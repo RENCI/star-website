@@ -1,0 +1,12 @@
+title: Staff
+path: /staff
+hero:
+  backgroundImagePath: https://picsum.photos/1200/301
+  title: Staff
+  blurb: >
+    Reprehenderit mollit duis mollit commodo exercitation aliquip ut do commodo do irure.
+    Lorem ipsum nisi nulla nulla laboris proident reprehenderit ex labore consequat do ut sint minim non.
+sections:
+  - Forms
+  - ImportantDates
+  - KeyContacts

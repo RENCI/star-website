@@ -1,0 +1,13 @@
+title: Home
+path: /
+hero:
+  backgroundImagePath: https://picsum.photos/1200/301
+  title: STAR
+  blurb: >
+    Eiusmod nisi nisi excepteur commodo sed ut sunt sunt anim elit veniam cupidatat officia occaecat.
+    Sit officia ut laborum velit irure elit amet proident commodo ut aliquip incididunt consequat incididunt sed.
+sections:
+  - AboutSTAR
+  - StudentsStaffCTAs
+  - Testimonials
+  - ProjectShowcase

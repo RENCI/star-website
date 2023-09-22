@@ -1,17 +1,18 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
+import React, { Fragment } from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import { CssBaseline, Sheet } from '@mui/joy'
 
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import Header from './header'
+import Footer from './footer'
 
-import Header from "./header"
-import "./layout.css"
+const menuOptions = [
+  { label: 'Home', path: '/' },
+  { label: 'Students', path: '/students' },
+  { label: 'Staff', path: '/staff' },
+  { label: 'Positions', path: '/positions' },
+]
 
-const Layout = ({ children }) => {
+export const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -23,28 +24,31 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+    <Fragment>
+      <CssBaseline />
+      <Sheet sx={{
+        height: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        pre: { whiteSpace: 'pre-wrap', p: 4 },
+        'main': {
+          flex: 1,
+          marginTop: '5rem', // height of site header
+        },
+      }}>
+        <Header
+          siteTitle={ data.site.siteMetadata?.title || `Title` }
+          menuOptions={ menuOptions }
+        />
+        
+        <main>
+          { children }
+        </main>
+
+        <Footer />
+
+      </Sheet>
+    </Fragment>
   )
 }
 

@@ -1,0 +1,15 @@
+title: Students
+path: /students
+hero:
+  backgroundImagePath: https://picsum.photos/1200/300
+  title: Students
+  blurb: >
+    Adipisicing tempor occaecat sunt cupidatat sint magn
+    dolore et do dolore eiusmod exercitation minim in
+sections:
+  - WhyRENCI
+  - ProgramsSpotlight
+  - ImportantDates
+  - Resources
+  - ProcessOverview
+  - InterviewTips

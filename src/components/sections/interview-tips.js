@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Section } from '../section'
 
 export const InterviewTips = ({ content }) => {
@@ -10,4 +11,15 @@ export const InterviewTips = ({ content }) => {
       <pre>{ JSON.stringify(content) }</pre>
     </Section>
   )
+}
+
+InterviewTips.propTypes = {
+  content: PropTypes.shape({
+    tips: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+      })
+    )
+  }),
 }

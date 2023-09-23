@@ -1,7 +1,7 @@
 title: Staff
 path: /staff
 hero:
-  backgroundImagePath: https://picsum.photos/1200/301
+  background_image_path: https://picsum.photos/1200/301
   title: Staff
   blurb: >
     Reprehenderit mollit duis mollit commodo exercitation aliquip ut do commodo do irure.

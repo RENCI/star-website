@@ -1,6 +1,7 @@
-- title: Mollit nisi minim ut
-  description: Magna cillum excepteur ex duis ex ea officia sit dolore amet excepteur quis. Incididunt ad dolore eu ut laborum aliqua fugiat excepteur est cillum do in sint.
-- title: Laborum ex tempor sint
-  description: Ut cupidatat eu sunt ut duis laborum duis eiusmod esse culpa labore in esse. Laboris non voluptate amet aliquip dolore in dolor ea reprehenderit ex dolore laborum culpa qui ut.
-- title: Non culpa fugiat officia
-  description: Sint non tempor ullamco do quis laborum laborum ut duis enim veniam reprehenderit voluptate sed aute. Magna sunt amet ex elit nostrud magna consequat exercitation id dolore.
+steps:
+  - title: Mollit nisi minim ut
+    description: Magna cillum excepteur ex duis ex ea officia sit dolore amet excepteur quis. Incididunt ad dolore eu ut laborum aliqua fugiat excepteur est cillum do in sint.
+  - title: Laborum ex tempor sint
+    description: Ut cupidatat eu sunt ut duis laborum duis eiusmod esse culpa labore in esse. Laboris non voluptate amet aliquip dolore in dolor ea reprehenderit ex dolore laborum culpa qui ut.
+  - title: Non culpa fugiat officia
+    description: Sint non tempor ullamco do quis laborum laborum ut duis enim veniam reprehenderit voluptate sed aute. Magna sunt amet ex elit nostrud magna consequat exercitation id dolore.

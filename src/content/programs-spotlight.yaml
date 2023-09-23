@@ -1,6 +1,7 @@
-- title: STAR Ventures
-  subtitle: Minim occaecat nisi
-  description: Veniam cillum ut sed excepteur id sunt ullamco aliquip sunt esse adipisicing proident aliqua dolor aliquip dolor ea in. Nostrud aliqua ullamco commodo velit ut sed aute dolor tempor voluptate.
-- title: Summer 2023
-  subtitle: Non consequat adipisicing
-  description: Excepteur magna occaecat mollit eiusmod magna quis deserunt dolor aute. Elit aliqua duis labore officia ut voluptate cillum labore velit tempor sit incididunt.
+programs:
+  - title: STAR Ventures
+    subtitle: Minim occaecat nisi
+    description: Veniam cillum ut sed excepteur id sunt ullamco aliquip sunt esse adipisicing proident aliqua dolor aliquip dolor ea in. Nostrud aliqua ullamco commodo velit ut sed aute dolor tempor voluptate.
+  - title: Summer 2023
+    subtitle: Non consequat adipisicing
+    description: Excepteur magna occaecat mollit eiusmod magna quis deserunt dolor aute. Elit aliqua duis labore officia ut voluptate cillum labore velit tempor sit incididunt.

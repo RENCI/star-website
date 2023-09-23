@@ -52,3 +52,22 @@ exports.createPages = ({ actions }) => {
     `staff.yaml`,
   ].forEach(createPageFromYaml)
 }
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = [
+    `type Hero implements Node {
+      background_image_path: String!
+      blurb: String!
+      title: String!
+    }`,
+    `type pagesYaml implements Node {
+      id: String!
+      title: String!
+      path: String!
+      hero: Hero! 
+      sections: [String!]!
+    }`,
+  ]
+  createTypes(typeDefs)
+}

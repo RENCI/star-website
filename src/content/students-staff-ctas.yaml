@@ -1,6 +1,7 @@
-students_cta:
-  title: Students
-  background_image_path: https://picsum.photos/700/700
-staff_cta:
-  title: Staff
-  background_image_path: https://picsum.photos/700/701
+buttons:
+  students_cta:
+    title: Students
+    background_image_path: https://picsum.photos/700/700
+  staff_cta:
+    title: Staff
+    background_image_path: https://picsum.photos/700/701

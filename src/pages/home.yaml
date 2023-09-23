@@ -1,7 +1,7 @@
 title: Home
 path: /
 hero:
-  backgroundImagePath: https://picsum.photos/1200/301
+  background_image_path: https://picsum.photos/1200/300
   title: STAR
   blurb: >
     Eiusmod nisi nisi excepteur commodo sed ut sunt sunt anim elit veniam cupidatat officia occaecat.

@@ -1,15 +1,16 @@
-- student_name: Jane Doe
-  student_photo_path: https://picsum.photos/500/400
-  project_description: Irure adipisicing do officia excepteur consectetur elit ea non commodo eu occaecat aute velit dolore in proident.
-- student_name: John Doe
-  student_photo_path: https://picsum.photos/500/401
-  project_description: Laborum fugiat in laboris aliqua ut consectetur minim dolor dolor.
-- student_name: June Doe
-  student_photo_path: https://picsum.photos/500/402
-  project_description: Lorem ipsum id ut dolor nulla in cillum amet aliqua enim irure esse ut id cillum est aute reprehenderit.
-- student_name: Joan Doe
-  student_photo_path: https://picsum.photos/500/403
-  project_description: Ut dolor laboris officia aliquip aliqua labore dolore laborum.
-- student_name: Jim Doe
-  student_photo_path: https://picsum.photos/500/404
-  project_description: Consequat reprehenderit veniam sit cupidatat dolor sit dolor veniam eu sint minim esse veniam do ut sint deserunt.
+projects:
+  - student_name: Jane Doe
+    student_photo_path: https://picsum.photos/500/400
+    project_description: Irure adipisicing do officia excepteur consectetur elit ea non commodo eu occaecat aute velit dolore in proident.
+  - student_name: John Doe
+    student_photo_path: https://picsum.photos/500/401
+    project_description: Laborum fugiat in laboris aliqua ut consectetur minim dolor dolor.
+  - student_name: June Doe
+    student_photo_path: https://picsum.photos/500/402
+    project_description: Lorem ipsum id ut dolor nulla in cillum amet aliqua enim irure esse ut id cillum est aute reprehenderit.
+  - student_name: Joan Doe
+    student_photo_path: https://picsum.photos/500/403
+    project_description: Ut dolor laboris officia aliquip aliqua labore dolore laborum.
+  - student_name: Jim Doe
+    student_photo_path: https://picsum.photos/500/404
+    project_description: Consequat reprehenderit veniam sit cupidatat dolor sit dolor veniam eu sint minim esse veniam do ut sint deserunt.

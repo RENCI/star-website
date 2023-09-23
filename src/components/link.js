@@ -23,13 +23,14 @@ ExternalLinkIcon.propTypes = {
   size: PropTypes.number.isRequired,
 }
 
-export const ExternalLink = ({ to, children }) => {
+export const ExternalLink = ({ to, children, ...etc }) => {
   return (
     <Fragment>
       <a
         href={ to }
         target="_blank"
         rel="noopener noreferrer"
+        { ...etc }
       >
         { children }
       </a>
@@ -38,11 +39,11 @@ export const ExternalLink = ({ to, children }) => {
   )
 }
 
-export const Link = ({ to, children, ...props }) => {
+export const Link = React.forwardRef(({ to, children, ...props }, ref) => {
   const externalUrlPattern = new RegExp(/^https?:\/\//)
   const match = externalUrlPattern.exec(to)
   if (match) {
-    return <ExternalLink to={ to } { ...props }>{ children }</ExternalLink>
+    return <ExternalLink to={ to } { ...props } ref={ ref }>{ children }</ExternalLink>
   }
-  return <GatsbyLink to={ to } { ...props }>{ children }</GatsbyLink>
-}
+  return <GatsbyLink to={ to } { ...props } ref={ ref }>{ children }</GatsbyLink>
+})

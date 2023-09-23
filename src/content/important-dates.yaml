@@ -1,15 +1,16 @@
-- date: 2023-01-02
-  title: Lorem ipsum ut
-  description: >
-    Lorem ipsum ut incididunt culpa adipisicing do enim anim voluptate quis
-    duis adipisicing irure aute non occaecat magna.
-- date: 2023-01-03
-  title: Consectetur et consequat
-  description: >
-    Lorem ipsum est sit dolore proident dolor mollit sed veniam est consequat
-    quis et qui amet irure.
-- date: 2023-01-04
-  title: Mollit qui anim
-  description: >
-    Cupidatat velit eiusmod officia aliquip consequat do commodo adipisicing
-    ut amet et esse quis.
+dates:
+  - date: 2023-01-02
+    title: Lorem ipsum ut
+    description: >
+      Lorem ipsum ut incididunt culpa adipisicing do enim anim voluptate quis
+      duis adipisicing irure aute non occaecat magna.
+  - date: 2023-01-03
+    title: Consectetur et consequat
+    description: >
+      Lorem ipsum est sit dolore proident dolor mollit sed veniam est consequat
+      quis et qui amet irure.
+  - date: 2023-01-04
+    title: Mollit qui anim
+    description: >
+      Cupidatat velit eiusmod officia aliquip consequat do commodo adipisicing
+      ut amet et esse quis.

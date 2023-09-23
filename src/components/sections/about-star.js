@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Sheet, Typography } from '@mui/joy'
 import { Section } from '../section'
 
@@ -17,4 +18,10 @@ export const AboutStar = ({ content }) => {
       </Sheet>
     </Section>
   )
+}
+
+AboutStar.propTypes = {
+  content: PropTypes.shape({
+    blurb: PropTypes.string.isRequired,
+  })
 }

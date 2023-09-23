@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 import { Divider, Typography } from '@mui/joy'
 import { Section } from '../section'
 
 const Quote = ({ quote, attribution, visible }) => {
   return (
-    <Typography paragraph sx={{
+    <Typography level="body-md" sx={{
       display: visible ? 'block' : 'none',
     }}>
       { quote } <br />
@@ -45,4 +46,16 @@ export const Testimonials = ({ content }) => {
       }
     </Section>
   )
+}
+
+Testimonials.propTypes = {
+  content: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    quotes: PropTypes.arrayOf(
+      PropTypes.shape({
+        quote: PropTypes.string.isRequired,
+        attribution: PropTypes.string.isRequired,
+      }).isRequired
+    ).isRequired,
+  })
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {
   AspectRatio, Card, CardOverflow,
   Link as JoyLink, Sheet, Stack,
@@ -6,7 +7,7 @@ import {
 import { Section } from '../section'
 import { Link } from '../link'
 
-const CardLink = ({
+const CtaButton = ({
   background_image_path, href, title
 }) => {
   return (
@@ -42,7 +43,7 @@ const CardLink = ({
 }
 
 export const StudentsStaffCtas = ({ content }) => {
-  const { staff_cta, students_cta } = content
+  const { staff_cta, students_cta } = content.buttons
 
   return (
     <Section height={{ xs: '696px', sm: '396px' }}>
@@ -59,9 +60,24 @@ export const StudentsStaffCtas = ({ content }) => {
           }
         }}
       >
-        <CardLink href="/students" { ...staff_cta } />
-        <CardLink href="/staff" { ...students_cta } />
+        <CtaButton href="/students" { ...staff_cta } />
+        <CtaButton href="/staff" { ...students_cta } />
       </Stack>
     </Section>
   )
+}
+
+StudentsStaffCtas.propTypes = {
+  buttons: PropTypes.arrayOf(
+    PropTypes.shape({
+      students_cta: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        background_image_path: PropTypes.string.isRequired,
+      }),
+      staff_cta: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        background_image_path: PropTypes.string.isRequired,
+      }),
+    })
+  ),
 }

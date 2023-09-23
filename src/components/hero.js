@@ -1,17 +1,18 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {
   Button, FormControl, Input, Sheet, Stack, Typography,
 } from '@mui/joy'
 import { useScrollPosition } from '../hooks'
 
-export const Hero = ({ backgroundImagePath, blurb, title }) => {
+export const Hero = ({ background_image_path, blurb, title }) => {
   const { scrollPosition } = useScrollPosition()
   return (
     <Sheet
       sx={{
         display: 'flex',
         height: '600px',
-        background: `url(${ backgroundImagePath })`,
+        background: `url(${ background_image_path })`,
         backgroundPosition: `0 ${scrollPosition / 2}px`,
         backgroundSize: 'cover',
         '.overlay': {
@@ -45,7 +46,7 @@ export const Hero = ({ backgroundImagePath, blurb, title }) => {
         className="overlay"
       >
         <Typography level="h1" className="title">{ title }</Typography>
-        <Typography paragraph className="subtitle">{ blurb }</Typography>
+        <Typography level="body-md" className="subtitle">{ blurb }</Typography>
         <FormControl>
           <Input
             placeholder="Search positions"
@@ -63,4 +64,10 @@ export const Hero = ({ backgroundImagePath, blurb, title }) => {
       </Stack>
     </Sheet>
   )
+}
+
+Hero.propTypes = {
+  background_image_path: PropTypes.string.isRequired,
+  blurb: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 }

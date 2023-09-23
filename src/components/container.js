@@ -13,6 +13,7 @@ export const Container = ({
         // ensure this component fills the available
         // space in its parent.
         width: '100%', flex: 1, alignSelf: 'stretch',
+        margin: 'auto',
         maxWidth,
       }}
     >

@@ -1,9 +1,7 @@
 import React from 'react'
 import { Section } from '../section'
 
-import content from '../../content/resources.yaml'
-
-export const Resources = () => {
+export const Resources = ({ content }) => {
   return (
     <Section
       height="40vh"

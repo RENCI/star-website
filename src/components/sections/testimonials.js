@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Divider, Typography } from '@mui/joy'
 import { Section } from '../section'
 
-import content from '../../content/testimonials.yaml'
-
 const Quote = ({ quote, attribution, visible }) => {
   return (
     <Typography paragraph sx={{
@@ -15,7 +13,7 @@ const Quote = ({ quote, attribution, visible }) => {
   )
 }
 
-export const Testimonials = () => {
+export const Testimonials = ({ content }) => {
   const { title, quotes } = content
   const [index, setIndex] = useState(0)
 

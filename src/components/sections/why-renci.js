@@ -1,9 +1,7 @@
 import React from 'react'
 import { Section } from '../section'
 
-import content from '../../content/why-renci.yaml'
-
-export const WhyRENCI = () => {
+export const WhyRenci = ({ content }) => {
   return (
     <Section
       backgroundColor="#00abc766"

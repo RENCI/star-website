@@ -1,9 +1,7 @@
 import React from 'react'
 import { Section } from '../section'
 
-import content from '../../content/interview-tips.yaml'
-
-export const InterviewTips = () => {
+export const InterviewTips = ({ content }) => {
   return (
     <Section
       height="50vh"

@@ -1,9 +1,7 @@
 import React from 'react'
 import { Section } from '../section'
 
-import content from '../../content/project-showcase.yaml'
-
-export const ProjectShowcase = () => {
+export const ProjectShowcase = ({ content }) => {
   return (
     <Section
       height="75vh"

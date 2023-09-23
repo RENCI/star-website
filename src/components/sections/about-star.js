@@ -2,9 +2,7 @@ import React from 'react'
 import { Sheet, Typography } from '@mui/joy'
 import { Section } from '../section'
 
-import content from '../../content/about-star.yaml'
-
-export const AboutSTAR = () => {
+export const AboutStar = ({ content }) => {
   return (
     <Section
       backgroundColor="#ff990033"

@@ -6,8 +6,6 @@ import {
 import { Section } from '../section'
 import { Link } from '../link'
 
-import content from '../../content/students-staff-ctas.yaml'
-
 const CardLink = ({
   background_image_path, href, title
 }) => {
@@ -43,7 +41,7 @@ const CardLink = ({
   )
 }
 
-export const StudentsStaffCTAs = () => {
+export const StudentsStaffCtas = ({ content }) => {
   const { staff_cta, students_cta } = content
 
   return (

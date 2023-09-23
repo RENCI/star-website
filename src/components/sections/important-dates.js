@@ -1,9 +1,7 @@
 import React from 'react'
 import { Section } from '../section'
 
-import content from '../../content/important-dates.yaml'
-
-export const ImportantDates = () => {
+export const ImportantDates = ({ content }) => {
   return (
     <Section
       backgroundColor="#00abc7cc"

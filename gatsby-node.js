@@ -27,10 +27,8 @@ exports.createPages = ({ actions }) => {
     const hydratedSections = sections.reduce((acc, sectionFilename) => {
       const sectionFile = fs.readFileSync(path.join(yamlSectionDir, `${ sectionFilename }.yaml`), 'utf8')
       const content = yaml.load(sectionFile)
-      return {
-        ...acc,
-        [sectionFilename]: content,
-      }
+      acc[sectionFilename] = content
+      return acc
     }, {})
 
     // create page and pass section content in context

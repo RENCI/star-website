@@ -5,14 +5,13 @@ const { paramCase, pascalCase } = require('change-case')
 
 //
 
-const yamlPageDir = path.join(`src`, `pages`)
-const yamlSectionDir = path.join(`src`, `content`, `sections`)
+const contentYamlDir = path.join(`src`, `pages`)
+const sectionYamlDir = path.join(`src`, `content`, `sections`)
+const contentImagesDir = path.join(`src`, `content`, `images`)
+const pageTemplate = require.resolve('./src/templates/page.js')
 
 exports.createPages = ({ actions }) => {
-  const pageTemplate = require.resolve('./src/templates/page.js')
-
-  /*
-   * This is simply a wrapper around Gatsby's createPage function
+  /* This is simply a wrapper around Gatsby's createPage function
    * that creates a page from the content in a given YAML file path.
    * 
    * @param {string}  filename  Name of YAML file in page directory.
@@ -20,12 +19,12 @@ exports.createPages = ({ actions }) => {
   function createPageFromYaml(filename) {
     const { createPage } = actions
     // page content as yaml 
-    const yamlData = yaml.load(fs.readFileSync(path.join(yamlPageDir, filename), 'utf-8'))
-    const { path: pagePath, sections, ...etc } = yamlData
+    const yamlData = yaml.load(fs.readFileSync(path.join(contentYamlDir, filename), 'utf-8'))
+    const { path: pagePath, hero, sections, ...etc } = yamlData
 
     // pages sections mapped to their content
     const hydratedSections = sections.reduce((acc, sectionFilename) => {
-      const sectionFile = fs.readFileSync(path.join(yamlSectionDir, `${ sectionFilename }.yaml`), 'utf8')
+      const sectionFile = fs.readFileSync(path.join(sectionYamlDir, `${ sectionFilename }.yaml`), 'utf8')
       const content = yaml.load(sectionFile)
       acc[sectionFilename] = content
       return acc
@@ -36,6 +35,8 @@ exports.createPages = ({ actions }) => {
       path: pagePath,
       component: pageTemplate,
       context: {
+        bgFilename: hero.background_image,
+        hero,
         sections: hydratedSections,
         ...etc,
       },

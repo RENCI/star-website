@@ -19,6 +19,7 @@ ProgramsOverview.propTypes = {
         title: PropTypes.string.isRequired,
         subtitle: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
+        offerings: PropTypes.arrayOf(PropTypes.string),
       })
     )
   }),

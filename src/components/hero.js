@@ -5,7 +5,7 @@ import {
 } from '@mui/joy'
 import { useScrolling } from '../hooks'
 
-export const Hero = ({ background_image_path, blurb, title }) => {
+export const Hero = ({ bgImageUrl, blurb, title }) => {
   const { scrollPosition } = useScrolling()
   const heroRef = useRef()
 
@@ -20,7 +20,7 @@ export const Hero = ({ background_image_path, blurb, title }) => {
       sx={{
         display: 'flex',
         height: '600px',
-        background: `url(${ background_image_path })`,
+        background: `url(${ bgImageUrl })`,
         backgroundPosition: `center center`,
         backgroundSize: 'cover',
         '.overlay': {

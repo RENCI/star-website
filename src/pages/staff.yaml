@@ -2,7 +2,7 @@ title: Staff
 path: /staff
 description: Sunt irure veniam cupidatat adipisicing cupidatat fugiat minim fugiat nisi pariatur aute ex fugiat duis.
 hero:
-  background_image_path: https://picsum.photos/1200/301
+  background_image: terrain.jpg
   title: Staff
   blurb: >
     Reprehenderit mollit duis mollit commodo exercitation aliquip ut do commodo do irure.

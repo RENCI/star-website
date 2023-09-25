@@ -75,7 +75,7 @@ export const Hero = ({ bgImageUrl, blurb, title }) => {
 }
 
 Hero.propTypes = {
-  background_image_path: PropTypes.string.isRequired,
+  bgImageUrl: PropTypes.string.isRequired,
   blurb: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 }

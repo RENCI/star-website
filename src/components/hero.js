@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import {
   Button, FormControl, Input, Sheet, Stack, Typography,
 } from '@mui/joy'
-import { useScrollPosition } from '../hooks'
+import { useScrolling } from '../hooks'
 
 export const Hero = ({ background_image_path, blurb, title }) => {
-  const { scrollPosition } = useScrollPosition()
+  const { scrollPosition } = useScrolling()
   const heroRef = useRef()
 
   useEffect(() => {

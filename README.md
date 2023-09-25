@@ -10,11 +10,58 @@ Content is managed by pages, which provide metadata (like page title and path) a
 
 #### Theme
 
-The site-wide content lives in `src/content/theme/index.yaml`. For now, we'll have to dig into the code to see what's available.
+The site-wide config or theme content lives in `src/content/theme/index.yaml`, and the following confirugations are available.
+
+| field           | type    | required | usage                       |
+|-----------------|---------|----------|-----------------------------|
+| **metadata**    | obj     | ✅       |                             |
+| - title         | string  | ✅       | window title & seo title    |
+| - description   | string  | ✅       | seo description             |
+| - site_url      | string  | ❌       |                             |
+|||||
+| **navigation**  | [link]! | ✅       | main menu items to render   |
+|||||
+| link            | obj     |          |                             |
+| - label         |         | ✅       | menu link text label        |
+| - path          |         | ✅       | path to link to             |
+|||||
+| **footer**      | obj     |          |                             |
+| - copyright     | string! | ✅       | text after copyright notice |
+
+##### Example Theme
+
+```yaml
+metadata:
+  title: STAR
+  description: RENCI'S STAR Programs
+  site_url: https://star.renci.org/
+navigation:
+  - label: Students
+    path: /students
+  - label: Staff
+    path: /staff
+  - label: Positions
+    path: /positions
+footer:
+  copyright: RENCI
+```
 
 #### Pages
 
-Pages live in the `src/pages` directory and look something like the following.
+Pages live as YAML files in the `src/pages` directory and have the following fields available.
+
+| field                       | type   | required | usage                                |
+|-----------------------------|--------|----------|--------------------------------------|
+| **title**                   | string | ✅       | window title & seo title             |
+| **path**                    | string | ✅       | route to access page                 |
+| **description**             | string | ❌       | seo description                      |
+|||||
+| **hero**                    |        | ❌       | decorative section at top of page    |
+| - background_image_path     | string | ✅       | - hero background image              |
+| - title                     | string | ✅       | - large main hero text               |
+| - blurb                     | string | ✅       | - medium hero subtitle               |
+
+##### Example Page
 
 ```yaml
 # src/pages/some-page.yaml
@@ -32,11 +79,9 @@ sections:
   - section-name-3
 ```
 
-The following fields are available for `src/pages/*.yaml` files: todo.
-
 #### Sections
 
-Each of the sections listed references a section's YAML file of the same name. For example, the content for the `project-showcase` section lives in `src/content/sections/project-showcase.yaml`.
+Each of the sections appearing in a page's `sections` array must reference a YAML file of the same name in `src/content/sections`. For example, the content for the `project-showcase` section lives in `src/content/sections/project-showcase.yaml`.
 
 Unlike pages, each section file (`src/content/sections/*.yaml`) has its own unique set of fields available. For now, we'll have to dig into the code to see what's available.
 

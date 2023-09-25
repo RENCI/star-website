@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import {
   Button, FormControl, Input, Sheet, Stack, Typography,
@@ -7,13 +7,21 @@ import { useScrollPosition } from '../hooks'
 
 export const Hero = ({ background_image_path, blurb, title }) => {
   const { scrollPosition } = useScrollPosition()
+  const heroRef = useRef()
+
+  useEffect(() => {
+    if (!heroRef.current) return
+    heroRef.current.style.backgroundPosition = `center ${ scrollPosition / 3 }px`
+  }, [scrollPosition])
+
   return (
     <Sheet
+      ref={ heroRef }
       sx={{
         display: 'flex',
         height: '600px',
         background: `url(${ background_image_path })`,
-        backgroundPosition: `0 ${scrollPosition / 2}px`,
+        backgroundPosition: `center center`,
         backgroundSize: 'cover',
         '.overlay': {
           px: 4,

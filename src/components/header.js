@@ -1,77 +1,68 @@
-import React from 'react'
-import { Sheet, Stack } from '@mui/joy'
+import React, { useMemo } from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import { Sheet } from '@mui/joy'
 import { Container } from './container'
+import { useScrollPosition } from '../hooks'
 import { Link } from './link'
+import { Menu } from './menu'
 
-const Header = ({ siteTitle, menuOptions }) => (
-  <Sheet
-    component="header"
-    sx={{
-      backgroundColor: '#fff',
-      filter: 'drop-shadow(0 0 8px #0003)',
-      zIndex: 9,
-      position: 'fixed',
-      width: '100%',
-      display: 'flex',
-      justifyContent: 'center',
-      '.header-container': {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-      },
-      px: 1,
-      minHeight: '5rem',
-      '.brand': {
-        p: 1,
-        alignSelf:'stretch',
+const Header = ({ siteTitle, menuOptions }) => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      themeYaml {
+        metadata {
+          title
+        }
+      }
+    }
+  `)
+
+  const { scrollPosition } = useScrollPosition()
+
+  // reduce header after user has scrolled down an bit,
+  // at least through the hero.
+  const reducedHeader = useMemo(() => {
+    return scrollPosition > 500
+  }, [scrollPosition])
+
+  return (
+    <Sheet
+      component="header"
+      sx={{
+        backgroundColor: reducedHeader ? '#fffc' : '#fff4',
+        '&:hover': {
+          backgroundColor: '#ffff',
+        },
+        filter: reducedHeader ? 'drop-shadow(0 0 8px #0003)' : '',
+        transition: 'filter 250ms 100ms, min-height 350ms, background-color 250ms 100ms',
+        backdropFilter: 'blur(3px)',
+        zIndex: 9,
+        position: 'fixed',
+        width: '100%',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
-      },
-      '.navigation': {
-        alignSelf:'stretch',
-        display: 'flex',
-        gap: 1,
-        m: 0, p: 0,
-        listStyleType: 'none',
-        '.nav-list': {
-          alignSelf: 'stretch',
+        '.header-container': {
           display: 'flex',
-          alignItems: 'stretch',
-          'a': {
-            p: 1,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          },
+          alignItems: 'center',
+          justifyContent: 'flex-start',
         },
-      },
-    }}
-  >
-    <Container className="header-container">
-      <Link to="/" className="brand">{ siteTitle }</Link>
-      
-      <Stack
-        direction="row"
-        component="ul"
-        role="navigation"
-        className="navigation"
-        justifyContent="center"
-        alignItems="center"
-      >
-        {
-          menuOptions.map(({ label, path }) => (
-            <li
-              key={ path }
-              className="nav-list"
-            >
-              <Link to={ path }>{ label }</Link>
-            </li>
-          ))
-        }
-      </Stack>
-    </Container>
-  </Sheet>
-)
+        px: 1,
+        minHeight: reducedHeader ? '3rem' : '5rem',
+        '.brand': {
+          p: 1,
+          alignSelf:'stretch',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        },
+      }}
+    >
+      <Container className="header-container">
+        <Link to="/" className="brand">{ data.themeYaml.metadata.title }</Link>
+        <Menu options={ menuOptions } />
+      </Container>
+    </Sheet>
+  )
+}
 
 export default Header

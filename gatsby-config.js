@@ -1,10 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: `STAR`,
-    description: `RENCI'S STAR Programs`,
-    author: `RENCI`,
-    siteUrl: `https://star.renci.org/`,
-  },
   plugins: [
     `gatsby-plugin-image`,
     {
@@ -25,8 +19,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `content`,
-        path: `${__dirname}/src/content`,
+        name: `sections`,
+        path: `${__dirname}/src/content/sections`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `theme`,
+        path: `${__dirname}/src/content/theme`,
       },
     },
     `gatsby-transformer-sharp`,

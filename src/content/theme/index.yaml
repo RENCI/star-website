@@ -1,0 +1,15 @@
+metadata:
+  title: STAR
+  description: RENCI'S STAR Programs
+  site_url: https://star.renci.org/
+navigation:
+  - label: Home
+    path: /
+  - label: Students
+    path: /students
+  - label: Staff
+    path: /staff
+  - label: Positions
+    path: /positions
+footer:
+  copyright: RENCI

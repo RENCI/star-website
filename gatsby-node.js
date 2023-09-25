@@ -5,8 +5,8 @@ const { paramCase, pascalCase } = require('change-case')
 
 //
 
-const yamlPageDir = path.join(`src`,`pages`)
-const yamlSectionDir = path.join(`src`,`content`)
+const yamlPageDir = path.join(`src`, `pages`)
+const yamlSectionDir = path.join(`src`, `content`, `sections`)
 
 exports.createPages = ({ actions }) => {
   const pageTemplate = require.resolve('./src/templates/page.js')
@@ -21,7 +21,7 @@ exports.createPages = ({ actions }) => {
     const { createPage } = actions
     // page content as yaml 
     const yamlData = yaml.load(fs.readFileSync(path.join(yamlPageDir, filename), 'utf-8'))
-    const { path: pagePath, hero, sections } = yamlData
+    const { path: pagePath, sections, ...etc } = yamlData
 
     // pages sections mapped to their content
     const hydratedSections = sections.reduce((acc, sectionFilename) => {
@@ -36,8 +36,8 @@ exports.createPages = ({ actions }) => {
       path: pagePath,
       component: pageTemplate,
       context: {
-        hero,
         sections: hydratedSections,
+        ...etc,
       },
     })
   }
@@ -49,23 +49,4 @@ exports.createPages = ({ actions }) => {
     `students.yaml`,
     `staff.yaml`,
   ].forEach(createPageFromYaml)
-}
-
-exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions
-  const typeDefs = [
-    `type Hero implements Node {
-      background_image_path: String!
-      blurb: String!
-      title: String!
-    }`,
-    `type pagesYaml implements Node {
-      id: String!
-      title: String!
-      path: String!
-      hero: Hero! 
-      sections: [String!]!
-    }`,
-  ]
-  createTypes(typeDefs)
 }

@@ -1,4 +1,5 @@
 title: Students
+description: Est in qui irure in aute occaecat laborum enim ut cillum sunt ullamco quis.
 path: /students
 hero:
   background_image_path: https://picsum.photos/1200/302
@@ -8,7 +9,7 @@ hero:
     dolore et do dolore eiusmod exercitation minim in
 sections:
   - why-renci
-  - programs-spotlight
+  - programs-overview
   - important-dates
   - resources
   - process-overview

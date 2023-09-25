@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Section } from '../section'
 
-export const ProgramsSpotlight = ({ content }) => {
+export const ProgramsOverview = ({ content }) => {
   return (
     <Section
       backgroundColor="#00abc722"
@@ -12,7 +12,7 @@ export const ProgramsSpotlight = ({ content }) => {
   )
 }
 
-ProgramsSpotlight.propTypes = {
+ProgramsOverview.propTypes = {
   content: PropTypes.shape({
     programs: PropTypes.arrayOf(
       PropTypes.shape({

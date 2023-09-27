@@ -12,21 +12,21 @@ Content is managed by pages, which provide metadata (like page title and path) a
 
 The site-wide config or theme content lives in `src/content/theme/index.yaml`, and the following confirugations are available.
 
-| field           | type    | required | usage                       |
-|-----------------|---------|----------|-----------------------------|
-| **metadata**    | obj     | ✅       |                             |
-| - title         | string  | ✅       | window title & seo title    |
-| - description   | string  | ✅       | seo description             |
-| - site_url      | string  | ❌       |                             |
+| Field           | Type    | Required? | Usage                       |
+|-----------------|---------|-----------|-----------------------------|
+| **metadata**    | obj     |    ✅     |                             |
+| - title         | string  |    ✅     | window title & seo title    |
+| - description   | string  |    ✅     | seo description             |
+| - site_url      | string  |    ❌     |                             |
 |||||
-| **navigation**  | [link]! | ✅       | main menu items to render   |
+| **navigation**  | [link]  |    ✅     | main menu items to render   |
 |||||
-| link            | obj     |          |                             |
-| - label         |         | ✅       | menu link text label        |
-| - path          |         | ✅       | path to link to             |
+| link            | obj     |           |                             |
+| - label         | string  |    ✅     | menu link text label        |
+| - path          | string  |    ✅     | path to link to             |
 |||||
-| **footer**      | obj     |          |                             |
-| - copyright     | string! | ✅       | text after copyright notice |
+| **footer**      | obj     |           |                             |
+| - copyright     | string  |    ✅     | text after copyright notice |
 
 ##### Example Theme
 
@@ -50,16 +50,16 @@ footer:
 
 Pages live as YAML files in the `src/pages` directory and have the following fields available.
 
-| field                       | type   | required | usage                                |
-|-----------------------------|--------|----------|--------------------------------------|
-| **title**                   | string | ✅       | window title & seo title             |
-| **path**                    | string | ✅       | route to access page                 |
-| **description**             | string | ❌       | seo description                      |
+| Field                       | Type   | Required? | Usage                                |
+|-----------------------------|--------|-----------|--------------------------------------|
+| **title**                   | string |    ✅     | window title & seo title             |
+| **path**                    | string |    ✅     | route to access page                 |
+| **description**             | string |    ❌     | seo description                      |
 |||||
-| **hero**                    |        | ❌       | decorative section at top of page    |
-| - background_image_path     | string | ✅       | - hero background image              |
-| - title                     | string | ✅       | - large main hero text               |
-| - blurb                     | string | ✅       | - medium hero subtitle               |
+| **hero**                    | obj    |    ❌     | decorative section at top of page    |
+| - background_image_path     | string |    ✅     | - image for hero background          |
+| - title                     | string |    ✅     | - large main hero text               |
+| - blurb                     | string |    ✅     | - medium hero subtitle               |
 
 ##### Example Page
 

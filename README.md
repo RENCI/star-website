@@ -104,3 +104,7 @@ footer:
 ### Image Content
 
 Images can be referenced and used in content YAML files by providing the path relative to the `src/content/images` directory. Simplest is probably to put images in that directory and set the YAML fields to just their filenames.
+
+## 🌊 Data Flow
+
+![data flow diagram](./data-flow-diagram.png)

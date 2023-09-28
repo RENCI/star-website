@@ -3,7 +3,7 @@ import { Section } from '../section'
 import { useSectionContent } from '../../hooks'
 
 export const WhyRenci = () => {
-  const content = useSectionContent('AboutStar')
+  const content = useSectionContent('WhyRenci')
 
   return (
     <Section

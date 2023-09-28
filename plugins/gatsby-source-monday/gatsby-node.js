@@ -55,6 +55,7 @@ const fieldMap = {
  * @return {array}  position objects.
  * */
 function assembleBoardData({ columns, items }) {
+  if (!columns || !items) { return }
   return items.reduce((acc, item) => {
     const { id, name, column_values } = item
     const extractedColumns = column_values
@@ -70,11 +71,22 @@ function assembleBoardData({ columns, items }) {
 }
 
 exports.sourceNodes = async (gatsbyApi, pluginOptions) => {
+  const { actions, createContentDigest, createNodeId, reporter } = gatsbyApi
+  const sourcingTimer = reporter.activityTimer(`source positions from Monday.com`)
+  sourcingTimer.start()
   try {
     axiosOptions.headers.Authorization = `bearer ${ pluginOptions.API_TOKEN }`
-    const { actions, createContentDigest, createNodeId } = gatsbyApi
+    sourcingTimer.setStatus(`Fetching positions`)
     const boardData = await fetchBoardData(axiosOptions)
+    if (!boardData) {
+      throw new Error(`Failed to fetch positions`)
+    }
+    sourcingTimer.setStatus(`Assembling position data`)
     const positionData = assembleBoardData(boardData)
+    if (!positionData) {
+      throw new Error(`Failed to process position data`)
+    }
+    sourcingTimer.setStatus(`Sourced ${ positionData.length } positions`)
     // create nods from positions data.
     for (const position of positionData) {
       actions.createNode({
@@ -87,8 +99,9 @@ exports.sourceNodes = async (gatsbyApi, pluginOptions) => {
         }
       })
     }
+    sourcingTimer.setStatus(`Created ${ positionData.length } position nodes`)
   } catch (error) {
-    console.error(error)
+    sourcingTimer.panicOnBuild(error)
   }
 }
 

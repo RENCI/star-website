@@ -1,11 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {
   AspectRatio, Card, CardOverflow,
   Link as JoyLink, Sheet, Stack,
 } from '@mui/joy'
 import { Section } from '../section'
 import { Link } from '../link'
+import { useSectionContent } from '../../hooks'
 
 const CtaButton = ({
   background_image_path, href, title
@@ -42,7 +42,8 @@ const CtaButton = ({
   )
 }
 
-export const StudentsStaffCtas = ({ content }) => {
+export const StudentsStaffCtas = () => {
+  const content = useSectionContent('StudentsStaffCtas')
   const { staff_cta, students_cta } = content.buttons
 
   return (
@@ -65,19 +66,4 @@ export const StudentsStaffCtas = ({ content }) => {
       </Stack>
     </Section>
   )
-}
-
-StudentsStaffCtas.propTypes = {
-  buttons: PropTypes.arrayOf(
-    PropTypes.shape({
-      students_cta: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        background_image_path: PropTypes.string.isRequired,
-      }),
-      staff_cta: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        background_image_path: PropTypes.string.isRequired,
-      }),
-    })
-  ),
 }

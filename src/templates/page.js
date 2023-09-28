@@ -6,10 +6,9 @@ import { Hero } from '../components/hero'
 import { Seo } from '../components/seo'
 const { pascalCase } = require('change-case')
 
-const StackedPage = ({ data, pageContext }) => {
-  const { bgImage } = data
-  const { hero, sections, title, description } = pageContext
-  const sectionFilenames = Object.keys(sections)
+const StackedPage = ({ data }) => {
+  const { hero, sections, title, description } = data.content
+  const sectionFilenames = sections
 
   return (
     <Fragment>
@@ -18,20 +17,15 @@ const StackedPage = ({ data, pageContext }) => {
         description={ description }
       />
       <Stack>
-        <Hero
-          bgImageUrl={ bgImage.publicURL }
-          { ...hero }
-        />
+        <Hero { ...hero } />
         {
           sectionFilenames.map(componentFileName => {
             const componentName = pascalCase(componentFileName)
             const Component = Sections[componentName]
-            const content = sections[componentFileName]
             return (
               <Component
                 key={ `Section${ componentName }`}
                 id={ `Section${ componentName }`}
-                content={ content }
               />
             )
           })
@@ -44,8 +38,25 @@ const StackedPage = ({ data, pageContext }) => {
 export default StackedPage
 
 export const query = graphql`
-  query HeroImageQuery($bgFilename: String!) {
-    bgImage: file(absolutePath: {regex: "/content/images/"}, base: {eq: $bgFilename}) {
-      publicURL
+  query($pagePath: String!) {
+    content: pagesYaml(path: { eq: $pagePath }) {
+      title
+      description
+      path
+      hero {
+        background_image {
+          childImageSharp {
+            gatsbyImageData(
+              width: 1200
+              height: 500
+              placeholder: BLURRED
+              formats: [AUTO, WEBP]
+            )
+          }
+        }
+        blurb
+        title
+      }
+      sections
     }
   }`

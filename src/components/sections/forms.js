@@ -1,22 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Section } from '../section'
+import { useSectionContent } from '../../hooks'
 
-export const Forms = ({ content }) => {
+export const Forms = () => {
+  const content = useSectionContent('Forms')
+
   return (
     <Section>
       <pre>{ JSON.stringify(content) }</pre>
     </Section>
   )
-}
-
-Forms.propTypes = {
-  content: PropTypes.shape({
-    forms: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        url: PropTypes.string.isRequired,
-      })
-    )
-  }),
 }

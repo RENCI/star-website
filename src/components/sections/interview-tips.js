@@ -1,8 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Section } from '../section'
+import { useSectionContent } from '../../hooks'
 
-export const InterviewTips = ({ content }) => {
+export const InterviewTips = () => {
+  const content = useSectionContent('InterviewTips')
+
   return (
     <Section
       height="50vh"
@@ -11,15 +13,4 @@ export const InterviewTips = ({ content }) => {
       <pre>{ JSON.stringify(content) }</pre>
     </Section>
   )
-}
-
-InterviewTips.propTypes = {
-  content: PropTypes.shape({
-    tips: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-      })
-    )
-  }),
 }

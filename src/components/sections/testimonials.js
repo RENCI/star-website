@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
 import { Divider, Typography } from '@mui/joy'
 import { Section } from '../section'
+import { useSectionContent } from '../../hooks'
+
 
 const Quote = ({ quote, attribution, visible }) => {
   return (
@@ -14,7 +15,8 @@ const Quote = ({ quote, attribution, visible }) => {
   )
 }
 
-export const Testimonials = ({ content }) => {
+export const Testimonials = () => {
+  const content = useSectionContent('Testimonials')
   const { title, quotes } = content
   const [index, setIndex] = useState(0)
 
@@ -46,16 +48,4 @@ export const Testimonials = ({ content }) => {
       }
     </Section>
   )
-}
-
-Testimonials.propTypes = {
-  content: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    quotes: PropTypes.arrayOf(
-      PropTypes.shape({
-        quote: PropTypes.string.isRequired,
-        attribution: PropTypes.string.isRequired,
-      }).isRequired
-    ).isRequired,
-  })
 }

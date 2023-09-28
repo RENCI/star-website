@@ -10,14 +10,22 @@ const sectionYamlDir = path.join(`src`, `content`, `sections`)
 const contentImagesDir = path.join(`src`, `content`, `images`)
 const pageTemplate = require.resolve('./src/templates/page.js')
 
-exports.createPages = ({ actions }) => {
+const getImage = (gatsbyImages, filename) => {
+  const result = gatsbyImages.find(
+    image => image.node.fluid.originalName === filename
+  )
+  return result.node
+}
+
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const { createPage } = actions
+
   /* This is simply a wrapper around Gatsby's createPage function
    * that creates a page from the content in a given YAML file path.
    * 
    * @param {string}  filename  Name of YAML file in page directory.
    */
   function createPageFromYaml(filename) {
-    const { createPage } = actions
     // page content as yaml 
     const yamlData = yaml.load(fs.readFileSync(path.join(contentYamlDir, filename), 'utf-8'))
     const { path: pagePath, hero, sections, ...etc } = yamlData
@@ -35,10 +43,7 @@ exports.createPages = ({ actions }) => {
       path: pagePath,
       component: pageTemplate,
       context: {
-        bgFilename: hero.background_image,
-        hero,
-        sections: hydratedSections,
-        ...etc,
+        pagePath,
       },
     })
   }
@@ -50,4 +55,24 @@ exports.createPages = ({ actions }) => {
     `students.yaml`,
     `staff.yaml`,
   ].forEach(createPageFromYaml)
+}
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes} = actions
+  const typeDefs = `
+    type Hero {
+      id: ID!
+      background_image: File! @link(by: "relativePath")
+      blurb: String!
+      title: String!
+    }
+    type PagesYaml implements Node {
+      title: String!
+      description: String!
+      path: String!
+      hero: Hero
+      sections: [String!]!
+    }
+  `
+  createTypes(typeDefs)
 }

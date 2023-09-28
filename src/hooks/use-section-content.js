@@ -47,7 +47,16 @@ export const useSectionContent = id => {
       ProjectShowcase: sectionsYaml(section_id: { eq: "project-showcase" }) {
         projects {
           student_name
-          student_photo_path
+          student_photo {
+            childImageSharp {
+              gatsbyImageData(
+                width: 1200
+                height: 500
+                placeholder: BLURRED
+                formats: [AUTO, WEBP]
+              )
+            }
+          }
           project_description
         }
       }
@@ -58,14 +67,30 @@ export const useSectionContent = id => {
         }
       }
       StudentsStaffCtas: sectionsYaml(section_id: { eq: "students-staff-ctas" }) {
-        buttons {
-          staff_cta {
-            title
-            background_image_path
+        staff_cta {
+          title
+          background_image {
+            childImageSharp {
+              gatsbyImageData(
+                width: 600
+                height: 300
+                placeholder: BLURRED
+                formats: [AUTO, WEBP]
+              )
+            }
           }
-          students_cta {
-            title
-            background_image_path
+        }
+        students_cta {
+          title
+          background_image {
+            childImageSharp {
+              gatsbyImageData(
+                width: 600
+                height: 300
+                placeholder: BLURRED
+                formats: [AUTO, WEBP]
+              )
+            }
           }
         }
       }

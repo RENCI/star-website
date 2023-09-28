@@ -73,6 +73,20 @@ exports.createSchemaCustomization = ({ actions }) => {
       hero: Hero
       sections: [String!]!
     }
+    type Project {
+      student_name: String!
+      student_photo: File! @link(by: "relativePath")
+      project_description: String!
+    }
+    type CtaButton {
+      title: String!
+      background_image: File! @link(by: "relativePath")
+    }
+    type SectionsYaml implements Node {
+      projects: [Project!]
+      students_cta: CtaButton!
+      staff_cta: CtaButton!
+    }
   `
   createTypes(typeDefs)
 }

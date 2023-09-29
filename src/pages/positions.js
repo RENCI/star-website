@@ -6,7 +6,7 @@ import { Seo } from '../components/seo'
 
 const PositionsPage = ({ data }) => {
 
-  const positions = data.allMondayItem.nodes
+  const positions = data?.allMondayItem?.nodes ?? []
 
   return (
     <Fragment>
@@ -17,9 +17,9 @@ const PositionsPage = ({ data }) => {
       <Container sx={{ mt: 20 }}>
         <Typography level="h2" color="neutral">Positions</Typography>
         {
-          positions.map(position => (
+          positions.length ? positions.map(position => (
             <pre key={ position.id }>{JSON.stringify(position)}</pre>
-          ))
+          )) : 'No positions'
         }
       </Container>
     </Fragment>

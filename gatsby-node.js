@@ -14,7 +14,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     allPagesYaml {
       nodes {
         path
-        sections
       }
     }
   }`)

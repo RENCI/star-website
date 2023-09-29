@@ -5,29 +5,7 @@ const { paramCase, pascalCase } = require('change-case')
 
 //
 
-const contentYamlDir = path.join(`src`, `pages`)
-const sectionYamlDir = path.join(`src`, `content`, `sections`)
-const contentImagesDir = path.join(`src`, `content`, `images`)
 const pageTemplate = require.resolve('./src/templates/page.js')
-
-// page yaml files
-const pageFilenames = [
-  `home.yaml`,
-  `students.yaml`,
-  `staff.yaml`,
-]
-
-/**
- * looks up section content by its id.
- *
- * @param      {string}   sectionId  The section id to lookup.
- * @returns    {object}   the section's YAML data as an object
- */
-function getSectionContent(sectionId) {
-    const sectionFile = fs.readFileSync(path.join(sectionYamlDir, `${ sectionId }.yaml`), 'utf8')
-    const content = yaml.load(sectionFile)
-    return content
-}
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions

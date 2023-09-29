@@ -107,4 +107,10 @@ Images can be referenced and used in content YAML files by providing the path re
 
 ## 🌊 Data Flow
 
+Understanding how data moves around at build- and run-time in a Gatsby application can be tricky. This diagram aims to bring clarity to our situation---that is, how YAML (pages and sections) end up as content to be consumed by our application.
+
 ![data flow diagram](./data-flow-diagram.png)
+
+### Brief Overview
+
+Everything begins with YAML files (in `src/pages` and `src/content/sections`), which get processed by Gatsby's build process. This process is customized in `gatsby-node.js`, where we explicitly define some types and relations with `createSchemaCustomization`. This is important for querying said data and relationships in our GraphQL database. In `gatsby-node.js`, we query this data for page content (`PagesYaml`) and pass the path and section IDs to the template page's context. The template (in `src/templates`) then can pull in the appropriate sections client-side via the `useSectionContent` hook, which simply implements Gatsby's `useStaticQuery`. Non-template pages (JavaScript files in `src/pages/`) also have access to this content.

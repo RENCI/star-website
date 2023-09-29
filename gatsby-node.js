@@ -43,13 +43,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   // create a page from each the page yaml files
   results.data.allPagesYaml.nodes.forEach(node => {
-    // pages' sections mapped to their respective content
-    const hydratedSections = node.sections.reduce((acc, sectionFilename) => {
-      const content = getSectionContent(sectionFilename)
-      acc[sectionFilename] = content
-      return acc
-    }, {})
-
     // create page and pass section content in context
     createPage({
       path: node.path,

@@ -1,15 +1,17 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {
   AspectRatio, Card, CardOverflow,
   Link as JoyLink, Sheet, Stack,
 } from '@mui/joy'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Section } from '../section'
 import { Link } from '../link'
+import { useSectionContent } from '../../hooks'
 
 const CtaButton = ({
-  background_image_path, href, title
+  background_image, href, title
 }) => {
+  const bgImage = getImage(background_image)
   return (
     <Card sx={{
       overflow: 'hidden',
@@ -28,7 +30,7 @@ const CtaButton = ({
     }}>
       <CardOverflow>
         <AspectRatio>
-          <img src={ background_image_path } alt="" />
+          <GatsbyImage image={ bgImage } alt="" />
         </AspectRatio>
       </CardOverflow>
       <Sheet className="card-content">
@@ -42,8 +44,9 @@ const CtaButton = ({
   )
 }
 
-export const StudentsStaffCtas = ({ content }) => {
-  const { staff_cta, students_cta } = content.buttons
+export const StudentsStaffCtas = () => {
+  const content = useSectionContent('StudentsStaffCtas')
+  const { staff_cta, students_cta } = content
 
   return (
     <Section height={{ xs: '696px', sm: '396px' }}>
@@ -60,24 +63,9 @@ export const StudentsStaffCtas = ({ content }) => {
           }
         }}
       >
-        <CtaButton href="/students" { ...staff_cta } />
-        <CtaButton href="/staff" { ...students_cta } />
+        <CtaButton href="/students" { ...students_cta } />
+        <CtaButton href="/staff" { ...staff_cta } />
       </Stack>
     </Section>
   )
-}
-
-StudentsStaffCtas.propTypes = {
-  buttons: PropTypes.arrayOf(
-    PropTypes.shape({
-      students_cta: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        background_image_path: PropTypes.string.isRequired,
-      }),
-      staff_cta: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        background_image_path: PropTypes.string.isRequired,
-      }),
-    })
-  ),
 }

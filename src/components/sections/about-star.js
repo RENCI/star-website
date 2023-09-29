@@ -1,9 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Sheet, Typography } from '@mui/joy'
 import { Section } from '../section'
+import { useSectionContent } from '../../hooks'
 
-export const AboutStar = ({ content }) => {
+export const AboutStar = () => {
+  const content = useSectionContent('AboutStar')
+
   return (
     <Section
       backgroundColor="#ff990033"
@@ -18,10 +20,4 @@ export const AboutStar = ({ content }) => {
       </Sheet>
     </Section>
   )
-}
-
-AboutStar.propTypes = {
-  content: PropTypes.shape({
-    blurb: PropTypes.string.isRequired,
-  })
 }

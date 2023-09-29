@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export const useScrollPosition = () => {
+export const useScrolling = () => {
   const [scrollPosition, setScrollPosition] = useState(0)
   const [scrollDirection, setScrollDirection] = useState(1) // 1 up, -1 down
 

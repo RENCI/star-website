@@ -3,8 +3,6 @@ metadata:
   description: RENCI'S STAR Programs
   site_url: https://star.renci.org/
 navigation:
-  - label: Home
-    path: /
   - label: Students
     path: /students
   - label: Staff

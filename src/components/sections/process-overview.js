@@ -1,22 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Section } from '../section'
+import { useSectionContent } from '../../hooks'
 
-export const ProcessOverview = ({ content }) => {
+export const ProcessOverview = () => {
+  const content = useSectionContent('ProcessOverview')
+
   return (
     <Section>
       <pre>{ JSON.stringify(content) }</pre>
     </Section>
   )
-}
-
-ProcessOverview.propTypes = {
-  content: PropTypes.shape({
-    steps: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-      })
-    )
-  }),
 }

@@ -28,6 +28,7 @@ export const Section = ({
         justifyContent: 'stretch',
         alignItems: 'stretch',
         position: 'relative',
+        overflow: 'hidden',
         '.section-container': {
           backgroundColor: 'transparent',
           display: 'flex',

@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import {
   Button, FormControl, Input, Sheet, Stack, Typography,
 } from '@mui/joy'
-import { useScrollPosition } from '../hooks'
+import { useScrolling } from '../hooks'
 
-export const Hero = ({ background_image_path, blurb, title }) => {
-  const { scrollPosition } = useScrollPosition()
+export const Hero = ({ background_image, blurb, title }) => {
+  const heroImage = getImage(background_image)
+  const { scrollPosition } = useScrolling()
   const heroRef = useRef()
 
   useEffect(() => {
@@ -20,10 +22,13 @@ export const Hero = ({ background_image_path, blurb, title }) => {
       sx={{
         display: 'flex',
         height: '600px',
-        background: `url(${ background_image_path })`,
-        backgroundPosition: `center center`,
-        backgroundSize: 'cover',
+        position: 'relative',
+        '.background-image': {
+          position: 'absolute',
+          left: 0, top: 0, width: '100%', height: '600px',
+        },
         '.overlay': {
+          zIndex: 8,
           px: 4,
           margin: 'auto',
           width: '1200px',
@@ -47,6 +52,7 @@ export const Hero = ({ background_image_path, blurb, title }) => {
         },
       }}
     >
+      <GatsbyImage image={ heroImage } alt="" className="background-image" />
       <Stack
         justifyContent="center"
         alignItems="flex-start"
@@ -75,7 +81,7 @@ export const Hero = ({ background_image_path, blurb, title }) => {
 }
 
 Hero.propTypes = {
-  background_image_path: PropTypes.string.isRequired,
+  background_image: PropTypes.object.isRequired,
   blurb: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 }

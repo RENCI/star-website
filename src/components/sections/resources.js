@@ -1,8 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Section } from '../section'
+import { useSectionContent } from '../../hooks'
 
-export const Resources = ({ content }) => {
+export const Resources = () => {
+  const content = useSectionContent('Resources')
+
   return (
     <Section
       height="40vh"
@@ -11,15 +13,4 @@ export const Resources = ({ content }) => {
       <pre>{ JSON.stringify(content) }</pre>
     </Section>
   )
-}
-
-Resources.propTypes = {
-  content: PropTypes.shape({
-    steps: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        url: PropTypes.string.isRequired,
-      })
-    )
-  }),
 }

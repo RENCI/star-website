@@ -1,8 +1,44 @@
 section_id: programs-overview
 programs:
   - title: STAR Ventures
-    subtitle: Minim occaecat nisi
+    subtitle: Exercitation in ullamco amet fugiat enim magna proident
     description: Veniam cillum ut sed excepteur id sunt ullamco aliquip sunt esse adipisicing proident aliqua dolor aliquip dolor ea in. Nostrud aliqua ullamco commodo velit ut sed aute dolor tempor voluptate.
-  - title: Summer 2023
-    subtitle: Non consequat adipisicing
+    offerings:
+      - Summer
+  - title: iRODS Summer Internship
+    subtitle: Culpa in laborum anim id do magna fugiat
     description: Excepteur magna occaecat mollit eiusmod magna quis deserunt dolor aute. Elit aliqua duis labore officia ut voluptate cillum labore velit tempor sit incididunt.
+    offerings:
+      - Summer
+  - title: Director's Internship
+    subtitle: Lorem ipsum esse dolor eu ut est excepteur
+    description: In esse sunt dolor non occaecat do nisi proident sunt proident quis cillum culpa dolor. Dolor adipisicing cillum ad ullamco ea aute consequat in quis reprehenderit irure quis.
+    offerings:
+  - title: RENCI Internship
+    subtitle: Ea aute laboris consectetur fugiat non aliquip nisi
+    description: Lorem ipsum consequat nulla laboris aute non fugiat irure sit velit elit quis mollit velit. Fugiat commodo ut sed cillum ut elit aliquip duis minim culpa sunt dolore.
+    offerings:
+      - Fall
+      - Spring
+      - Summer
+  - title: Masters
+    subtitle: Lorem ipsum consequat officia consectetur ut laboris velit
+    description: Aliqua in reprehenderit dolor reprehenderit excepteur esse in incididunt nostrud. Deserunt dolore nulla cupidatat quis est nulla amet occaecat do consequat non laboris elit laboris sed laboris excepteur id.
+    offerings:
+      - Fall
+      - Spring
+      - Summer
+  - title: PhD
+    subtitle: Sunt duis ex proident id non amet in
+    description: Aliqua ex amet sit nulla magna eiusmod eu ea ex in aliquip. Lorem ipsum proident esse non velit consectetur occaecat ullamco dolor aute dolore aliqua irure.
+    offerings:
+      - Fall
+      - Spring
+      - Summer
+  - title: Affiliates
+    subtitle: Voluptate sunt in nostrud laboris incididunt ut do
+    description: Non laborum cupidatat veniam voluptate ea consectetur mollit dolor est enim cillum nostrud officia. Irure consequat proident commodo cupidatat culpa voluptate amet minim in sint ut culpa duis enim dolor nulla esse pariatur.
+    offerings:
+      - Fall
+      - Spring
+      - Summer

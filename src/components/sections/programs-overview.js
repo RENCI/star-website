@@ -1,8 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Section } from '../section'
+import { useSectionContent } from '../../hooks'
 
-export const ProgramsOverview = ({ content }) => {
+export const ProgramsOverview = () => {
+  const content = useSectionContent('ProgramsOverview')
+
   return (
     <Section
       backgroundColor="#00abc722"
@@ -10,16 +12,4 @@ export const ProgramsOverview = ({ content }) => {
       <pre>{ JSON.stringify(content) }</pre>
     </Section>
   )
-}
-
-ProgramsOverview.propTypes = {
-  content: PropTypes.shape({
-    programs: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        subtitle: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-      })
-    )
-  }),
 }

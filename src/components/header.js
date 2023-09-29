@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Sheet } from '@mui/joy'
 import { Container } from './container'
-import { useScrollPosition } from '../hooks'
+import { useScrolling } from '../hooks'
 import { Link } from './link'
 import { Menu } from './menu'
 
@@ -17,7 +17,7 @@ const Header = ({ siteTitle, menuOptions }) => {
     }
   `)
 
-  const { scrollPosition } = useScrollPosition()
+  const { scrollPosition } = useScrolling()
 
   // reduce header after user has scrolled down an bit,
   // at least through the hero.

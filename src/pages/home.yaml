@@ -2,7 +2,7 @@ title: Home
 description: Qui in ea aute in dolor ut voluptate in laboris nisi.
 path: /
 hero:
-  background_image_path: https://picsum.photos/1200/300
+  background_image: lake.jpg
   title: STAR
   blurb: >
     Eiusmod nisi nisi excepteur commodo sed ut sunt sunt anim elit veniam cupidatat officia occaecat.

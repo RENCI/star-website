@@ -5,7 +5,7 @@ const { paramCase, pascalCase } = require('change-case')
 
 //
 
-const pageTemplate = require.resolve('./src/templates/page.js')
+const stackedPageTemplate = require.resolve('./src/templates/stacked-page.js')
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
@@ -23,7 +23,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // create page and pass section content in context
     createPage({
       path: node.path,
-      component: pageTemplate,
+      component: stackedPageTemplate,
       context: {
         pagePath: node.path,
       },

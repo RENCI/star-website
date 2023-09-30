@@ -79,7 +79,7 @@ export const useSectionContent = id => {
             childImageSharp {
               gatsbyImageData(
                 width: 600
-                height: 300
+                height: 400
                 placeholder: BLURRED
                 formats: [AUTO, WEBP]
               )
@@ -92,7 +92,7 @@ export const useSectionContent = id => {
             childImageSharp {
               gatsbyImageData(
                 width: 600
-                height: 300
+                height: 400
                 placeholder: BLURRED
                 formats: [AUTO, WEBP]
               )

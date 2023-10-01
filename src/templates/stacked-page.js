@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
 import { Stack } from '@mui/joy'
+import { pascalCase } from 'change-case'
 import * as Sections from '../components/sections'
 import { Hero } from '../components/hero'
 import { Seo } from '../components/seo'
-const { pascalCase } = require('change-case')
 
 const StackedPage = ({ data }) => {
   const { hero, sections, title, description } = data.content

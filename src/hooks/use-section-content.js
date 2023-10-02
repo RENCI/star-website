@@ -114,5 +114,8 @@ export const useSectionContent = id => {
       }
     }
   `)
-  return content[id]
+  if (id) {
+    return content[id]
+  }
+  return content
 }

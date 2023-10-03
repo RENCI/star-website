@@ -5,10 +5,12 @@ import { pascalCase } from 'change-case'
 import * as Sections from '../components/sections'
 import { Hero } from '../components/hero'
 import { Seo } from '../components/seo'
+import { useSectionContent } from '../hooks'
 
 const StackedPage = ({ data }) => {
   const { hero, sections, title, description } = data.content
   const sectionFilenames = sections
+  const sectionContent = useSectionContent()
 
   return (
     <Fragment>
@@ -22,10 +24,12 @@ const StackedPage = ({ data }) => {
           sectionFilenames.map(componentFileName => {
             const componentName = pascalCase(componentFileName)
             const Component = Sections[componentName]
+            const content = sectionContent[componentName]
             return (
               <Component
                 key={ `Section${ componentName }`}
                 id={ `Section${ componentName }`}
+                content={ content }
               />
             )
           })

@@ -1,11 +1,9 @@
 import React from 'react'
 import { Sheet, Typography } from '@mui/joy'
 import { Section } from '../section'
-import { useSectionContent } from '../../hooks'
 
-export const AboutStar = () => {
-  const content = useSectionContent('AboutStar')
-
+export const AboutStar = ({ content }) => {
+  
   return (
     <Section
       backgroundColor="#ff990033"

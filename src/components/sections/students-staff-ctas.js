@@ -6,7 +6,6 @@ import {
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Section } from '../section'
 import { Link } from '../link'
-import { useSectionContent } from '../../hooks'
 
 const CtaButton = ({
   background_image, href, title
@@ -44,8 +43,7 @@ const CtaButton = ({
   )
 }
 
-export const StudentsStaffCtas = () => {
-  const content = useSectionContent('StudentsStaffCtas')
+export const StudentsStaffCtas = ({ content }) => {
   const { staff_cta, students_cta } = content
 
   return (

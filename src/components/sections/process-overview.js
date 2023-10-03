@@ -1,9 +1,7 @@
 import React from 'react'
 import { Section } from '../section'
-import { useSectionContent } from '../../hooks'
 
-export const ProcessOverview = () => {
-  const content = useSectionContent('ProcessOverview')
+export const ProcessOverview = ({ content }) => {
 
   return (
     <Section>

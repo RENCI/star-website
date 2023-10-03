@@ -1,10 +1,8 @@
 import React from 'react'
 import { Section } from '../section'
-import { useSectionContent } from '../../hooks'
 
-export const ImportantDates = () => {
-  const content = useSectionContent('ImportantDates')
-
+export const ImportantDates = ({ content }) => {
+  
   return (
     <Section
       backgroundColor="#00abc7cc"

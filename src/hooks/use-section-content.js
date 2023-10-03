@@ -4,10 +4,10 @@ import { graphql, useStaticQuery } from 'gatsby'
  * This uses a static query to pull in all section content.
  *
  * @param     {string}    id      The section identifier, `section_id`
- * @return    {object}    All content from the sectionsYaml returned corresponding to `id`
+ * @return    {object}    All sectionsYaml content
  * */
-export const useSectionContent = id => {
-  const content = useStaticQuery(graphql`
+export const useSectionContent = () => {
+  return useStaticQuery(graphql`
     query AllSectionContentQuery {
       AboutStar: sectionsYaml(section_id: { eq: "about-star" }) {
         blurb
@@ -114,8 +114,4 @@ export const useSectionContent = id => {
       }
     }
   `)
-  if (id) {
-    return content[id]
-  }
-  return content
 }

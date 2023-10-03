@@ -1,10 +1,8 @@
 import React from 'react'
 import { Section } from '../section'
-import { useSectionContent } from '../../hooks'
 
-export const WhyRenci = () => {
-  const content = useSectionContent('WhyRenci')
-
+export const WhyRenci = ({ content }) => {
+  
   return (
     <Section
       backgroundColor="#00abc766"

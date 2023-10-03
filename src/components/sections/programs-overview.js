@@ -1,10 +1,8 @@
 import React from 'react'
 import { Section } from '../section'
-import { useSectionContent } from '../../hooks'
 
-export const ProgramsOverview = () => {
-  const content = useSectionContent('ProgramsOverview')
-
+export const ProgramsOverview = ({ content }) => {
+  
   return (
     <Section
       backgroundColor="#00abc722"

@@ -1,11 +1,9 @@
 import React from 'react'
 import { Section } from '../section'
-import { useSectionContent } from '../../hooks'
 
 
-export const ProjectShowcase = () => {
-  const content = useSectionContent('ProjectShowcase')
-
+export const ProjectShowcase = ({ content }) => {
+  
   return (
     <Section
       height="75vh"

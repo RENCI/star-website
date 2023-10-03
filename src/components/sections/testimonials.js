@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Divider, Typography } from '@mui/joy'
 import { Section } from '../section'
-import { useSectionContent } from '../../hooks'
-
 
 const Quote = ({ quote, attribution, visible }) => {
   return (
@@ -15,8 +13,7 @@ const Quote = ({ quote, attribution, visible }) => {
   )
 }
 
-export const Testimonials = () => {
-  const content = useSectionContent('Testimonials')
+export const Testimonials = ({ content }) => {
   const { title, quotes } = content
   const [index, setIndex] = useState(0)
 
@@ -26,7 +23,7 @@ export const Testimonials = () => {
     }, 3000)
 
     return () => clearTimeout(wait)
-  }, [index, quotes.length])
+  }, [index, quotes])
 
   return (
     <Section

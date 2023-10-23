@@ -107,6 +107,7 @@ export const useSectionContent = () => {
         }
       }
       WhyRenci: sectionsYaml(section_id: { eq: "why-renci" }) {
+        title
         reasons {
           title
           description

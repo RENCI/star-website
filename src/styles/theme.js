@@ -6,11 +6,16 @@ const theme = extendTheme({
       palette: {
         // affects all Joy components that has `color="primary"` prop.
         primary: {
-          50: '#fffbeb',
-          100: '#fef3c7',
-          200: '#fde68a',
-          // 300, 400, ..., 800,
-          900: '#98350f',
+          50: '#95e9fc',
+          100: '#4edbfa',
+          200: '#07ccf8',
+          300: '#06afd5',
+          400: '#0592b1',
+          500: '#04758e',
+          600: '#035e72',
+          700: '#024655',
+          800: '#022f39',
+          900: '#01232b',
         },
       },
     },

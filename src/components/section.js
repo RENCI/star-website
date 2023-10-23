@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { Sheet } from '@mui/joy'
+import Typography from '@mui/joy/Typography';
 
 import { Container } from './container'
 
@@ -16,6 +17,7 @@ export const Section = ({
   height = '75vh',
   // make room for any additional style customization.
   customStyles = {},
+  title
 }) => {
   return (
     <Sheet
@@ -52,6 +54,7 @@ export const Section = ({
       }}
     >
       <Container className="section-container">
+        {title && <Typography level="h2">{title}</Typography>}
         { children }
       </Container>
       {

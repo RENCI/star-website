@@ -1,11 +1,30 @@
 section_id: why-renci
 title: Why RENCI?
 reasons:
-  - title: Eu ut aute culpa
-    description: Excepteur consectetur aliqua ea dolore irure ex qui est mollit commodo.
-  - title: Qui proident irure ea
-    description: Lorem ipsum nulla adipisicing aute aute ut commodo nulla sint ea tempor fugiat nostrud sint deserunt do commodo.
-  - title: Eu nulla adipisicing ut
-    description: Lorem ipsum occaecat elit dolore commodo non duis anim voluptate amet excepteur dolor pariatur deserunt dolor fugiat sit.
-  - title: Elit id exercitation magna
-    description: Voluptate in est exercitation do mollit incididunt culpa in veniam anim magna aliquip mollit excepteur culpa.
+  - title: Real World Impact
+    description: > 
+      RENCI works on projects funded through the NIH, NSF, NOAA, and 
+      beyond. These projects have real impacts for individuals around 
+      the world and include work to end the opioid crisis, create better 
+      information sharing during pandemics, better understand and model 
+      coastal hurricane impacts, and provide more rapid and effective 
+      treatment for heart, lung, blood, and sleep disorders.
+  - title: Explore Our Projects
+    description: >
+      Internships are assigned to each student by the internship team, 
+      but please take the time to view some of the projects we’re currently 
+      working on.
+  - title: People First Culture
+    description: >
+      RENCI puts people first, promoting learning, personal growth, 
+      collaboration, flexibility, and work/life balance, and these 
+      priorities extend to our interns as well. We boast a diverse staff 
+      and leadership that genuinely cares about, supports, and celebrates 
+      individual and team successes equally.
+  - title: AI and Data Science Exposure
+    description: >
+      AI and data science are currently hot topics, and they should be. 
+      Most careers will likely rely on or engage with some aspects of data 
+      science and/or AI in the future. RENCI does data science research. 
+      Your STAR internship will help you explore how your future career fits 
+      into the AI/data science revolution!

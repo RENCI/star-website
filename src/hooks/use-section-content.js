@@ -19,6 +19,7 @@ export const useSectionContent = () => {
         }
       }
       ImportantDates: sectionsYaml(section_id: { eq: "important-dates" }) {
+        title
         dates {
           date
           title

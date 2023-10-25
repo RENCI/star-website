@@ -7,18 +7,24 @@ const axiosOptions = { headers: {} }
 //
 
 const query = `query {
-  boards(ids:[3488406941]) {
+  boards(ids:[5267641585]) {
     columns {
       id
       title
-      settings_str
     }
-    items {
+    groups(ids:["group_title"]) {
       id
-      name
-      column_values {
-        title
-        value
+      title
+      items_page {
+        cursor
+        items {
+          id
+          name
+          column_values {
+            id
+            text
+          }
+        }
       }
     }
   }
@@ -40,10 +46,12 @@ async function fetchBoardData(options) {
 
 // columns (keys) end up as item object properties (values)
 const fieldMap = {
-  'RENCI Division/Project Team': 'division',
-  'Student Identified?': 'filled',
-  'Position Title': 'title',
-  'Estimated Start Date': 'startDate',
+  'Program': 'program',
+  'RENCI Domain': 'domain',
+  'Group': 'group',
+  'Project/Team Name': 'division',
+  'Semester': 'semester',
+  'Anticipated Start Date': 'startDate',
 }
 
 /* Turns column and row data into an array of position objects

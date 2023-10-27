@@ -29,13 +29,20 @@ const PositionsPage = ({ data }) => {
 export default PositionsPage
 
 export const query = graphql`
-    query PositionsQuery {
-      allMondayItem {
-        nodes {
-          id
-          manager
-          title
-        }
+  query PositionsQuery {
+    allMondayItem {
+      nodes {
+        id
+        name
+        program
+        domain
+        group
+        division
+        semester
+        startDate
+        description
+        duration
       }
     }
-  `
+  }
+`

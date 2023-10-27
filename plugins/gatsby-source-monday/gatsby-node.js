@@ -2,7 +2,9 @@ const axios = require('axios')
 const fs = require('fs')
 
 const API_URL = `https://api.monday.com/v2`
-const axiosOptions = { headers: {} }
+const axiosOptions = { headers: {
+  'API-Version': '2023-10',
+} }
 
 //
 
@@ -23,6 +25,11 @@ const query = `query {
           column_values {
             id
             text
+            column {
+              id
+              title
+            }
+            value
           }
         }
       }
@@ -45,35 +52,37 @@ async function fetchBoardData(options) {
 
 
 // columns (keys) end up as item object properties (values)
-const fieldMap = {
+const columnMap = {
   'Program': 'program',
   'RENCI Domain': 'domain',
   'Group': 'group',
   'Project/Team Name': 'division',
   'Semester': 'semester',
   'Anticipated Start Date': 'startDate',
+  'Position Description': 'description',
+  'Estimated Duration (in weeks)': 'duration',
 }
 
 /* Turns column and row data into an array of position objects
- * with fields defined by `fieldMap` 
+ * with fields defined by `columnMap` 
  * 
  * @param {array}  columns  Monday response columns defined in query above.
  * @param {array}  items    Monday response items defined in query above.
  * 
  * @return {array}  position objects.
  * */
-function assembleBoardData({ columns, items }) {
-  if (!columns || !items) { return }
-  return items.reduce((acc, item) => {
+function assembleBoardData({ columns, groups }) {
+  if (!columns || !groups) { return }
+  return groups[0].items_page.items.reduce((acc, item) => {
     const { id, name, column_values } = item
-    const extractedColumns = column_values
-      .reduce((acc, { title, value }) => {
-        if (title in fieldMap) {
-          acc[fieldMap[title]] = JSON.parse(value)
+    const extractedColumnValues = column_values
+      .reduce((acc, { column, text }) => {
+        if (column.title in columnMap) {
+          acc[columnMap[column.title]] = text
         }
         return acc
       }, {})
-    acc.push({ id, manager: name, ...extractedColumns })
+    acc.push({ id, name, ...extractedColumnValues })
     return acc
   }, [])
 }

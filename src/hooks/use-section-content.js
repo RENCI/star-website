@@ -45,10 +45,12 @@ export const useSectionContent = () => {
         }
       }
       ProgramsOverview: sectionsYaml(section_id: { eq: "programs-overview" }) {
+        title
         programs {
           title
           subtitle
           description
+          offerings
         }
       }
       ProjectShowcase: sectionsYaml(section_id: { eq: "project-showcase" }) {

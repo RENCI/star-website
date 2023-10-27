@@ -37,6 +37,11 @@ const theme = extendTheme({
     },
     h3: {
       fontWeight: '500'
+    },
+    h4: {
+      fontWeight: '300',
+      textDecoration: "italics"
+      
     }
   },
 

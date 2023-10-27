@@ -1,13 +1,15 @@
 import React from 'react'
 import { Section } from '../section'
+import { VerticalTabsList } from '../vertical-tabs-list'
 
 export const ProgramsOverview = ({ content }) => {
   
   return (
     <Section
-      backgroundColor="#00abc722"
+    title={content.title}  
+    backgroundColor="#00abc722"
     >
-      <pre>{ JSON.stringify(content) }</pre>
+      <VerticalTabsList programs={content.programs}/>
     </Section>
   )
 }

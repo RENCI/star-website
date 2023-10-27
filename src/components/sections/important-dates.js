@@ -44,13 +44,14 @@ export const ImportantDates = ({ content }) => {
   ]
 
   return (
-    <Section title={content.title} backgroundColor="#00abc7cc">
+    <Section title={content.title} backgroundColor="#fff" height="55vh">
       <Sheet>
         <Table
           color="neutral"
-          size="sm"
+          size="md"
           stickyHeader
           stripe="odd"
+          hoverRow
           variant="outlined"
           aria-label="important dates table"
         >
@@ -73,7 +74,6 @@ export const ImportantDates = ({ content }) => {
           </tbody>
         </Table>
       </Sheet>
-      {/* <pre>{ JSON.stringify(content) }</pre> */}
     </Section>
   )
 }

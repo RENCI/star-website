@@ -17,7 +17,6 @@ export const WhyRenci = ({ content }) => {
           ))
         }
       </Grid>
-      <pre>{ JSON.stringify(content) }</pre>
     </Section>
   )
 }

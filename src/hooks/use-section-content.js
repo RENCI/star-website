@@ -27,6 +27,7 @@ export const useSectionContent = () => {
         }
       }
       InterviewTips: sectionsYaml(section_id: { eq: "interview-tips" }) {
+        title
         tips {
           title
           description

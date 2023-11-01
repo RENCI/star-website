@@ -5,6 +5,7 @@ export const InterviewTips = ({ content }) => {
   
   return (
     <Section
+      title={content.title}  
       height="50vh"
       backgroundColor="#44668833"
     >

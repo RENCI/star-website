@@ -28,6 +28,16 @@ export const useSectionContent = () => {
       }
       InterviewTips: sectionsYaml(section_id: { eq: "interview-tips" }) {
         title
+        featured_img {
+          childImageSharp {
+            gatsbyImageData(
+              width: 800
+              height: 860
+              placeholder: BLURRED
+              formats: [AUTO, WEBP]
+            )
+          }
+        }
         tips {
           title
           description

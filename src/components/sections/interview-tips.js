@@ -1,15 +1,54 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Section } from '../section'
+import Stack from '@mui/joy/Stack'
+import AspectRatio from '@mui/joy/AspectRatio'
+import Box from '@mui/joy/Box'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+
+const TextPhotoWrapper = ({
+  featured_img, tips
+}) => {
+  const image = getImage(featured_img)
+
+  return (
+    <Stack
+      direction={{ xs: 'column', sm: 'row-reverse' }}
+      gap={ 4 }
+    >
+      <AspectRatio
+        objectFit="scale-down"
+        ratio="9/16"
+        minHeight={300}
+        maxHeight={400}
+        sx={{
+          flexBasis: '450px',
+          marginTop: '1.35rem'
+        }}
+        >
+          <GatsbyImage image={ image } alt="" />
+        </AspectRatio>
+
+      <Box>
+        {tips.map((tip)=>(
+          <Fragment>
+            <h3>{tip.title}</h3>
+            <p>{tip.description}</p>
+          </Fragment>
+        ))}
+      </Box>
+    </Stack>
+  )
+}
 
 export const InterviewTips = ({ content }) => {
-  
+
   return (
     <Section
       title={content.title}  
-      height="50vh"
+      // height="50vh"
       backgroundColor="#44668833"
     >
-      <pre>{ JSON.stringify(content) }</pre>
+      <TextPhotoWrapper { ...content }/>
     </Section>
   )
 }

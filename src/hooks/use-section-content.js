@@ -20,10 +20,18 @@ export const useSectionContent = () => {
       }
       ImportantDates: sectionsYaml(section_id: { eq: "important-dates" }) {
         title
+        date_titles {
+          position_description_completed
+          hiring_decisions_completed
+          job_offer_decision_form_due_from_student
+        }
         dates {
-          date
-          title
-          description
+          semester
+          semester_dates {
+            position_description_completed
+            hiring_decisions_completed
+            job_offer_decision_form_due_from_student
+          }
         }
       }
       InterviewTips: sectionsYaml(section_id: { eq: "interview-tips" }) {

@@ -14,15 +14,20 @@ const TextPhotoWrapper = ({
     <Stack
       direction={{ xs: 'column', sm: 'row-reverse' }}
       gap={ 4 }
+      sx={{minHeight: '50vh'}}
     >
       <AspectRatio
-        objectFit="scale-down"
+        objectFit="cover"
         ratio="9/16"
         minHeight={300}
         maxHeight={400}
         sx={{
           flexBasis: '450px',
-          marginTop: '1.35rem'
+          marginTop: '1.35rem',
+          width: '100%',
+          ".MuiAspectRatio-content": {
+            backgroundColor: "transparent"
+          }
         }}
         >
           <GatsbyImage image={ image } alt="" />

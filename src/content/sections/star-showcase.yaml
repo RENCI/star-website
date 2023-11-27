@@ -1,5 +1,6 @@
-section_id: project-showcase
-projects:
+section_id: star-showcase
+title: STAR Showcase
+students:
   - student_name: Jane Doe
     student_photo: student-photo.jpg
     project_description: Irure adipisicing do officia excepteur consectetur elit ea non commodo eu occaecat aute velit dolore in proident.

@@ -1,8 +1,7 @@
 import React from 'react'
 import { Section } from '../section'
 
-
-export const ProjectShowcase = ({ content }) => {
+export const StarShowcase = ({ content }) => {
   
   return (
     <Section

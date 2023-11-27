@@ -64,8 +64,9 @@ export const useSectionContent = () => {
           offerings
         }
       }
-      ProjectShowcase: sectionsYaml(section_id: { eq: "project-showcase" }) {
-        projects {
+      StarShowcase: sectionsYaml(section_id: { eq: "star-showcase" }) {
+        title
+        students {
           student_name
           student_photo {
             childImageSharp {

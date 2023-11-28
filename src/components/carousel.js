@@ -3,26 +3,10 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import Box from '@mui/joy/Box'
-import Card from '@mui/joy/Card'
-import Typography from '@mui/joy/Typography';
-
-// import required modules
 import { Navigation } from 'swiper/modules';
+import Box from '@mui/joy/Box'
 
-const StudentSlide = ({student}) => {
-  return (
-    <Box sx={{maxHeight: '300px', maxWidth: '600px'}}>
-      <Card>
-        <Typography fontSize="xl" fontWeight="lg">
-          {student.student_name}
-        </Typography>
-        <Typography>{student.project_description}</Typography>
-      </Card>
-    </Box>
-  )
-}
-
+import { StudentSlide } from './student-slide'
 
 export const Carousel = ({students}) => {
 

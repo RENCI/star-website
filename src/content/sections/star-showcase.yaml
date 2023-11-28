@@ -2,10 +2,10 @@ section_id: star-showcase
 title: STAR Showcase
 students:
   - student_name: Jane Doe
-    student_photo: student-photo.jpg
+    student_photo: sample-star-showcase-image1.png
     project_description: Irure adipisicing do officia excepteur consectetur elit ea non commodo eu occaecat aute velit dolore in proident.
   - student_name: John Doe
-    student_photo: student-photo.jpg
+    student_photo: sample-star-showcase-image2.png
     project_description: Laborum fugiat in laboris aliqua ut consectetur minim dolor dolor.
   - student_name: June Doe
     student_photo: student-photo.jpg

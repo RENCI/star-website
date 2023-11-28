@@ -71,7 +71,7 @@ export const useSectionContent = () => {
           student_photo {
             childImageSharp {
               gatsbyImageData(
-                width: 1200
+                width: 500
                 height: 500
                 placeholder: BLURRED
                 formats: [AUTO, WEBP]

@@ -13,7 +13,6 @@ export const StudentSlide = ({student}) => {
   const image = getImage(student_photo)
 
   return (
-    <Box sx={{margin: 'auto'}}>
       <Card 
         sx={{
           maxWidth: '600px',
@@ -51,6 +50,5 @@ export const StudentSlide = ({student}) => {
         </Stack>
 
       </Card>
-    </Box>
   )
 }

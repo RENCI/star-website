@@ -4,20 +4,32 @@ date_titles:
   position_description_completed: "Position Description Completed"
   hiring_decisions_completed: "Hiring Decisions Completed"
   job_offer_decision_form_due_from_student: "Job Offer Decision Form Due (from Student)"
+  unc_classes_begin: "UNC Classes Begin"
+  critical_onboarding_paperwork_due: "Critical Onboarding Paperwork Due"
+  prepping_for_day1_tasks_due: "Prepping for Day 1 Tasks Due"
 dates:
-  - semester: Fall 2023
+  - semester: FALL 2023
     semester_dates:
       position_description_completed: "Friday, July 21, 2023"
       hiring_decisions_completed: "Friday, August 11, 2023"
       job_offer_decision_form_due_from_student: "Wednesday, August 16, 2023"
-  - semester: Spring 2024
+      unc_classes_begin: "Monday, August 21, 2023"
+      critical_onboarding_paperwork_due: "Wednesday, August 23, 2023"
+      prepping_for_day1_tasks_due: "Wednesday, August 30, 2023"
+  - semester: SPRING 2024
     semester_dates:
       position_description_completed: "Friday, December 1, 2023"
       hiring_decisions_completed: "Friday, December 22, 2023"
       job_offer_decision_form_due_from_student: "Wednesday, January 3, 2024"
-  - semester: Summer 2024
+      unc_classes_begin: "Wednesday, January 10, 2024"
+      critical_onboarding_paperwork_due: "Wednesday, January 10, 2024"
+      prepping_for_day1_tasks_due: "Wednesday, January 17, 2024"
+  - semester: SUMMER 2024
     semester_dates:
       position_description_completed: "Friday, April 12, 2024"
       hiring_decisions_completed: "Friday, May 3, 2024"
       job_offer_decision_form_due_from_student: "Wednesday, May 8, 2024"
+      unc_classes_begin: "Wednesday, May 15, 2024"
+      critical_onboarding_paperwork_due: "Thursday, May 16, 2024"
+      prepping_for_day1_tasks_due: "Thursday, May 23, 2024"
 

@@ -24,6 +24,9 @@ export const useSectionContent = () => {
           position_description_completed
           hiring_decisions_completed
           job_offer_decision_form_due_from_student
+          unc_classes_begin
+          critical_onboarding_paperwork_due
+          prepping_for_day1_tasks_due
         }
         dates {
           semester
@@ -31,6 +34,9 @@ export const useSectionContent = () => {
             position_description_completed
             hiring_decisions_completed
             job_offer_decision_form_due_from_student
+            unc_classes_begin
+            critical_onboarding_paperwork_due
+            prepping_for_day1_tasks_due
           }
         }
       }

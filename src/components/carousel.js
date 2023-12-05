@@ -3,18 +3,33 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Keyboard, Pagination, Navigation } from 'swiper/modules';
-import Box from '@mui/joy/Box'
+import { Keyboard, Navigation } from 'swiper/modules';
 
 import { StudentSlide } from './student-slide'
 
 export const Carousel = ({students}) => {
 
   return (
-      <Swiper navigation={true} modules={[ Navigation]}>
+      <Swiper 
+        navigation={true} 
+        modules={[ Keyboard, Navigation]}
+        keyboard={{
+          enabled: true,
+        }}
+        slidesPerView={1}
+        spaceBetween={30}
+        style={{
+          height: '100%',
+          width: '100%'
+        }}
+      >
         {
           students.map((student) => (
-            <SwiperSlide style={{maxWidth:'1000px', display: "flex", justifyContent: "center", alightItems: "center"}}>
+            <SwiperSlide key={student.name} style={{ 
+              display: "flex", 
+              justifyContent: "center", 
+              alightItems: "center",
+            }}>
               <StudentSlide student={student}/>
             </SwiperSlide>
           ))

@@ -32,16 +32,16 @@ export const ImportantDates = ({ content }) => {
           <thead>
             <tr>
               <th style={{ width: "35%" }}></th>
-              {content.dates.map(({semester})=>(
-                <th>{semester}</th>
+              {content.dates.map(({semester}, i) => (
+                <th key={`semester-${i}`}>{semester}</th>
               ))}
             </tr>
           </thead>
           <tbody>
-            {datesArray.map(row => (
-              <tr>
-                {row.map(cell => (
-                  <td>{cell}</td>
+            {datesArray.map((row, rowIndex) => (
+              <tr key={`important-dates-row-${rowIndex}`}>
+                {row.map((cell, cellIndex) => (
+                  <td key={`important-dates-row-${rowIndex}-cell-${cellIndex}`}>{cell}</td>
                 ))}
               </tr>
             ))}

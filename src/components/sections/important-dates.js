@@ -5,7 +5,7 @@ import Sheet from "@mui/joy/Sheet"
 
 export const ImportantDates = ({ content }) => {
   
-  const datesArray = (content) => {
+  const createDatesArray = (content) => {
     const { date_titles, dates } = content
     const keysArray = Object.keys(date_titles)
 
@@ -15,8 +15,8 @@ export const ImportantDates = ({ content }) => {
     });
   }
 
-  const Dates = datesArray(content)
-  
+  const datesArray = createDatesArray(content)
+
   return (
     <Section title={content.title} backgroundColor="#fff" height="55vh">
       <Sheet>
@@ -38,7 +38,7 @@ export const ImportantDates = ({ content }) => {
             </tr>
           </thead>
           <tbody>
-            {Dates.map(row => (
+            {datesArray.map(row => (
               <tr>
                 {row.map(cell => (
                   <td>{cell}</td>

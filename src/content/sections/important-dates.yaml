@@ -1,3 +1,4 @@
+# Instructions for editing this file
 section_id: important-dates
 title: Important Dates
 date_titles:
@@ -7,6 +8,8 @@ date_titles:
   unc_classes_begin: "UNC Classes Begin"
   critical_onboarding_paperwork_due: "Critical Onboarding Paperwork Due"
   prepping_for_day1_tasks_due: "Prepping for Day 1 Tasks Due"
+
+# Content managers edit below this line.
 dates:
   - semester: FALL 2023
     semester_dates:

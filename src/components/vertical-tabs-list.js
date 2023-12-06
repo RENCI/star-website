@@ -1,12 +1,9 @@
 import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
 import Typography from '@mui/joy/Typography';
 import Tabs from '@mui/joy/Tabs';
 import TabList from '@mui/joy/TabList';
 import Tab, { tabClasses } from '@mui/joy/Tab';
 import TabPanel from '@mui/joy/TabPanel';
-import AspectRatio from '@mui/joy/AspectRatio';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import List from '@mui/joy/List';
 import ListItem from '@mui/joy/ListItem';
 

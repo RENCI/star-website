@@ -78,13 +78,14 @@ export const useSectionContent = () => {
           offerings
         }
       }
-      ProjectShowcase: sectionsYaml(section_id: { eq: "project-showcase" }) {
-        projects {
+      StarShowcase: sectionsYaml(section_id: { eq: "star-showcase" }) {
+        title
+        students {
           student_name
           student_photo {
             childImageSharp {
               gatsbyImageData(
-                width: 1200
+                width: 500
                 height: 500
                 placeholder: BLURRED
                 formats: [AUTO, WEBP]

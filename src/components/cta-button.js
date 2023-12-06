@@ -37,7 +37,6 @@ export const CtaButton = ({
           component={ Link } to={ href }
           className="card-title"
         >{ title }</JoyLink>
-        {console.log(background_image)}
       </Sheet>
     </Card>
   )

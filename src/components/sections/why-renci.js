@@ -13,7 +13,7 @@ export const WhyRenci = ({ content }) => {
       <Grid container spacing={2}>
         {
           content.reasons.map((paragraph) => (
-            <ParagraphGrid paragraph={paragraph} />
+            <ParagraphGrid heading={paragraph.title} body={paragraph.description} />
           ))
         }
       </Grid>

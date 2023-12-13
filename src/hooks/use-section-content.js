@@ -58,6 +58,7 @@ export const useSectionContent = () => {
         }
       }
       KeyContacts: sectionsYaml(section_id: { eq: "key-contacts" }) {
+        title
         people {
           name
           description

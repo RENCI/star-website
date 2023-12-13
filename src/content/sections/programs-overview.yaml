@@ -1,12 +1,18 @@
 section_id: programs-overview
+title: Programs Overview
 programs:
   - title: STAR Ventures
-    subtitle: Exercitation in ullamco amet fugiat enim magna proident
-    description: Veniam cillum ut sed excepteur id sunt ullamco aliquip sunt esse adipisicing proident aliqua dolor aliquip dolor ea in. Nostrud aliqua ullamco commodo velit ut sed aute dolor tempor voluptate.
+    subtitle: High School Internship
+    description: >
+      STAR Ventures is a 3-week summer program for high school students 
+      interested in exploring data science as a career. Students will 
+      have the opportunity to attend informational workshops about the 
+      roles and responsibilities of various departments within RENCI and 
+      how they contribute to data science research.
     offerings:
       - Summer
-  - title: iRODS Summer Internship
-    subtitle: Culpa in laborum anim id do magna fugiat
+  - title: Astral Program
+    subtitle: Rising College Freshmen (High School Seniors) and Undergraduate Students
     description: Excepteur magna occaecat mollit eiusmod magna quis deserunt dolor aute. Elit aliqua duis labore officia ut voluptate cillum labore velit tempor sit incididunt.
     offerings:
       - Summer

@@ -1,26 +1,25 @@
 import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
-import { Typography } from '@mui/joy'
+import { Stack, Typography } from '@mui/joy'
 import { Container } from '../components/container'
 import { Seo } from '../components/seo'
+import { FiltersTray, PositionsList } from '../components/positions'
 
 const PositionsPage = ({ data }) => {
-
-  const positions = data?.allMondayItem?.nodes ?? []
-
   return (
     <Fragment>
       <Seo
         title="Positions"
         description="Commodo sunt tempor ad velit nostrud aute est aute incididunt enim labore."
       />
-      <Container sx={{ mt: 20 }}>
+      <Container sx={{ mt: 20, p: 2 }}>
         <Typography level="h2" color="neutral">Positions</Typography>
-        {
-          positions.length ? positions.map(position => (
-            <pre key={ position.id }>{JSON.stringify(position)}</pre>
-          )) : 'No positions'
-        }
+
+        <Stack gap={ 2 }>
+          <FiltersTray />
+          <PositionsList />
+        </Stack>
+
       </Container>
     </Fragment>
   )
@@ -30,6 +29,14 @@ export default PositionsPage
 
 export const query = graphql`
   query PositionsQuery {
+    allMondayColumn {
+      nodes {
+        id
+        field
+        title
+        options
+      }
+    }
     allMondayItem {
       nodes {
         id
@@ -40,8 +47,11 @@ export const query = graphql`
         division
         semester
         startDate
-        description
         duration
+        abstract
+        description
+        pay
+        url
       }
     }
   }

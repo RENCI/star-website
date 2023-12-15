@@ -12,7 +12,9 @@ const query = `query {
   boards(ids:[5267641585]) {
     columns {
       id
+      settings_str
       title
+      type
     }
     groups(ids:["group_title"]) {
       id
@@ -59,20 +61,51 @@ const columnMap = {
   'Project/Team Name': 'division',
   'Semester': 'semester',
   'Anticipated Start Date': 'startDate',
-  'Position Description': 'description',
   'Estimated Duration (in weeks)': 'duration',
+  'Project Abstract': 'abstract',
+  'Position Description': 'description',
+  'Pay Range': 'pay',
+  'PD Link': 'url',
 }
 
-/* Turns column and row data into an array of position objects
+/* This function massages column data into a form suitable for building
+ *  position filters client-side. Our filters are select boxes, so we'll
+ *  only need to consider columns with enumerable possible values; that is 
+ *  only those with a type of `status`. Additionally, we only care about
+ *  those appearing in the `columnMap` object.
+ * 
+ * @param   array  columns    Monday response columns defined in query above.
+ * 
+ * @return  array  columns as objects.
+ * */
+function assembleColumnData({ columns }) {
+  return columns.reduce((acc, column) => {
+    const { id, title, type, settings_str } = column
+    const { labels = {} } = JSON.parse(settings_str)
+    if (title in columnMap && type === 'status') {
+      acc.push({
+        id,
+        // `field` defines the property on position objects,
+        // client-side, that correpond to this column on positions.
+        field: columnMap[title],
+        options: Object.values(labels),
+        title,
+      })
+    }
+    return acc
+  }, [])
+}
+
+/* This function massages row data into an array of position objects
  * with fields defined by `columnMap` 
  * 
- * @param {array}  columns  Monday response columns defined in query above.
- * @param {array}  items    Monday response items defined in query above.
+ * @param   array  columns    Monday response columns defined in query above.
+ * @param   array  items      Monday response items defined in query above.
  * 
- * @return {array}  position objects.
+ * @return  array  positions as objects.
  * */
-function assembleBoardData({ columns, groups }) {
-  if (!columns || !groups) { return }
+function assemblePositionData({ groups }) {
+  if (!groups) { return }
   return groups[0].items_page.items.reduce((acc, item) => {
     const { id, name, column_values } = item
     const extractedColumnValues = column_values
@@ -92,19 +125,42 @@ exports.sourceNodes = async (gatsbyApi, pluginOptions) => {
   const sourcingTimer = reporter.activityTimer(`source positions from Monday.com`)
   sourcingTimer.start()
   try {
+
+    // fetch the board data
     axiosOptions.headers.Authorization = `bearer ${ pluginOptions.API_TOKEN }`
     sourcingTimer.setStatus(`Fetching positions`)
     const boardData = await fetchBoardData(axiosOptions)
     if (!boardData) {
       throw new Error(`Failed to fetch positions`)
     }
+
+    // massage column data and create column nodes
     sourcingTimer.setStatus(`Assembling position data`)
-    const positionData = assembleBoardData(boardData)
+    const columnData = assembleColumnData(boardData)
+    if (!columnData) {
+      throw new Error(`Failed to process column data`)
+    }
+    sourcingTimer.setStatus(`Sourced ${ columnData.length } columns`)
+    for (const column of columnData) {
+      actions.createNode({
+        ...column,
+        parent: null,
+        children: [],
+        internal: {
+          type: 'MondayColumn',
+          contentDigest: createContentDigest(column)
+        }
+      })
+    }
+    sourcingTimer.setStatus(`Created ${ columnData.length } column nodes`)
+    
+    // massage position data and create position nodes
+    sourcingTimer.setStatus(`Assembling position data`)
+    const positionData = assemblePositionData(boardData)
     if (!positionData) {
       throw new Error(`Failed to process position data`)
     }
     sourcingTimer.setStatus(`Sourced ${ positionData.length } positions`)
-    // create nods from positions data.
     for (const position of positionData) {
       actions.createNode({
         ...position,
@@ -117,6 +173,7 @@ exports.sourceNodes = async (gatsbyApi, pluginOptions) => {
       })
     }
     sourcingTimer.setStatus(`Created ${ positionData.length } position nodes`)
+    
   } catch (error) {
     sourcingTimer.panicOnBuild(error)
   }

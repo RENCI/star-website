@@ -10,7 +10,6 @@ export const Layout = ({ children }) => (
       height: '100vh',
       display: 'flex',
       flexDirection: 'column',
-      pre: { whiteSpace: 'pre-wrap', p: 4 },
       'main': {
         flex: 1,
       },

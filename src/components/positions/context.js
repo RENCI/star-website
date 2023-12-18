@@ -5,8 +5,16 @@ export const usePositions = () => useContext(PositionsContext)
 
 /*
  * This utility function turns strings in an array
- * into properrties in an object, all of whose values
+ * into properties in an object, all of whose values
  * are set to a given initial value.
+ * 
+ * @param      {string[]} keysArray   strings to be used as
+ *                                    the returned object keys 
+ * @param      {any}      initialValue=''   value to initialize
+ *                                          the object with
+ * 
+ * @return     {object}   incoming strings as properties and
+ *                        values equal to the initial value.
  */
 function objectFromArray(keysArray, initialValue = '') {
   if (
@@ -20,10 +28,8 @@ function objectFromArray(keysArray, initialValue = '') {
 }
 
 export const PositionsProvider = ({ children }) => {
-  /*
-   * this query grabs all the position data that is
-   * coming directly from the monday source plugin.
-   */
+  // this query grabs all the position data that is
+  // coming directly from the monday source plugin.
   const data = useStaticQuery(graphql`
     query PositionsQuery {
       allMondayColumn {
@@ -57,21 +63,24 @@ export const PositionsProvider = ({ children }) => {
   // extract the data nodes.
   const columns = useMemo(() => data?.allMondayColumn?.nodes ?? [], [data])
   const positions = useMemo(() => data?.allMondayItem?.nodes ?? [], [data])
-  // filters is an object whose keys are position
+  // `filters` is an object whose keys are position
   // properties and whose values are ones to match
-  // on positions in the respective property.
+  // on positions in the respective property,
+  // e.g., { program: '', domain: 'Research', ... }.
   const [filters, setFilters] = useState(() => objectFromArray(columns), [columns])
-  // activeFilters is an array of filter keys that are in use
+  // activeFilters is an array of filter keys that are in use,
+  // e.g., ['domain'].
   const activeFilters = useMemo(() => Object.keys(filters)
     .filter(key => !!filters[key]), [filters])
-  // updating on changes to the filters, filteredPositions
-  // will contain those positions that match active filter values.
-  // if there are no active filters, this returns all positions.
+  // `filteredPositions` contains those positions that
+  // match active filter values, and it updates on
+  // changes to `filters`. if there are no active filters,
+  // all positions are returned.
   const filteredPositions = useMemo(() => {
     if (!activeFilters.length) {
       return positions
     }
-    // this is an inclusive or. which may not match user expectations. 
+    // this is an inclusive or, which may not match user expectations. 
     return positions
       .filter(position => {
         return activeFilters
@@ -79,11 +88,12 @@ export const PositionsProvider = ({ children }) => {
       })
   }, [activeFilters, filters, positions])
 
+  // sets all filter properties to the empty string.
   const resetFilters = () => setFilters(objectFromArray(columns))
 
   if (!data) {
-    // todo: implement a more appropriate loading indicator
-    return 'Loading...'
+    // todo: implement a more appropriate fallback.
+    return 'There is no data.'
   }
 
   return (
@@ -92,7 +102,11 @@ export const PositionsProvider = ({ children }) => {
         // monday board columns.
         // this gets turned into filters ui,
         // which can probably just happen here.
-        // ^ todo
+        // ^ todo: turn columns into filters here.
+        // there is no need for any part of this application
+        // to know anything about monday.com, and "columns"
+        // is an implementation detail of monday.com that
+        // can be handled here.
         columns,
         // all positions are available,..
         positions,
@@ -101,9 +115,9 @@ export const PositionsProvider = ({ children }) => {
         // all filtering functionality lives
         // inside this filters property
         filters: {
-          // alias for filters
+          // alias for `filters`
           current: filters,
-          // alias for setFilters
+          // alias for `setFilters`
           set: setFilters,
           // clear all filters
           reset: resetFilters,

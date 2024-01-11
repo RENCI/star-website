@@ -4,6 +4,7 @@ import Stack from '@mui/joy/Stack'
 import AspectRatio from '@mui/joy/AspectRatio'
 import Box from '@mui/joy/Box'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { TitleBodyItem } from '../title-body-item'
 
 const TextPhotoWrapper = ({
   featured_img, tips
@@ -34,12 +35,7 @@ const TextPhotoWrapper = ({
         </AspectRatio>
 
       <Box>
-        {tips.map((tip)=>(
-          <Fragment>
-            <h3>{tip.title}</h3>
-            <p>{tip.description}</p>
-          </Fragment>
-        ))}
+        {tips.map((tip)=>(<TitleBodyItem item={tip}/>))}
       </Box>
     </Stack>
   )

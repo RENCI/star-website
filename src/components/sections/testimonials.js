@@ -27,8 +27,9 @@ export const Testimonials = ({ content }) => {
 
   return (
     <Section
-      height="75vh"
-      backgroundColor="#f093"
+      height="40vh"
+      backgroundColor="#3333"
+      title="What Previous STARs say..."
     >
       <Typography level="h2">{ title }</Typography>
       

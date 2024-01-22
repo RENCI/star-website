@@ -35,15 +35,20 @@ export const Hero = ({ background_image, blurb, title }) => {
           '.title': {
             maxWidth: '66%',
             fontSize: '400%',
-            backgroundColor: '#cccc',
+            color: '#fff',
             p: 1,
+            letterSpacing: '2px',
+            fontWeight: '500'
           },
           '.subtitle': {
-            maxWidth: '66%',
+            maxWidth: '60%',
             fontSize: '120%',
-            backgroundColor: '#cccc',
-            lineHeight: 1.75,
+            color: '#fff',
+            lineHeight: 1.5,
             p: 1,
+            letterSpacing: '0.01px',
+            fontWeight: '500',
+            filter: 'drop-shadow(5px 5px 5px black)'
           },
           '.search-button': {
             borderTopLeftRadius: 0,

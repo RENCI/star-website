@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-import { graphql } from 'gatsby'
 import { Stack, Typography } from '@mui/joy'
 import { Container } from '../components/container'
 import { Seo } from '../components/seo'
@@ -26,33 +25,3 @@ const PositionsPage = ({ data }) => {
 }
 
 export default PositionsPage
-
-export const query = graphql`
-  query PositionsQuery {
-    allMondayColumn {
-      nodes {
-        id
-        field
-        title
-        options
-      }
-    }
-    allMondayItem {
-      nodes {
-        id
-        name
-        program
-        domain
-        group
-        division
-        semester
-        startDate
-        duration
-        abstract
-        description
-        pay
-        url
-      }
-    }
-  }
-`

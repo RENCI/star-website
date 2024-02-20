@@ -2,6 +2,7 @@ import React from 'react'
 import { 
   Box, 
   Card, 
+  Chip,
   Stack, 
   Typography, 
   Divider, 
@@ -29,27 +30,33 @@ export const PositionsCard = ({ position }) => {
           />
         )}
       >
-        <Box
-          sx={{minWidth: '250px'}}
-        >
-          <Typography sx={{marginBottom: '0.5rem'}}>{position.program}</Typography>
-          
-          <Typography level="title-lg" color="primary">
-            {position.name}
-          </Typography>
-          <Typography sx={{
+        <Box sx={{minWidth: '250px'}}>          
+        <Typography sx={{
             textTransform: 'uppercase', 
-            fontSize: '85%',  
-            marginTop: '0.5rem'
+            fontWeight: 600,
           }}>
             {TransformDate(position.semester)} 2024
           </Typography>
+
+          <Typography level="caption" sx={{ fontSize: '75%', marginTop: '1rem'}}>DOMAIN</Typography>
+          <Typography>
+            {position.domain}
+          </Typography>
+
+          <Typography level="caption" sx={{ fontSize: '75%', marginTop: '1rem'}}>GROUP</Typography>
+          <Typography>
+            {position.group}
+          </Typography>
+
         </Box>
-        <Box
-          sx={{ fontSize: '75%', }}
-        >
-          <Typography level="title-md">{position.domain} / {position.group}</Typography>
-          <Typography>{position.description}</Typography>
+        <Box sx={{width: '100%'}}>
+          <Stack direction="row-reverse">
+            <Chip color="primary" >{position.program}</Chip>
+          </Stack>
+          <Typography level="title-lg" color="primary" sx={{marginTop: '0.5rem'}}>
+            {position.name}
+          </Typography>
+          <Typography level="body-sm" sx={{marginTop: '1rem'}}>{position.description}</Typography>
           <br/>
           <Button
             component="a" 

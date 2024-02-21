@@ -3,8 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { Sheet, Typography, Box, Container, Grid, useTheme } from '@mui/joy'
 // import { Container } from './container'
 import { Link } from './link'
-import renciLogo from '../images/renci.png'
-import starLogo from '../images/star-logo-color.png'
+import starRenciLogo from '../images/star-renci-logo-combined.png'
 
 export const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -44,7 +43,7 @@ export const Footer = () => {
                 display: 'block',
                 minHeight: '50px',
                 minWidth: '110px',
-                backgroundImage: `url(${ starLogo })`,
+                backgroundImage: `url(${ starRenciLogo })`,
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: '0% 50%',
@@ -59,15 +58,6 @@ export const Footer = () => {
             <p>919-445-9640</p>
           </Grid>
           <Grid item xs={ 12 } sm={ 4 } md={ 3 } lg={ 3 } className="link-group">
-            <Box component="span" sx={{
-              display: 'block',
-              minHeight: '60px',
-              minWidth: '120px',
-              backgroundImage: `url(${ renciLogo })`,
-              backgroundSize: 'contain',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: '0% 50%',
-            }} />
             <br/>
             <strong>Connect</strong>
             <ul className="link-list">

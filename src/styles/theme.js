@@ -5,14 +5,14 @@ const palette = {
     palette: {
       // affects all Joy components that has `color="primary"` prop.
       primary: {
-        50: '#95e9fc',
-        100: '#4edbfa',
-        200: '#07ccf8',
-        300: '#06afd5',
+        50: '#b8eaff',
+        100: '#92cce2',
+        200: '#6caec6',
+        300: '#529bb4',
         400: '#0592b1',
         500: '#04758e',
         600: '#035e72',
-        700: '#024655',
+        700: '#022f39',
         800: '#022f39',
         900: '#01232b',
       },

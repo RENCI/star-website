@@ -7,7 +7,7 @@ export const WhyRenci = ({ content }) => {
   
   return (
     <Section
-      backgroundColor="#00abc766"
+      // backgroundColor="#ECFEE8"
       title={content.title}
     >
       <Grid container spacing={2}>

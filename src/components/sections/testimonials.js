@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import { Divider, Typography } from '@mui/joy'
+import { Divider, Typography, Box } from '@mui/joy'
 import { Section } from '../section'
 
 const Quote = ({ quote, attribution, visible }) => {
   return (
     <Typography level="body-md" sx={{
       display: visible ? 'block' : 'none',
+      fontSize: '1.5rem',
+      fontStyle: 'italic'
     }}>
       { quote } <br />
       - { attribution }
@@ -33,8 +35,8 @@ export const Testimonials = ({ content }) => {
     >
       <Typography level="h2">{ title }</Typography>
       
-      <Divider sx={{ width: '75%', m: '2rem auto' }} />
-
+      <Divider sx={{ width: '75%', m: '0rem auto 1rem' }} />
+      <Box sx={{maxWidth: '700px'}}>
       {
         quotes.map((item, i) => (
           <Quote
@@ -44,6 +46,8 @@ export const Testimonials = ({ content }) => {
           />
         ))
       }
+
+      </Box>
     </Section>
   )
 }

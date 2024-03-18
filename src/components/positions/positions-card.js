@@ -6,7 +6,9 @@ import {
   Stack, 
   Typography, 
   Divider, 
-  Button } from '@mui/joy'
+  Button,
+  List,
+  ListItem } from '@mui/joy'
 import OpenInNew from '@mui/icons-material/OpenInNew';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
@@ -19,7 +21,7 @@ export const PositionsCard = ({ position }) => {
     return displaySemester
   }
   return (
-    <Card variant="soft">
+    <Card variant="soft" size="lg">
       <Stack 
         direction={{ xs: 'column', sm: 'row' }}
         spacing={3}
@@ -30,15 +32,8 @@ export const PositionsCard = ({ position }) => {
           />
         )}
       >
-        <Box sx={{minWidth: '250px'}}>          
-        <Typography sx={{
-            textTransform: 'uppercase', 
-            fontWeight: 600,
-          }}>
-            {TransformDate(position.semester)} 2024
-          </Typography>
-
-          <Typography level="caption" sx={{ fontSize: '75%', marginTop: '1rem'}}>DOMAIN</Typography>
+        <Box sx={{minWidth: '250px'}}>
+          <Typography level="caption" sx={{ fontSize: '75%'}}>DOMAIN</Typography>
           <Typography>
             {position.domain}
           </Typography>
@@ -50,13 +45,11 @@ export const PositionsCard = ({ position }) => {
 
         </Box>
         <Box sx={{width: '100%'}}>
-          <Stack direction="row-reverse">
-            <Chip color="primary" >{position.program}</Chip>
-          </Stack>
-          <Typography level="title-lg" color="primary" sx={{marginTop: '0.5rem'}}>
-            {position.name}
+          <Typography level="title-lg" color="primary" sx={{}}>
+            {position.name}, {TransformDate(position.semester)} 2024
           </Typography>
           <Typography level="body-sm" sx={{marginTop: '1rem'}}>{position.description}</Typography>
+          <br/>
           <br/>
           <Button
             component="a" 

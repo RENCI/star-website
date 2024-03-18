@@ -1,7 +1,10 @@
 section_id: testimonials
 title: What previous STARs say...
 quotes:
-  - quote: Commodo elit anim in aliqua culpa aute in sint eu in culpa id ut non cillum velit.
+  - quote: >
+      Commodo elit anim in aliqua culpa aute in sint eu in 
+      culpa id ut non cillum velit. Amet deserunt ea nisi 
+      quis non adipisicing in velit cupidatat reprehenderit.
     attribution: Jane Doe
   - quote: Amet deserunt ea nisi quis non adipisicing in velit cupidatat reprehenderit.
     attribution: John Doe

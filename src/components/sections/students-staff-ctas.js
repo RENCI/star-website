@@ -14,7 +14,7 @@ export const StudentsStaffCtas = ({ content }) => {
         sx={{
           my: '30px',
           height: { xs: '600px', sm: '450px' },
-          width: '75%',
+          width: '85%',
           p: 2,
           '.MuiCard-root': {
             flex: 1,

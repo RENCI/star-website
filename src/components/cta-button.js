@@ -1,7 +1,7 @@
 import React from 'react'
 import {
   AspectRatio, Card, CardOverflow,
-  Link as JoyLink, Sheet,
+  Link as JoyLink, Sheet, Typography
 } from '@mui/joy'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Link } from './link'
@@ -20,7 +20,7 @@ export const CtaButton = ({
         left: 0,
         right: 0,
         height: '65px',
-        backgroundColor: 'azure',
+        backgroundColor: '#04758E',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -36,7 +36,15 @@ export const CtaButton = ({
           overlay
           component={ Link } to={ href }
           className="card-title"
-        >{ title }</JoyLink>
+        >
+          <Typography level="body-lg" sx={{
+            textTransform: 'uppercase',
+            fontWeight: 600,
+            color: '#fff'
+          }}>
+          { title }
+          </Typography>
+          </JoyLink>
       </Sheet>
     </Card>
   )

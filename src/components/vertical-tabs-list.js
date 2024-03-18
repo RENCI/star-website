@@ -20,7 +20,7 @@ export const VerticalTabsList = ({programs}) => {
         disableUnderline
         
         sx={{
-          minWidth: '200px',
+          width: '400px',
           p: 0.5,
           m: '1rem',
           gap: 2,

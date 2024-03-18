@@ -31,8 +31,8 @@ const theme = extendTheme({
 
     },
     h2: {
-      paddingBottom: '1.5rem',
-      fontWeight: '600',
+      paddingBottom: '1.75rem',
+      fontWeight: '500',
       color: palette.light.palette.primary[700],
     },
     h3: {

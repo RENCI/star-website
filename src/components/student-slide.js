@@ -21,6 +21,7 @@ export const StudentSlide = ({student}) => {
       >
         <Stack
           direction={{ xs: 'column', sm: 'row' }}
+          gap={3}
         >
         <AspectRatio 
           flex 

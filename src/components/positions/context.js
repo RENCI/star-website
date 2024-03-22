@@ -44,7 +44,7 @@ export const PositionsProvider = ({ children }) => {
         nodes {
           id
           name
-          program
+          education
           domain
           group
           division
@@ -66,7 +66,7 @@ export const PositionsProvider = ({ children }) => {
   // `filters` is an object whose keys are position
   // properties and whose values are ones to match
   // on positions in the respective property,
-  // e.g., { program: '', domain: 'Research', ... }.
+  // e.g., { education: '', domain: 'Research', ... }.
   const [filters, setFilters] = useState(() => objectFromArray(columns), [columns])
   // activeFilters is an array of filter keys that are in use,
   // e.g., ['domain'].

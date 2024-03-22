@@ -55,7 +55,7 @@ async function fetchBoardData(options) {
 
 // columns (keys) end up as item object properties (values)
 const columnMap = {
-  'Program': 'program',
+  'Minimum Education': 'education',
   'RENCI Domain': 'domain',
   'Group': 'group',
   'Project/Team Name': 'division',

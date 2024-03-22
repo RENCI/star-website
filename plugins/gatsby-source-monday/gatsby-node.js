@@ -75,7 +75,7 @@ exports.sourceNodes = async (gatsbyApi, pluginOptions) => {
     sourcingTimer.panicOnBuild(error)
     sourcingTimer.setStatus(`Could not source positions from API; using fallback data`)
 
-    sourcingTimer.setStatus(`Assembling sample position data`)
+    sourcingTimer.setStatus(`Assembling sample column data`)
     createColumnNodes(gatsbyApi, sampleData.columns)
     
     sourcingTimer.setStatus(`Assembling sample position data`)

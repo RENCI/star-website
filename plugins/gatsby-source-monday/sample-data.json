@@ -1,32 +1,83 @@
-[
-  {
-    "id": "5637633427",
-    "name": "Software Development Intern",
-    "education": "Undergraduate: Freshman/Sophomore",
-    "domain": "Research",
-    "group": "Software Architecture",
-    "division": "HeLx, EduHeLx, ORDR-D",
-    "semester": "Spring Semester",
-    "startDate": "2024-01-10",
-    "duration": "16",
-    "abstract": "Ut pariatur laborum laborum eu ex eu ullamco adipisicing sit.",
-    "description": "In nisi officia labore duis exercitation culpa fugiat dolore est.",
-    "pay": "$12-$18 per hour",
-    "url": "https://example.com/"
-  },
-  {
-    "id": "5704883132",
-    "name": "Project Management and Strategic Engagement Internship",
-    "education": "Undergraduate: Freshman/Sophomore",
-    "domain": "Collaborations",
-    "group": "National Consortium for Data Science",
-    "division": "National Consortium for Data Science",
-    "semester": "Spring Semester",
-    "startDate": "2024-01-10",
-    "duration": "12 weeks",
-    "abstract": "Ut occaecat in cupidatat ullamco officia adipisicing aliqua et nostrud ut.",
-    "description": "Amet veniam labore commodo ea deserunt nisi non dolore amet exercitation irure proident ad irure.",
-    "pay": "$12-18 per hour",
-    "url": "https://example.com/"
-  }
-]
+{
+  "positions": [
+    {
+      "id": "sample-pos-1",
+      "name": "Sample position 1",
+      "education": "Undergraduate: Freshman/Sophomore",
+      "domain": "Research",
+      "group": "Software Architecture",
+      "division": "HeLx, EduHeLx, ORDR-D",
+      "semester": "Spring Semester",
+      "startDate": "2024-01-10",
+      "duration": "16",
+      "abstract": "Ut pariatur laborum laborum eu ex eu ullamco adipisicing sit.",
+      "description": "In nisi officia labore duis exercitation culpa fugiat dolore est.",
+      "pay": "$12-$18 per hour",
+      "url": "https://example.com/"
+    },
+    {
+      "id": "sample-pos-2",
+      "name": "Sample position 2",
+      "education": "Undergraduate: Freshman/Sophomore",
+      "domain": "Collaborations",
+      "group": "National Consortium for Data Science",
+      "division": "National Consortium for Data Science",
+      "semester": "Spring Semester",
+      "startDate": "2024-01-10",
+      "duration": "12 weeks",
+      "abstract": "Ut occaecat in cupidatat ullamco officia adipisicing aliqua et nostrud ut.",
+      "description": "Amet veniam labore commodo ea deserunt nisi non dolore amet exercitation irure proident ad irure.",
+      "pay": "$12-18 per hour",
+      "url": "https://example.com/"
+    }
+  ],
+  "columns": [
+    {
+      "id": "status8",
+      "field": "education",
+      "options": [
+        "Undergraduate: Freshman/Sophomore",
+        "Undergraduate: Junior/Senior",
+        "Graduate"
+      ],
+      "title": "Minimum Education"
+    },
+    {
+      "id": "status",
+      "field": "domain",
+      "options": [ "Research", "Operations", "Collaborations" ],
+      "title": "RENCI Domain"
+    },
+    {
+      "id": "status1",
+      "field": "group",
+      "options": [
+        "Office of the Director",
+        "Project Management",
+        "Coordination Team",
+        "Finance",
+        "Earth Data Science",
+        "Data Science & Analytics",
+        "Clinical Informatics",
+        "Software Architecture",
+        "Networking Research & Infrastructure",
+        "Advanced Cyber Infrastructure Support",
+        "Communications",
+        "Human Resources",
+        "BioData Catalyst Coordinating Center",
+        "NIH Heal Data Stewardship Group",
+        "National Consortium for Data Science",
+        "RADx Data Hub",
+        "iRODS Consortium",
+        "South Big Data Hub"
+      ],
+      "title": "Group"
+    },
+    {
+      "id": "status3",
+      "field": "semester",
+      "options": [ "Spring Semester", "Fall Semester", "Summer Semester" ],
+      "title": "Semester"
+    }
+  ]
+}

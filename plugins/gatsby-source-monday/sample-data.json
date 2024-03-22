@@ -1,0 +1,32 @@
+[
+  {
+    "id": "5637633427",
+    "name": "Software Development Intern",
+    "education": "Undergraduate: Freshman/Sophomore",
+    "domain": "Research",
+    "group": "Software Architecture",
+    "division": "HeLx, EduHeLx, ORDR-D",
+    "semester": "Spring Semester",
+    "startDate": "2024-01-10",
+    "duration": "16",
+    "abstract": "Ut pariatur laborum laborum eu ex eu ullamco adipisicing sit.",
+    "description": "In nisi officia labore duis exercitation culpa fugiat dolore est.",
+    "pay": "$12-$18 per hour",
+    "url": "https://example.com/"
+  },
+  {
+    "id": "5704883132",
+    "name": "Project Management and Strategic Engagement Internship",
+    "education": "Undergraduate: Freshman/Sophomore",
+    "domain": "Collaborations",
+    "group": "National Consortium for Data Science",
+    "division": "National Consortium for Data Science",
+    "semester": "Spring Semester",
+    "startDate": "2024-01-10",
+    "duration": "12 weeks",
+    "abstract": "Ut occaecat in cupidatat ullamco officia adipisicing aliqua et nostrud ut.",
+    "description": "Amet veniam labore commodo ea deserunt nisi non dolore amet exercitation irure proident ad irure.",
+    "pay": "$12-18 per hour",
+    "url": "https://example.com/"
+  }
+]

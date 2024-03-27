@@ -23,10 +23,18 @@ export const PositionsCard = ({ position }) => {
 
     return `${displaySemester} ${displayYear}`
   }
+
+  const DisplayDate = (startDate) => {
+    const date = new Date(startDate);
+    const formattedDate = `${date.getMonth() + 1}-${date.getDate() + 1}-${date.getFullYear()}`;
+
+    return formattedDate
+  }
+
   return (
     <Card variant="soft" size="lg">
       <Stack 
-        direction={{ xs: 'column', sm: 'row' }}
+        direction={{ xs: 'column-reverse', sm: 'row' }}
         spacing={3}
         divider={(
           <Divider
@@ -51,8 +59,38 @@ export const PositionsCard = ({ position }) => {
           <Typography level="title-lg" color="primary" sx={{}}>
             {position.name}, {DisplaySemester(position.semester, position.startDate)}
           </Typography>
-          <Typography level="body-sm" sx={{marginTop: '1rem'}}>{position.description}</Typography>
+          <Typography level="body-md" sx={{marginTop: '1rem'}}>{position.description}</Typography>
           <br/>
+          <List marker="disc" size="sm" sx={{
+            listStyleType: 'disc',
+            marginLeft: '1rem',
+            paddingLeft: '2rem',
+            '& .MuiListItem-root': {
+              display: 'list-item',
+            },
+          }}>
+            <ListItem sx={{pading: 0}}>
+              <Typography>
+                <strong>Minimum Education: </strong>{position.education}
+              </Typography>
+            </ListItem>
+            <ListItem>
+              <Typography>
+                <strong>Anticipated Start Date: </strong>{DisplayDate(position.startDate)}
+              </Typography>
+            </ListItem>
+            <ListItem>
+              <Typography>
+                <strong>Estimated Duration: </strong>{position.duration} weeks
+              </Typography>
+            </ListItem>
+            <ListItem>
+              <Typography>
+                <strong>Pay Range: </strong>{position.pay}
+              </Typography>
+            </ListItem>
+          </List>
+
           <br/>
           <Button
             component="a" 

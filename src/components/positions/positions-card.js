@@ -16,9 +16,12 @@ import { useTheme } from '@mui/material/styles';
 export const PositionsCard = ({ position }) => {
   const theme = useTheme();
 
-  const TransformDate = (semester) => {
+  const DisplaySemester = (semester, startDate) => {
     const displaySemester = semester.split(" ")[0]
-    return displaySemester
+
+    const displayYear = startDate.split("-")[0]
+
+    return `${displaySemester} ${displayYear}`
   }
   return (
     <Card variant="soft" size="lg">
@@ -46,7 +49,7 @@ export const PositionsCard = ({ position }) => {
         </Box>
         <Box sx={{width: '100%'}}>
           <Typography level="title-lg" color="primary" sx={{}}>
-            {position.name}, {TransformDate(position.semester)} 2024
+            {position.name}, {DisplaySemester(position.semester, position.startDate)}
           </Typography>
           <Typography level="body-sm" sx={{marginTop: '1rem'}}>{position.description}</Typography>
           <br/>

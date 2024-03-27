@@ -6,7 +6,7 @@ export const AboutStar = ({ content }) => {
   
   return (
     <Section
-      backgroundColor="#ff990033"
+      backgroundColor="#04758E33"
       height="33vh"
     >
       <Sheet sx={{

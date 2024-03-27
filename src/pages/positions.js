@@ -1,27 +1,27 @@
 import React, { Fragment } from 'react'
-import { Sheet, Typography } from '@mui/joy'
+import { Stack, Typography } from '@mui/joy'
+import { Container } from '../components/container'
 import { Seo } from '../components/seo'
+import { FiltersTray, PositionsList } from '../components/positions'
 
-const PositionsPage = () => (
-  <Fragment>
-    <Seo
-      title="Positions"
-      description="Commodo sunt tempor ad velit nostrud aute est aute incididunt enim labore."
-    />
-    <Sheet sx={{
-      border: '1px dashed grey',
-      height: '50vh',
-      width: '50vw',
-      margin: 'auto',
-      mt: 8,
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-    }}>
-      <Typography level="h2" color="neutral">Positions</Typography>
-    </Sheet>
-  </Fragment>
-)
+const PositionsPage = ({ data }) => {
+  return (
+    <Fragment>
+      <Seo
+        title="Positions"
+        description="Commodo sunt tempor ad velit nostrud aute est aute incididunt enim labore."
+      />
+      <Container sx={{ mt: 20, p: 2 }}>
+        <Typography level="h2" color="neutral">Positions</Typography>
+
+        <Stack gap={ 2 }>
+          <FiltersTray />
+          <PositionsList />
+        </Stack>
+
+      </Container>
+    </Fragment>
+  )
+}
 
 export default PositionsPage

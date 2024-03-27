@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Link as GatsbyLink } from 'gatsby'
+import { Link as MUILink} from '@mui/joy'
+
 
 export const ExternalLinkIcon = ({ size, ...rest }) => {
   return (
@@ -26,16 +28,27 @@ ExternalLinkIcon.propTypes = {
 export const ExternalLink = ({ to, children, ...etc }) => {
   return (
     <Fragment>
-      <a
+      <MUILink
         href={ to }
         target="_blank"
         rel="noopener noreferrer"
         { ...etc }
       >
         { children }
-      </a>
+      </MUILink>
       <ExternalLinkIcon size={ 10 } style={{ marginLeft: '4px' }} />
     </Fragment>
+  )
+}
+
+export const InternalLink = ({ to, children, ref, ...props }) => {
+  return (
+    <MUILink
+    component={GatsbyLink} 
+    to={ to } { ...props } ref={ ref }
+    >
+      { children }
+    </MUILink>
   )
 }
 
@@ -45,5 +58,5 @@ export const Link = React.forwardRef(({ to, children, ...props }, ref) => {
   if (match) {
     return <ExternalLink to={ to } { ...props } ref={ ref }>{ children }</ExternalLink>
   }
-  return <GatsbyLink to={ to } { ...props } ref={ ref }>{ children }</GatsbyLink>
+  return <InternalLink to={ to } { ...props } ref={ ref }>{ children }</InternalLink>
 })

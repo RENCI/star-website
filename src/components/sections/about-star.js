@@ -10,7 +10,7 @@ export const AboutStar = ({ content }) => {
       height="33vh"
     >
       <Sheet sx={{
-        backgroundColor: '#fff9',
+        backgroundColor: '#04758E00',
         borderRadius: '1rem',
         p: 8, m: { xs: 2, md: 4},
       }}>

@@ -32,7 +32,7 @@ export const Hero = ({ background_image, blurb, title }) => {
           margin: 'auto',
           width: '100%',
           height:'100%',
-          background: 'linear-gradient(90deg, #331E36 0%, rgba(0, 0, 0, 0) 75%)',
+          background: 'linear-gradient(90deg, #1A1B2F 0%, rgba(0, 0, 0, 0) 100%)',
           '.content': {
             zIndex: 9,
             width: '1200px',

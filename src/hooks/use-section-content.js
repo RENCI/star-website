@@ -131,6 +131,7 @@ export const useSectionContent = () => {
         }
       }
       Testimonials: sectionsYaml(section_id: { eq: "testimonials" }) {
+        title
         quotes {
           quote
           attribution

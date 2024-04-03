@@ -19,8 +19,8 @@ export const Carousel = ({students}) => {
         slidesPerView={1}
         spaceBetween={30}
         style={{
-          height: '100%',
-          width: '100%'
+          height: '90%',
+          width: '100%',
         }}
       >
         {

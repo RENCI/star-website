@@ -21,8 +21,8 @@ export const StudentsStaffCtas = ({ content }) => {
           }
         }}
       >
-        <CtaButton href="/students" { ...students_cta } />
-        <CtaButton href="/staff" { ...staff_cta } />
+        <CtaButton href="/students" backgroundColor="#F9A302" { ...students_cta } />
+        <CtaButton href="/staff" backgroundColor="#1A1B2F"{ ...staff_cta } />
       </Stack>
     </Section>
   )

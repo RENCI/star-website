@@ -7,7 +7,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Link } from './link'
 
 export const CtaButton = ({
-  background_image, href, title
+  background_image, href, title, backgroundColor
 }) => {
   const bgImage = getImage(background_image)
   return (
@@ -20,7 +20,7 @@ export const CtaButton = ({
         left: 0,
         right: 0,
         height: '65px',
-        backgroundColor: '#04758E',
+        backgroundColor: backgroundColor,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -38,11 +38,13 @@ export const CtaButton = ({
           className="card-title"
         >
           <Typography level="body-lg" sx={{
-            textTransform: 'uppercase',
-            fontWeight: 600,
-            color: '#fff'
+            // textTransform: 'uppercase',
+            fontWeight: 500,
+            color: '#fff',
+            fontSize: '1.4rem',
+            letterSpacing: '1px'
           }}>
-          { title }
+          { title }{" > "}
           </Typography>
           </JoyLink>
       </Sheet>

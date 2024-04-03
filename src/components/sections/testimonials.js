@@ -12,7 +12,7 @@ const Quote = ({ quote, attribution, visible }) => {
       }}>
         { quote }
       </Typography>
-      <Typography level="body-sm" sx={{ fontStyle: 'italic', textAlign: 'right' }}>
+      <Typography level="body-sm" sx={{ fontStyle: 'italic', textAlign: 'right', fontSize: '1rem' }}>
       - { attribution }
       </Typography>
     </Fragment>
@@ -34,12 +34,10 @@ export const Testimonials = ({ content }) => {
   return (
     <Section
       height="40vh"
-      backgroundColor="#3333"
-      title="STAR Tales"
+      backgroundColor="#33333310"
+      title={title}
     >
-      <Typography level="h2">{ title }</Typography>
-      
-      {/* <Divider sx={{ width: '75%', m: '0rem auto 1rem' }} /> */}
+      <Divider sx={{ width: '75%', m: '0rem auto 1rem' }} />
       <Box sx={{maxWidth: '900px'}}>
         {
           quotes.map((item, i) => (

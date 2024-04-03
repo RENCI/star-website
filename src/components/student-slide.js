@@ -17,6 +17,8 @@ export const StudentSlide = ({student}) => {
         sx={{
           maxWidth: '600px',
           flexWrap: 'wrap',
+          marginTop: '1rem',
+          marginBottom: '1rem'
         }}
       >
         <Stack

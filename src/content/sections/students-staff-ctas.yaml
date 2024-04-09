@@ -1,7 +1,7 @@
 section_id: students-staff-ctas
 students_cta:
   title: Students
-  background_image: mountain.jpg
+  background_image: students-button-photo.png
 staff_cta:
   title: Staff
-  background_image: street.jpg
+  background_image: staff-button-photo.png

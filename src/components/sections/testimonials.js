@@ -1,15 +1,21 @@
-import React, { useEffect, useState } from 'react'
-import { Divider, Typography } from '@mui/joy'
+import React, { useEffect, useState, Fragment } from 'react'
+import { Divider, Typography, Box } from '@mui/joy'
 import { Section } from '../section'
 
 const Quote = ({ quote, attribution, visible }) => {
   return (
-    <Typography level="body-md" sx={{
-      display: visible ? 'block' : 'none',
-    }}>
-      { quote } <br />
+    <Fragment>
+      <Typography level="body-md" sx={{
+        display: visible ? 'block' : 'none',
+        fontSize: '1.5rem',
+        textAlign: 'left'
+      }}>
+        { quote }
+      </Typography>
+      <Typography level="body-sm" sx={{ fontStyle: 'italic', textAlign: 'right', fontSize: '1rem' }}>
       - { attribution }
-    </Typography>
+      </Typography>
+    </Fragment>
   )
 }
 
@@ -27,22 +33,22 @@ export const Testimonials = ({ content }) => {
 
   return (
     <Section
-      height="75vh"
-      backgroundColor="#f093"
+      height="40vh"
+      backgroundColor="#33333310"
+      title={title}
     >
-      <Typography level="h2">{ title }</Typography>
-      
-      <Divider sx={{ width: '75%', m: '2rem auto' }} />
-
-      {
-        quotes.map((item, i) => (
-          <Quote
-            key={ `testimonial-${ i }` }
-            visible={ index === i }
-            { ...item }
-          />
-        ))
-      }
+      <Divider sx={{ width: '75%', m: '0rem auto 1rem' }} />
+      <Box sx={{maxWidth: '900px'}}>
+        {
+          quotes.map((item, i) => (
+            <Quote
+              key={ `testimonial-${ i }` }
+              visible={ index === i }
+              { ...item }
+            />
+          ))
+        }
+      </Box>
     </Section>
   )
 }

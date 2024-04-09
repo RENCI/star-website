@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import {
-  Button, FormControl, Input, Sheet, Stack, Typography,
+  Button, FormControl, Input, Sheet, Stack, Typography, Box
 } from '@mui/joy'
 import { useScrolling } from '../hooks'
 
@@ -29,21 +29,34 @@ export const Hero = ({ background_image, blurb, title }) => {
         },
         '.overlay': {
           zIndex: 8,
-          px: 4,
           margin: 'auto',
-          width: '1200px',
+          width: '100%',
+          height:'100%',
+          background: 'linear-gradient(90deg, #1A1B2F 0%, rgba(0, 0, 0, 0) 100%)',
+          '.content': {
+            zIndex: 9,
+            width: '1200px',
+            margin: 'auto',
+            px: 4,
+            height:'100%',
+          },
           '.title': {
             maxWidth: '66%',
             fontSize: '400%',
-            backgroundColor: '#cccc',
+            color: '#fff',
             p: 1,
+            letterSpacing: '2px',
+            fontWeight: '500'
           },
           '.subtitle': {
-            maxWidth: '66%',
+            maxWidth: '60%',
             fontSize: '120%',
-            backgroundColor: '#cccc',
-            lineHeight: 1.75,
+            color: '#fff',
+            lineHeight: 1.5,
             p: 1,
+            letterSpacing: '0.01px',
+            fontWeight: '500',
+            filter: 'drop-shadow(5px 5px 5px black)'
           },
           '.search-button': {
             borderTopLeftRadius: 0,
@@ -53,15 +66,16 @@ export const Hero = ({ background_image, blurb, title }) => {
       }}
     >
       <GatsbyImage image={ heroImage } alt="" className="background-image" />
+      <Box className="overlay">
       <Stack
         justifyContent="center"
         alignItems="flex-start"
         gap={ 3 }
-        className="overlay"
+        className="content"
       >
         <Typography level="h1" className="title">{ title }</Typography>
-        <Typography level="body-md" className="subtitle">{ blurb }</Typography>
-        <FormControl>
+        <Typography level="body-lg" className="subtitle">{ blurb }</Typography>
+        {/* <FormControl>
           <Input
             placeholder="Search positions"
             endDecorator={
@@ -74,8 +88,10 @@ export const Hero = ({ background_image, blurb, title }) => {
             }
             sx={{ '--Input-decoratorChildHeight': '45px' }}
           />
-        </FormControl>
+        </FormControl> */}
       </Stack>
+
+      </Box>
     </Sheet>
   )
 }

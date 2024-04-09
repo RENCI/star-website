@@ -38,8 +38,21 @@ export const Menu = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            '&[aria-current="page"]': {
+              borderBottom: '5px solid #04758e'
+            },
+            '&:hover': {
+              fontWeight: '600'
+            },
           },
         },
+        '.MuiLink-root': {
+          // color: 'red',
+          fontWeight: '400',
+          fontSize: '120%',
+          
+        },
+        
       }}
     >
       {
@@ -48,7 +61,9 @@ export const Menu = () => {
             key={ path }
             className="nav-list"
           >
-            <Link to={ path }>{ label }</Link>
+            <Link to={ path } underline='none'>
+              { label }
+            </Link>
           </li>
         ))
       }

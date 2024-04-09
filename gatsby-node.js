@@ -47,7 +47,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       hero: Hero
       sections: [String!]!
     }
-    type Project {
+    type Student {
       student_name: String!
       student_photo: File! @link(by: "relativePath")
       project_description: String!
@@ -57,7 +57,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       background_image: File! @link(by: "relativePath")
     }
     type SectionsYaml implements Node {
-      projects: [Project!]
+      students: [Student!]
       students_cta: CtaButton!
       staff_cta: CtaButton!
     }

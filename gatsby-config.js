@@ -1,5 +1,10 @@
+require('dotenv').config({
+  path: `.env.${ process.env.NODE_ENV }`,
+})
+
 module.exports = {
   plugins: [
+    /* image plugins */
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -8,6 +13,9 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    /* content plugins */
     `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -37,18 +45,22 @@ module.exports = {
         path: `${__dirname}/src/content/theme`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    /* custom plugins */
+    {
+      resolve: `gatsby-source-monday`,
+      options: {
+        API_TOKEN: process.env.MONDAY_API_TOKEN,
+      }
+    },
+    /* manifest */
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `star-website`,
+        short_name: `star`,
         start_url: `/`,
-        background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+        background_color: `#007abc`,
+        theme_color: `#007abc`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },

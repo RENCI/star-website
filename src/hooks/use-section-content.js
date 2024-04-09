@@ -20,19 +20,45 @@ export const useSectionContent = () => {
       }
       ImportantDates: sectionsYaml(section_id: { eq: "important-dates" }) {
         title
+        date_titles {
+          position_description_completed
+          hiring_decisions_completed
+          job_offer_decision_form_due_from_student
+          unc_classes_begin
+          critical_onboarding_paperwork_due
+          prepping_for_day1_tasks_due
+        }
         dates {
-          date
-          title
-          description
+          semester
+          semester_dates {
+            position_description_completed
+            hiring_decisions_completed
+            job_offer_decision_form_due_from_student
+            unc_classes_begin
+            critical_onboarding_paperwork_due
+            prepping_for_day1_tasks_due
+          }
         }
       }
       InterviewTips: sectionsYaml(section_id: { eq: "interview-tips" }) {
+        title
+        featured_img {
+          childImageSharp {
+            gatsbyImageData(
+              width: 800
+              height: 860
+              placeholder: BLURRED
+              formats: [AUTO, WEBP]
+            )
+          }
+        }
         tips {
           title
           description
         }
       }
       KeyContacts: sectionsYaml(section_id: { eq: "key-contacts" }) {
+        title
         people {
           name
           description
@@ -45,19 +71,22 @@ export const useSectionContent = () => {
         }
       }
       ProgramsOverview: sectionsYaml(section_id: { eq: "programs-overview" }) {
+        title
         programs {
           title
           subtitle
           description
+          offerings
         }
       }
-      ProjectShowcase: sectionsYaml(section_id: { eq: "project-showcase" }) {
-        projects {
+      StarShowcase: sectionsYaml(section_id: { eq: "star-showcase" }) {
+        title
+        students {
           student_name
           student_photo {
             childImageSharp {
               gatsbyImageData(
-                width: 1200
+                width: 500
                 height: 500
                 placeholder: BLURRED
                 formats: [AUTO, WEBP]
@@ -102,6 +131,7 @@ export const useSectionContent = () => {
         }
       }
       Testimonials: sectionsYaml(section_id: { eq: "testimonials" }) {
+        title
         quotes {
           quote
           attribution

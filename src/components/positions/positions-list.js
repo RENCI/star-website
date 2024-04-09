@@ -1,7 +1,7 @@
 import React from 'react'
 import { Stack, Typography } from '@mui/joy'
 import { usePositions } from './context'
-import { PositionPreview } from './position-preview'
+import { PositionsCard } from './positions-card'
 
 export const PositionsList = () => {
   const { filteredPositions } = usePositions()
@@ -29,7 +29,7 @@ export const PositionsList = () => {
     <Stack gap={ 2 }>
       {
         filteredPositions.map(position => (
-          <PositionPreview
+          <PositionsCard
             key={ position.id }
             position={ position }
           />

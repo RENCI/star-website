@@ -2,11 +2,12 @@ title: Students
 description: Est in qui irure in aute occaecat laborum enim ut cillum sunt ullamco quis.
 path: /students
 hero:
-  background_image: treetops.jpg
+  background_image: students-hero.jpg
   title: Students
   blurb: >
-    Adipisicing tempor occaecat sunt cupidatat sint magn
-    dolore et do dolore eiusmod exercitation minim in
+    Are you in high school or college? Explore your career interests through a RENCI STAR 
+    internship in data and computer science, business and finance, communication and 
+    design, the research sciences, and beyond.
 sections:
   - why-renci
   - programs-overview

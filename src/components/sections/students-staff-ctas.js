@@ -1,47 +1,7 @@
 import React from 'react'
-import {
-  AspectRatio, Card, CardOverflow,
-  Link as JoyLink, Sheet, Stack,
-} from '@mui/joy'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { Stack } from '@mui/joy'
 import { Section } from '../section'
-import { Link } from '../link'
-
-const CtaButton = ({
-  background_image, href, title
-}) => {
-  const bgImage = getImage(background_image)
-  return (
-    <Card sx={{
-      overflow: 'hidden',
-      position: 'relative',
-      '.card-content': {
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        height: '75px',
-        backgroundColor: 'azure',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      },
-    }}>
-      <CardOverflow>
-        <AspectRatio>
-          <GatsbyImage image={ bgImage } alt="" />
-        </AspectRatio>
-      </CardOverflow>
-      <Sheet className="card-content">
-        <JoyLink
-          overlay
-          component={ Link } to={ href }
-          className="card-title"
-        >{ title }</JoyLink>
-      </Sheet>
-    </Card>
-  )
-}
+import { CtaButton } from '../cta-button'
 
 export const StudentsStaffCtas = ({ content }) => {
   const { staff_cta, students_cta } = content
@@ -52,17 +12,17 @@ export const StudentsStaffCtas = ({ content }) => {
         direction={{ xs: 'column', sm: 'row' }}
         gap={ 4 }
         sx={{
-          my: '48px',
-          height: { xs: '600px', sm: '300px' },
-          width: '100%',
+          my: '30px',
+          height: { xs: '600px', sm: '450px' },
+          width: '85%',
           p: 2,
           '.MuiCard-root': {
             flex: 1,
           }
         }}
       >
-        <CtaButton href="/students" { ...students_cta } />
-        <CtaButton href="/staff" { ...staff_cta } />
+        <CtaButton href="/students" backgroundColor="#F9A302" { ...students_cta } />
+        <CtaButton href="/staff" backgroundColor="#1A1B2F"{ ...staff_cta } />
       </Stack>
     </Section>
   )

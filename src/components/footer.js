@@ -1,7 +1,9 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { Sheet, Typography } from '@mui/joy'
-import { Container } from './container'
+import { Sheet, Typography, Box, Container, Grid, useTheme } from '@mui/joy'
+// import { Container } from './container'
+import { Link } from './link'
+import starRenciLogo from '../images/star-renci-logo-combined.png'
 
 export const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -13,28 +15,65 @@ export const Footer = () => {
       }
     }
   `)
+  const theme = useTheme()
 
   return (
-    <Sheet component="footer" sx={{
-      backgroundColor: '#333',
-      minHeight: '25vh',
-      p: 4,
-      '.footer-container': {
-        margin: '0 auto',
-        height: '100%',
-        backgroundColor: 'transparent',
-        color: '#eee',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      },
-    }}>
-      <Container className="footer-container">
-        <Typography level="body-lg" textColor="neutral.300">
-          &copy; { new Date().getFullYear() } &middot; { data.themeYaml.footer.copyright }
-        </Typography>
+    <Box
+      sx={{
+        background: '#ddd',
+        padding: '2.5rem 0',
+        color: theme.palette.text.primary,
+        '& .link-group': {
+          // paddingTop: '1rem',
+        },
+        '& .link-list': {
+          padding: 0,
+          listStyleType: 'none',
+          '& li': {
+            marginBottom: '0.5rem',
+          }
+        },
+      }}
+    >
+      <Container maxWidth="lg" >
+        <Grid container>
+          <Grid item xs={ 12 } sm={ 8 } md={ 9 } lg={ 9 }>
+
+              <Box component="span" sx={{
+                display: 'block',
+                minHeight: '50px',
+                minWidth: '110px',
+                backgroundImage: `url(${ starRenciLogo })`,
+                backgroundSize: 'contain',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: '0% 50%',
+              }} />
+              <p>
+                Student Achievement at RENCI<br />
+                Europa Center <br />
+                100 Europa Drive, Suite 540 <br />
+                Chapel Hill, NC  27517
+              </p>
+            <p>media@renci.org</p>
+            <p>919-445-9640</p>
+          </Grid>
+          <Grid item xs={ 12 } sm={ 4 } md={ 3 } lg={ 3 } className="link-group">
+            <br/>
+            <strong>Connect</strong>
+            <ul className="link-list">
+              <li><Link to="https://www.twitter.com/RENCI">Twitter</Link></li>
+              <li><Link to="https://www.facebook.com/renci.org">Facebook</Link></li>
+              <li><Link to="https://www.linkedin.com/company/65321">LinkedIn</Link></li>
+              <li><Link to="https://www.youtube.com/RENCIMedia">YouTube</Link></li>
+            </ul>
+          </Grid>
+
+          <Grid item xs={ 12 } style={{ textAlign: 'center', padding: '1rem' }}>
+            &copy; { new Date().getFullYear() }
+          </Grid>
+        </Grid>
       </Container>
-    </Sheet>
+    </Box>
   )
 }
 

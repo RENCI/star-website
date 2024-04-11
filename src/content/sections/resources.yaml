@@ -1,8 +1,22 @@
 section_id: resources
+title: STAR Talk Resources
 links:
-  - title: Lorem ipsum ut
-    url: https://example.com/
-  - title: Consectetur et consequat
-    url: https://example.com/
-  - title: Mollit qui anim
-    url: https://example.com/
+  - title: STARship Guidelines
+    url: https://docs.google.com/document/d/1p20E9P-rZUjCoDAJCzGckRqPRxI18ldv85fUueLwxvc/edit?usp=drive_link
+    buttonColor: '#F9A302'
+  - title: STAR Ventures Guidelines
+    url: https://docs.google.com/document/d/1kxRN48QsfMpfevdv5dchMNLeJq2H_8kIY4AtCXzPgaE/edit?usp=drive_link
+    buttonColor: '#00758D'
+blurb: >
+  Each STARship and STAR ventures student will give a presentation 
+  at the end of their session. Use these resources to help you 
+  prepare for your STAR talk. Note that the guidelines for STAR Talks 
+  for STARships and STAR Ventures vary.
+stayConnectedButtonText: "Stay Connected to the STARverse"
+stayConnectedButtonURL: http://bit.ly/STARInterestFormRENCI
+stayConnectedblurb: "Fill out the Student Interest Form to stay connected with STAR updates, including:"
+stayConnectedlist:
+  - item: 'Alerts when new positions are posted'
+  - item: 'Tips for successful internships'
+  - item: 'Upcoming events'
+  - item: 'Program highlights'

@@ -1,15 +1,21 @@
 import React from 'react'
 import { Section } from '../section'
-import { VerticalTabsList } from '../vertical-tabs-list'
+import { ProgramTabs } from '../program-tabs-section'
+import { Sheet, Container, Typography } from '@mui/joy'
 
 export const ProgramsOverview = ({ content }) => {
   
   return (
-    <Section
-    title={content.title}  
-    // backgroundColor="#04758E33"
+    <Sheet
+      component="section"
+      sx={{
+      }}
     >
-      <VerticalTabsList programs={content.programs}/>
-    </Section>
+      <Typography level="h2" sx={{
+        textAlign: 'center',
+        my: 2,
+      }}>{content.title}</Typography>
+      <ProgramTabs programs={content.programs}/>
+    </Sheet>
   )
 }

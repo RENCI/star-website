@@ -65,6 +65,7 @@ export const useSectionContent = () => {
         }
       }
       ProcessOverview: sectionsYaml(section_id: { eq: "process-overview" }) {
+        title
         steps {
           title
           description

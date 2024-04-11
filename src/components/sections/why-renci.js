@@ -9,6 +9,7 @@ export const WhyRenci = ({ content }) => {
     <Section
       // backgroundColor="#ECFEE8"
       title={content.title}
+      height="55vh"
     >
       <Grid container spacing={2}>
         {

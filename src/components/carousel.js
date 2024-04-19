@@ -19,9 +19,10 @@ export const Carousel = ({students}) => {
         slidesPerView={1}
         spaceBetween={30}
         style={{
-          height: '90%',
+          height: '50%',
           width: '100%',
         }}
+        parallax
       >
         {
           students.map((student) => (

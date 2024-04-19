@@ -7,9 +7,9 @@ export const StarShowcase = ({ content }) => {
   return (
     <Section
       title={content.title}
-      height="55vh"
+      height="50vh"
     >
-        <Carousel students={content.students} />
+      <Carousel students={content.students} />
     </Section>
   )
 }

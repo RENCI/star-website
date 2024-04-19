@@ -3,54 +3,52 @@ import Box from '@mui/joy/Box'
 import Card from '@mui/joy/Card'
 import Typography from '@mui/joy/Typography';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-
+import Button from '@mui/joy/Button'
 import AspectRatio from '@mui/joy/AspectRatio';
 import CardContent from '@mui/joy/CardContent';
 import Stack from '@mui/joy/Stack'
-
+import { Link } from './link'
 export const StudentSlide = ({student}) => {
-  const { student_name, student_photo, project_description } = student
-  const image = getImage(student_photo)
+  const { 
+    student_name, 
+    title, 
+    project_description,
+    project_link_text, 
+    project_link } = student
 
   return (
       <Card 
         sx={{
           maxWidth: '600px',
+          minWidth: '400px',
           flexWrap: 'wrap',
           marginTop: '1rem',
           marginBottom: '1rem'
         }}
       >
-        <Stack
-          direction={{ xs: 'column', sm: 'row' }}
-          gap={3}
-        >
-        <AspectRatio 
-          flex 
-          ratio="1"  
-          sx={{
-            minWidth: '200px', 
-            ".MuiAspectRatio-content": {
-              backgroundColor: "transparent",
-              paddingBottom: 0
-            }
-          }}
-        >
-          <GatsbyImage image={ image } alt="" />
-        </AspectRatio>
-        
-        <CardContent>  
-          <Typography fontSize="xl" fontWeight="lg">
-            {student_name}
-          </Typography>
-          
-          <Typography level="body-sm" fontWeight="lg" textColor="text.tertiary">
-            Student Intern
-          </Typography>
-          
-          <Typography>{project_description}</Typography>
+        <CardContent sx={{
+          display: 'flex', 
+          flexDirection: 'column', 
+          justifyContent: 'space-between'
+        }}>
+          <Box>
+            <Typography fontSize="xl" fontWeight="lg">
+              {student_name}
+            </Typography>
+            
+            <Typography level="body-sm" fontWeight="lg" textColor="text.tertiary">
+              {title}
+            </Typography>
+            
+            <Typography>{project_description}</Typography>
+
+          </Box>
+          <Button
+            component={Link}
+            to={project_link}
+            noIcon
+          >{project_link_text}</Button>
         </CardContent>
-        </Stack>
 
       </Card>
   )

@@ -60,7 +60,7 @@ export const Link = React.forwardRef(({ to, children, noIcon, ...props }, ref) =
   const externalUrlPattern = new RegExp(/^https?:\/\//)
   const match = externalUrlPattern.exec(to)
   if (match) {
-    return <ExternalLink to={ to } noIcon={noIcon} { ...props } ref={ ref }>{ children }</ExternalLink>
+    return <ExternalLink to={ to } { ...props } noIcon={noIcon} ref={ ref }>{ children }</ExternalLink>
   }
   return <InternalLink to={ to } { ...props } ref={ ref }>{ children }</InternalLink>
 })

@@ -84,17 +84,10 @@ export const useSectionContent = () => {
         title
         students {
           student_name
-          student_photo {
-            childImageSharp {
-              gatsbyImageData(
-                width: 500
-                height: 500
-                placeholder: BLURRED
-                formats: [AUTO, WEBP]
-              )
-            }
-          }
+          title
           project_description
+          project_link_text
+          project_link
         }
       }
       Resources: sectionsYaml(section_id: { eq: "resources" }) {

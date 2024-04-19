@@ -1,18 +1,34 @@
 section_id: star-showcase
 title: Projects in the STARlight
 students:
-  - student_name: Jane Doe
-    student_photo: sample-star-showcase-image1.png
-    project_description: Irure adipisicing do officia excepteur consectetur elit ea non commodo eu occaecat aute velit dolore in proident.
-  - student_name: John Doe
-    student_photo: sample-star-showcase-image2.png
-    project_description: Laborum fugiat in laboris aliqua ut consectetur minim dolor dolor.
-  - student_name: June Doe
-    student_photo: student-photo.jpg
-    project_description: Lorem ipsum id ut dolor nulla in cillum amet aliqua enim irure esse ut id cillum est aute reprehenderit.
-  - student_name: Joan Doe
-    student_photo: student-photo.jpg
-    project_description: Ut dolor laboris officia aliquip aliqua labore dolore laborum.
-  - student_name: Jim Doe
-    student_photo: student-photo.jpg
-    project_description: Consequat reprehenderit veniam sit cupidatat dolor sit dolor veniam eu sint minim esse veniam do ut sint deserunt.
+  - student_name: Rio Wambacher
+    title: STAR Intern, Spring 23
+    project_description: HEAL Publications Analysis
+    project_link_text: 'Click here to view Rio’s STAR Talk presentation'
+    project_link: https://drive.google.com/file/d/1HVsiv1XNZp0bGwVNfLhJeNbYc0iPdi5C/view?usp=sharing
+  - student_name: Kylie McDonald
+    title: STAR Intern, Fall 23
+    project_description: Digital Curation
+    project_link_text: 'Click here to view Kylies’s STAR Talk paper'
+    project_link: https://docs.google.com/document/d/1o89j0olyAqJbdMCzUs9YLKAMZf4beGdo/edit?usp=sharing&ouid=106015245864437093171&rtpof=true&sd=true
+  - student_name: Kieran, Ethan, and Anoop
+    title: STAR Ventures Participants, Summer 23
+    project_description: 'Addressing the Opioid Crisis: The Solution to Over-Prescribing'
+    project_link_text: 'Click here to view their STAR Ventures presentation'
+    project_link: https://drive.google.com/file/d/1usViQQVO-lIPk6Qj2dothDt2n7MQph7X/view?usp=sharing
+  - student_name: Alok S
+    title: STAR Intern, Summer 23
+    project_description: UI application for echocardiogram image segmentation
+    project_link_text: 'Click here to view Alok’s STAR Talk presentation'
+    project_link: https://drive.google.com/file/d/1hyh53AEuV3HYgxS-1zwN4wzq8kYDQ3c9/view?usp=drive_link
+  - student_name: Ganning Xu
+    title: iRODS Intern, Summer 23
+    project_description: Zone Management Tool and NFSRODS
+    project_link_text: 'Click here to view Ganning’s TriRODS presentation'
+    project_link: https://youtu.be/Q0tSk0LExIk
+  - student_name: Jude Sproul
+    title: STAR Intern, Summer 23
+    project_description: Making multidimensional time series data more accessible with Python
+    project_link_text: 'Click here to view Jude’s STAR Talk presentation'
+    project_link: https://drive.google.com/file/d/1bBuSXnKxPXCirGRQPrTKBsOLm15r5jvA/view?usp=drive_link
+

@@ -7,7 +7,7 @@ import Button from '@mui/joy/Button'
 import AspectRatio from '@mui/joy/AspectRatio';
 import CardContent from '@mui/joy/CardContent';
 import Stack from '@mui/joy/Stack'
-import {Link} from './link'
+import { Link } from './link'
 export const StudentSlide = ({student}) => {
   const { 
     student_name, 
@@ -46,6 +46,7 @@ export const StudentSlide = ({student}) => {
           <Button
             component={Link}
             to={project_link}
+            noIcon
           >{project_link_text}</Button>
         </CardContent>
 

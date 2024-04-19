@@ -25,7 +25,7 @@ ExternalLinkIcon.propTypes = {
   size: PropTypes.number.isRequired,
 }
 
-export const ExternalLink = ({ to, children, ...etc }) => {
+export const ExternalLink = ({ to, children, noIcon, ...etc }) => {
   return (
     <Fragment>
       <MUILink
@@ -36,7 +36,11 @@ export const ExternalLink = ({ to, children, ...etc }) => {
       >
         { children }
       </MUILink>
-      <ExternalLinkIcon size={ 10 } style={{ marginLeft: '4px' }} />
+      {
+        !noIcon && (
+          <ExternalLinkIcon size={ 10 } style={{ marginLeft: '4px' }} />
+        )
+      }
     </Fragment>
   )
 }
@@ -52,11 +56,11 @@ export const InternalLink = ({ to, children, ref, ...props }) => {
   )
 }
 
-export const Link = React.forwardRef(({ to, children, ...props }, ref) => {
+export const Link = React.forwardRef(({ to, children, noIcon, ...props }, ref) => {
   const externalUrlPattern = new RegExp(/^https?:\/\//)
   const match = externalUrlPattern.exec(to)
   if (match) {
-    return <ExternalLink to={ to } { ...props } ref={ ref }>{ children }</ExternalLink>
+    return <ExternalLink to={ to } { ...props } noIcon={noIcon} ref={ ref }>{ children }</ExternalLink>
   }
   return <InternalLink to={ to } { ...props } ref={ ref }>{ children }</InternalLink>
 })

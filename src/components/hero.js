@@ -6,7 +6,7 @@ import {
 } from '@mui/joy'
 import { useScrolling } from '../hooks'
 
-export const Hero = ({ background_image, blurb, title }) => {
+export const Hero = ({ background_image, blurb, title, titleColor }) => {
   const heroImage = getImage(background_image)
   const { scrollPosition } = useScrolling()
   const heroRef = useRef()
@@ -32,7 +32,7 @@ export const Hero = ({ background_image, blurb, title }) => {
           margin: 'auto',
           width: '100%',
           height:'100%',
-          background: 'linear-gradient(90deg, #1A1B2F 0%, rgba(0, 0, 0, 0) 100%)',
+          background: 'linear-gradient(90deg, #080830 0%, rgba(0, 0, 0, 0) 100%)',
           '.content': {
             zIndex: 9,
             width: '1200px',
@@ -43,14 +43,14 @@ export const Hero = ({ background_image, blurb, title }) => {
           '.title': {
             maxWidth: '66%',
             fontSize: '400%',
-            color: '#fff',
+            color: '#EDCB5B',
             p: 1,
-            letterSpacing: '2px',
+            letterSpacing: '1px',
             fontWeight: '500'
           },
           '.subtitle': {
-            maxWidth: '60%',
-            fontSize: '120%',
+            maxWidth: '55%',
+            fontSize: '150%',
             color: '#fff',
             lineHeight: 1.5,
             p: 1,

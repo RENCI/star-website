@@ -4,18 +4,24 @@ import { Section } from '../section'
 
 const Quote = ({ quote, attribution, visible }) => {
   return (
-    <Fragment>
+    <Box sx={{display: visible ? 'block' : 'none'}}>
       <Typography level="body-md" sx={{
-        display: visible ? 'block' : 'none',
-        fontSize: '1.5rem',
-        textAlign: 'left'
+        fontSize: '1.4rem',
+        textAlign: 'left',
       }}>
         { quote }
       </Typography>
-      <Typography level="body-sm" sx={{ fontStyle: 'italic', textAlign: 'right', fontSize: '1rem' }}>
+      <Typography level="body-sm" sx={{ 
+        fontStyle: 'italic', 
+        textAlign: 'right', 
+        fontSize: '1.1rem',
+        fontWeight: 500,
+        paddingTop: '1rem',
+        letterSpacing: '0.1px' 
+      }}>
       - { attribution }
       </Typography>
-    </Fragment>
+    </Box>
   )
 }
 
@@ -35,10 +41,11 @@ export const Testimonials = ({ content }) => {
     <Section
       height="40vh"
       backgroundColor="#33333310"
-      title={title}
     >
+      <Typography level="h2">{title}</Typography>
+
       <Divider sx={{ width: '75%', m: '0rem auto 1rem' }} />
-      <Box sx={{maxWidth: '900px'}}>
+      <Box sx={{maxWidth: '900px', height: '25vh'}}>
         {
           quotes.map((item, i) => (
             <Quote

@@ -6,44 +6,26 @@ import Tab, { tabClasses } from '@mui/joy/Tab';
 import TabPanel from '@mui/joy/TabPanel';
 import List from '@mui/joy/List';
 import ListItem from '@mui/joy/ListItem';
+import { styled } from '@mui/joy'
 
 export const ProgramTabs = ({programs}) => {
   return (
     <Tabs
     sx={{border: '1px solid'}}
     >
-      <TabList
-        disableUnderline
-      >
-        {
-          programs.map((program)=> (
-            <Tab disableIndicator>{program.title}</Tab>
-            ))
-        }
-      </TabList>
-      {
-        programs.map((program, index) => (
-          <TabPanel value={index}>
-            <Typography level="h3">{program.title}</Typography>
-            {program.subtitle && (
-              <Typography level="body-sm" sx={{marginBottom: '1rem'}}>{program.subtitle}</Typography>
-            )}
-            <Typography>{program.description}</Typography>
-            {
-              program.offerings && (
-                <Fragment>
-                  <Typography level="h4" sx={{marginTop: "1rem"}}>Offerings:</Typography>
-                  <List marker="circle">
-                    {program.offerings.map((semester) => (
-                      <ListItem>{semester}</ListItem>
-                    ))}
-                  </List>
-                </Fragment>
-              )
-            }
-          </TabPanel>
-        )
-      )}
     </Tabs>
   )
 }
+
+export const TabContainer = styled(Tabs)`
+`
+
+
+export const ProgramTab = styled(Tab)`
+  height: 200px;
+  width: 33%
+`
+
+export const ProgramPanel = styled(TabPanel)(({backgroundColor, ...props})=> ({
+  backgroundColor: backgroundColor
+}))

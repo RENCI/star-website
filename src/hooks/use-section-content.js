@@ -75,9 +75,28 @@ export const useSectionContent = () => {
         title
         programs {
           title
+          program_id
           subtitle
+        }
+        starShipContent {
+          program_id
           description
-          offerings
+          whatToExpect
+          previousExperienceOffered
+          requirements
+        }
+        starVenturesContent {
+          program_id
+          description
+          dates
+          requirements
+          registrationLink
+        }
+        irodsContent {
+          program_id
+          description
+          additionalInfo
+          learnMoreLink
         }
       }
       StarShowcase: sectionsYaml(section_id: { eq: "star-showcase" }) {

@@ -8,6 +8,9 @@ import {
   Button
 } from '@mui/joy'
 import { List } from '../../list'
+import { ImportantDates } from '../'
+import ImportantDatesContent from '../../../content/sections/important-dates.yaml'
+import { DatesTable } from '../../dates-table'
 
 export const StarShipPanel = ({title, content}) => {
   return (
@@ -60,6 +63,14 @@ export const StarShipPanel = ({title, content}) => {
           </Stack>
         </Box>
       </Stack>
+      <br/>
+      <Typography level="h4">Important STARship Dates:</Typography>
+      <DatesTable content={ImportantDatesContent}/>
+      <Box sx={{margin: '2rem auto 1rem', display: 'flex', justifyContent: 'center'}}>
+        <Button sx={{padding: '1rem 4rem', fontSize: '1.3rem'}}>
+          View Open Positions
+        </Button>
+      </Box>
     </Container>
   )
 }

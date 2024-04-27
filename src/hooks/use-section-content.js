@@ -110,18 +110,20 @@ export const useSectionContent = () => {
         }
       }
       Resources: sectionsYaml(section_id: { eq: "resources" }) {
-        links {
-          title
-          url
-          buttonColor
+        title
+        sections {
+          heading
+          description
+          links {
+            title
+            url
+          }
+          stayConnectedList {
+            item
+          }
         }
-        blurb
         stayConnectedButtonText
         stayConnectedButtonURL
-        stayConnectedblurb
-        stayConnectedlist {
-          item
-        }
       }
       StudentsStaffCtas: sectionsYaml(section_id: { eq: "students-staff-ctas" }) {
         staff_cta {

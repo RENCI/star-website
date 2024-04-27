@@ -1,8 +1,9 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Section } from '../section'
-import { Sheet, Grid, Container, Typography, Button, Stack, Box, List, ListItem } from '@mui/joy'
+import { Grid, Typography, Button, Box, List } from '@mui/joy'
 import { Link, ExternalLinkIcon } from '../link'
 import { DecorativeBulletListItem} from '../list'
+
 export const Resources = ({ content }) => {
   
   return (
@@ -11,43 +12,36 @@ export const Resources = ({ content }) => {
       textColor="#fff"
       title={content.title}
     >
-      {
-        content.sections.map((section) => (
-          <Box key={section.heading} sx={{
-            marginBottom: '2rem'
-          }}>
-            <Typography level="h3" sx={{color: "inherit", marginBottom: '0.25rem'}}>{section.heading}</Typography>
-            <Typography level="body-lg" sx={{color: "inherit", marginBottom: '0.5rem'}}>{section.description}</Typography>
-            {section.links && (
-              <Grid container >
-              {section.links.map((link)=> (
-                <Grid item key={link.title} sm={12} md={6}>
-                  <Link to={link.url}>
-                    <Typography sx={{fontWeight: 600, fontSize: '1.1rem', color: '#F9A302'}}>
-                      {link.title}
-                    </Typography>
-                  </Link>
-                </Grid>
-              ))}
+      {content.sections.map((section) => (
+        <Box key={section.heading} sx={{marginBottom: '2rem'}}>
+          <Typography level="h3" sx={{color: "inherit", marginBottom: '0.25rem'}}>{section.heading}</Typography>
+          <Typography level="body-lg" sx={{color: "inherit", marginBottom: '0.5rem'}}>{section.description}</Typography>
+          {section.links && (
+            <Grid container>
+            {section.links.map((link) => (
+              <Grid item key={link.title} sm={12} md={6}>
+                <Link to={link.url}>
+                  <Typography sx={{fontWeight: 600, color: '#F9A302'}}>
+                    {link.title}
+                  </Typography>
+                </Link>
               </Grid>
-            )}
-            {section.stayConnectedList && (
-              <List sx={{
-              }}>
-                <Grid container>
-                  {
-                    section.stayConnectedList.map(({item}) => (
-                      <Grid item sm={12} md={6}>
-                        <DecorativeBulletListItem sx={{color: 'inherit', p: 0, fontSize: '1.1rem'}}>{item}</DecorativeBulletListItem>
-                      </Grid>
-                    ))
-                  }
-                </Grid>
-              </List>
-            )}
-          </Box>
-        ))
-      }
+            ))}
+            </Grid>
+          )}
+          {section.stayConnectedList && (
+            <List>
+              <Grid container>
+                {section.stayConnectedList.map(({item}) => (
+                  <Grid item sm={12} md={6}>
+                    <DecorativeBulletListItem sx={{color: 'inherit', p: 0, fontSize: '1.1rem'}}>{item}</DecorativeBulletListItem>
+                  </Grid>
+                ))}
+              </Grid>
+            </List>
+          )}
+        </Box>
+      ))}
       <Box sx={{my: 'auto', display: 'flex', justifyContent: 'center'}}>
         <Button noIcon component={Link} to={content.stayConnectedButtonURL}>
           <Typography level="title-lg" sx={{color: '#fff', padding: '0.75rem 2rem', fontSize: '1.3rem'}}>

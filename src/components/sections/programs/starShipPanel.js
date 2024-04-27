@@ -4,13 +4,13 @@ import {
   Typography,
   ListItem,
   Stack,
-  Box,
-  Button
+  Box
 } from '@mui/joy'
 import { List } from '../../list'
 import { ImportantDates } from '../'
 import ImportantDatesContent from '../../../content/sections/important-dates.yaml'
 import { DatesTable } from '../../dates-table'
+import { Button } from '../../button'
 
 export const StarShipPanel = ({title, content}) => {
   return (
@@ -56,10 +56,13 @@ export const StarShipPanel = ({title, content}) => {
           <Typography level="h4">Student Responsibilities:</Typography>
           <Stack
             gap={ 4 }
-            sx={{display: 'flex', marginTop: '1.5rem', padding: '0 2.5rem'}}
+            sx={{display: 'flex'}}
           >
-            <Button>STARship Responsibilities</Button>
-            <Button>Extended Student Responsibilities*</Button>
+            {
+              content.responsibilitiesButtons.map((button) => (
+                <Button key={button.title} to={button.url} >{button.title}</Button>
+              ))
+            }
           </Stack>
         </Box>
       </Stack>
@@ -67,7 +70,7 @@ export const StarShipPanel = ({title, content}) => {
       <Typography level="h4">Important STARship Dates:</Typography>
       <DatesTable content={ImportantDatesContent}/>
       <Box sx={{margin: '2rem auto 1rem', display: 'flex', justifyContent: 'center'}}>
-        <Button sx={{padding: '1rem 4rem', fontSize: '1.3rem'}}>
+        <Button large to="/positions">
           View Open Positions
         </Button>
       </Box>

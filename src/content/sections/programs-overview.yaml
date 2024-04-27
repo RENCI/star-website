@@ -28,6 +28,11 @@ starShipContent:
   requirements:
     - Must be a current Undergraduate or Graduate student (at least half-time enrollment) at a college/university
     - Must be available to work up to 20 hrs per week during Fall and/or Spring and up to 40 hrs per week during Summer
+  responsibilitiesButtons:
+    - title: "New Student Responsibilities"
+      url: "https://docs.google.com/document/d/1vjrr349cRXTHq1ypr2jzQz5dZde67sB3xpvKm9Tgl7s/edit"
+    - title: "Extended Student Responsbilities*"
+      url: "https://docs.google.com/document/d/1Q7imkLGgekCt7oWGqRJ1cXPglGhtCCvhUMxLPp9Suxc/edit"
 starVenturesContent:
   program_id: 'starventures'
   description: >

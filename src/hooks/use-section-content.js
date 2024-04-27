@@ -84,6 +84,10 @@ export const useSectionContent = () => {
           whatToExpect
           previousExperienceOffered
           requirements
+          responsibilitiesButtons {
+            title
+            url
+          }
         }
         starVenturesContent {
           program_id

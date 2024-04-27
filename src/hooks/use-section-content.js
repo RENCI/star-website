@@ -95,7 +95,8 @@ export const useSectionContent = () => {
         irodsContent {
           program_id
           description
-          additionalInfo
+          dates
+          requirements
           learnMoreLink
         }
       }

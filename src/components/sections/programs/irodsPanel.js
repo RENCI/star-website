@@ -22,15 +22,15 @@ export const IrodsPanel = ({title, content}) => {
         <Box flex={1}>
           <Typography level="h4" sx={{ color: '#fff'}}>Dates:</Typography>
           <List>
-            {content.additionalInfo.map((item)=> (
+            {content.dates.map((item)=> (
               <ListItem key={item} sx={{ color: '#fff'}}>{item}</ListItem>
             ))}
           </List>
         </Box>
         <Box flex={1}>
-          <Typography level="h4" sx={{ color: '#fff'}}>Requirements:</Typography>
+          <Typography level="h4" sx={{ color: '#fff'}}>Additional Info:</Typography>
           <List>
-            {content.additionalInfo.map((item)=> (
+            {content.requirements.map((item)=> (
               <ListItem key={item} sx={{ color: '#fff'}}>{item}</ListItem>
             ))}
           </List>

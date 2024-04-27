@@ -26,7 +26,6 @@ starShipContent:
     - Communications & Social Media
     - Cloud Programming & Testing
   requirements:
-    - Must be 17 or older
     - Must be a current Undergraduate or Graduate student (at least half-time enrollment) at a college/university
     - Must be available to work up to 20 hrs per week during Fall and/or Spring and up to 40 hrs per week during Summer
 starVenturesContent:
@@ -50,8 +49,10 @@ irodsContent:
     graduate students to work in a production-quality software engineering 
     environment with global reach, mentorship, periodic code reviews, and 
     direct community feedback.
-  additionalInfo:
+  dates:
+    - 3 months during the summer
+    - Approximately June - August
+  requirements:
     - Currently, only offered during the summer to rising college freshman, undergraduate, and graduate students
     - Must be 18 or older
-    - 3 months (approx. June-August)
   learnMoreLink: https://irods.org/2024/01/irods-internship-summer-2024/

@@ -4,7 +4,7 @@ import {
   TabContainer, 
   ProgramTab,
   ProgramPanel } from '../program-tabs-section'
-import { Sheet, Container, Typography } from '@mui/joy'
+import { Sheet, Container, Typography, Stack } from '@mui/joy'
 import TabList from '@mui/joy/TabList';
 import Tab, { tabClasses } from '@mui/joy/Tab';
 import TabPanel from '@mui/joy/TabPanel';
@@ -22,12 +22,14 @@ export const ProgramsOverview = ({ content }) => {
       program_id: 'starventures',
       content: content.starVenturesContent,
       backgroundColor: '#1A1B2F',
+      color: '#fff',
       ...content.programs[1]
     },
     {
       program_id: 'irods',
       content: content.irodsContent,
       backgroundColor: '#00758D',
+      color: '#fff',
       ...content.programs[2]
     }
   ]
@@ -35,6 +37,7 @@ export const ProgramsOverview = ({ content }) => {
     <Sheet
       component="section"
       sx={{
+        pt: '2rem',
       }}
     >
       <Typography level="h2" sx={{
@@ -43,14 +46,31 @@ export const ProgramsOverview = ({ content }) => {
       }}>{content.title}</Typography>
       <TabContainer>
         <TabList sx={{
-          width: '900px',
+          maxWidth: '900px',
           margin: '0 auto',
         }}>
           {
-            content.programs.map((program) => {
+            programContent.map((program) => {
               return (
-                <ProgramTab key={`${program.program_id}-tab`}>
-                  {program.title}
+                <ProgramTab 
+                  key={`${program.program_id}-tab`} 
+                  backgroundColor={program.backgroundColor}
+                >
+                  <Stack
+                    direction="column"
+                    spacing={2}
+                  >
+                    <Typography 
+                      level="h3"
+                      align="center" 
+                      sx={{
+                        fontWeight: 300, 
+                        letterSpacing: '0.2px',
+                        fontSize: '1.5rem',
+                        color: program.color
+                      }}>{program.title}</Typography>
+                    <Typography level="body-md" align="center" sx={{color: program.color}}>{program.subtitle}</Typography>
+                  </Stack>
                 </ProgramTab>
               )
             })
@@ -66,17 +86,17 @@ export const ProgramsOverview = ({ content }) => {
                 backgroundColor={program.backgroundColor}
               >
                 {
-                  program.program_id == 'starship' ? 
+                  program.program_id === 'starship' ? 
                     <StarShipPanel 
                       title={program.title}
                       content={program.content}
                     /> 
-                  : program.program_id == 'starventures' ?
+                  : program.program_id === 'starventures' ?
                     <StarVenturesPanel 
                       title={program.title}
                       content={program.content}
                     />
-                  : program.program_id == 'irods' ?
+                  : program.program_id === 'irods' ?
                     <IrodsPanel 
                       title={program.title}
                       content={program.content}

@@ -34,7 +34,7 @@ const TextPhotoWrapper = ({
                 <List>
                 {
                   item.description.map((tip)=> (
-                    <ListItem>{tip}</ListItem>
+                    <ListItem key={tip}>{tip}</ListItem>
                   ))
                 }
               </List>

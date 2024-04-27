@@ -18,7 +18,7 @@ export const ProcessOverview = ({ content }) => {
     >
       <Container maxWidth="md">
       {
-        content.steps.map((item)=>(<TitleBodyItem item={item}/>))
+        content.steps.map((item)=>(<TitleBodyItem item={item} key={item.title}/>))
       }
 
       </Container>

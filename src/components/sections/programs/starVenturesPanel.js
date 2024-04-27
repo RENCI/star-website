@@ -23,7 +23,7 @@ export const StarVenturesPanel = ({title, content}) => {
           <Typography level="h4" sx={{ color: '#fff'}}>Dates:</Typography>
           <List>
             {content.dates.map((item)=> (
-              <ListItem sx={{ color: '#fff'}}>{item}</ListItem>
+              <ListItem key={item} sx={{ color: '#fff'}}>{item}</ListItem>
             ))}
           </List>
         </Box>
@@ -31,7 +31,7 @@ export const StarVenturesPanel = ({title, content}) => {
           <Typography level="h4" sx={{ color: '#fff'}}>Requirements:</Typography>
           <List>
             {content.requirements.map((item)=> (
-              <ListItem sx={{ color: '#fff'}}>{item}</ListItem>
+              <ListItem key={item} sx={{ color: '#fff'}}>{item}</ListItem>
             ))}
           </List>
         </Box>

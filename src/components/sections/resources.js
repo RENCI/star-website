@@ -33,7 +33,7 @@ export const Resources = ({ content }) => {
             <List>
               <Grid container>
                 {section.stayConnectedList.map(({item}) => (
-                  <Grid item sm={12} md={6}>
+                  <Grid item sm={12} md={6} key={item}>
                     <DecorativeBulletListItem sx={{color: 'inherit', p: 0, fontSize: '1.1rem'}}>{item}</DecorativeBulletListItem>
                   </Grid>
                 ))}

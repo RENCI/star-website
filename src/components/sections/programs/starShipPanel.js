@@ -26,7 +26,7 @@ export const StarShipPanel = ({title, content}) => {
           <Typography level="h4">What to Expect</Typography>
           <List>
             {content.whatToExpect.map((item)=> (
-              <ListItem>{item}</ListItem>
+              <ListItem key={item}>{item}</ListItem>
             ))}
           </List>
         </Box>
@@ -34,7 +34,7 @@ export const StarShipPanel = ({title, content}) => {
           <Typography level="h4">Previous STARships have offered experience in:</Typography>
           <List>
             {content.previousExperienceOffered.map((item)=> (
-              <ListItem>{item}</ListItem>
+              <ListItem key={item}>{item}</ListItem>
             ))}
           </List>
         </Box>
@@ -48,7 +48,7 @@ export const StarShipPanel = ({title, content}) => {
           <Typography level="h4">Requirements:</Typography>
           <List>
             {content.requirements.map((item)=> (
-              <ListItem>{item}</ListItem>
+              <ListItem key={item}>{item}</ListItem>
             ))}
           </List>
         </Box>

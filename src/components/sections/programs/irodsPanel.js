@@ -23,7 +23,7 @@ export const IrodsPanel = ({title, content}) => {
           <Typography level="h4" sx={{ color: '#fff'}}>Dates:</Typography>
           <List>
             {content.additionalInfo.map((item)=> (
-              <ListItem sx={{ color: '#fff'}}>{item}</ListItem>
+              <ListItem key={item} sx={{ color: '#fff'}}>{item}</ListItem>
             ))}
           </List>
         </Box>
@@ -31,7 +31,7 @@ export const IrodsPanel = ({title, content}) => {
           <Typography level="h4" sx={{ color: '#fff'}}>Requirements:</Typography>
           <List>
             {content.additionalInfo.map((item)=> (
-              <ListItem sx={{ color: '#fff'}}>{item}</ListItem>
+              <ListItem key={item} sx={{ color: '#fff'}}>{item}</ListItem>
             ))}
           </List>
         </Box>

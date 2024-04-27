@@ -1,9 +1,9 @@
 import React from 'react'
 import { Section } from '../section'
-import { Grid, Typography, Button, Box, List } from '@mui/joy'
+import { Grid, Typography, Box, List } from '@mui/joy'
 import { Link, ExternalLinkIcon } from '../link'
 import { DecorativeBulletListItem} from '../list'
-
+import { Button } from '../button'
 export const Resources = ({ content }) => {
   
   return (
@@ -43,9 +43,9 @@ export const Resources = ({ content }) => {
         </Box>
       ))}
       <Box sx={{my: 'auto', display: 'flex', justifyContent: 'center'}}>
-        <Button noIcon component={Link} to={content.stayConnectedButtonURL}>
-          <Typography level="title-lg" sx={{color: '#fff', padding: '0.75rem 2rem', fontSize: '1.3rem'}}>
-            {content.stayConnectedButtonText}<ExternalLinkIcon size={ 12 } fill="#fff" style={{ marginLeft: '1rem' }}/>
+        <Button noIcon large external component={Link} to={content.stayConnectedButtonURL}>
+          <Typography>
+            {content.stayConnectedButtonText}
           </Typography>
         </Button>
       </Box>

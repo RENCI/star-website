@@ -60,7 +60,7 @@ export const StarShipPanel = ({title, content}) => {
           >
             {
               content.responsibilitiesButtons.map((button) => (
-                <Button key={button.title} to={button.url} >{button.title}</Button>
+                <Button key={button.title} to={button.url} external>{button.title}</Button>
               ))
             }
           </Stack>

@@ -71,7 +71,7 @@ export const InterviewTips = ({ content }) => {
     <Section
       title={content.title}  
       backgroundColor="#1A1B2F"
-      titleColor="#fff"
+      textColor="#fff"
 >
       <TextPhotoWrapper { ...content }/>
     </Section>

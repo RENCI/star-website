@@ -17,7 +17,7 @@ export const Section = ({
   // make room for any additional style customization.
   customStyles = {},
   title,
-  titleColor
+  textColor
 }) => {
   return (
     <Sheet
@@ -26,15 +26,15 @@ export const Section = ({
       sx={{
         backgroundColor,
         display: 'flex',
-        justifyContent: 'stretch',
+        // justifyContent: 'stretch',
         alignItems: 'stretch',
-        position: 'relative',
-        overflow: 'hidden',
+        // position: 'relative',
+        // overflow: 'hidden',
         '.section-container': {
           backgroundColor: 'transparent',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
+          // display: 'flex',
+          // flexDirection: 'column',
+          // justifyContent: 'center',
           alignItems: 'center',
           py: 8,
           mx: 'auto',
@@ -52,8 +52,12 @@ export const Section = ({
         ...customStyles,
       }}
     >
-      <Container className="section-container" maxWidth="md">
-        {title && <Typography level="h2" sx={{color: titleColor ? titleColor : null}}>{title}</Typography>}
+      <Container className="section-container" maxWidth="md" sx={{color: textColor ? textColor : null}}>
+        {title && <Typography level="h2" sx={{
+            color: textColor ? textColor : null,
+            textAlign: 'center'
+          }}>{title}
+        </Typography>}
         { children }
       </Container>
       {

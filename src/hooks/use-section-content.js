@@ -81,12 +81,13 @@ export const useSectionContent = () => {
         starShipContent {
           program_id
           description
-          whatToExpect
-          previousExperienceOffered
-          requirements
-          responsibilitiesButtons {
-            title
-            url
+          sections {
+            heading
+            contentType
+            content {
+              title
+              url
+            }
           }
         }
         starVenturesContent {

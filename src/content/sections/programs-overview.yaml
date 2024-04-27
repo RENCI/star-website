@@ -16,23 +16,32 @@ starShipContent:
     STARships are an opportunity for undergraduate and graduate students
     to have a tailor-made internship, with RENCI project teams, to accomplish
     project milestones.
-  whatToExpect:
-    - "STARships vary in their length, from one semester to multiple semesters, depending on the project needs and student’s performance"
-    - "Typical skills developed: presentation skills, professional development, organizational skills, effective communication, and other project-specific skills."
-  previousExperienceOffered:
-    - Software Development
-    - Web Application Construction
-    - Project Management
-    - Communications & Social Media
-    - Cloud Programming & Testing
-  requirements:
-    - Must be a current Undergraduate or Graduate student (at least half-time enrollment) at a college/university
-    - Must be available to work up to 20 hrs per week during Fall and/or Spring and up to 40 hrs per week during Summer
-  responsibilitiesButtons:
-    - title: "New Student Responsibilities"
-      url: "https://docs.google.com/document/d/1vjrr349cRXTHq1ypr2jzQz5dZde67sB3xpvKm9Tgl7s/edit"
-    - title: "Extended Student Responsbilities*"
-      url: "https://docs.google.com/document/d/1Q7imkLGgekCt7oWGqRJ1cXPglGhtCCvhUMxLPp9Suxc/edit"
+  sections:
+    - heading: "What to Expect"
+      contentType: "ul"
+      content:
+        - title: "STARships vary in their length, from one semester to multiple semesters, depending on the project needs and student’s performance"
+        - title: "Typical skills developed: presentation skills, professional development, organizational skills, effective communication, and other project-specific skills."
+    - heading: "Previous STARships have offered experience in:"
+      contentType: "ul"
+      content:
+        - title: "Software Development"
+        - title: "Web Application Construction"
+        - title: "Project Management"
+        - title: "Communications & Social Media"
+        - title: "Cloud Programming & Testing"
+    - heading: "Requirements"
+      contentType: "ul"
+      content:
+        - title: "Must be a current Undergraduate or Graduate student (at least half-time enrollment) at a college/university"
+        - title: "Must be available to work up to 20 hrs per week during Fall and/or Spring and up to 40 hrs per week during Summer"
+    - heading: "Student Responsibilities"
+      contentType: "button"
+      content:
+        - title: "New Student Responsibilities"
+          url: "https://docs.google.com/document/d/1vjrr349cRXTHq1ypr2jzQz5dZde67sB3xpvKm9Tgl7s/edit"
+        - title: "Extended Student Responsbilities*"
+          url: "https://docs.google.com/document/d/1Q7imkLGgekCt7oWGqRJ1cXPglGhtCCvhUMxLPp9Suxc/edit"
 starVenturesContent:
   program_id: 'starventures'
   description: >

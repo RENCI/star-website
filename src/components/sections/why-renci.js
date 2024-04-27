@@ -7,7 +7,7 @@ export const WhyRenci = ({ content }) => {
   
   return (
     <Section
-      // backgroundColor="#ECFEE8"
+      backgroundColor="#F6F6F6"
       title={content.title}
       height="55vh"
     >

@@ -16,10 +16,14 @@ export const useSectionContent = () => {
         }
       }
       Forms: sectionsYaml(section_id: { eq: "forms" }) {
-        forms {
-          name
-          url
-        }
+        title
+        sections {
+          heading
+          links {
+            name
+            url
+          }
+        }    
       }
       ImportantDates: sectionsYaml(section_id: { eq: "important-dates" }) {
         title

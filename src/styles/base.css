@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,500;1,700&display=swap');
+
+:root {
+  --color-bg: #eee;
+  --color-text: #222;
+  
+  --color-sbdh: #f37521;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  font-weight: 300;
+  font-size: 13pt;
+}
+
+#root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+/* 
+@media (prefers-color-scheme: dark) {
+  #root {
+    background-color: #000;
+    color: #fff;
+  }
+}
+ */
+
+ main {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  flex: 1;
+}
+
+/* a {
+  color: var(--color-sbdh);
+  transition: filter 250ms;
+} */
+
+
+/* a:hover {
+  filter: brightness(1.1);
+} */
+
+em {
+  font-weight: 300;
+}

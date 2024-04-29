@@ -1,10 +1,12 @@
 import React from 'react'
 import {
   AspectRatio, Card, CardOverflow,
-  Link as JoyLink, Sheet, Typography
+  Link as JoyLink, Sheet, Typography,
+  CardActions, Button
 } from '@mui/joy'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Link } from './link'
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 export const CtaButton = ({
   background_image, href, title, backgroundColor
@@ -13,41 +15,39 @@ export const CtaButton = ({
   return (
     <Card sx={{
       overflow: 'hidden',
-      position: 'relative',
+      borderRadius: '0% 0% 25px 25px',
       '.card-content': {
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        height: '65px',
         backgroundColor: backgroundColor,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        marginTop: '-1rem'
       },
     }}>
       <CardOverflow>
-        <AspectRatio>
+        <AspectRatio ratio={1.75}>
           <GatsbyImage image={ bgImage } alt="" />
         </AspectRatio>
       </CardOverflow>
-      <Sheet className="card-content">
+      <CardOverflow className="card-content">
         <JoyLink
           overlay
           component={ Link } to={ href }
           className="card-title"
+          underline="none"
         >
           <Typography level="body-lg" sx={{
-            // textTransform: 'uppercase',
-            fontWeight: 500,
+            fontWeight: 600,
             color: '#fff',
-            fontSize: '1.4rem',
-            letterSpacing: '1px'
+            fontSize: { xs: '1.5rem', sm: '1.8rem' },
+            letterSpacing: '1px',
+            display: 'flex',
+            py: '1rem'
           }}>
-          { title }{" > "}
+          { title }<NavigateNextIcon sx={{marginLeft: '2rem', paddingTop: '1px'}}/>
           </Typography>
-          </JoyLink>
-      </Sheet>
+        </JoyLink>
+      </CardOverflow>
     </Card>
   )
 }

@@ -14,9 +14,11 @@ export const Button = ({children, to, large, external, ...props}) => {
         padding: large ? '1rem 3rem' : '0.5rem 2rem'
       }}
     >
-      <Typography level={large ? 'title-lg': 'body-md'} sx={{
+      <Typography sx={{
         color: '#fff',
-        fontWeight: large ? 500 : null
+        fontWeight: large ? 500 : null,
+        fontSize: large ? '1.25rem' : '1rem',
+        textAlign: 'center'
       }}>
         {children}
         {

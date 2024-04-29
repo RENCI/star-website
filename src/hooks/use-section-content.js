@@ -65,6 +65,7 @@ export const useSectionContent = () => {
         }
       }
       ProcessOverview: sectionsYaml(section_id: { eq: "process-overview" }) {
+        title
         steps {
           title
           description
@@ -74,9 +75,34 @@ export const useSectionContent = () => {
         title
         programs {
           title
+          program_id
           subtitle
+        }
+        starShipContent {
+          program_id
           description
-          offerings
+          sections {
+            heading
+            contentType
+            content {
+              title
+              url
+            }
+          }
+        }
+        starVenturesContent {
+          program_id
+          description
+          dates
+          requirements
+          registrationLink
+        }
+        irodsContent {
+          program_id
+          description
+          dates
+          requirements
+          learnMoreLink
         }
       }
       StarShowcase: sectionsYaml(section_id: { eq: "star-showcase" }) {
@@ -90,10 +116,20 @@ export const useSectionContent = () => {
         }
       }
       Resources: sectionsYaml(section_id: { eq: "resources" }) {
-        links {
-          title
-          url
+        title
+        sections {
+          heading
+          description
+          links {
+            title
+            url
+          }
+          stayConnectedList {
+            item
+          }
         }
+        stayConnectedButtonText
+        stayConnectedButtonURL
       }
       StudentsStaffCtas: sectionsYaml(section_id: { eq: "students-staff-ctas" }) {
         staff_cta {

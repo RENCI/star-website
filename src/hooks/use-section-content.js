@@ -11,6 +11,9 @@ export const useSectionContent = () => {
     query AllSectionContentQuery {
       AboutStar: sectionsYaml(section_id: { eq: "about-star" }) {
         blurb
+        bullets {
+          item
+        }
       }
       Forms: sectionsYaml(section_id: { eq: "forms" }) {
         forms {

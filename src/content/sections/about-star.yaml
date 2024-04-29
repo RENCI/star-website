@@ -1,8 +1,14 @@
 section_id: about-star
 blurb: >
-  STAR provides high school and college students interested 
-  in data science, computer science, business, finance, project 
-  management, communication, research science, and beyond, 
-  an opportunity to pursue their passion while engaging in 
-  meaningful data science-related projects.
+  STAR provides high school and college students opportunity 
+  to pursue their passion while engaging in meaningful data 
+  science-related projects.
+bullets:
+  - item: Data Science
+  - item: Computer Science
+  - item: Business
+  - item: Finance
+  - item: Project Management
+  - item: Communications
+  - item: Research Science
 

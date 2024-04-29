@@ -21,11 +21,11 @@ export const List = ({children}) => {
   )
 }
 
-export const DecorativeBulletListItem = ({children}) => {
+export const DecorativeBulletListItem = ({children, size}) => {
   return (
     <MUIListItem sx={{}}>
       <CircleIcon sx={{color: '#F9A302', paddingRight: '0.5rem'}}/>
-      <Typography level="body-md" sx={{color: '#fff'}}>
+      <Typography level={size==='lg' ? 'h3': 'body-md'} sx={{color: '#fff'}}>
         {children}
       </Typography>
     </MUIListItem>

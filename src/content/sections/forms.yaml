@@ -5,21 +5,21 @@ sections:
     links: 
     - name: STARship Request Form
       url: https://wkf.ms/3LdrJer
+  - heading: "Extending Your Student"
+    links: 
+    - name: STARship Extension Request Form
+      url: https://wkf.ms/3MlK2Ps
   - heading: "Preparing for Your Student"
     links: 
     - name: Guidelines for Managing Students
       url: https://docs.google.com/document/d/1fHsEqDMMCpjmHiiGthKPfsUuTGIlXawYT2J-cA7rSrE/edit#
     - name: Onboarding Document Template
       url: https://docs.google.com/document/d/1j9w2yb6lTPGsiD_7VEiFfX2ulcuTLdscmATMF5KYzqI/edit?usp=drive_link
-  - heading: "Managing Your Student"
-    links: 
-    - name: STARship STAR Talk Guidelines
-      url: https://docs.google.com/document/d/1p20E9P-rZUjCoDAJCzGckRqPRxI18ldv85fUueLwxvc/edit?usp=drive_link
-  - heading: "Extending Your Student"
-    links: 
-    - name: STARship Extension Request Form
-      url: https://wkf.ms/3MlK2Ps
   - heading: "Other Resources"
     links: 
     - name: STAR Ventures 1-pager
       url: https://drive.google.com/file/d/1BDoEzeoXC0u_g65Bzc1TQlUfRpoBE5xT/view?usp=drive_link
+  - heading: "Managing Your Student"
+    links: 
+    - name: STARship STAR Talk Guidelines
+      url: https://docs.google.com/document/d/1p20E9P-rZUjCoDAJCzGckRqPRxI18ldv85fUueLwxvc/edit?usp=drive_link

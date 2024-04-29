@@ -111,6 +111,16 @@ export const useSectionContent = () => {
           requirements
           learnMoreLink
         }
+        lowerBanner {
+          childImageSharp {
+              gatsbyImageData(
+                width: 2400
+                height: 500
+                placeholder: BLURRED
+                formats: [AUTO, WEBP]
+              )
+            }
+        }
       }
       StarShowcase: sectionsYaml(section_id: { eq: "star-showcase" }) {
         title

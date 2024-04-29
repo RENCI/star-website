@@ -1,13 +1,8 @@
 import React from 'react';
-import Box from '@mui/joy/Box'
-import Card from '@mui/joy/Card'
-import Typography from '@mui/joy/Typography';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import Button from '@mui/joy/Button'
-import AspectRatio from '@mui/joy/AspectRatio';
-import CardContent from '@mui/joy/CardContent';
-import Stack from '@mui/joy/Stack'
+import { Card, CardContent, CardActions, Typography } from '@mui/joy';
 import { Link } from './link'
+import { Button } from './button'
+
 export const StudentSlide = ({student}) => {
   const { 
     student_name, 
@@ -17,39 +12,59 @@ export const StudentSlide = ({student}) => {
     project_link } = student
 
   return (
-      <Card 
-        sx={{
-          maxWidth: '600px',
-          minWidth: '400px',
-          flexWrap: 'wrap',
-          marginTop: '1rem',
-          marginBottom: '1rem'
-        }}
-      >
-        <CardContent sx={{
-          display: 'flex', 
-          flexDirection: 'column', 
-          justifyContent: 'space-between'
-        }}>
-          <Box>
-            <Typography fontSize="xl" fontWeight="lg">
-              {student_name}
-            </Typography>
-            
-            <Typography level="body-sm" fontWeight="lg" textColor="text.tertiary">
-              {title}
-            </Typography>
-            
-            <Typography>{project_description}</Typography>
-
-          </Box>
-          <Button
-            component={Link}
-            to={project_link}
-            noIcon
-          >{project_link_text}</Button>
-        </CardContent>
-
-      </Card>
+    <Card 
+      sx={{
+        minHeight: '350px',
+        flexWrap: 'wrap',
+        marginTop: '1rem',
+        marginBottom: '3rem',
+        px: '3.5rem',
+        py: '2rem',
+        backgroundColor: '#ECF1F2',
+      }}
+    >
+      <CardContent sx={{
+        display: 'flex', 
+        flexDirection: 'column', 
+        justifyContent: 'center'
+      }}>
+        <Typography 
+          level="h3"
+          align="center"
+          sx={{
+            fontSize: '1.65rem',
+            fontWeight: 600
+          }}
+        >
+          {student_name}
+        </Typography>
+          
+        <Typography
+          align="center"
+          sx={{
+            fontSize: '1.5rem'
+          }}
+        >
+          {title}
+        </Typography>
+          
+        <Typography
+          align="center"
+          sx={{
+            fontSize: '1.2rem',
+            fontStyle: 'italic',
+          }}
+        >{project_description}</Typography>
+      </CardContent>
+      <CardActions>
+        <Button
+          component={Link}
+          to={project_link}
+          noIcon
+          large
+          external
+        >{project_link_text}</Button>
+      </CardActions>
+    </Card>
   )
 }

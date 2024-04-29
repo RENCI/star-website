@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Divider, Typography, Box } from '@mui/joy'
+import { Divider, Typography, Box, Container } from '@mui/joy'
 import { Section } from '../section'
 
 const Quote = ({ quote, attribution, visible }) => {
@@ -7,12 +7,12 @@ const Quote = ({ quote, attribution, visible }) => {
     <Box sx={{display: visible ? 'block' : 'none'}}>
       <Typography level="body-md" sx={{
         fontSize: '1.4rem',
-        textAlign: 'left',
+        textAlign: 'center',
+        fontStyle: 'italic', 
       }}>
         { quote }
       </Typography>
       <Typography level="body-sm" sx={{ 
-        fontStyle: 'italic', 
         textAlign: 'right', 
         fontSize: '1.1rem',
         fontWeight: 500,
@@ -32,20 +32,19 @@ export const Testimonials = ({ content }) => {
   useEffect(() => {
     const wait = setTimeout(() => {
       setIndex((index + 1) % quotes.length)
-    }, 3000)
+    }, 5000)
 
     return () => clearTimeout(wait)
   }, [index, quotes])
 
   return (
     <Section
-      height="40vh"
       backgroundColor="#33333310"
+      title={title}
     >
-      <Typography level="h2">{title}</Typography>
-
       <Divider sx={{ width: '75%', m: '0rem auto 1rem' }} />
-      <Box sx={{maxWidth: '900px', height: '25vh'}}>
+      
+      <Container sx={{ minHeight:'14rem' }}>
         {
           quotes.map((item, i) => (
             <Quote
@@ -55,7 +54,7 @@ export const Testimonials = ({ content }) => {
             />
           ))
         }
-      </Box>
+      </Container>
     </Section>
   )
 }

@@ -32,6 +32,11 @@ export const ExternalLink = ({ to, children, noIcon, fill, ...etc }) => {
         href={ to }
         target="_blank"
         rel="noopener noreferrer"
+        sx={{
+          ':hover': {
+            textDecorationColor: fill
+          }
+        }}
         { ...etc }
       >
         { children }

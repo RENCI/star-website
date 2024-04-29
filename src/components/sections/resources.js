@@ -20,7 +20,7 @@ export const Resources = ({ content }) => {
             <Grid container>
             {section.links.map((link) => (
               <Grid item key={link.title} sm={12} md={6}>
-                <Link to={link.url}>
+                <Link to={link.url} fill="#F9A302">
                   <Typography sx={{fontWeight: 600, color: '#F9A302'}}>
                     {link.title}
                   </Typography>

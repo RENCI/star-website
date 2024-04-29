@@ -2,12 +2,11 @@ import React from 'react'
 import { 
   Container, 
   Typography,
-  ListItem,
   Stack,
   Grid,
   Box
 } from '@mui/joy'
-import { List } from '../../list'
+import { List, ListItem } from '../../list'
 import ImportantDatesContent from '../../../content/sections/important-dates.yaml'
 import { DatesTable } from '../../dates-table'
 import { Button } from '../../button'

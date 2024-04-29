@@ -6,11 +6,10 @@ import {
   AccordionDetails,
   AccordionSummary,
   AspectRatio,
-  ListItem, 
   Grid
 } from '@mui/joy'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { List } from '../list'
+import { List, ListItem } from '../list'
 
 const TextPhotoWrapper = ({
   featured_img, tips

@@ -2,12 +2,11 @@ import React from 'react'
 import { 
   Container, 
   Typography,
-  ListItem,
   Stack,
   Box,
   Button
 } from '@mui/joy'
-import { List } from '../../list'
+import { List, ListItem } from '../../list'
 
 export const StarVenturesPanel = ({title, content}) => {
   return (
@@ -23,7 +22,7 @@ export const StarVenturesPanel = ({title, content}) => {
           <Typography level="h4" sx={{ color: '#fff'}}>Dates:</Typography>
           <List>
             {content.dates.map((item)=> (
-              <ListItem key={item} sx={{ color: '#fff'}}>{item}</ListItem>
+              <ListItem key={item} color="#fff">{item}</ListItem>
             ))}
           </List>
         </Box>
@@ -31,7 +30,7 @@ export const StarVenturesPanel = ({title, content}) => {
           <Typography level="h4" sx={{ color: '#fff'}}>Requirements:</Typography>
           <List>
             {content.requirements.map((item)=> (
-              <ListItem key={item} sx={{ color: '#fff'}}>{item}</ListItem>
+              <ListItem key={item} color="#fff">{item}</ListItem>
             ))}
           </List>
         </Box>

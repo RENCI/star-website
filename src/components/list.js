@@ -21,6 +21,14 @@ export const List = ({children}) => {
   )
 }
 
+export const ListItem = ({children, color}) => {
+  return (
+    <MUIListItem  sx={{fontSize: '1rem', color: color}}>
+      {children}
+    </MUIListItem>
+  )
+}
+
 export const DecorativeBulletListItem = ({children, size}) => {
   return (
     <MUIListItem sx={{}}>
@@ -34,3 +42,4 @@ export const DecorativeBulletListItem = ({children, size}) => {
     </MUIListItem>
   )
 }
+

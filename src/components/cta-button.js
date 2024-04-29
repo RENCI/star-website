@@ -7,15 +7,17 @@ import {
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Link } from './link'
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import DownloadIcon from '@mui/icons-material/Download';
 
 export const CtaButton = ({
-  background_image, href, title, backgroundColor
+  background_image, href, title, backgroundColor, interview
 }) => {
   const bgImage = getImage(background_image)
   return (
     <Card sx={{
       overflow: 'hidden',
       borderRadius: '0% 0% 25px 25px',
+      border: 'none',
       '.card-content': {
         backgroundColor: backgroundColor,
         display: 'flex',
@@ -24,10 +26,18 @@ export const CtaButton = ({
         marginTop: '-1rem'
       },
     }}>
-      <CardOverflow>
-        <AspectRatio ratio={1.75}>
-          <GatsbyImage image={ bgImage } alt="" />
-        </AspectRatio>
+      <CardOverflow> 
+        {
+          interview ? (
+            <AspectRatio ratio={0.75}>
+              <GatsbyImage image={ bgImage } alt="" />
+            </AspectRatio>
+          ) : (
+            <AspectRatio ratio={1.75}>
+              <GatsbyImage image={ bgImage } alt="" />
+            </AspectRatio>
+          )
+        }
       </CardOverflow>
       <CardOverflow className="card-content">
         <JoyLink
@@ -36,16 +46,31 @@ export const CtaButton = ({
           className="card-title"
           underline="none"
         >
-          <Typography level="body-lg" sx={{
-            fontWeight: 600,
-            color: '#fff',
-            fontSize: { xs: '1.5rem', sm: '1.8rem' },
-            letterSpacing: '1px',
-            display: 'flex',
-            py: '1rem'
-          }}>
-          { title }<NavigateNextIcon sx={{marginLeft: '2rem', paddingTop: '1px'}}/>
-          </Typography>
+          {
+            interview ? (
+              <Typography level="body-sm" sx={{
+                fontWeight: 600,
+                color: '#fff',
+                letterSpacing: '1px',
+                display: 'flex',
+                py: '1rem'
+              }}>
+                { title }<DownloadIcon sx={{marginLeft: '0.5rem', paddingTop: '4px'}}/>
+              </Typography>
+            ) : (
+              <Typography level="body-lg" sx={{
+                fontWeight: 600,
+                color: '#fff',
+                fontSize: { xs: '1.5rem', sm: '1.8rem' },
+                letterSpacing: '1px',
+                display: 'flex',
+                py: '1rem'
+              }}>
+              { title }<NavigateNextIcon sx={{marginLeft: '2rem', paddingTop: '1px'}}/>
+              </Typography>
+
+            )
+          }
         </JoyLink>
       </CardOverflow>
     </Card>

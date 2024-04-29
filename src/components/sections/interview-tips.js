@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 import { Section } from '../section'
 import { 
   AccordionGroup,
@@ -10,6 +11,7 @@ import {
 } from '@mui/joy'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { List, ListItem } from '../list'
+import { CtaButton } from '../cta-button'
 
 const TextPhotoWrapper = ({
   featured_img, tips
@@ -21,6 +23,24 @@ const TextPhotoWrapper = ({
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
+
+  const InterviewImg = useStaticQuery(graphql`
+      query interviewImg {
+      allFile(filter: {relativePath: {eq: "interview-student-image.png"}}) {
+        nodes {
+          childImageSharp {
+            gatsbyImageData(
+              width: 400
+              height: 600
+              placeholder: BLURRED
+              formats: [AUTO, WEBP]
+            )
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Grid container spacing={4} sx={{mx: 2}}>
       <Grid item sm={12} md={8}>
@@ -46,22 +66,13 @@ const TextPhotoWrapper = ({
         </AccordionGroup>
       </Grid>
       <Grid item sm={0} md={4}>
-        <AspectRatio
-          objectFit="cover"
-          ratio="9/16"
-          minHeight={300}
-          maxHeight={400}
-          sx={{
-            flexBasis: '450px',
-            marginTop: '1.35rem',
-            width: '100%',
-            ".MuiAspectRatio-content": {
-              backgroundColor: "transparent"
-            }
-          }}
-        >
-          <GatsbyImage image={ image } alt="" />
-        </AspectRatio>
+        <CtaButton 
+          href="/staff" 
+          backgroundColor="#F9A302" 
+          background_image={InterviewImg.allFile.nodes[0]}
+          title="Download Interview Tips"
+          interview
+          />
       </Grid>
     </Grid>
   )

@@ -10,7 +10,7 @@ export const AboutStar = ({ content }) => {
       backgroundColor="#04758E"
       height="33vh"
     >
-      <Typography level="h3" align="center" sx={{
+      <Typography level="title-lg" align="center" sx={{
         color: "#fff", 
         marginBottom: '1.5rem',
         fontWeight: 400

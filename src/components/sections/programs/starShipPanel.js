@@ -46,55 +46,6 @@ export const StarShipPanel = ({title, content}) => {
           })
         }
       </Grid>
-      {/* <Stack
-        direction={{ xs: 'column', sm: 'row' }}
-        gap={ 4 }
-        sx={{display: 'flex', marginTop: '1.5rem'}}
-      >
-        <Box flex={1}>
-          <Typography level="h4">What to Expect</Typography>
-          <List>
-            {content.whatToExpect.map((item)=> (
-              <ListItem key={item}>{item}</ListItem>
-            ))}
-          </List>
-        </Box>
-        <Box flex={1}>
-          <Typography level="h4">Previous STARships have offered experience in:</Typography>
-          <List>
-            {content.previousExperienceOffered.map((item)=> (
-              <ListItem key={item}>{item}</ListItem>
-            ))}
-          </List>
-        </Box>
-      </Stack>
-      <Stack
-        direction={{ xs: 'column', sm: 'row' }}
-        gap={ 4 }
-        sx={{display: 'flex', marginTop: '1.5rem'}}
-      >
-        <Box flex={1}>
-          <Typography level="h4">Requirements:</Typography>
-          <List>
-            {content.requirements.map((item)=> (
-              <ListItem key={item}>{item}</ListItem>
-            ))}
-          </List>
-        </Box>
-        <Box flex={1}>
-          <Typography level="h4">Student Responsibilities:</Typography>
-          <Stack
-            gap={ 4 }
-            sx={{display: 'flex'}}
-          >
-            {
-              content.responsibilitiesButtons.map((button) => (
-                <Button key={button.title} to={button.url} external>{button.title}</Button>
-              ))
-            }
-          </Stack>
-        </Box>
-      </Stack> */}
       <br/>
       <Typography level="h4">Important STARship Dates:</Typography>
       <DatesTable content={ImportantDatesContent}/>

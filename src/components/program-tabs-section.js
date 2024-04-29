@@ -1,5 +1,5 @@
 import { Tabs, TabPanel } from '@mui/joy';
-import Tab, { tabClasses } from '@mui/joy/Tab';
+import Tab from '@mui/joy/Tab';
 import { styled } from '@mui/joy'
 
 export const TabContainer = styled(Tabs)`

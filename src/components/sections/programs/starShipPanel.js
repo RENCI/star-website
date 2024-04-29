@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { 
   Container, 
   Typography,
@@ -8,7 +8,6 @@ import {
   Box
 } from '@mui/joy'
 import { List } from '../../list'
-import { ImportantDates } from '../'
 import ImportantDatesContent from '../../../content/sections/important-dates.yaml'
 import { DatesTable } from '../../dates-table'
 import { Button } from '../../button'

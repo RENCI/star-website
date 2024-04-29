@@ -1,9 +1,10 @@
-import React, { Fragment } from 'react'
-import MUIList from '@mui/joy/List';
-import MUIListItem from '@mui/joy/ListItem';
-import { styled } from '@mui/joy'
+import React from 'react'
+import {
+  List as MUIList,
+  ListItem as MUIListItem,
+  Typography
+} from '@mui/joy';
 import CircleIcon from '@mui/icons-material/Circle';
-import {Typography} from '@mui/joy'
 
 export const List = ({children}) => {
   return (

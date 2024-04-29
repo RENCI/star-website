@@ -1,12 +1,15 @@
 import React from 'react'
 import { Section } from '../section'
-import { Stack, ListItem, Grid } from '@mui/joy'
-import AspectRatio from '@mui/joy/AspectRatio'
+import { 
+  AccordionGroup,
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  AspectRatio,
+  ListItem, 
+  Grid
+} from '@mui/joy'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import AccordionGroup from '@mui/joy/AccordionGroup';
-import Accordion from '@mui/joy/Accordion';
-import AccordionDetails from '@mui/joy/AccordionDetails';
-import AccordionSummary from '@mui/joy/AccordionSummary';
 import { List } from '../list'
 
 const TextPhotoWrapper = ({

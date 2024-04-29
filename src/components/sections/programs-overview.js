@@ -4,10 +4,8 @@ import {
   TabContainer, 
   ProgramTab,
   ProgramPanel } from '../program-tabs-section'
-import { Sheet, Container, Typography, Stack } from '@mui/joy'
+import { Sheet, Typography, Stack } from '@mui/joy'
 import TabList from '@mui/joy/TabList';
-import Tab, { tabClasses } from '@mui/joy/Tab';
-import TabPanel from '@mui/joy/TabPanel';
 import { StarShipPanel, StarVenturesPanel, IrodsPanel } from './programs'
 
 export const ProgramsOverview = ({ content }) => {

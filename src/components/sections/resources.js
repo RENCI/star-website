@@ -1,7 +1,7 @@
 import React from 'react'
 import { Section } from '../section'
 import { Grid, Typography, Box, List } from '@mui/joy'
-import { Link, ExternalLinkIcon } from '../link'
+import { Link } from '../link'
 import { DecorativeBulletListItem} from '../list'
 import { Button } from '../button'
 export const Resources = ({ content }) => {

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button as MUIButton, Typography} from '@mui/joy'
 import { Link, ExternalLinkIcon } from './link'
-import { styled } from '@mui/joy'
 
 export const Button = ({children, to, large, external, ...props}) => {
 

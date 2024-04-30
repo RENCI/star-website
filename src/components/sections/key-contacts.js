@@ -7,9 +7,9 @@ export const KeyContacts = ({ content }) => {
   
   return (
     <Section  
-      backgroundColor="#DFE5E8"
+      backgroundColor="#1A1B2F"
       title={content.title}
-      // textColor="#fff"
+      textColor="#fff"
     >
       <Grid container spacing={2}>
         {

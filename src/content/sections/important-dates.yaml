@@ -1,38 +1,55 @@
+
+
 # Instructions for editing this file
 section_id: important-dates
 title: Important Dates
 date_titles:
-  position_description_completed: "Position Description Completed"
-  hiring_decisions_completed: "Hiring Decisions Completed"
-  job_offer_decision_form_due_from_student: "Job Offer Decision Form Due (from Student)"
-  unc_classes_begin: "UNC Classes Begin"
-  critical_onboarding_paperwork_due: "Critical Onboarding Paperwork Due"
-  prepping_for_day1_tasks_due: "Prepping for Day 1 Tasks Due"
+  date1: "Last Day to Submit an Internship Request Form for the Cohort"
+  date2: "Position Description Completed"
+  date3: "Hiring Decisions Completed"
+  date4: "Job Offer Decision Form Due"
+  date5: "Cohort Start Date"
+  date6: "Program Interim Survey Due"
+  date7: "Extension Request Form Due"
+  date8: "STAR Talk Week"
+  date9: "Last Day of Cohort"
+  date10: "Program Exit Survey Due"
 
 # Content managers edit below this line.
 dates:
-  - semester: FALL 2023
-    semester_dates:
-      position_description_completed: "Friday, July 21, 2023"
-      hiring_decisions_completed: "Friday, August 11, 2023"
-      job_offer_decision_form_due_from_student: "Wednesday, August 16, 2023"
-      unc_classes_begin: "Monday, August 21, 2023"
-      critical_onboarding_paperwork_due: "Wednesday, August 23, 2023"
-      prepping_for_day1_tasks_due: "Wednesday, August 30, 2023"
-  - semester: SPRING 2024
-    semester_dates:
-      position_description_completed: "Friday, December 1, 2023"
-      hiring_decisions_completed: "Friday, December 22, 2023"
-      job_offer_decision_form_due_from_student: "Wednesday, January 3, 2024"
-      unc_classes_begin: "Wednesday, January 10, 2024"
-      critical_onboarding_paperwork_due: "Wednesday, January 10, 2024"
-      prepping_for_day1_tasks_due: "Wednesday, January 17, 2024"
   - semester: SUMMER 2024
     semester_dates:
-      position_description_completed: "Friday, April 12, 2024"
-      hiring_decisions_completed: "Friday, May 3, 2024"
-      job_offer_decision_form_due_from_student: "Wednesday, May 8, 2024"
-      unc_classes_begin: "Wednesday, May 15, 2024"
-      critical_onboarding_paperwork_due: "Thursday, May 16, 2024"
-      prepping_for_day1_tasks_due: "Thursday, May 23, 2024"
-
+      date1: "Friday, March 29, 2024"
+      date2: "Friday, April 12, 2024"
+      date3: "Friday, May 3, 2024"
+      date4: "Wednesday, May 8, 2024"
+      date5: "Friday, May 24, 2024"
+      date6: "Friday, July 5, 2024"
+      date7: "Friday, July 5, 2024"
+      date8: "Monday, July 29, 2024"
+      date9: "Friday, August 9, 2024"
+      date10: "Friday, August 9, 2024"
+  - semester: FALL 2024
+    semester_dates:
+      date1: "Friday, July 5, 2024"
+      date2: "Friday, July 19, 2024"
+      date3: "Friday, August 9, 2024"
+      date4: "Wednesday, August 14, 2024"
+      date5: "Friday, August 30, 2024"
+      date6: "Friday, October 25, 2024"
+      date7: "Friday, November 15, 2024"
+      date8: "Wednesday, November 20, 2024"
+      date9: "Wednesday, December 18, 2024"
+      date10: "Wednesday, December 18, 2024"
+  - semester: SPRING 2025
+    semester_dates:
+      date1: "Wednesday, November 20, 2024"
+      date2: "Friday, November 29, 2024"
+      date3: "Friday, December 20, 2024"
+      date4: "Friday, January 3, 2025"
+      date5: "Friday, January 17, 2025"
+      date6: "Friday, March 7, 2025"
+      date7: "Friday, March 28, 2025"
+      date8: "Monday, April 21, 2025"
+      date9: "Friday, May 9, 2025"
+      date10: "Friday, May 9, 2025"

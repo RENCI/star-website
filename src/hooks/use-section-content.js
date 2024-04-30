@@ -100,6 +100,16 @@ export const useSectionContent = () => {
         starVenturesContent {
           program_id
           description
+          starVenturesImg {
+            childImageSharp {
+              gatsbyImageData(
+                width: 1600
+                height: 700
+                placeholder: BLURRED
+                formats: [AUTO, WEBP]
+              )
+            }
+          }
           sections {
             heading
             contentType

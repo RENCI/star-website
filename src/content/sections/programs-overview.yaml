@@ -48,6 +48,7 @@ starVenturesContent:
     The STAR Ventures Summer Program helps high school students explore 
     various RENCI department roles and responsibilities and how they 
     contribute to research.
+  starVenturesImg: ../images/star-ventures-image.png
   sections:
     - heading: "Dates"
       contentType: "ul"

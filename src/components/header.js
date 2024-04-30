@@ -30,14 +30,11 @@ const Header = ({ siteTitle, menuOptions }) => {
     <Sheet
       component="header"
       sx={{
-        backgroundColor: reducedHeader ? '#fffc' : '#fffd',
-        // '&:hover': {
-        //   backgroundColor: '#ffff',
-        // },
+        backgroundColor: reducedHeader ? '#fff' : '#fffd',
         filter: reducedHeader ? 'drop-shadow(0 0 8px #0003)' : '',
         transition: 'filter 250ms 100ms, min-height 350ms, background-color 250ms 100ms',
         backdropFilter: 'blur(3px)',
-        zIndex: 9,
+        zIndex: 999,
         position: 'fixed',
         width: '100%',
         display: 'flex',
@@ -46,11 +43,13 @@ const Header = ({ siteTitle, menuOptions }) => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'flex-start',
+          m: 0,
+          p: 0
         },
         px: 1,
         minHeight: reducedHeader ? '3rem' : '5rem',
         '.brand': {
-          p: 1,
+          px: 1,
           alignSelf:'stretch',
           display: 'flex',
           justifyContent: 'center',

@@ -3,12 +3,11 @@ import { Section } from '../section'
 import { 
   TabContainer, 
   ProgramTab,
-  ProgramPanel } from '../program-tabs-section'
-import { Sheet, Container, Typography, Stack } from '@mui/joy'
+  ProgramPanel } from '../program-tabs'
+import { Sheet, Typography, Stack, Box, AspectRatio } from '@mui/joy'
 import TabList from '@mui/joy/TabList';
-import Tab, { tabClasses } from '@mui/joy/Tab';
-import TabPanel from '@mui/joy/TabPanel';
 import { StarShipPanel, StarVenturesPanel, IrodsPanel } from './programs'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 export const ProgramsOverview = ({ content }) => {
   const programContent = [
@@ -33,6 +32,8 @@ export const ProgramsOverview = ({ content }) => {
       ...content.programs[2]
     }
   ]
+  const image = getImage(content.lowerBanner)
+
   return (
     <Sheet
       component="section"
@@ -108,6 +109,11 @@ export const ProgramsOverview = ({ content }) => {
           })
         }
       </TabContainer>
+      <Box sx={{backgroundColor: '#345', height: '300px'}}>
+        <AspectRatio ratio={2}>
+          <GatsbyImage image={ image } alt="" />
+        </AspectRatio>
+      </Box>
     </Sheet>
   )
 }

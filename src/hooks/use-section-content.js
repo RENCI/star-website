@@ -11,32 +11,47 @@ export const useSectionContent = () => {
     query AllSectionContentQuery {
       AboutStar: sectionsYaml(section_id: { eq: "about-star" }) {
         blurb
+        bullets {
+          item
+        }
       }
       Forms: sectionsYaml(section_id: { eq: "forms" }) {
-        forms {
-          name
-          url
-        }
+        title
+        sections {
+          heading
+          links {
+            name
+            url
+          }
+        }    
       }
       ImportantDates: sectionsYaml(section_id: { eq: "important-dates" }) {
         title
         date_titles {
-          position_description_completed
-          hiring_decisions_completed
-          job_offer_decision_form_due_from_student
-          unc_classes_begin
-          critical_onboarding_paperwork_due
-          prepping_for_day1_tasks_due
+          date1
+          date2
+          date3
+          date4
+          date5
+          date6
+          date7
+          date8
+          date9
+          date10
         }
         dates {
           semester
           semester_dates {
-            position_description_completed
-            hiring_decisions_completed
-            job_offer_decision_form_due_from_student
-            unc_classes_begin
-            critical_onboarding_paperwork_due
-            prepping_for_day1_tasks_due
+            date1
+            date2
+            date3
+            date4
+            date5
+            date6
+            date7
+            date8
+            date9
+            date10
           }
         }
       }
@@ -93,16 +108,47 @@ export const useSectionContent = () => {
         starVenturesContent {
           program_id
           description
-          dates
-          requirements
+          starVenturesImg {
+            childImageSharp {
+              gatsbyImageData(
+                width: 1600
+                height: 700
+                placeholder: BLURRED
+                formats: [AUTO, WEBP]
+              )
+            }
+          }
+          sections {
+            heading
+            contentType
+            content {
+              title
+            }
+          }
           registrationLink
+          minorsNote
         }
         irodsContent {
           program_id
           description
-          dates
-          requirements
+          sections {
+            heading
+            contentType
+            content {
+              title
+            }
+          }
           learnMoreLink
+        }
+        lowerBanner {
+          childImageSharp {
+            gatsbyImageData(
+              width: 2400
+              height: 500
+              placeholder: BLURRED
+              formats: [AUTO, WEBP]
+            )
+          }
         }
       }
       StarShowcase: sectionsYaml(section_id: { eq: "star-showcase" }) {

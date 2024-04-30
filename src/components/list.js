@@ -1,9 +1,10 @@
-import React, { Fragment } from 'react'
-import MUIList from '@mui/joy/List';
-import MUIListItem from '@mui/joy/ListItem';
-import { styled } from '@mui/joy'
+import React from 'react'
+import {
+  List as MUIList,
+  ListItem as MUIListItem,
+  Typography
+} from '@mui/joy';
 import CircleIcon from '@mui/icons-material/Circle';
-import {Typography} from '@mui/joy'
 
 export const List = ({children}) => {
   return (
@@ -20,13 +21,25 @@ export const List = ({children}) => {
   )
 }
 
-export const DecorativeBulletListItem = ({children}) => {
+export const ListItem = ({children, color}) => {
+  return (
+    <MUIListItem  sx={{fontSize: '1rem', color: color}}>
+      {children}
+    </MUIListItem>
+  )
+}
+
+export const DecorativeBulletListItem = ({children, size}) => {
   return (
     <MUIListItem sx={{}}>
-      <CircleIcon sx={{color: '#F9A302', paddingRight: '0.5rem'}}/>
-      <Typography level="body-md" sx={{color: '#fff'}}>
+      <CircleIcon sx={{color: '#F9A302', marginRight: '1rem', fontSize: '1.2rem'}}/>
+      <Typography level={size==='lg' ? 'h3': 'body-lg'} sx={{
+        color: '#fff',
+        fontWeight: size==='lg' ? 400 : 500
+      }}>
         {children}
       </Typography>
     </MUIListItem>
   )
 }
+

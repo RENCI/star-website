@@ -4,12 +4,12 @@ import Typography from '@mui/joy/Typography';
 import Card from '@mui/joy/Card'
 import Grid from '@mui/joy/Grid'
 
-export const ParagraphGrid = ({heading, body}, id) => {
+export const ParagraphGrid = ({heading, body, color}, id) => {
   return (
     <Grid item xs={12} md={6} >
       <Card key={`${heading}-${id}`} sx={{height: '100%', backgroundColor: 'transparent'}} variant="soft">
-        <Typography level="h3">{heading}</Typography>
-        <Typography>{body}</Typography>
+        <Typography level="h3" sx={{color: color}}>{heading}</Typography>
+        <Typography sx={{color: color}}>{body}</Typography>
       </Card>
     </Grid>
   )

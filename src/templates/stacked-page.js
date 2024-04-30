@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import { graphql } from 'gatsby'
 import { Stack } from '@mui/joy'
 import { pascalCase } from 'change-case'
@@ -7,10 +7,19 @@ import { Hero } from '../components/hero'
 import { Seo } from '../components/seo'
 import { useSectionContent } from '../hooks'
 
-const StackedPage = ({ data }) => {
+const StackedPage = ({ location, data }) => {
   const { hero, sections, title, description } = data.content
   const sectionFilenames = sections
   const sectionContent = useSectionContent()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0 })
+    if (!location.hash) {
+      return
+    }
+    const targetElement = document.getElementById(location.hash.slice(1))
+    targetElement.scrollIntoView({ behavior: 'smooth' })
+  }, [location.hash])
 
   return (
     <Fragment>

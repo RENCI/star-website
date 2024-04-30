@@ -9,10 +9,28 @@ import {
 } from '@mui/joy'
 import { List } from '../../list'
 import ImportantDatesContent from '../../../content/sections/important-dates.yaml'
+import { useStaticQuery, graphql } from "gatsby"
 import { DatesTable } from '../../dates-table'
 import { Button } from '../../button'
 
+const datesQuery = graphql`query {
+  dates: allImportantDate {
+    nodes {
+      id
+      name
+      dates {
+        date
+        year
+      }
+    }
+  }
+}`
+
 export const StarShipPanel = ({title, content}) => {
+  const data = useStaticQuery(datesQuery)
+
+  console.log(data)
+  
   return (
     <Container maxWidth="md" sx={{margin: '1.5rem auto'}}>
       <Typography level="h3" textAlign="center" gutterBottom>{title}</Typography>

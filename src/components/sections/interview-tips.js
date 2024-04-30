@@ -85,6 +85,7 @@ export const InterviewTips = ({ content }) => {
       title={content.title}  
       backgroundColor="#1A1B2F"
       textColor="#fff"
+      id="interview-tips"
 >
       <TextPhotoWrapper { ...content }/>
     </Section>

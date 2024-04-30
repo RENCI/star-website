@@ -8,6 +8,7 @@ export const ProcessOverview = ({ content }) => {
     <Section
       backgroundColor="#F6F6F6"
       title={content.title}
+      id="process-overview"
     >
       {
         content.steps.map((item)=>(<TitleBodyItem item={item} key={item.title}/>))

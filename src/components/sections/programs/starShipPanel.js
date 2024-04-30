@@ -29,8 +29,8 @@ export const StarShipPanel = ({title, content}) => {
         }
       </PanelContentGridContainer>
       <br/>
-      <Typography level="h4">Important STARship Dates:</Typography>
-      <DatesTable content={ImportantDatesContent}/>
+      <Typography level="h4" id="important-dates">Important STARship Dates:</Typography>
+      <DatesTable content={ImportantDatesContent} />
       <MainPanelButton 
         title="View Open Positions"
         to="/positions"

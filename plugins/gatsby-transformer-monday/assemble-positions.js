@@ -3,8 +3,7 @@ const columnMap = require('./column-map')
 /* This function massages row data into an array of position objects
  * with fields defined by `columnMap.positions` 
  * 
- * @param   array  columns    Monday response columns defined in query above.
- * @param   array  items      Monday response items defined in query above.
+ * @param   array  groups     Monday response groups defined in query.
  * 
  * @return  array  positions as objects.
  * */

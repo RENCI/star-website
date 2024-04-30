@@ -32,7 +32,7 @@ export const PositionsProvider = ({ children }) => {
   // coming directly from the monday source plugin.
   const data = useStaticQuery(graphql`
     query PositionsQuery {
-      allMondayColumn {
+      allPositionColumn {
         nodes {
           id
           field
@@ -40,7 +40,7 @@ export const PositionsProvider = ({ children }) => {
           options
         }
       }
-      allMondayItem {
+      allPositionItem {
         nodes {
           id
           name
@@ -61,8 +61,8 @@ export const PositionsProvider = ({ children }) => {
   `)
 
   // extract the data nodes.
-  const columns = useMemo(() => data?.allMondayColumn?.nodes ?? [], [data])
-  const positions = useMemo(() => data?.allMondayItem?.nodes ?? [], [data])
+  const columns = useMemo(() => data?.allPositionColumn?.nodes ?? [], [data])
+  const positions = useMemo(() => data?.allPositionItem?.nodes ?? [], [data])
   // `filters` is an object whose keys are position
   // properties and whose values are ones to match
   // on positions in the respective property,

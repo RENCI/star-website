@@ -28,7 +28,21 @@ const PositionsPage = () => {
 
   const PositionsHeroContent = {
     "title": "Positions",
-    "background_image": backgroundImg
+    "background_image": backgroundImg,
+    "buttons": [
+      {
+        title: "Interview Tips",
+        url: "/students#interview-tips"
+      },
+      {
+        title: "Important Dates",
+        url: "/students#important-dates"
+      },
+      {
+        title: "Process Overview",
+        url: "/students#process-overview"
+      },
+    ]
   }
   return (
     <Fragment>

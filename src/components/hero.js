@@ -2,11 +2,19 @@ import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import {
-  Button, FormControl, Input, Sheet, Stack, Typography, Box
+  Sheet, Stack, Typography, Box, Grid, Container
 } from '@mui/joy'
 import { useScrolling } from '../hooks'
+import { Button } from './button'
+import { Link } from './link'
 
-export const Hero = ({ background_image, blurb, title, titleColor }) => {
+export const Hero = ({ 
+  background_image, 
+  blurb, 
+  title, 
+  titleColor,
+  buttons
+}) => {
   const heroImage = getImage(background_image)
   const { scrollPosition } = useScrolling()
   const heroRef = useRef()
@@ -32,7 +40,7 @@ export const Hero = ({ background_image, blurb, title, titleColor }) => {
           margin: 'auto',
           width: '100%',
           height:'100%',
-          background: 'linear-gradient(90deg, #080830 0%, rgba(0, 0, 0, 0) 100%)',
+          background: 'linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%)',
           '.content': {
             zIndex: 9,
             width: '1200px',
@@ -69,28 +77,31 @@ export const Hero = ({ background_image, blurb, title, titleColor }) => {
       <Box className="overlay">
       <Stack
         justifyContent="center"
-        alignItems="flex-start"
+        alignItems={{ sm: 'center', md: 'flex-start' }}
         gap={ 3 }
         className="content"
       >
-        <Typography level="h1" className="title">{ title }</Typography>
-        <Typography level="body-lg" className="subtitle">{ blurb }</Typography>
-        {/* <FormControl>
-          <Input
-            placeholder="Search positions"
-            endDecorator={
-              <Button
-                variant="solid"
-                color="primary"
-                type="submit"
-                className="search-button"
-              >Search</Button>
-            }
-            sx={{ '--Input-decoratorChildHeight': '45px' }}
-          />
-        </FormControl> */}
+        <Box
+          justifyContent="center"
+          alignItems="flex-start"
+        >
+          <Typography level="h1" className="title">{ title }</Typography>
+          <Typography level="body-lg" className="subtitle">{ blurb }</Typography>
+        </Box>
+        {buttons && (
+          <Stack
+            direction={{ sm: 'column', md: 'row' }}
+            gap={ 2 }
+            mt="3rem"
+          >
+            {buttons.map((button)=> (
+              <Button noIcon large component={Link} to={button.url}>
+                <Typography>{button.title}</Typography>
+              </Button>
+            ))}
+          </Stack>
+        )}
       </Stack>
-
       </Box>
     </Sheet>
   )

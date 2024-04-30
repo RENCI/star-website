@@ -3,12 +3,13 @@ import { Section } from "../section"
 import { Box } from "@mui/joy"
 
 export const ImportantDates = ({ content }) => {
-  const rows = content.nodes.map(({ name, dates }) => ({
+  const rows = content.nodes.map(({ name, dates, audience }) => ({
     name,
     dates: dates.reduce((acc, d) => {
       acc[d.year] = d.date
       return acc
     }, {}),
+    audience,
   }))
 
 

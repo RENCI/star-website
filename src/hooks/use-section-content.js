@@ -25,6 +25,7 @@ export const useSectionContent = () => {
         nodes {
           id
           name
+          audience
           dates {
             date
             year

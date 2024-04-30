@@ -12,19 +12,23 @@ module.exports = function assembleDatesData({ columns, groups }) {
       acc[col.id] = col.title
       return acc
     }, {})
-
   const dates = groups[0].items_page.items.map(item => {
-    const values = item.column_values.reduce((acc, { id, text }) => {
-      acc.push({
-        date: text,
-        year: years[id],
-      })
-      return acc
-    }, [])
+    // the `Viewer` column has `id` of `status5` in the Monday board.
+    const audience = item.column_values.find(col => col.id === 'status5').text
+    const values = item.column_values
+      .filter(col => col.id.startsWith('date'))
+      .reduce((acc, { id, text }) => {
+        acc.push({
+          date: text,
+          year: years[id],
+        })
+        return acc
+      }, [])
     return {
       id: item.id,
       name: item.name,
       dates: values,
+      audience,
     }
   })
 

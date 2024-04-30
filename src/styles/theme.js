@@ -34,14 +34,17 @@ const theme = extendTheme({
       paddingBottom: '1.75rem',
       fontWeight: '500',
       color: palette.light.palette.primary[700],
+      fontSize: '2rem',
+      letterSpacing: '0.2px'
     },
     h3: {
-      fontWeight: '500'
+      fontWeight: '500',
+      fontSize: '1.6rem',
+      letterSpacing: '0.1px'
     },
     h4: {
-      fontWeight: '300',
-      textDecoration: "italics"
-      
+      fontWeight: '500',
+      fontSize: '1.4rem'
     }
   },
 

@@ -11,32 +11,47 @@ export const useSectionContent = () => {
     query AllSectionContentQuery {
       AboutStar: sectionsYaml(section_id: { eq: "about-star" }) {
         blurb
+        bullets {
+          item
+        }
       }
       Forms: sectionsYaml(section_id: { eq: "forms" }) {
-        forms {
-          name
-          url
-        }
+        title
+        sections {
+          heading
+          links {
+            name
+            url
+          }
+        }    
       }
       ImportantDates: sectionsYaml(section_id: { eq: "important-dates" }) {
         title
         date_titles {
-          position_description_completed
-          hiring_decisions_completed
-          job_offer_decision_form_due_from_student
-          unc_classes_begin
-          critical_onboarding_paperwork_due
-          prepping_for_day1_tasks_due
+          date1
+          date2
+          date3
+          date4
+          date5
+          date6
+          date7
+          date8
+          date9
+          date10
         }
         dates {
           semester
           semester_dates {
-            position_description_completed
-            hiring_decisions_completed
-            job_offer_decision_form_due_from_student
-            unc_classes_begin
-            critical_onboarding_paperwork_due
-            prepping_for_day1_tasks_due
+            date1
+            date2
+            date3
+            date4
+            date5
+            date6
+            date7
+            date8
+            date9
+            date10
           }
         }
       }
@@ -65,6 +80,7 @@ export const useSectionContent = () => {
         }
       }
       ProcessOverview: sectionsYaml(section_id: { eq: "process-overview" }) {
+        title
         steps {
           title
           description
@@ -74,33 +90,92 @@ export const useSectionContent = () => {
         title
         programs {
           title
+          program_id
           subtitle
+        }
+        starShipContent {
+          program_id
           description
-          offerings
+          sections {
+            heading
+            contentType
+            content {
+              title
+              url
+            }
+          }
+        }
+        starVenturesContent {
+          program_id
+          description
+          starVenturesImg {
+            childImageSharp {
+              gatsbyImageData(
+                width: 1600
+                height: 700
+                placeholder: BLURRED
+                formats: [AUTO, WEBP]
+              )
+            }
+          }
+          sections {
+            heading
+            contentType
+            content {
+              title
+            }
+          }
+          registrationLink
+          minorsNote
+        }
+        irodsContent {
+          program_id
+          description
+          sections {
+            heading
+            contentType
+            content {
+              title
+            }
+          }
+          learnMoreLink
+        }
+        lowerBanner {
+          childImageSharp {
+            gatsbyImageData(
+              width: 2400
+              height: 500
+              placeholder: BLURRED
+              formats: [AUTO, WEBP]
+            )
+          }
         }
       }
       StarShowcase: sectionsYaml(section_id: { eq: "star-showcase" }) {
         title
         students {
           student_name
-          student_photo {
-            childImageSharp {
-              gatsbyImageData(
-                width: 500
-                height: 500
-                placeholder: BLURRED
-                formats: [AUTO, WEBP]
-              )
-            }
-          }
+          title
           project_description
+          project_link_text
+          project_link
         }
       }
       Resources: sectionsYaml(section_id: { eq: "resources" }) {
-        links {
-          title
-          url
+        title
+        sections {
+          heading
+          description
+          links {
+            title
+            url
+          }
+          stayConnectedList {
+            item
+          }
         }
+        stayConnectedButtonText
+        stayConnectedButtonURL
       }
       StudentsStaffCtas: sectionsYaml(section_id: { eq: "students-staff-ctas" }) {
         staff_cta {

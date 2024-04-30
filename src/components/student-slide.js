@@ -1,57 +1,70 @@
 import React from 'react';
-import Box from '@mui/joy/Box'
-import Card from '@mui/joy/Card'
-import Typography from '@mui/joy/Typography';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-
-import AspectRatio from '@mui/joy/AspectRatio';
-import CardContent from '@mui/joy/CardContent';
-import Stack from '@mui/joy/Stack'
+import { Card, CardContent, CardActions, Typography } from '@mui/joy';
+import { Link } from './link'
+import { Button } from './button'
 
 export const StudentSlide = ({student}) => {
-  const { student_name, student_photo, project_description } = student
-  const image = getImage(student_photo)
+  const { 
+    student_name, 
+    title, 
+    project_description,
+    project_link_text, 
+    project_link } = student
 
   return (
-      <Card 
-        sx={{
-          maxWidth: '600px',
-          flexWrap: 'wrap',
-          marginTop: '1rem',
-          marginBottom: '1rem'
-        }}
-      >
-        <Stack
-          direction={{ xs: 'column', sm: 'row' }}
-          gap={3}
-        >
-        <AspectRatio 
-          flex 
-          ratio="1"  
+    <Card 
+      sx={{
+        minHeight: '350px',
+        flexWrap: 'wrap',
+        marginTop: '1rem',
+        marginBottom: '3rem',
+        px: '3.5rem',
+        py: '2rem',
+        backgroundColor: '#ECF1F2',
+      }}
+    >
+      <CardContent sx={{
+        display: 'flex', 
+        flexDirection: 'column', 
+        justifyContent: 'center'
+      }}>
+        <Typography 
+          level="h3"
+          align="center"
           sx={{
-            minWidth: '200px', 
-            ".MuiAspectRatio-content": {
-              backgroundColor: "transparent",
-              paddingBottom: 0
-            }
+            fontSize: '1.65rem',
+            fontWeight: 600
           }}
         >
-          <GatsbyImage image={ image } alt="" />
-        </AspectRatio>
-        
-        <CardContent>  
-          <Typography fontSize="xl" fontWeight="lg">
-            {student_name}
-          </Typography>
+          {student_name}
+        </Typography>
           
-          <Typography level="body-sm" fontWeight="lg" textColor="text.tertiary">
-            Student Intern
-          </Typography>
+        <Typography
+          align="center"
+          sx={{
+            fontSize: '1.5rem'
+          }}
+        >
+          {title}
+        </Typography>
           
-          <Typography>{project_description}</Typography>
-        </CardContent>
-        </Stack>
-
-      </Card>
+        <Typography
+          align="center"
+          sx={{
+            fontSize: '1.2rem',
+            fontStyle: 'italic',
+          }}
+        >{project_description}</Typography>
+      </CardContent>
+      <CardActions>
+        <Button
+          component={Link}
+          to={project_link}
+          noIcon
+          large
+          external
+        >{project_link_text}</Button>
+      </CardActions>
+    </Card>
   )
 }

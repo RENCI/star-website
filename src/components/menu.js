@@ -26,23 +26,30 @@ export const Menu = () => {
       sx={{
         alignSelf:'stretch',
         display: 'flex',
-        gap: 1,
-        m: 0, p: 0,
+        // gap: 1,
+        padding: 0,
+        margin: 0,
         listStyleType: 'none',
+        zIndex: 999,
+        height: '100%',
         '.nav-list': {
           alignSelf: 'stretch',
           display: 'flex',
           alignItems: 'stretch',
+          zIndex: 999,
+          height: '100%',
           'a': {
-            p: 2,
+            px: 4,
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            borderRadius: 0,
+
             '&[aria-current="page"]': {
               borderBottom: '5px solid #04758e'
             },
             '&:hover': {
-              fontWeight: '600'
+              backgroundColor: '#04758e10'
             },
           },
         },

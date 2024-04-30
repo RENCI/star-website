@@ -1,21 +1,42 @@
 import React from 'react'
-import { Sheet, Typography } from '@mui/joy'
+import { Typography, List, Box } from '@mui/joy'
 import { Section } from '../section'
+import { DecorativeBulletListItem } from '../list'
 
 export const AboutStar = ({ content }) => {
   
   return (
     <Section
-      backgroundColor="#04758E33"
+      backgroundColor="#04758E"
       height="33vh"
     >
-      <Sheet sx={{
-        backgroundColor: '#04758E00',
-        borderRadius: '1rem',
-        p: 8, m: { xs: 2, md: 4},
+      <Typography level="title-lg" align="center" sx={{
+        color: "#fff", 
+        marginBottom: '1.5rem',
+        fontWeight: 400
+      }}>{ content.blurb }</Typography>
+      
+      <Box sx={{
+        width: {xs: '100%', sm: '100%', md: '100%'},
+        margin: {xs: '0 auto', sm: '0 auto', md: '0 auto'},
       }}>
-        <Typography level="h3">{ content.blurb }</Typography>
-      </Sheet>
+        <List
+          size="sm"
+          sx={{
+            display: 'grid',
+            gridTemplateColumns: { xs: '1fr 1fr', sm: '1fr 1fr', md: '1fr 1fr'},
+            mx: {sm: '1rem', md: 'calc(-1 * var(--ListItem-paddingX))'},
+          }}
+      
+        >
+          {
+            content.bullets.map(({item})=>(
+              <DecorativeBulletListItem>{item}</DecorativeBulletListItem>
+            ))
+          }
+        </List>
+
+      </Box>
     </Section>
   )
 }

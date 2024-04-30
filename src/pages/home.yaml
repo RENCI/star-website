@@ -3,14 +3,14 @@ description: Qui in ea aute in dolor ut voluptate in laboris nisi.
 path: /
 hero:
   background_image: home-hero.jpg
-  title: Pathways to the future
+  title: Learning to Soar
+  titleColor: '#EDCB5B'
   blurb: >
     Student Advancement at RENCI (STAR) helps the next generation 
     of thinkers bring their ideas to the table, build valuable skills, 
     and pursue professional growth. We are excited to engage with 
     curious, hard-working young professionals through STAR Internships 
     (STARships).
-
 sections:
   - about-star
   - students-staff-ctas

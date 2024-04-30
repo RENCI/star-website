@@ -2,20 +2,28 @@ const assemblePositionData = require('./assemble-positions')
 const assembleColumnData = require('./assemble-columns')
 const assembleDatesData = require('./assemble-dates')
 
-async function onCreateNode({ actions, createContentDigest, loadNodeContent, node}) {
+async function onCreateNode({
+  actions,
+  createContentDigest,
+  loadNodeContent,
+  node,
+  reporter,
+}) {
+  const timer = reporter.activityTimer(`transforming Monday.com boards`)
 
-  if (node.internal.type !== 'MondayBoard') {
-    return
-  }
-
-  // using this function throws an error. will look into.
-  // const nodeContent = await loadNodeContent(node)
+  timer.setStatus(`Look for boards`)
 
   if (!node) {
     return
   }
 
+  if (node.internal.type !== 'MondayBoard') {
+    return
+  }
+
+
   const createPositionNodes = positionData => {
+    timer.setStatus(`Create PositionItem nodes`)
     for (const position of positionData) {
       actions.createNode({
         ...position,
@@ -30,6 +38,7 @@ async function onCreateNode({ actions, createContentDigest, loadNodeContent, nod
   }
 
   const createColumnNodes = columnData => {
+    timer.setStatus(`Create PositionColumn nodes`)
     for (const column of columnData) {
       actions.createNode({
         ...column,
@@ -44,8 +53,7 @@ async function onCreateNode({ actions, createContentDigest, loadNodeContent, nod
   }
 
   const createDateNodes = datesData => {
-    console.log(datesData)
-
+    timer.setStatus(`Create ImportantDate nodes`)
     datesData.forEach(date => {
       actions.createNode({
         ...date,
@@ -59,20 +67,28 @@ async function onCreateNode({ actions, createContentDigest, loadNodeContent, nod
     })
   }
 
-  if (node.id === `6391840129`) {
-    const datesData = assembleDatesData(node)
-    // console.log(JSON.stringify(datesData, null, 2))
-    createDateNodes(datesData)
-  }
-  
-  if (node.id === `5267641585`) {
-    const positionData = assemblePositionData(node)
-    // console.log(JSON.stringify(positionData, null, 2))
-    createPositionNodes(positionData)
+  try {
+    if (node.id === `6391840129`) {
+      const datesData = assembleDatesData(node)
+      // console.log(JSON.stringify(datesData, null, 2))
+      createDateNodes(datesData)
+      timer.setStatus(`Created ImportantDate nodes`)
+    }
+    
+    if (node.id === `5267641585`) {
+      const positionData = assemblePositionData(node)
+      // console.log(JSON.stringify(positionData, null, 2))
+      createPositionNodes(positionData)
+      timer.setStatus(`Created PositionItem nodes`)
 
-    const columnData = assembleColumnData(node)
-    // console.log(JSON.stringify(columnData, null, 2))
-    createColumnNodes(columnData)
+      const columnData = assembleColumnData(node)
+      // console.log(JSON.stringify(columnData, null, 2))
+      createColumnNodes(columnData)
+      timer.setStatus(`Created PositionColumn nodes`)
+    }
+  } catch (error) {
+    timer.panicOnBuild(error)
+    timer.setStatus(`Could not transform Monday.com position and dates boards.`)
   }
 
 }

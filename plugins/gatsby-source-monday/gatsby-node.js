@@ -8,7 +8,7 @@ const axiosOptions = { headers: {
 
 exports.sourceNodes = async (gatsbyApi, pluginOptions) => {
   const { actions, createContentDigest, createNodeId, reporter } = gatsbyApi
-  const sourcingTimer = reporter.activityTimer(`source boards from Monday.com`)
+  const timer = reporter.activityTimer(`source Monday.com boards`)
 
   function createBoardNode(data) {
     // console.log(JSON.stringify(data, null, 2))
@@ -23,29 +23,29 @@ exports.sourceNodes = async (gatsbyApi, pluginOptions) => {
     })
   }
 
-  sourcingTimer.start()
+  timer.start()
   try {
     // fetch the board data
     axiosOptions.headers.Authorization = `bearer ${ pluginOptions.API_TOKEN }`
-    sourcingTimer.setStatus(`Fetching board data`)
+    timer.setStatus(`Fetching board data`)
     const boardData = await fetchBoardData(axiosOptions)
     if (!boardData) {
       throw new Error(`Failed to fetch board data`)
     }
 
     // create board nodes
-    sourcingTimer.setStatus(`Assembling board data`)
+    timer.setStatus(`Assembling board data`)
     if (!boardData) {
       throw new Error(`Failed to process board data`)
     }
-    sourcingTimer.setStatus(`Sourced ${ Object.keys(boardData).length } boards`)
+    timer.setStatus(`Sourced ${ Object.keys(boardData).length } boards`)
     Object.keys(boardData).forEach(key => {
       createBoardNode(boardData[key][0])
     })
-    sourcingTimer.setStatus(`Created ${ Object.keys(boardData).length } board nodes`)
+    timer.setStatus(`Created ${ Object.keys(boardData).length } board nodes`)
   } catch (error) {
-    sourcingTimer.panicOnBuild(error)
-    sourcingTimer.setStatus(`Could not source boards from API.`)
+    timer.panicOnBuild(error)
+    timer.setStatus(`Could not source boards from API.`)
   }
 }
 

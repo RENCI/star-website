@@ -60,23 +60,18 @@ async function onCreateNode({ actions, createContentDigest, loadNodeContent, nod
   }
 
   if (node.id === `6391840129`) {
-    console.log('DATES')
-    
     const datesData = assembleDatesData(node)
-    console.log(JSON.stringify(datesData, null, 2))
+    // console.log(JSON.stringify(datesData, null, 2))
     createDateNodes(datesData)
   }
   
   if (node.id === `5267641585`) {
-    console.log('POSITIONS')
-    
     const positionData = assemblePositionData(node)
-    console.log(JSON.stringify(positionData, null, 2))
+    // console.log(JSON.stringify(positionData, null, 2))
     createPositionNodes(positionData)
 
-    console.log('COLUMNS')
     const columnData = assembleColumnData(node)
-    console.log(JSON.stringify(columnData, null, 2))
+    // console.log(JSON.stringify(columnData, null, 2))
     createColumnNodes(columnData)
   }
 

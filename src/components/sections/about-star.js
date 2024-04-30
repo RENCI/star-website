@@ -31,7 +31,7 @@ export const AboutStar = ({ content }) => {
         >
           {
             content.bullets.map(({item})=>(
-              <DecorativeBulletListItem size="lg">{item}</DecorativeBulletListItem>
+              <DecorativeBulletListItem>{item}</DecorativeBulletListItem>
             ))
           }
         </List>

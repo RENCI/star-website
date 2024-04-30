@@ -21,25 +21,13 @@ export const useSectionContent = () => {
           url
         }
       }
-      ImportantDates: sectionsYaml(section_id: { eq: "important-dates" }) {
-        title
-        date_titles {
-          position_description_completed
-          hiring_decisions_completed
-          job_offer_decision_form_due_from_student
-          unc_classes_begin
-          critical_onboarding_paperwork_due
-          prepping_for_day1_tasks_due
-        }
-        dates {
-          semester
-          semester_dates {
-            position_description_completed
-            hiring_decisions_completed
-            job_offer_decision_form_due_from_student
-            unc_classes_begin
-            critical_onboarding_paperwork_due
-            prepping_for_day1_tasks_due
+      ImportantDates: allImportantDate {
+        nodes {
+          id
+          name
+          dates {
+            date
+            year
           }
         }
       }

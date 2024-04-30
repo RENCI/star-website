@@ -6,11 +6,11 @@ export const ProcessOverview = ({ content }) => {
 
   return (
     <Section
-      title='Process Overview'
-
+      backgroundColor="#F6F6F6"
+      title={content.title}
     >
       {
-        content.steps.map((item)=>(<TitleBodyItem item={item}/>))
+        content.steps.map((item)=>(<TitleBodyItem item={item} key={item.title}/>))
       }
     </Section>
   )

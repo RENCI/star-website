@@ -14,30 +14,29 @@ export const Section = ({
   // these seem like top priority customizations
   // to surface, but set reasonable defaults.
   backgroundColor = 'transparent',
-  height = '75vh',
   // make room for any additional style customization.
   customStyles = {},
-  title
+  title,
+  textColor
 }) => {
   return (
     <Sheet
       component="section"
       id={ id }
       sx={{
-        height,
         backgroundColor,
         display: 'flex',
-        justifyContent: 'stretch',
+        // justifyContent: 'stretch',
         alignItems: 'stretch',
-        position: 'relative',
-        overflow: 'hidden',
+        // position: 'relative',
+        // overflow: 'hidden',
         '.section-container': {
           backgroundColor: 'transparent',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
+          // display: 'flex',
+          // flexDirection: 'column',
+          // justifyContent: 'center',
           alignItems: 'center',
-          my: 2,
+          py: 8,
           mx: 'auto',
         },
         '.height-indicator': {
@@ -53,14 +52,18 @@ export const Section = ({
         ...customStyles,
       }}
     >
-      <Container className="section-container">
-        {title && <Typography level="h2">{title}</Typography>}
+      <Container className="section-container" maxWidth="md" sx={{color: textColor ? textColor : null}}>
+        {title && <Typography level="h2" sx={{
+            color: textColor ? textColor : null,
+            textAlign: 'center'
+          }}>{title}
+        </Typography>}
         { children }
       </Container>
       {
         process.env.NODE_ENV === 'development' && SHOW_SECTION_HEIGHTS && (
           <span className="height-indicator">
-            height = { JSON.stringify(height) }
+            {/* height = { JSON.stringify(height) } */}
           </span>
         )
       }

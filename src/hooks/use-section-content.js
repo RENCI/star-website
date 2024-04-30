@@ -11,6 +11,9 @@ export const useSectionContent = () => {
     query AllSectionContentQuery {
       AboutStar: sectionsYaml(section_id: { eq: "about-star" }) {
         blurb
+        bullets {
+          item
+        }
       }
       Forms: sectionsYaml(section_id: { eq: "forms" }) {
         forms {
@@ -65,6 +68,7 @@ export const useSectionContent = () => {
         }
       }
       ProcessOverview: sectionsYaml(section_id: { eq: "process-overview" }) {
+        title
         steps {
           title
           description
@@ -74,33 +78,61 @@ export const useSectionContent = () => {
         title
         programs {
           title
+          program_id
           subtitle
+        }
+        starShipContent {
+          program_id
           description
-          offerings
+          sections {
+            heading
+            contentType
+            content {
+              title
+              url
+            }
+          }
+        }
+        starVenturesContent {
+          program_id
+          description
+          dates
+          requirements
+          registrationLink
+        }
+        irodsContent {
+          program_id
+          description
+          dates
+          requirements
+          learnMoreLink
         }
       }
       StarShowcase: sectionsYaml(section_id: { eq: "star-showcase" }) {
         title
         students {
           student_name
-          student_photo {
-            childImageSharp {
-              gatsbyImageData(
-                width: 500
-                height: 500
-                placeholder: BLURRED
-                formats: [AUTO, WEBP]
-              )
-            }
-          }
+          title
           project_description
+          project_link_text
+          project_link
         }
       }
       Resources: sectionsYaml(section_id: { eq: "resources" }) {
-        links {
-          title
-          url
+        title
+        sections {
+          heading
+          description
+          links {
+            title
+            url
+          }
+          stayConnectedList {
+            item
+          }
         }
+        stayConnectedButtonText
+        stayConnectedButtonURL
       }
       StudentsStaffCtas: sectionsYaml(section_id: { eq: "students-staff-ctas" }) {
         staff_cta {

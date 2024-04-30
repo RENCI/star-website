@@ -1,7 +1,7 @@
 import React from "react"
 import { Layout } from "./src/components/layout"
 import { CssVarsProvider } from '@mui/joy/styles';
-import theme from './src/styles/theme'
+import theme from './src/styles/'
 import { PositionsProvider } from './src/components/positions'
 
 export const wrapPageElement = ({ element, props }) => {

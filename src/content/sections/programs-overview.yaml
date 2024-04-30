@@ -1,35 +1,72 @@
 section_id: programs-overview
 title: Programs Overview
 programs:
+  - title: STARship
+    program_id: 'starship'
+    subtitle: "Undergraduate or Graduate Students"
   - title: STAR Ventures
-    subtitle: High School Internship
-    description: >
-      STAR Ventures is a 3-week summer program for high school students 
-      interested in exploring data science as a career. Students will 
-      have the opportunity to attend informational workshops about the 
-      roles and responsibilities of various departments within RENCI and 
-      how they contribute to data science research.
-    offerings:
-      - Summer
-  - title: Accelerated Summer Training, Resources, and Learning (ASTRAL)
-    subtitle: Rising College Freshmen (High School Seniors) and Undergraduate Students
-    description: >
-      The ASTRAL program is a gateway for rising college freshmen and 
-      undergraduate students to gain hands-on experience with RENCI project 
-      teams, developing various professional and technical skills through 
-      the program’s three phases: Plan, Perform, and Present.
-    offerings:
-      - Offered during the summer to rising college freshman and undergraduate students
-      - Must be age 18 years or older
-      - 3 week, on location internships
-  - title: RENCI STARship
+    program_id: 'starventures'
+    subtitle: Rising high school juniors and seniors and rising college freshman
+  - title: iRODS Internship
+    program_id: 'irods'
     subtitle: Undergraduate and Graduate students
-    description: >
-      STARships are an opportunity for undergraduate and graduate students 
-      to have a tailor-made internship, working with RENCI project teams, 
-      to accomplish project milestones.
-    offerings:
-      - Offered during the summer, fall, and spring semesters to undergraduate and graduate students
-      - Must be 17 or older
-      - STARships vary in their length, from one semester to multiple years, depending on the project needs and students performance
-
+starShipContent:
+  program_id: 'starship'
+  description: >
+    STARships are an opportunity for undergraduate and graduate students
+    to have a tailor-made internship, with RENCI project teams, to accomplish
+    project milestones.
+  sections:
+    - heading: "What to Expect"
+      contentType: "ul"
+      content:
+        - title: "STARships vary in their length, from one semester to multiple semesters, depending on the project needs and student’s performance"
+        - title: "Typical skills developed: presentation skills, professional development, organizational skills, effective communication, and other project-specific skills."
+    - heading: "Previous STARships have offered experience in:"
+      contentType: "ul"
+      content:
+        - title: "Software Development"
+        - title: "Web Application Construction"
+        - title: "Project Management"
+        - title: "Communications & Social Media"
+        - title: "Cloud Programming & Testing"
+    - heading: "Requirements"
+      contentType: "ul"
+      content:
+        - title: "Must be a current Undergraduate or Graduate student (at least half-time enrollment) at a college/university"
+        - title: "Must be available to work up to 20 hrs per week during Fall and/or Spring and up to 40 hrs per week during Summer"
+    - heading: "Student Responsibilities"
+      contentType: "button"
+      content:
+        - title: "New Student Responsibilities"
+          url: "https://docs.google.com/document/d/1vjrr349cRXTHq1ypr2jzQz5dZde67sB3xpvKm9Tgl7s/edit"
+        - title: "Extended Student Responsbilities*"
+          url: "https://docs.google.com/document/d/1Q7imkLGgekCt7oWGqRJ1cXPglGhtCCvhUMxLPp9Suxc/edit"
+starVenturesContent:
+  program_id: 'starventures'
+  description: >
+    The STAR Ventures Summer Program helps high school students explore 
+    various RENCI department roles and responsibilities and how they 
+    contribute to research.
+  dates:
+    - This year’s program will run from July 15 - August 2, 2024.
+    - Registration is open from mid-April until spots are filled.
+  requirements:
+    - Offered during the summer to rising high school juniors and seniors and rising college freshman
+    - Must be 15 - 17 years old at the time of the program
+    - Must be able to attend all in-person and virtual sessions during the entire program
+  registrationLink: https://wkf.ms/3LdrJer
+irodsContent:
+  program_id: 'irods'
+  description: >
+    The iRODS Summer Internships is an opportunity for undergraduate and 
+    graduate students to work in a production-quality software engineering 
+    environment with global reach, mentorship, periodic code reviews, and 
+    direct community feedback.
+  dates:
+    - 3 months during the summer
+    - Approximately June - August
+  requirements:
+    - Currently, only offered during the summer to rising college freshman, undergraduate, and graduate students
+    - Must be 18 or older
+  learnMoreLink: https://irods.org/2024/01/irods-internship-summer-2024/

@@ -2,7 +2,7 @@ import React from 'react'
 import { Button as MUIButton, Typography} from '@mui/joy'
 import { Link, ExternalLinkIcon } from './link'
 
-export const Button = ({children, to, large, external, ...props}) => {
+export const Button = ({children, to, large, external, color, ...props}) => {
 
   return (
     <MUIButton
@@ -11,7 +11,11 @@ export const Button = ({children, to, large, external, ...props}) => {
       to={to}
       underline="none"
       sx={{
-        padding: large ? '1rem 3rem' : '0.5rem 2rem'
+        padding: large ? '1rem 3rem' : '0.5rem 2rem',
+        backgroundColor: color,
+        ':hover': {
+          backgroundColor: `${color}99`
+        }
       }}
     >
       <Typography sx={{

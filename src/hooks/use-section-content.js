@@ -100,26 +100,37 @@ export const useSectionContent = () => {
         starVenturesContent {
           program_id
           description
-          dates
-          requirements
+          sections {
+            heading
+            contentType
+            content {
+              title
+            }
+          }
           registrationLink
+          minorsNote
         }
         irodsContent {
           program_id
           description
-          dates
-          requirements
+          sections {
+            heading
+            contentType
+            content {
+              title
+            }
+          }
           learnMoreLink
         }
         lowerBanner {
           childImageSharp {
-              gatsbyImageData(
-                width: 2400
-                height: 500
-                placeholder: BLURRED
-                formats: [AUTO, WEBP]
-              )
-            }
+            gatsbyImageData(
+              width: 2400
+              height: 500
+              placeholder: BLURRED
+              formats: [AUTO, WEBP]
+            )
+          }
         }
       }
       StarShowcase: sectionsYaml(section_id: { eq: "star-showcase" }) {

@@ -12,11 +12,14 @@ import {
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { List, ListItem } from '../list'
 import { CtaButton } from '../cta-button'
+import { Button } from '../button'
+import { useWindowWidth } from '../../hooks'
 
 const TextPhotoWrapper = ({
   featured_img, tips, interviewPDF
 }) => {
   const image = getImage(featured_img)
+  const { isCompact } = useWindowWidth();
 
   const [expanded, setExpanded] = React.useState('panel0');
 
@@ -65,14 +68,23 @@ const TextPhotoWrapper = ({
           ))}
         </AccordionGroup>
       </Grid>
-      <Grid item sm={0} md={4}>
-        <CtaButton 
-          href={interviewPDF}
-          backgroundColor="#F9A302" 
-          background_image={InterviewImg.allFile.nodes[0]}
-          title="Download Interview Tips"
-          interview
+      <Grid item sm={12} md={4}>
+        {isCompact ? (
+          <Button
+            to={interviewPDF}
+            interview
+            color="#F9A302"
+            text="#1A1B2F"
+          >Download Interview Tips</Button>
+        ) : (
+          <CtaButton 
+            href={interviewPDF}
+            backgroundColor="#F9A302" 
+            background_image={InterviewImg.allFile.nodes[0]}
+            title="Download Interview Tips"
+            interview
           />
+        )}
       </Grid>
     </Grid>
   )

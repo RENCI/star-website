@@ -2,10 +2,12 @@ import React, { useMemo } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Sheet, Box } from '@mui/joy'
 import { Container } from './container'
-import { useScrolling } from '../hooks'
+import { useScrolling, useWindowWidth } from '../hooks'
 import { Link } from './link'
 import { Menu } from './menu'
+import { MobileMenu } from './mobile-menu'
 import starLogo from '../images/star-logo-color.png'
+
 
 const Header = ({ siteTitle, menuOptions }) => {
   const data = useStaticQuery(graphql`
@@ -17,6 +19,7 @@ const Header = ({ siteTitle, menuOptions }) => {
       }
     }
   `)
+  const { isCompact } = useWindowWidth();
 
   const { scrollPosition } = useScrolling()
 
@@ -47,32 +50,16 @@ const Header = ({ siteTitle, menuOptions }) => {
           p: 0
         },
         px: 1,
-        minHeight: reducedHeader ? '3rem' : '5rem',
-        '.brand': {
-          px: 1,
-          alignSelf:'stretch',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        },
+        minHeight: reducedHeader ? '3.5rem' : '4.5rem',
+
       }}
     >
       <Container className="header-container">
-        <Link to="/" className="brand">
-          <Box component="span" sx={{
-            display: 'block',
-            minHeight: '40px',
-            minWidth: '60px',
-            backgroundImage: `url(${ starLogo })`,
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: '0% 50%',
-            marginRight: '1rem'
-            // border: '1px solid red'
-          }} />
-          {/* { data.themeYaml.metadata.title } */}
-        </Link>
-        <Menu options={ menuOptions } />
+
+      {
+        isCompact ? <MobileMenu/> : <Menu/>
+      }
+
       </Container>
     </Sheet>
   )

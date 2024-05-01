@@ -7,6 +7,7 @@ import {
 import { useScrolling } from '../hooks'
 import { Button } from './button'
 import { Link } from './link'
+import { useWindowWidth } from '../hooks'
 
 export const Hero = ({ 
   background_image, 
@@ -18,6 +19,7 @@ export const Hero = ({
   const heroImage = getImage(background_image)
   const { scrollPosition } = useScrolling()
   const heroRef = useRef()
+  const { isCompact } = useWindowWidth();
 
   useEffect(() => {
     if (!heroRef.current) return
@@ -29,36 +31,36 @@ export const Hero = ({
       ref={ heroRef }
       sx={{
         display: 'flex',
-        height: '600px',
+        height: isCompact ? '650px' :'600px',
         position: 'relative',
         '.background-image': {
           position: 'absolute',
-          left: 0, top: 0, width: '100%', height: '600px',
+          left: 0, top: 0, width: '100%', height: isCompact ? '650px' :'600px',
         },
         '.overlay': {
           zIndex: 8,
           margin: 'auto',
           width: '100%',
           height:'100%',
-          background: 'linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%)',
+          background: isCompact? 'linear-gradient(145deg, #000 0%, #00000020 100%)' :'linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%)',
           '.content': {
             zIndex: 9,
-            width: '1200px',
+            maxWidth: '1200px',
             margin: 'auto',
-            px: 4,
+            px: isCompact ? 1: 4,
             height:'100%',
           },
           '.title': {
-            maxWidth: '66%',
-            fontSize: '400%',
+            maxWidth: isCompact ? '100% ':'66%',
+            fontSize: isCompact ? '250% ':'400%',
             color: '#EDCB5B',
             p: 1,
             letterSpacing: '1px',
-            fontWeight: '500'
+            fontWeight: '300'
           },
           '.subtitle': {
-            maxWidth: '55%',
-            fontSize: '150%',
+            maxWidth: isCompact ? '100%':'55%',
+            fontSize: isCompact ? '130%' :'150%',
             color: '#fff',
             lineHeight: 1.5,
             p: 1,

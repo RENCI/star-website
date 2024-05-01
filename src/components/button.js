@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button as MUIButton, Typography} from '@mui/joy'
-import { Link, ExternalLinkIcon } from './link'
+import { Link } from './link'
+import OpenInNew from '@mui/icons-material/OpenInNew';
 
 export const Button = ({children, to, large, external, color, ...props}) => {
 
@@ -10,6 +11,7 @@ export const Button = ({children, to, large, external, color, ...props}) => {
       noIcon
       to={to}
       underline="none"
+      endDecorator={external &&<OpenInNew sx={{marginLeft: '1rem'}}/>}
       sx={{
         padding: large ? '1rem 3rem' : '0.5rem 2rem',
         backgroundColor: color,
@@ -25,15 +27,6 @@ export const Button = ({children, to, large, external, color, ...props}) => {
         textAlign: 'center'
       }}>
         {children}
-        {
-          external && (
-            <ExternalLinkIcon
-              size={ large ? 14 : 10 } 
-              fill="#fff" 
-              style={{ marginLeft: '1rem', marginBottom: '1px'}} 
-            />
-          )
-        }
       </Typography>
     </MUIButton>
   )

@@ -61,10 +61,10 @@ starVenturesContent:
         - title: "Offered during the summer to rising high school juniors and seniors and rising college freshman."
         - title: "Must be 15 - 17 years old at the time of the program."
         - title: "Must be able to attend all in-person and virtual sessions during the entire program"
-  registrationLink: https://wkf.ms/3LdrJer
+  registrationLink: https://wkf.ms/43lvrK6 
   minorsNote: >
     Note: RENCI values safety and security of all students. Minors and 
-    their parents/guardians may be required to complete additional forms 
+    their parents/guardians will be required to complete additional forms 
     if accepted into the program.
 irodsContent:
   program_id: 'irods'
@@ -82,7 +82,7 @@ irodsContent:
     - heading: "Requirements"
       contentType: "ul"
       content:
-        - title: "Currently, only offered during the summer to rising college freshman, undergraduate, and graduate students"
+        - title: "Only offered during the summer to rising college freshman, undergraduate, and graduate students"
         - title: "Must be 18 or older."
   learnMoreLink: https://irods.org/2024/01/irods-internship-summer-2024/
 lowerBanner: ../images/resources-students.png

@@ -9,13 +9,14 @@ const Quote = ({ quote, attribution, visible }) => {
         fontSize: '1.4rem',
         textAlign: 'center',
         fontStyle: 'italic', 
+        fontWeight: 500
       }}>
         { quote }
       </Typography>
       <Typography level="body-sm" sx={{ 
         textAlign: 'right', 
         fontSize: '1.1rem',
-        fontWeight: 500,
+        fontWeight: 400,
         paddingTop: '1rem',
         letterSpacing: '0.1px' 
       }}>
@@ -32,7 +33,7 @@ export const Testimonials = ({ content }) => {
   useEffect(() => {
     const wait = setTimeout(() => {
       setIndex((index + 1) % quotes.length)
-    }, 5000)
+    }, 10000)
 
     return () => clearTimeout(wait)
   }, [index, quotes])

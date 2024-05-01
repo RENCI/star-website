@@ -67,6 +67,7 @@ export const useSectionContent = () => {
             )
           }
         }
+        interviewPDF
         tips {
           title
           description

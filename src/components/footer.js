@@ -24,42 +24,41 @@ export const Footer = () => {
         padding: '2.5rem 0',
         color: theme.palette.text.primary,
         '& .link-group': {
-          // paddingTop: '1rem',
         },
         '& .link-list': {
           padding: 0,
+          margin: 0,
           listStyleType: 'none',
           '& li': {
-            marginBottom: '0.5rem',
+            mt: '0.5rem',
           }
         },
       }}
     >
-      <Container maxWidth="lg" >
+      <Container maxWidth="lg">
         <Grid container>
+          <Grid item xs={ 12 } sm={ 12 } md={ 12 } lg={ 12 }>
+            <Box component="span" sx={{
+              display: 'block',
+              minHeight: '50px',
+              minWidth: '110px',
+              backgroundImage: `url(${ starRenciLogo })`,
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: '0% 50%',
+              mb: '1rem'
+            }} />
+          </Grid>
           <Grid item xs={ 12 } sm={ 8 } md={ 9 } lg={ 9 }>
-
-              <Box component="span" sx={{
-                display: 'block',
-                minHeight: '50px',
-                minWidth: '110px',
-                backgroundImage: `url(${ starRenciLogo })`,
-                backgroundSize: 'contain',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: '0% 50%',
-              }} />
-              <p>
-                Student Achievement at RENCI<br />
-                Europa Center <br />
-                100 Europa Drive, Suite 540 <br />
-                Chapel Hill, NC  27517
-              </p>
-            <p>media@renci.org</p>
-            <p>919-445-9640</p>
+            <Typography sx={{fontWeight: 600}}>Student Achievement at RENCI</Typography>
+            <Typography>Europa Center</Typography>
+            <Typography>100 Europa Drive, Suite 540</Typography>
+            <Typography sx={{marginBottom: '0.5rem'}}>Chapel Hill, NC  27517</Typography>
+            <Link to='mailto:media@renci.org'>media@renci.org</Link>
+            <Typography>919-445-9640</Typography>
           </Grid>
           <Grid item xs={ 12 } sm={ 4 } md={ 3 } lg={ 3 } className="link-group">
-            <br/>
-            <strong>Connect</strong>
+            <Typography sx={{fontWeight: 600, mb: 0}}>Stay Connected with RENCI</Typography>
             <ul className="link-list">
               <li><Link to="https://www.twitter.com/RENCI">Twitter</Link></li>
               <li><Link to="https://www.facebook.com/renci.org">Facebook</Link></li>

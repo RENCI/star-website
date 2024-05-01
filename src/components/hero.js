@@ -97,7 +97,7 @@ export const Hero = ({
             mt="3rem"
           >
             {buttons.map((button)=> (
-              <Button noIcon large component={Link} to={button.url}>
+              <Button noIcon large hero component={Link} to={button.url}>
                 <Typography>{button.title}</Typography>
               </Button>
             ))}

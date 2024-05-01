@@ -43,7 +43,7 @@ export const Hero = ({
           background: 'linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%)',
           '.content': {
             zIndex: 9,
-            width: '1200px',
+            maxWidth: '1200px',
             margin: 'auto',
             px: 4,
             height:'100%',

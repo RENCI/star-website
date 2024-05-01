@@ -7,6 +7,7 @@ import {
 import { useScrolling } from '../hooks'
 import { Button } from './button'
 import { Link } from './link'
+import { useWindowWidth } from '../hooks'
 
 export const Hero = ({ 
   background_image, 
@@ -18,6 +19,7 @@ export const Hero = ({
   const heroImage = getImage(background_image)
   const { scrollPosition } = useScrolling()
   const heroRef = useRef()
+  const { isCompact } = useWindowWidth();
 
   useEffect(() => {
     if (!heroRef.current) return
@@ -45,19 +47,19 @@ export const Hero = ({
             zIndex: 9,
             maxWidth: '1200px',
             margin: 'auto',
-            px: 4,
+            px: isCompact ? 1: 4,
             height:'100%',
           },
           '.title': {
-            maxWidth: '66%',
-            fontSize: '400%',
+            maxWidth: isCompact ? '100% ':'66%',
+            fontSize: isCompact ? '250% ':'400%',
             color: '#EDCB5B',
             p: 1,
             letterSpacing: '1px',
             fontWeight: '500'
           },
           '.subtitle': {
-            maxWidth: '55%',
+            maxWidth: isCompact ? '100%':'55%',
             fontSize: '150%',
             color: '#fff',
             lineHeight: 1.5,

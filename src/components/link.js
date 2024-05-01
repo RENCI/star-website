@@ -40,12 +40,12 @@ export const ExternalLink = ({ to, children, noIcon, fill, ...etc }) => {
         { ...etc }
       >
         { children }
+        {
+          !noIcon && (
+            <ExternalLinkIcon size={ 10 } fill={fill} style={{ marginLeft: '4px' }} />
+          )
+        }
       </MUILink>
-      {
-        !noIcon && (
-          <ExternalLinkIcon size={ 10 } fill={fill} style={{ marginLeft: '4px' }} />
-        )
-      }
     </Fragment>
   )
 }

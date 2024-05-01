@@ -31,18 +31,18 @@ export const Hero = ({
       ref={ heroRef }
       sx={{
         display: 'flex',
-        height: '600px',
+        height: isCompact ? '650px' :'600px',
         position: 'relative',
         '.background-image': {
           position: 'absolute',
-          left: 0, top: 0, width: '100%', height: '600px',
+          left: 0, top: 0, width: '100%', height: isCompact ? '650px' :'600px',
         },
         '.overlay': {
           zIndex: 8,
           margin: 'auto',
           width: '100%',
           height:'100%',
-          background: 'linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%)',
+          background: isCompact? 'linear-gradient(145deg, #000 0%, #00000020 100%)' :'linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%)',
           '.content': {
             zIndex: 9,
             maxWidth: '1200px',
@@ -56,11 +56,11 @@ export const Hero = ({
             color: '#EDCB5B',
             p: 1,
             letterSpacing: '1px',
-            fontWeight: '500'
+            fontWeight: '300'
           },
           '.subtitle': {
             maxWidth: isCompact ? '100%':'55%',
-            fontSize: '150%',
+            fontSize: isCompact ? '130%' :'150%',
             color: '#fff',
             lineHeight: 1.5,
             p: 1,

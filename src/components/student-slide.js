@@ -127,7 +127,7 @@ export const MobileSlide = ({student}) => {
           to={project_link}
           noIcon
           external
-        >View STAR Talk</Button>
+          >{project_link_text}</Button>
       </CardActions>
     </Card>
   )

@@ -6,7 +6,7 @@ programs:
     subtitle: "Undergraduate or Graduate Students"
   - title: STAR Ventures
     program_id: 'starventures'
-    subtitle: Rising high school juniors and seniors and rising college freshman
+    subtitle: High School Students
   - title: iRODS Internship
     program_id: 'irods'
     subtitle: Undergraduate and Graduate students
@@ -40,7 +40,7 @@ starShipContent:
       content:
         - title: "New Student Responsibilities"
           url: "https://docs.google.com/document/d/1vjrr349cRXTHq1ypr2jzQz5dZde67sB3xpvKm9Tgl7s/edit"
-        - title: "Extended Student Responsbilities*"
+        - title: "Extended Student Responsbilities"
           url: "https://docs.google.com/document/d/1Q7imkLGgekCt7oWGqRJ1cXPglGhtCCvhUMxLPp9Suxc/edit"
 starVenturesContent:
   program_id: 'starventures'

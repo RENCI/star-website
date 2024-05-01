@@ -14,7 +14,7 @@ import { List, ListItem } from '../list'
 import { CtaButton } from '../cta-button'
 
 const TextPhotoWrapper = ({
-  featured_img, tips
+  featured_img, tips, interviewPDF
 }) => {
   const image = getImage(featured_img)
 
@@ -51,7 +51,7 @@ const TextPhotoWrapper = ({
               expanded={expanded === `panel${i}`} 
               onChange={handleChange(`panel${i}`)}
             >
-              <AccordionSummary sx={{ backgroundColor: '#F6F6F6'}}>{item.title}</AccordionSummary>
+              <AccordionSummary sx={{ backgroundColor: '#F6F6F6', fontWeight: 600}}>{item.title}</AccordionSummary>
               <AccordionDetails sx={{ backgroundColor: '#F6F6F6'}}>
                 <List>
                 {
@@ -67,7 +67,7 @@ const TextPhotoWrapper = ({
       </Grid>
       <Grid item sm={0} md={4}>
         <CtaButton 
-          href="/staff" 
+          href={interviewPDF}
           backgroundColor="#F9A302" 
           background_image={InterviewImg.allFile.nodes[0]}
           title="Download Interview Tips"

@@ -45,6 +45,7 @@ export const CtaButton = ({
           component={ Link } to={ href }
           className="card-title"
           underline="none"
+          noIcon
         >
           {
             interview ? (

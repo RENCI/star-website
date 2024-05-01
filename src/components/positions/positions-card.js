@@ -5,12 +5,11 @@ import {
   Stack, 
   Typography, 
   Divider, 
-  Button,
   List,
   ListItem } from '@mui/joy'
-import OpenInNew from '@mui/icons-material/OpenInNew';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import { Button } from '../button'
 
 export const PositionsCard = ({ position }) => {
   const theme = useTheme();
@@ -92,10 +91,10 @@ export const PositionsCard = ({ position }) => {
 
           <br/>
           <Button
-            component="a" 
-            href={position.url}
-            endDecorator={<OpenInNew />}
-          >Apply</Button>
+            noIcon
+            external
+            to={position.url}
+          >Apply </Button>
         </Box>
       </Stack>
       

@@ -67,6 +67,7 @@ export const useSectionContent = () => {
             )
           }
         }
+        interviewPDF
         tips {
           title
           description
@@ -156,6 +157,7 @@ export const useSectionContent = () => {
         students {
           student_name
           title
+          semester
           project_description
           project_link_text
           project_link

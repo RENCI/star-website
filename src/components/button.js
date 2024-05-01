@@ -3,7 +3,7 @@ import { Button as MUIButton, Typography} from '@mui/joy'
 import { Link } from './link'
 import OpenInNew from '@mui/icons-material/OpenInNew';
 
-export const Button = ({children, to, large, external, color, ...props}) => {
+export const Button = ({children, to, large, external, color, text, ...props}) => {
 
   return (
     <MUIButton
@@ -11,7 +11,7 @@ export const Button = ({children, to, large, external, color, ...props}) => {
       noIcon
       to={to}
       underline="none"
-      endDecorator={external &&<OpenInNew sx={{marginLeft: '1rem'}}/>}
+      endDecorator={external && <OpenInNew sx={{marginLeft: '1rem'}}/>}
       sx={{
         padding: large ? '1rem 3rem' : '0.5rem 2rem',
         backgroundColor: color,
@@ -21,7 +21,7 @@ export const Button = ({children, to, large, external, color, ...props}) => {
       }}
     >
       <Typography sx={{
-        color: '#fff',
+        color: text ? text : '#fff',
         fontWeight: large ? 500 : null,
         fontSize: large ? '1.25rem' : '1rem',
         textAlign: 'center'

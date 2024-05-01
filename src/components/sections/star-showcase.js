@@ -1,10 +1,12 @@
 import React from 'react'
 import { Section } from '../section'
-import { Carousel } from '../carousel'
+import { Carousel, MobileCarousel } from '../carousel'
 import { Sheet, Typography } from '@mui/joy'
+import { useWindowWidth } from '../../hooks'
 
 export const StarShowcase = ({ content }) => {
-  
+  const { isCompact } = useWindowWidth();
+
   return (
     <Sheet
       component="section"
@@ -19,7 +21,10 @@ export const StarShowcase = ({ content }) => {
         color: '#fff'
       }}>{content.title}</Typography>
 
-      <Carousel students={content.students} />
+      {
+        isCompact ? <MobileCarousel students={content.students} /> :    <Carousel students={content.students} />
+      }
+   
     </Sheet>
   )
 }

@@ -36,6 +36,7 @@ export const Section = ({
           // flexDirection: 'column',
           // justifyContent: 'center',
           alignItems: 'center',
+          px: 2,
           py: 8,
           mx: 'auto',
         },

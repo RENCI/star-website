@@ -32,7 +32,7 @@ export const Testimonials = ({ content }) => {
   useEffect(() => {
     const wait = setTimeout(() => {
       setIndex((index + 1) % quotes.length)
-    }, 5000)
+    }, 10000)
 
     return () => clearTimeout(wait)
   }, [index, quotes])

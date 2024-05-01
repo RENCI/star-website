@@ -3,26 +3,26 @@ title: Programs Overview
 programs:
   - title: STARship
     program_id: 'starship'
-    subtitle: "Undergraduate or Graduate Students"
+    subtitle: Undergraduate or Graduate Students
   - title: STAR Ventures
     program_id: 'starventures'
     subtitle: High School Students
   - title: iRODS Internship
     program_id: 'irods'
-    subtitle: Undergraduate and Graduate students
+    subtitle: Undergraduate and Graduate Students
 starShipContent:
   program_id: 'starship'
   description: >
     STARships are an opportunity for undergraduate and graduate students
-    to have a tailor-made internship, with RENCI project teams, to accomplish
-    project milestones.
+    to gain experience through a tailor-made internship, working with 
+    RENCI project teams to accomplish project milestones.
   sections:
     - heading: "What to Expect"
       contentType: "ul"
       content:
-        - title: "STARships vary in their length, from one semester to multiple semesters, depending on the project needs and student’s performance"
+        - title: "STARships vary in their length, from one semester to multiple semesters, depending on the project needs and student’s performance."
         - title: "Typical skills developed: presentation skills, professional development, organizational skills, effective communication, and other project-specific skills."
-    - heading: "Previous STARships have offered experience in:"
+    - heading: "Previous STARships offered experience in:"
       contentType: "ul"
       content:
         - title: "Software Development"
@@ -33,8 +33,8 @@ starShipContent:
     - heading: "Requirements"
       contentType: "ul"
       content:
-        - title: "Must be a current Undergraduate or Graduate student (at least half-time enrollment) at a college/university"
-        - title: "Must be available to work up to 20 hrs per week during Fall and/or Spring and up to 40 hrs per week during Summer"
+        - title: "Must be a current undergraduate or graduate student (at least half-time enrollment) at a college/university."
+        - title: "Must be available to work up to 20 hrs per week during Fall and/or Spring and up to 40 hrs per week during Summer."
     - heading: "Student Responsibilities"
       contentType: "button"
       content:

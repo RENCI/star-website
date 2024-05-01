@@ -18,13 +18,15 @@ export const Forms = ({ content }) => {
         >
           <Typography level="h3" sx={{color: "inherit", marginBottom: '0.25rem'}}>{section.heading}</Typography>
           <Typography level="body-lg" sx={{color: "inherit", marginBottom: '0.5rem'}}>{section.description}</Typography>
-          {section.links && section.links.map((link) => (
-              <Link to={link.url} key={link.name}>
-                <Typography sx={{fontWeight: 600}}>
-                  {link.name}
-                </Typography>
-              </Link>
-          ))}
+            {section.links && section.links.map((link) => (
+              <Stack direction="column" key={link.title}>
+                <Link to={link.url} key={link.name}>
+                  <Typography sx={{fontWeight: 600}}>
+                    {link.name}
+                  </Typography>
+                </Link>
+              </Stack>
+            ))}
         </Grid>
       ))}
 

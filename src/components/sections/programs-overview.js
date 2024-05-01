@@ -109,11 +109,17 @@ export const ProgramsOverview = ({ content }) => {
           })
         }
       </TabContainer>
-      <Box sx={{backgroundColor: '#345', height: '300px'}}>
+      {/* 
+        This is an image banner that separates the program overview 
+        section from the student resources section. I haven't been
+        able to get this responsive to multiple screen sizes, so we
+        will have to return to this to add it back in the future.
+       */}
+      {/* <Box sx={{backgroundColor: '#345', height: '300px'}}>
         <AspectRatio ratio={2}>
           <GatsbyImage image={ image } alt="" />
         </AspectRatio>
-      </Box>
+      </Box> */}
     </Sheet>
   )
 }

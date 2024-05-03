@@ -9,16 +9,24 @@ const columnMap = require('./column-map')
  * */
 module.exports = function assemblePositionData({ groups }) {
   if (!groups) { return }
-  return groups[0].items_page.items.reduce((acc, item) => {
-    const { id, name, column_values } = item
-    const extractedColumnValues = column_values
-      .reduce((acc, { column, text }) => {
-        if (column.title in columnMap) {
-          acc[columnMap[column.title]] = text
-        }
-        return acc
-      }, {})
-    acc.push({ id, name, ...extractedColumnValues })
+  return groups.reduce((acc, group) => {
+    acc.push(...group.items_page.items.reduce((itemAcc, item) => {
+        const { id, name, column_values } = item
+        const extractedColumnValues = column_values
+          .reduce((itemAcc, { column, text }) => {
+            if (column.title in columnMap) {
+              itemAcc[columnMap[column.title]] = text
+            }
+            return itemAcc
+          }, {})
+        itemAcc.push({
+          id,
+          name,
+          status: group.title,
+          ...extractedColumnValues,
+        })
+        return itemAcc
+      }, []))
     return acc
   }, [])
 }

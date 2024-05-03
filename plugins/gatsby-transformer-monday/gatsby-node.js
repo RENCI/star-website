@@ -2,6 +2,8 @@ const assemblePositionData = require('./assemble-positions')
 const assembleColumnData = require('./assemble-columns')
 const assembleDatesData = require('./assemble-dates')
 
+const DEBUG = true
+
 async function onCreateNode({
   actions,
   createContentDigest,
@@ -70,19 +72,19 @@ async function onCreateNode({
   try {
     if (node.id === `6391840129`) {
       const datesData = assembleDatesData(node)
-      // console.log(JSON.stringify(datesData, null, 2))
+      if (DEBUG) { console.log(JSON.stringify(datesData, null, 2)) }
       createDateNodes(datesData)
       timer.setStatus(`Created ImportantDate nodes`)
     }
     
     if (node.id === `5267641585`) {
       const positionData = assemblePositionData(node)
-      // console.log(JSON.stringify(positionData, null, 2))
+      if (DEBUG) { console.log(JSON.stringify(positionData, null, 2)) }
       createPositionNodes(positionData)
       timer.setStatus(`Created PositionItem nodes`)
 
       const columnData = assembleColumnData(node)
-      // console.log(JSON.stringify(columnData, null, 2))
+      if (DEBUG) { console.log(JSON.stringify(columnData, null, 2)) }
       createColumnNodes(columnData)
       timer.setStatus(`Created PositionColumn nodes`)
     }

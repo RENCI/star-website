@@ -40,7 +40,7 @@ export const PositionsProvider = ({ children }) => {
           options
         }
       }
-      allPositionItem {
+      allPositionItem(filter: {status: {regex: "/Closed/"}}) {
         nodes {
           id
           name

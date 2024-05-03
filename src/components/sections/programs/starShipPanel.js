@@ -29,7 +29,6 @@ const datesQuery = graphql`query {
     }
   }
 }`
->>>>>>> monday
 
 export const StarShipPanel = ({title, content}) => {
   const data = useStaticQuery(datesQuery)

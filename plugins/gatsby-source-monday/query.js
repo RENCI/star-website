@@ -32,7 +32,7 @@ module.exports = `query {
       title
       type
     }
-    groups(ids:["group_title"]) {
+    groups(ids: ["group_title", "topics", "new_group"]) {
       id
       title
       items_page {

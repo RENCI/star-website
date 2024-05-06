@@ -1,87 +1,51 @@
 const fs = require('fs')
 
 const fetchBoardData = require('./fetch-board-data')
-const assemblePositionData = require('./assemble-positions')
-const assembleColumnData = require('./assemble-columns')
-
-const sampleData = require('./sample-data.json')
 
 const axiosOptions = { headers: {
   'API-Version': '2023-10',
 } }
 
-const createPositionNodes = (gatsbyApi, positionData) => {
-  for (const position of positionData) {
-    gatsbyApi.actions.createNode({
-      ...position,
-      parent: null,
-      children: [],
-      internal: {
-        type: 'MondayItem',
-        contentDigest: gatsbyApi.createContentDigest(position)
-      }
-    })
-  }
-}
-
-const createColumnNodes = (gatsbyApi, columnData) => {
-  for (const column of columnData) {
-    gatsbyApi.actions.createNode({
-      ...column,
-      parent: null,
-      children: [],
-      internal: {
-        type: 'MondayColumn',
-        contentDigest: gatsbyApi.createContentDigest(column)
-      }
-    })
-  }
-}
-
 exports.sourceNodes = async (gatsbyApi, pluginOptions) => {
   const { actions, createContentDigest, createNodeId, reporter } = gatsbyApi
-  const sourcingTimer = reporter.activityTimer(`source positions from Monday.com`)
-  sourcingTimer.start()
+  const timer = reporter.activityTimer(`source Monday.com boards`)
+
+  function createBoardNode(data) {
+    // console.log(JSON.stringify(data, null, 2))
+    actions.createNode({
+      ...data,
+      parent: null,
+      children: [],
+      internal: {
+        type: 'MondayBoard',
+        contentDigest: createContentDigest(data)
+      },
+    })
+  }
+
+  timer.start()
   try {
     // fetch the board data
     axiosOptions.headers.Authorization = `bearer ${ pluginOptions.API_TOKEN }`
-    sourcingTimer.setStatus(`Fetching positions`)
+    timer.setStatus(`Fetching board data`)
     const boardData = await fetchBoardData(axiosOptions)
     if (!boardData) {
-      throw new Error(`Failed to fetch positions`)
+      throw new Error(`Failed to fetch board data`)
     }
 
-    // massage column data and create column nodes
-    sourcingTimer.setStatus(`Assembling position data`)
-    const columnData = assembleColumnData(boardData)
-    if (!columnData) {
-      throw new Error(`Failed to process column data`)
+    // create board nodes
+    timer.setStatus(`Assembling board data`)
+    if (!boardData) {
+      throw new Error(`Failed to process board data`)
     }
-    sourcingTimer.setStatus(`Sourced ${ columnData.length } columns`)
-    createColumnNodes(gatsbyApi, columnData)
-    sourcingTimer.setStatus(`Created ${ columnData.length } column nodes`)
-    
-    // massage position data and create position nodes
-    sourcingTimer.setStatus(`Assembling position data`)
-    const positionData = assemblePositionData(boardData)
-    if (!positionData) {
-      throw new Error(`Failed to process position data`)
-    }
-    sourcingTimer.setStatus(`Sourced ${ positionData.length } positions`)
-    createPositionNodes(gatsbyApi, positionData)
-    sourcingTimer.setStatus(`Created ${ positionData.length } position nodes`)
-    
+    timer.setStatus(`Sourced ${ Object.keys(boardData).length } boards`)
+    Object.keys(boardData).forEach(key => {
+      createBoardNode(boardData[key][0])
+    })
+    timer.setStatus(`Created ${ Object.keys(boardData).length } board nodes`)
   } catch (error) {
-    sourcingTimer.panicOnBuild(error)
-    sourcingTimer.setStatus(`Could not source positions from API; using fallback data`)
-
-    sourcingTimer.setStatus(`Assembling sample column data`)
-    createColumnNodes(gatsbyApi, sampleData.columns)
-    
-    sourcingTimer.setStatus(`Assembling sample position data`)
-    createPositionNodes(gatsbyApi, sampleData.positions)
-
-    sourcingTimer.setStatus(`Created ${ sampleData.positions.length } sample position nodes`)
+    timer.panicOnBuild(error)
+    timer.setStatus(`Could not source boards from API.`)
   }
 }
 

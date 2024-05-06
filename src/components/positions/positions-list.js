@@ -4,7 +4,7 @@ import { usePositions } from './context'
 import { PositionsCard } from './positions-card'
 
 export const PositionsList = () => {
-  const { filteredPositions } = usePositions()
+  const { filters, filteredPositions } = usePositions()
 
   if (filteredPositions.length === 0) {
     return (
@@ -19,7 +19,11 @@ export const PositionsList = () => {
           variant="soft"
           sx={{ p: 2 }}
         >
-          No positions match your search criteria!
+          {
+            filters.active.length
+              ? 'No positions match your search criteria!'
+              : 'Sorry, we don\'t currently have open positions!'
+          }
         </Typography>
       </Stack>
     )

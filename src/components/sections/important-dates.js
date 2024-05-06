@@ -1,14 +1,26 @@
 import React from "react"
 import { Section } from "../section"
-import Table from "@mui/joy/Table"
-import Sheet from "@mui/joy/Sheet"
-import { DatesTable } from '../dates-table'
+import { Box } from "@mui/joy"
 
 export const ImportantDates = ({ content }) => {
-  
+  const rows = content.nodes.map(({ name, dates, audience }) => ({
+    name,
+    dates: dates.reduce((acc, d) => {
+      acc[d.year] = d.date
+      return acc
+    }, {}),
+    audience,
+  }))
+
+
   return (
     <Section title={content.title} backgroundColor="#fff" height="55vh">
-      <DatesTable content={content}/>
+      <Box
+        component="pre"
+        sx={{ whiteSpace: 'pre-wrap', fontSize: '75%' }}
+      >
+        {JSON.stringify(rows, null, 2)}
+      </Box>
     </Section>
   )
 }

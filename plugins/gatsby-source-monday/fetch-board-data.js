@@ -8,10 +8,9 @@ module.exports = async function fetchBoardData(options) {
     if (response?.status !== 200 || !response?.data) {
       return
     }
-    return response.data.data.boards[0]
+    return response.data.data
   } catch (error) {
     console.error(error)
     return []
   }
 }
-

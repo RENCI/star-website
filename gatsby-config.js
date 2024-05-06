@@ -52,6 +52,7 @@ module.exports = {
         API_TOKEN: process.env.MONDAY_API_TOKEN,
       }
     },
+    `gatsby-transformer-monday`,
     /* manifest */
     {
       resolve: `gatsby-plugin-manifest`,

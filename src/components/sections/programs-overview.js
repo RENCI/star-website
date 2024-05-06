@@ -1,13 +1,11 @@
 import React from 'react'
-import { Section } from '../section'
 import { 
   TabContainer, 
   ProgramTab,
   ProgramPanel } from '../program-tabs'
-import { Sheet, Typography, Stack, Box, AspectRatio } from '@mui/joy'
+import { Sheet, Typography, Stack } from '@mui/joy'
 import TabList from '@mui/joy/TabList';
 import { StarShipPanel, StarVenturesPanel, IrodsPanel } from './programs'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 export const ProgramsOverview = ({ content }) => {
   const programContent = [
@@ -32,7 +30,6 @@ export const ProgramsOverview = ({ content }) => {
       ...content.programs[2]
     }
   ]
-  const image = getImage(content.lowerBanner)
 
   return (
     <Sheet
@@ -109,17 +106,6 @@ export const ProgramsOverview = ({ content }) => {
           })
         }
       </TabContainer>
-      {/* 
-        This is an image banner that separates the program overview 
-        section from the student resources section. I haven't been
-        able to get this responsive to multiple screen sizes, so we
-        will have to return to this to add it back in the future.
-       */}
-      {/* <Box sx={{backgroundColor: '#345', height: '300px'}}>
-        <AspectRatio ratio={2}>
-          <GatsbyImage image={ image } alt="" />
-        </AspectRatio>
-      </Box> */}
     </Sheet>
   )
 }

@@ -2,11 +2,8 @@ import React from 'react'
 import { 
   Container, 
   Typography,
-  Stack,
-  Grid,
   Box
 } from '@mui/joy'
-import { List, ListItem } from '../../list'
 import {
   PanelContentGridContainer,
   PanelContentGridItem,
@@ -15,7 +12,6 @@ import {
 import ImportantDatesContent from '../../../content/sections/important-dates.yaml'
 import { useStaticQuery, graphql } from "gatsby"
 import { DatesTable } from '../../dates-table'
-import { Button } from '../../button'
 
 const datesQuery = graphql`query {
   dates: allImportantDate {

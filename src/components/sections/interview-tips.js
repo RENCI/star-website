@@ -6,19 +6,16 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
-  AspectRatio,
   Grid
 } from '@mui/joy'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { List, ListItem } from '../list'
 import { CtaButton } from '../cta-button'
 import { Button } from '../button'
 import { useWindowWidth } from '../../hooks'
 
 const TextPhotoWrapper = ({
-  featured_img, tips, interviewPDF
+  tips, interviewPDF
 }) => {
-  const image = getImage(featured_img)
   const { isCompact } = useWindowWidth();
 
   const [expanded, setExpanded] = React.useState('panel0');

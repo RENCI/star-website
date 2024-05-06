@@ -1,12 +1,8 @@
 import React from 'react'
 import { 
   Container, 
-  Typography,
-  Stack,
-  Box,
-  Button
+  Typography
 } from '@mui/joy'
-import { List, ListItem } from '../../list'
 import {
   PanelContentGridContainer,
   PanelContentGridItem,

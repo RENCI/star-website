@@ -1,5 +1,4 @@
 import React from 'react'
-import { Section } from '../section'
 import { Carousel, MobileCarousel } from '../carousel'
 import { Sheet, Typography } from '@mui/joy'
 import { useWindowWidth } from '../../hooks'

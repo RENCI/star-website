@@ -2,9 +2,6 @@ import React from 'react'
 import { 
   Container, 
   Typography,
-  Stack,
-  Box,
-  Button,
   AspectRatio
 } from '@mui/joy'
 import {

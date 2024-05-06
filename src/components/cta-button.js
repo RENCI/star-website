@@ -1,8 +1,7 @@
 import React from 'react'
 import {
   AspectRatio, Card, CardOverflow,
-  Link as JoyLink, Sheet, Typography,
-  CardActions, Button
+  Link as JoyLink, Typography
 } from '@mui/joy'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Link } from './link'

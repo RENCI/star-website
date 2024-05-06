@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import {
-  Sheet, Stack, Typography, Box, Grid, Container
+  Sheet, Stack, Typography, Box
 } from '@mui/joy'
 import { useScrolling } from '../hooks'
 import { Button } from './button'

@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { Sheet, Typography, Box, Container, Grid, useTheme } from '@mui/joy'
+import { Typography, Box, Container, Grid, useTheme } from '@mui/joy'
 // import { Container } from './container'
 import { Link } from './link'
 import starRenciLogo from '../images/star-renci-logo-combined.png'
@@ -11,6 +11,11 @@ export const Footer = () => {
       themeYaml {
         footer {
           copyright
+          email
+          socials {
+            name
+            url
+          }
         }
       }
     }
@@ -54,16 +59,17 @@ export const Footer = () => {
             <Typography>Europa Center</Typography>
             <Typography>100 Europa Drive, Suite 540</Typography>
             <Typography sx={{marginBottom: '0.5rem'}}>Chapel Hill, NC  27517</Typography>
-            <Link to='mailto:media@renci.org'>media@renci.org</Link>
+            <Link to={`mailto:${data.themeYaml.footer.email}`}>{data.themeYaml.footer.email}</Link>
             <Typography>919-445-9640</Typography>
           </Grid>
           <Grid item xs={ 12 } sm={ 4 } md={ 3 } lg={ 3 } className="link-group">
             <Typography sx={{fontWeight: 600, mb: 0}}>Stay Connected with RENCI</Typography>
             <ul className="link-list">
-              <li><Link to="https://www.twitter.com/RENCI">Twitter</Link></li>
-              <li><Link to="https://www.facebook.com/renci.org">Facebook</Link></li>
-              <li><Link to="https://www.linkedin.com/company/65321">LinkedIn</Link></li>
-              <li><Link to="https://www.youtube.com/RENCIMedia">YouTube</Link></li>
+              {
+                data.themeYaml.footer.socials.map((item) => (
+                  <li><Link to={item.url}>{item.name}</Link></li>
+                ))
+              }
             </ul>
           </Grid>
 

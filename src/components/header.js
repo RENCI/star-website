@@ -1,13 +1,10 @@
 import React, { useMemo } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Sheet, Box } from '@mui/joy'
+import { Sheet } from '@mui/joy'
 import { Container } from './container'
 import { useScrolling, useWindowWidth } from '../hooks'
-import { Link } from './link'
 import { Menu } from './menu'
 import { MobileMenu } from './mobile-menu'
-import starLogo from '../images/star-logo-color.png'
-
 
 const Header = ({ siteTitle, menuOptions }) => {
   const data = useStaticQuery(graphql`

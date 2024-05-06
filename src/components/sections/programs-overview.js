@@ -1,10 +1,9 @@
 import React from 'react'
-import { Section } from '../section'
 import { 
   TabContainer, 
   ProgramTab,
   ProgramPanel } from '../program-tabs'
-import { Sheet, Typography, Stack, Box, AspectRatio } from '@mui/joy'
+import { Sheet, Typography, Stack } from '@mui/joy'
 import TabList from '@mui/joy/TabList';
 import { StarShipPanel, StarVenturesPanel, IrodsPanel } from './programs'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'

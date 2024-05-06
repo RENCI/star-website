@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { Sheet, Typography, Box, Container, Grid, useTheme } from '@mui/joy'
+import { Typography, Box, Container, Grid, useTheme } from '@mui/joy'
 // import { Container } from './container'
 import { Link } from './link'
 import starRenciLogo from '../images/star-renci-logo-combined.png'

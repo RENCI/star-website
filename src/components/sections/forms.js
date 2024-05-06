@@ -1,6 +1,6 @@
 import React from 'react'
 import { Section } from '../section'
-import { Typography, Button, Stack, Grid, Box } from '@mui/joy'
+import { Typography, Stack, Grid } from '@mui/joy'
 import { Link } from '../link'
 
 export const Forms = ({ content }) => {

@@ -47,7 +47,7 @@ export const Hero = ({
             zIndex: 9,
             maxWidth: '1200px',
             margin: 'auto',
-            px: isCompact ? 1: 4,
+            px: isCompact ? 1: 0,
             height:'100%',
           },
           '.title': {

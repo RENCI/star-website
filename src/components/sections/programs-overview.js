@@ -36,6 +36,7 @@ export const ProgramsOverview = ({ content }) => {
       component="section"
       sx={{
         pt: '2rem',
+        backgroundColor: '#F6F6F6'
       }}
     >
       <Typography level="h2" sx={{

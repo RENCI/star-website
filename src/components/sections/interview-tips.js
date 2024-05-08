@@ -42,9 +42,9 @@ const TextPhotoWrapper = ({
   `)
 
   return (
-    <Grid container spacing={4} sx={{mx: 2}}>
+    <Grid container spacing={4}>
       <Grid item sm={12} md={8}>
-        <AccordionGroup size="lg" sx={{ maxWidth: 700 }}>
+        <AccordionGroup size="lg">
           {tips.map((item, i)=>(
             <Accordion
               key={item.title}
@@ -65,11 +65,16 @@ const TextPhotoWrapper = ({
           ))}
         </AccordionGroup>
       </Grid>
-      <Grid item sm={12} md={4}>
+      <Grid item sm={12} md={4} sx={{
+        width: isCompact ? '100%' : null,
+        display: isCompact ? 'flex' : null,
+        justifyContent: isCompact ? 'center' : null
+      }}>
         {isCompact ? (
           <Button
             to={interviewPDF}
             interview
+            external
             color="#F9A302"
             text="#1A1B2F"
           >Download Interview Tips</Button>

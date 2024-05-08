@@ -55,7 +55,7 @@ export const StudentSlide = ({student}) => {
           }}
         >{project_description}</Typography>
       </CardContent>
-      <CardActions>
+      <CardActions sx={{margin: '0 auto'}}>
         <Button
           component={Link}
           to={project_link}
@@ -121,7 +121,7 @@ export const MobileSlide = ({student}) => {
           }}
         >{project_description}</Typography>
       </CardContent>
-      <CardActions>
+      <CardActions sx={{margin: '0 auto'}}>
         <Button
           component={Link}
           to={project_link}

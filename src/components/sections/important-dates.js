@@ -1,6 +1,8 @@
 import React from "react"
 import { Section } from "../section"
 import { Box } from "@mui/joy"
+import { DatesTable } from '../dates-table'
+import ImportantDatesContent from '../../content/sections/important-dates.yaml'
 
 export const ImportantDates = ({ content }) => {
   const rows = content.nodes.map(({ name, dates, audience }) => ({
@@ -14,13 +16,8 @@ export const ImportantDates = ({ content }) => {
 
 
   return (
-    <Section title={content.title} backgroundColor="#fff" height="55vh">
-      <Box
-        component="pre"
-        sx={{ whiteSpace: 'pre-wrap', fontSize: '75%' }}
-      >
-        {JSON.stringify(rows, null, 2)}
-      </Box>
+    <Section title='Important Dates' backgroundColor="#fff" height="55vh">
+      <DatesTable content={ImportantDatesContent} type="staff"/>
     </Section>
   )
 }

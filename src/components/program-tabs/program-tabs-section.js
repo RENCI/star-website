@@ -6,11 +6,9 @@ export const TabContainer = styled(Tabs)`
 `
 
 export const ProgramTab = styled(Tab)((({backgroundColor, color, ...props}) => ({
-  minHeight: '230px',
   width: '33%',
   display: 'flex',
   alignItems: 'flex-start',
-  paddingTop: '2rem',
   color: color ? color : null,
   transition: 'background-color 0.5s ease',
   [`&[aria-selected="false"]`]: {

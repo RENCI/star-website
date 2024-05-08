@@ -36,23 +36,30 @@ export const ProgramsOverview = ({ content }) => {
       component="section"
       sx={{
         pt: '2rem',
+        backgroundColor: '#F6F6F6'
       }}
     >
       <Typography level="h2" sx={{
         textAlign: 'center',
         my: 2,
       }}>{content.title}</Typography>
-      <TabContainer>
-        <TabList sx={{
+      <TabContainer sx={{ backgroundColor: '#F6F6F6' }}>
+        <TabList disableUnderline sx={{
           maxWidth: '900px',
-          margin: '0 auto',
+          margin: '0 auto -1px',
+          padding: 0
         }}>
           {
             programContent.map((program) => {
               return (
                 <ProgramTab 
+                  disableIndicator
+                  indicatorInset
                   key={`${program.program_id}-tab`} 
                   backgroundColor={program.backgroundColor}
+                  sx={{
+                    padding: {xs: '1rem 0', sm: '2rem 0', md: '2.5rem 0'},
+                  }}
                 >
                   <Stack
                     direction="column"
@@ -62,12 +69,15 @@ export const ProgramsOverview = ({ content }) => {
                       level="h3"
                       align="center" 
                       sx={{
-                        fontWeight: 300, 
+                        fontWeight: {xs: 500, sm: 400, md: 300}, 
                         letterSpacing: '0.2px',
-                        fontSize: '1.5rem',
-                        color: program.color
+                        fontSize: {xs: '1rem', sm: '1.25rem', md: '1.5rem'},
+                        color: program.color,
                       }}>{program.title}</Typography>
-                    <Typography level="body-md" align="center" sx={{color: program.color}}>{program.subtitle}</Typography>
+                    <Typography level="body-md" align="center" sx={{
+                      color: program.color,
+                      fontSize: {xs: '0.8rem', sm: '0.9rem', md: '1rem'},
+                    }}>{program.subtitle}</Typography>
                   </Stack>
                 </ProgramTab>
               )

@@ -21,20 +21,42 @@ const [open, setOpen] = useState(false)
 
   return (
     <Fragment>
-      <IconButton
-        variant="outlined"
-        color="neutral"
-        onClick={ () => setOpen(true) }
-        sx={{ 
-          mx: 2, 
-          borderColor: '#41404270', 
-          '&:hover': {
-            backgroundColor: '#04758e10'
-          }, 
+      <Box sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        width: '100%'
+      }}>
+        <IconButton
+          variant="outlined"
+          color="neutral"
+          onClick={ () => setOpen(true) }
+          sx={{ 
+            mx: 1, 
+            borderColor: '#41404270', 
+            '&:hover': {
+              backgroundColor: '#04758e10'
+            }, 
+          }}
+        >
+          <MenuIcon />
+        </IconButton>
+        <Box component="span" sx={{
+          display: 'block',
+          minHeight: '30px',
+          minWidth: '60px',
+          backgroundImage: `url(${ starLogo })`,
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: '0% 50%',
+          marginBottom: '0.5rem',
+        }} />
+        <Box sx={{
+          width: '56px'
         }}
-      >
-        <MenuIcon />
-      </IconButton>
+        />
+      </Box>
+    
       <Drawer
         open={ open }
         onClose={ () => setOpen(false) }
@@ -46,7 +68,7 @@ const [open, setOpen] = useState(false)
             p: 2,
           }}
         >
-          <Link to="/" className="brand">
+          <Link to="/" className="brand" onClick={ () => setOpen(false) }>
             <Box component="span" sx={{
               display: 'block',
               minHeight: '40px',

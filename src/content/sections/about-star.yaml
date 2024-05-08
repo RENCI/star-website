@@ -1,2 +1,15 @@
 section_id: about-star
-blurb: Welcome to RENCI's STAR website, where both students and RENCI staff can find information and resources about our internship programs.
+blurb: >
+  STAR provides high school and college students the opportunity 
+  to pursue their passion while engaging in meaningful data 
+  science-related projects.
+bullets:
+  - item: Data Science
+  - item: Computer Science
+  - item: Business
+  - item: Finance
+  - item: Project Management
+  - item: Communications
+  - item: Research Science
+  - item: Cyberinfrastructure Security
+

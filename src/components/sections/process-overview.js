@@ -1,13 +1,18 @@
 import React from 'react'
 import { Section } from '../section'
-import { useSectionContent } from '../../hooks'
+import { TitleBodyItem } from '../title-body-item'
 
-export const ProcessOverview = () => {
-  const content = useSectionContent('ProcessOverview')
+export const ProcessOverview = ({ content }) => {
 
   return (
-    <Section>
-      <pre>{ JSON.stringify(content) }</pre>
+    <Section
+      backgroundColor="#F6F6F6"
+      title={content.title}
+      id="process-overview"
+    >
+      {
+        content.steps.map((item)=>(<TitleBodyItem item={item} key={item.title}/>))
+      }
     </Section>
   )
 }

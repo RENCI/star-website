@@ -1,8 +1,28 @@
 section_id: process-overview
+title: Process Overview
 steps:
-  - title: Mollit nisi minim ut
-    description: Magna cillum excepteur ex duis ex ea officia sit dolore amet excepteur quis. Incididunt ad dolore eu ut laborum aliqua fugiat excepteur est cillum do in sint.
-  - title: Laborum ex tempor sint
-    description: Ut cupidatat eu sunt ut duis laborum duis eiusmod esse culpa labore in esse. Laboris non voluptate amet aliquip dolore in dolor ea reprehenderit ex dolore laborum culpa qui ut.
-  - title: Non culpa fugiat officia
-    description: Sint non tempor ullamco do quis laborum laborum ut duis enim veniam reprehenderit voluptate sed aute. Magna sunt amet ex elit nostrud magna consequat exercitation id dolore.
+  - title: 'Step One: View Open Positions' 
+    description: > 
+      Explore open STARship opportunities on the “Positions” page 
+      by reading a brief summary of the position and minimum requirements.
+  - title: 'Step Two: Apply'
+    description: >
+      By clicking “apply”, you are rerouted to the full position 
+      description. Each position has different requirements, so review them 
+      thoroughly. Then, submit the application accordingly.
+  - title: 'Step Three: Application Review'
+    description: >
+      The hiring committee reviews applications on a rolling basis. Each 
+      team has their own procedures and timelines. A member of the STAR 
+      team will reach out if you are chosen to move to the next round.
+  - title: 'Step Four: Interview'
+    description: >
+      Most STARships and programs require 1-2 interviews with the hiring 
+      committee. Please come prepared and consider reviewing our Interview Tips.
+  - title: 'Step Five: Selection Process'
+    description: >
+      Each hiring committee will select the applicant(s) that best fits their 
+      needs. If you are selected, you will be contacted by the STAR team who 
+      will work with you to complete appropriate paperwork. While we would like 
+      to provide everyone with a selection update, the volume of applicants may 
+      prevent us from doing so.

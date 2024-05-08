@@ -1,11 +1,25 @@
 section_id: why-renci
 title: Why RENCI?
 reasons:
-  - title: Eu ut aute culpa
-    description: Excepteur consectetur aliqua ea dolore irure ex qui est mollit commodo.
-  - title: Qui proident irure ea
-    description: Lorem ipsum nulla adipisicing aute aute ut commodo nulla sint ea tempor fugiat nostrud sint deserunt do commodo.
-  - title: Eu nulla adipisicing ut
-    description: Lorem ipsum occaecat elit dolore commodo non duis anim voluptate amet excepteur dolor pariatur deserunt dolor fugiat sit.
-  - title: Elit id exercitation magna
-    description: Voluptate in est exercitation do mollit incididunt culpa in veniam anim magna aliquip mollit excepteur culpa.
+  - title: Real World Impact
+    description: > 
+      RENCI works on projects funded through the National Institutes of 
+      Health (NIH), National Science Foundation (NSF), National Oceanic 
+      and Atmospheric Administration (NOAA), and beyond. These projects 
+      have real world impacts and include work to end the opioid crisis, 
+      create better information sharing during pandemics, better 
+      understand and model coastal hurricane impacts, provide more rapid 
+      and effective treatment for heart, lung, blood, and sleep disorders, 
+      and explore the future of the AI/data science revolution.
+  - title: People First Culture
+    description: >
+      RENCI puts people first, promoting learning, personal growth, 
+      collaboration, flexibility, and work/life balance, and these 
+      priorities extend to STAR students as well. We boast a diverse staff 
+      and leadership that genuinely care about, support, and celebrate 
+      individual and team successes equally. As a STAR student, you’ll find 
+      that RENCI staff supports your professional goals, regardless of your 
+      technical experience. We are proud to not only offer STARships within 
+      our research teams, but we also provide opportunities within our 
+      operational teams, such as Project Management, Communications, 
+      Cyberinfrastructure Security, and more.

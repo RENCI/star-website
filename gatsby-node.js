@@ -5,29 +5,7 @@ const { paramCase, pascalCase } = require('change-case')
 
 //
 
-const contentYamlDir = path.join(`src`, `pages`)
-const sectionYamlDir = path.join(`src`, `content`, `sections`)
-const contentImagesDir = path.join(`src`, `content`, `images`)
-const pageTemplate = require.resolve('./src/templates/page.js')
-
-// page yaml files
-const pageFilenames = [
-  `home.yaml`,
-  `students.yaml`,
-  `staff.yaml`,
-]
-
-/**
- * looks up section content by its id.
- *
- * @param      {string}   sectionId  The section id to lookup.
- * @returns    {object}   the section's YAML data as an object
- */
-function getSectionContent(sectionId) {
-    const sectionFile = fs.readFileSync(path.join(sectionYamlDir, `${ sectionId }.yaml`), 'utf8')
-    const content = yaml.load(sectionFile)
-    return content
-}
+const stackedPageTemplate = require.resolve('./src/templates/stacked-page.js')
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
@@ -36,7 +14,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     allPagesYaml {
       nodes {
         path
-        sections
       }
     }
   }`)
@@ -46,7 +23,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // create page and pass section content in context
     createPage({
       path: node.path,
-      component: pageTemplate,
+      component: stackedPageTemplate,
       context: {
         pagePath: node.path,
       },
@@ -70,7 +47,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       hero: Hero
       sections: [String!]!
     }
-    type Project {
+    type Student {
       student_name: String!
       student_photo: File! @link(by: "relativePath")
       project_description: String!
@@ -80,7 +57,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       background_image: File! @link(by: "relativePath")
     }
     type SectionsYaml implements Node {
-      projects: [Project!]
+      students: [Student!]
       students_cta: CtaButton!
       staff_cta: CtaButton!
     }

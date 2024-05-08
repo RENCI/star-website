@@ -1,17 +1,43 @@
+
+
+# Instructions for editing this file
 section_id: important-dates
+title: Important Dates
+date_titles:
+  date1: "Last Day to Submit an Internship Request Form for the Cohort"
+  date2: "Position Description Completed"
+  date3: "Hiring Decisions Completed"
+  date4: "Job Offer Decision Form Due"
+  date5: "Cohort Start Date"
+  date6: "Program Interim Survey Due"
+  date7: "Extension Request Form Due"
+  date8: "STAR Talk Week"
+  date9: "Last Day of Cohort"
+  date10: "Program Exit Survey Due"
+
+# Content managers edit below this line.
 dates:
-  - date: 2023-01-02
-    title: Lorem ipsum ut
-    description: >
-      Lorem ipsum ut incididunt culpa adipisicing do enim anim voluptate quis
-      duis adipisicing irure aute non occaecat magna.
-  - date: 2023-01-03
-    title: Consectetur et consequat
-    description: >
-      Lorem ipsum est sit dolore proident dolor mollit sed veniam est consequat
-      quis et qui amet irure.
-  - date: 2023-01-04
-    title: Mollit qui anim
-    description: >
-      Cupidatat velit eiusmod officia aliquip consequat do commodo adipisicing
-      ut amet et esse quis.
+  - semester: SUMMER 2024
+    semester_dates:
+      date1: "Friday, March 29, 2024"
+      date2: "Friday, April 12, 2024"
+      date3: "Friday, May 3, 2024"
+      date4: "Wednesday, May 8, 2024"
+      date5: "Friday, May 24, 2024"
+      date6: "Friday, July 5, 2024"
+      date7: "Friday, July 5, 2024"
+      date8: "Monday, July 29, 2024"
+      date9: "Friday, August 9, 2024"
+      date10: "Friday, August 9, 2024"
+  - semester: FALL 2024
+    semester_dates:
+      date1: "Friday, July 5, 2024"
+      date2: "Friday, July 19, 2024"
+      date3: "Friday, August 9, 2024"
+      date4: "Wednesday, August 14, 2024"
+      date5: "Friday, August 30, 2024"
+      date6: "Friday, October 25, 2024"
+      date7: "Friday, November 15, 2024"
+      date8: "Wednesday, November 20, 2024"
+      date9: "Wednesday, December 18, 2024"
+      date10: "Wednesday, December 18, 2024"

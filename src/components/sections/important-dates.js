@@ -1,15 +1,22 @@
-import React from 'react'
-import { Section } from '../section'
-import { useSectionContent } from '../../hooks'
+import React from "react"
+import { Section } from "../section"
+import { DatesTable } from '../dates-table'
+import ImportantDatesContent from '../../content/sections/important-dates.yaml'
 
-export const ImportantDates = () => {
-  const content = useSectionContent('ImportantDates')
+export const ImportantDates = ({ content }) => {
+  const rows = content.nodes.map(({ name, dates, audience }) => ({
+    name,
+    dates: dates.reduce((acc, d) => {
+      acc[d.year] = d.date
+      return acc
+    }, {}),
+    audience,
+  }))
+
 
   return (
-    <Section
-      backgroundColor="#00abc7cc"
-    >
-      <pre>{ JSON.stringify(content) }</pre>
+    <Section title='Important Dates' backgroundColor="#fff" height="55vh">
+      <DatesTable content={ImportantDatesContent} type="staff"/>
     </Section>
   )
 }

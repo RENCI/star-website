@@ -53,7 +53,6 @@ export const DatesTable = ({content, type}) => {
         ))}
       </tr>
     </thead>
-    {console.log(staffArray)}
     <tbody>
       { type==="students" ? studentsArray.map((row, rowIndex) => (
         <tr key={`important-dates-row-${rowIndex}`}>

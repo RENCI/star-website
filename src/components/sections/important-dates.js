@@ -1,6 +1,5 @@
 import React from "react"
 import { Section } from "../section"
-import { Box } from "@mui/joy"
 import { DatesTable } from '../dates-table'
 import ImportantDatesContent from '../../content/sections/important-dates.yaml'
 

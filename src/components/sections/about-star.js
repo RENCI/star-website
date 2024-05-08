@@ -7,7 +7,7 @@ export const AboutStar = ({ content }) => {
   
   return (
     <Section
-      backgroundColor="#04758E"
+      backgroundColor="#1A1B2F"
       height="33vh"
     >
       <Typography level="title-lg" align="center" sx={{

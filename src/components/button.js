@@ -11,7 +11,7 @@ export const Button = ({children, to, large, external, color, text, hero, ...pro
       noIcon
       to={to}
       underline="none"
-      endDecorator={external && <OpenInNew sx={{marginLeft: '1rem'}}/>}
+      endDecorator={external && <OpenInNew sx={{marginLeft: '1rem', color: text}}/>}
       
       sx={{
         padding: large ? '1rem 3rem' : '0.5rem 2rem',

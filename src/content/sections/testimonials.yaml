@@ -1,9 +1,35 @@
 section_id: testimonials
-title: What previous STARs say...
+title: STAR Tales
 quotes:
-  - quote: Commodo elit anim in aliqua culpa aute in sint eu in culpa id ut non cillum velit.
-    attribution: Jane Doe
-  - quote: Amet deserunt ea nisi quis non adipisicing in velit cupidatat reprehenderit.
-    attribution: John Doe
-  - quote: Dolore dolore ea commodo in amet ex aliqua enim laboris.
-    attribution: June Doe
+  - quote: >
+      I accepted an offer to attend The University of Illinois
+      Urbana-Champaign. I ended up receiving an academic achievement
+      scholarship from UIUC. I couldn't have done it without RENCI's
+      intership experience.
+    attribution: Nalin (High School Intern)
+  - quote: >
+      Before my internship, I did not know/understand the effort that 
+      went into project proposals and creating a DEI team. I have 
+      thoroughly enjoyed all that I have been able to learn while 
+      interning this semester.
+    attribution: Undergraduate Intern
+  - quote: >
+      I had a great experience as the RENCI Communications Team 
+      intern! I feel like I learned a lot in terms of public relations 
+      tasks and written materials.
+    attribution: Allison (Communications Intern)
+  - quote: >
+      The experience at RENCI is really great. I learned how to code 
+      and manage projects professionally. My supervisor Yufeng is a 
+      knowledgeable person and all my teammates are very helpful. The 
+      weekly meeting really helped me to understand the whole project 
+      and gave me a clear view of my current work.
+    attribution: Yifei (Research Assistant)
+  - quote: >
+      I learned more about the [Computer Science] and Data Science 
+      field, especially how [Computer Science] can be related to many 
+      other aspects of academia. Additionally, I learned that I don't 
+      have to have a technical background to be in [Computer Science] 
+      and how project management is a great way to contribute to the 
+      team.
+    attribution: STAR Ventures Participant

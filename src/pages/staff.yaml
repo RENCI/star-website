@@ -1,12 +1,11 @@
 title: Staff
 path: /staff
-description: Sunt irure veniam cupidatat adipisicing cupidatat fugiat minim fugiat nisi pariatur aute ex fugiat duis.
+description: Develop next generation leaders by serving as a student's manager, mentor, or team member.
 hero:
-  background_image: terrain.jpg
+  background_image: staff-hero.jpg
   title: Staff
   blurb: >
-    Reprehenderit mollit duis mollit commodo exercitation aliquip ut do commodo do irure.
-    Lorem ipsum nisi nulla nulla laboris proident reprehenderit ex labore consequat do ut sint minim non.
+    Develop next generation leaders by serving as a student's manager, mentor, or team member.
 sections:
   - forms
   - important-dates

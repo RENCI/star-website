@@ -1,12 +1,35 @@
 section_id: interview-tips
+title: Interview Tips
+featured_img: ../images/interview-student-image.png
+interviewPDF: https://docs.google.com/document/d/1AtVVAlbDIfQkyAuBpetb3L_H8I8yMm39YZ33j__i7_E/view
 tips:
-  - title: Before your interview
-    description: Deserunt cupidatat non nulla aliqua occaecat duis ad labore aute fugiat minim eiusmod ea veniam laborum fugiat laborum.
-  - title: During your interview
-    description: Nulla excepteur qui in ullamco aute eu magna adipisicing veniam commodo esse in eu.
-  - title: Ut exercitation
-    description: Reprehenderit aliquip nisi ut amet non fugiat nisi proident aliquip esse nulla.
-  - title: Commodo fugiat
-    description: Non magna exercitation laborum dolor ut proident magna irure labore velit laboris nisi esse elit pariatur laborum nostrud.
-  - title: After your interview
-    description: Qui non labore aliquip dolore officia duis labore ut commodo ut.
+  - title: Before Your Interview
+    description: [
+      "Do your research: Use the company’s website (and other credible resources) to provide a solid understanding of the company’s goals (mission, vision, and values). During your interview, you can talk about overlapping passions and/or how your  background aligns. ",
+      "Reread the job description: If needed, print it out and highlight or underline specific skills the employer is looking for. Prepare examples of how your past and current work aligns with the job requirements.",
+      "Prepare your answers to common questions: Be prepared to talk about yourself and why you’re a good fit for the role.",
+      "Practice: Use mock interviews with family or friends to practice answering questions. Try recording yourself to look for filler words such as “um,” “you know,” or “uh”.",
+      "Prepare a list of references: This may be a requirement before or after your interview, so it’s always important to be prepared ahead of time.",
+      "Prepare questions for your interviewers: Think of 3-5 questions that show you’ve done your research on the company and that you’re seriously interested in the role.",
+      "Plan your interview attire: Choose your outfit according to the role you’re applying for. If you’re unsure, you can ask your recruiter when the interview is being scheduled.",
+      "Get plenty of rest!"
+    ]
+  - title: Interview Day
+    description: [
+      "Bring copies of your resume: In case of multiple interviewers, take 3-5 copies in addition to your own. On your copy, highlight specific accomplishments for an easy reference.",
+      "Plan to arrive early: Map out your route and leave early in case there are unforeseen circumstances. For virtual interviews, join the meeting 5 minutes early.",
+      "Make a great first impression: Remember to smile! Make sure your clothes are free of stains, holes, pet hair, etc., and don’t over do it with colognes and perfumes.",
+      "Treat everyone with respect: Treat everyone you encounter as if they are the hiring manager.",
+      "Be positive and authentic: By being genuine, you become relatable and conversations become easy.",
+      "Respond truthfully: Focus on your key strengths and why your background makes you qualified for the position. Don’t be tempted to embellish your skills and accomplishments.",
+      "Take notes: Write notes on anything about the position or employer that wasn’t on the job description or company website. If it takes a second for you to respond because you are writing notes, don’t stress. Let the interviewer(s) know you are taking notes and appreciate their patience. ",
+      "Keep answers concise and focused: Try not to ramble. Practicing ahead of time will help with being focused.",
+      "Don’t speak negatively about past employers: Focus on experiences you’ve gained and what you want to accomplish next. If they ask you why you left, focus on the opportunities you are seeking, not the negativity you are leaving. ",
+      "Ask your own questions: Asking questions gives you a better sense of the company’s growth opportunities and culture, the manager’s leadership style, and whether the role/organization is the right fit for you.",
+      "Ask about next steps: Companies may have different timelines and requirements for interviewing and hiring. It’s important to know the process.",
+      "Thank them for their time: Show that you appreciate the opportunity to interview."
+    ]
+  - title: After Your Interview
+    description: [
+      "Send a follow up: Wait at least 24-48 business hours before sending a follow up/thank you email. This shows the interviewer that you are interested in the job. Be sure to take your time to write a well-organized email."
+    ]

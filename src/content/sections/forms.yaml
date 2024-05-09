@@ -1,8 +1,25 @@
 section_id: forms
-forms:
-  - name: Nostrud voluptate
-    url: https://example.com/nostrud-voluptate.pdf
-  - name: Lorem ipsum
-    url: https://example.com/lorem-ipsum.pdf
-  - name: Ut officia
-    url: https://example.com/ut-officia.pdf
+title: "Staff Resources"
+sections:
+  - heading: "Requesting a STARship"
+    links: 
+    - name: STARship Request Form
+      url: https://wkf.ms/3LdrJer
+  - heading: "Extending Your Student"
+    links: 
+    - name: STARship Extension Request Form
+      url: https://wkf.ms/3MlK2Ps
+  - heading: "Preparing for Your Student"
+    links: 
+    - name: Guidelines for Managing Students
+      url: https://docs.google.com/document/d/1fHsEqDMMCpjmHiiGthKPfsUuTGIlXawYT2J-cA7rSrE/edit#
+    - name: Onboarding Document Template
+      url: https://docs.google.com/document/d/1j9w2yb6lTPGsiD_7VEiFfX2ulcuTLdscmATMF5KYzqI/edit?usp=drive_link
+  - heading: "Other Resources"
+    links: 
+    - name: STAR Ventures One-Pager
+      url: https://drive.google.com/file/d/1BDoEzeoXC0u_g65Bzc1TQlUfRpoBE5xT/view?usp=drive_link
+  - heading: "Managing Your Student"
+    links: 
+    - name: STARship STAR Talk Guidelines
+      url: https://docs.google.com/document/d/1p20E9P-rZUjCoDAJCzGckRqPRxI18ldv85fUueLwxvc/edit?usp=drive_link

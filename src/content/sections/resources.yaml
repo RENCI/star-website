@@ -1,8 +1,33 @@
 section_id: resources
-links:
-  - title: Lorem ipsum ut
-    url: https://example.com/
-  - title: Consectetur et consequat
-    url: https://example.com/
-  - title: Mollit qui anim
-    url: https://example.com/
+title: Student Resources
+sections:
+  - heading: "STAR Slack Guidelines"
+    description: >
+      Slack is one of RENCI’s primary means of communication. This 
+      document covers guidelines and expectations for using Slack 
+      during your STARship.
+    links:
+      - title: Student Slack Rules and Guidelines
+        url: https://docs.google.com/document/d/1wy6qSVWKAolaisnt9EJW1YlLRwZkhClIcLXaw2nNC14/preview
+  - heading: "STAR Talk Resources"
+    description: >
+      Each STARship and STAR Ventures student will give a presentation 
+      at the end of their session. Use these resources to help you 
+      prepare for your STAR Talk. Note that the guidelines for STAR 
+      Talks for STARships and STAR Ventures vary.
+    links:
+      - title: STARship Students
+        url: https://docs.google.com/document/d/1p20E9P-rZUjCoDAJCzGckRqPRxI18ldv85fUueLwxvc/edit?usp=drive_link
+      - title: STAR Ventures Students
+        url: https://docs.google.com/document/d/1kxRN48QsfMpfevdv5dchMNLeJq2H_8kIY4AtCXzPgaE/edit?usp=drive_link
+  - heading: "Want to stay connected?"
+    description: >
+      Fill out the Student Interest Form to stay connected with STAR 
+      updates.
+    stayConnectedList:
+      - item: 'Alerts when new positions are posted'
+      - item: 'Upcoming events'
+      - item: 'Tips for successful internships'
+      - item: 'Program highlights'
+stayConnectedButtonText: "Stay Connected to the STARverse"
+stayConnectedButtonURL: http://bit.ly/STARInterestFormRENCI

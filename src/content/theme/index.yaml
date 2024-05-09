@@ -11,3 +11,13 @@ navigation:
     path: /positions
 footer:
   copyright: RENCI
+  email: internships@renci.org
+  socials:
+    - name: Twitter
+      url: https://www.twitter.com/RENCI
+    - name: Facebook
+      url: https://www.facebook.com/renci.org
+    - name: LinkedIn
+      url: https://www.linkedin.com/company/65321
+    - name: YouTube
+      url: https://www.youtube.com/RENCIMedia

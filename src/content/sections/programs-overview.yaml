@@ -1,44 +1,88 @@
 section_id: programs-overview
+title: Programs Overview
 programs:
+  - title: STARship
+    program_id: 'starship'
+    subtitle: Undergraduate or Graduate Students
   - title: STAR Ventures
-    subtitle: Exercitation in ullamco amet fugiat enim magna proident
-    description: Veniam cillum ut sed excepteur id sunt ullamco aliquip sunt esse adipisicing proident aliqua dolor aliquip dolor ea in. Nostrud aliqua ullamco commodo velit ut sed aute dolor tempor voluptate.
-    offerings:
-      - Summer
-  - title: iRODS Summer Internship
-    subtitle: Culpa in laborum anim id do magna fugiat
-    description: Excepteur magna occaecat mollit eiusmod magna quis deserunt dolor aute. Elit aliqua duis labore officia ut voluptate cillum labore velit tempor sit incididunt.
-    offerings:
-      - Summer
-  - title: Director's Internship
-    subtitle: Lorem ipsum esse dolor eu ut est excepteur
-    description: In esse sunt dolor non occaecat do nisi proident sunt proident quis cillum culpa dolor. Dolor adipisicing cillum ad ullamco ea aute consequat in quis reprehenderit irure quis.
-    offerings:
-  - title: RENCI Internship
-    subtitle: Ea aute laboris consectetur fugiat non aliquip nisi
-    description: Lorem ipsum consequat nulla laboris aute non fugiat irure sit velit elit quis mollit velit. Fugiat commodo ut sed cillum ut elit aliquip duis minim culpa sunt dolore.
-    offerings:
-      - Fall
-      - Spring
-      - Summer
-  - title: Masters
-    subtitle: Lorem ipsum consequat officia consectetur ut laboris velit
-    description: Aliqua in reprehenderit dolor reprehenderit excepteur esse in incididunt nostrud. Deserunt dolore nulla cupidatat quis est nulla amet occaecat do consequat non laboris elit laboris sed laboris excepteur id.
-    offerings:
-      - Fall
-      - Spring
-      - Summer
-  - title: PhD
-    subtitle: Sunt duis ex proident id non amet in
-    description: Aliqua ex amet sit nulla magna eiusmod eu ea ex in aliquip. Lorem ipsum proident esse non velit consectetur occaecat ullamco dolor aute dolore aliqua irure.
-    offerings:
-      - Fall
-      - Spring
-      - Summer
-  - title: Affiliates
-    subtitle: Voluptate sunt in nostrud laboris incididunt ut do
-    description: Non laborum cupidatat veniam voluptate ea consectetur mollit dolor est enim cillum nostrud officia. Irure consequat proident commodo cupidatat culpa voluptate amet minim in sint ut culpa duis enim dolor nulla esse pariatur.
-    offerings:
-      - Fall
-      - Spring
-      - Summer
+    program_id: 'starventures'
+    subtitle: High School Students
+  - title: iRODS Internship
+    program_id: 'irods'
+    subtitle: Undergraduate and Graduate Students
+starShipContent:
+  program_id: 'starship'
+  description: >
+    STARships are an opportunity for undergraduate and graduate students
+    to gain experience through a tailor-made internship, working with 
+    RENCI project teams to accomplish project milestones.
+  sections:
+    - heading: "What to Expect"
+      contentType: "ul"
+      content:
+        - title: "STARships vary in their length, from one semester to multiple semesters, depending on the project needs and student’s performance."
+        - title: "Typical skills developed: presentation skills, professional development, organizational skills, effective communication, and other project-specific skills."
+    - heading: "Previous STARships offered experience in:"
+      contentType: "ul"
+      content:
+        - title: "Software Development"
+        - title: "Web Application Construction"
+        - title: "Project Management"
+        - title: "Communications & Social Media"
+        - title: "Cloud Programming & Testing"
+    - heading: "Requirements"
+      contentType: "ul"
+      content:
+        - title: "Must be a current undergraduate or graduate student (at least half-time enrollment) at a college/university."
+        - title: "Must be available to work up to 20 hrs per week during Fall and/or Spring and up to 40 hrs per week during Summer."
+    - heading: "Student Responsibilities"
+      contentType: "button"
+      content:
+        - title: "New Student Responsibilities"
+          url: "https://docs.google.com/document/d/1vjrr349cRXTHq1ypr2jzQz5dZde67sB3xpvKm9Tgl7s/edit"
+        - title: "Extended Student Responsbilities"
+          url: "https://docs.google.com/document/d/1Q7imkLGgekCt7oWGqRJ1cXPglGhtCCvhUMxLPp9Suxc/edit"
+starVenturesContent:
+  program_id: 'starventures'
+  description: >
+    The STAR Ventures Summer Program helps high school students explore 
+    various RENCI department roles and responsibilities and how they 
+    contribute to research.
+  starVenturesImg: ../images/star-ventures-image.png
+  sections:
+    - heading: "Dates"
+      contentType: "ul"
+      content:
+        - title: "This year’s program will run from July 15 - August 2, 2024."
+        - title: "Registration is open from mid-April until spots are filled."
+    - heading: "Requirements"
+      contentType: "ul"
+      content:
+        - title: "Offered during the summer to rising high school juniors and seniors and rising college freshman."
+        - title: "Must be 15 - 17 years old at the time of the program."
+        - title: "Must be able to attend all in-person and virtual sessions during the entire program."
+  registrationLink: https://wkf.ms/43lvrK6 
+  minorsNote: >
+    Note: RENCI values safety and security of all students. Minors and 
+    their parents/guardians will be required to complete additional forms 
+    if accepted into the program.
+irodsContent:
+  program_id: 'irods'
+  description: >
+    The iRODS Summer Internships is an opportunity for undergraduate and 
+    graduate students to work in a production-quality software engineering 
+    environment with global reach, mentorship, periodic code reviews, and 
+    direct community feedback.
+  sections:
+    - heading: "Dates"
+      contentType: "ul"
+      content:
+        - title: "3 months during the summer"
+        - title: "Approximately June - August"
+    - heading: "Requirements"
+      contentType: "ul"
+      content:
+        - title: "Only offered during the summer to rising college freshman, undergraduate, and graduate students."
+        - title: "Must be 18 or older."
+  learnMoreLink: https://irods.org/2024/01/irods-internship-summer-2024/
+lowerBanner: ../images/resources-students.png

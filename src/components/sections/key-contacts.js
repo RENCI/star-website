@@ -1,13 +1,23 @@
 import React from 'react'
 import { Section } from '../section'
-import { useSectionContent } from '../../hooks'
+import { ParagraphGrid } from '../paragraph-grid';
+import Grid from '@mui/joy/Grid';
 
-export const KeyContacts = () => {
-  const content = useSectionContent('KeyContacts')
-
+export const KeyContacts = ({ content }) => {
+  
   return (
-    <Section>
-      <pre>{ JSON.stringify(content) }</pre>
+    <Section  
+      backgroundColor="#1A1B2F"
+      title={content.title}
+      textColor="#fff"
+    >
+      <Grid container spacing={2}>
+        {
+          content.people.map((person) => (
+            <ParagraphGrid heading={person.name} body={person.description} color="#fff"/>
+          ))
+        }
+      </Grid>
     </Section>
   )
 }

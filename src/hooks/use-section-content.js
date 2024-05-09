@@ -4,73 +4,161 @@ import { graphql, useStaticQuery } from 'gatsby'
  * This uses a static query to pull in all section content.
  *
  * @param     {string}    id      The section identifier, `section_id`
- * @return    {object}    All content from the sectionsYaml returned corresponding to `id`
+ * @return    {object}    All sectionsYaml content
  * */
-export const useSectionContent = id => {
-  const content = useStaticQuery(graphql`
+export const useSectionContent = () => {
+  return useStaticQuery(graphql`
     query AllSectionContentQuery {
       AboutStar: sectionsYaml(section_id: { eq: "about-star" }) {
         blurb
-      }
-      Forms: sectionsYaml(section_id: { eq: "forms" }) {
-        forms {
-          name
-          url
+        bullets {
+          item
         }
       }
-      ImportantDates: sectionsYaml(section_id: { eq: "important-dates" }) {
-        dates {
-          date
-          title
-          description
+      Forms: sectionsYaml(section_id: { eq: "forms" }) {
+        title
+        sections {
+          heading
+          links {
+            name
+            url
+          }
+        }    
+      }
+      ImportantDates: allImportantDate {
+        nodes {
+          id
+          name
+          audience
+          dates {
+            date
+            year
+          }
         }
       }
       InterviewTips: sectionsYaml(section_id: { eq: "interview-tips" }) {
+        title
+        featured_img {
+          childImageSharp {
+            gatsbyImageData(
+              width: 800
+              height: 860
+              placeholder: BLURRED
+              formats: [AUTO, WEBP]
+            )
+          }
+        }
+        interviewPDF
         tips {
           title
           description
         }
       }
       KeyContacts: sectionsYaml(section_id: { eq: "key-contacts" }) {
+        title
         people {
           name
           description
         }
       }
       ProcessOverview: sectionsYaml(section_id: { eq: "process-overview" }) {
+        title
         steps {
           title
           description
         }
       }
       ProgramsOverview: sectionsYaml(section_id: { eq: "programs-overview" }) {
+        title
         programs {
           title
+          program_id
           subtitle
-          description
         }
-      }
-      ProjectShowcase: sectionsYaml(section_id: { eq: "project-showcase" }) {
-        projects {
-          student_name
-          student_photo {
+        starShipContent {
+          program_id
+          description
+          sections {
+            heading
+            contentType
+            content {
+              title
+              url
+            }
+          }
+        }
+        starVenturesContent {
+          program_id
+          description
+          starVenturesImg {
             childImageSharp {
               gatsbyImageData(
-                width: 1200
-                height: 500
+                width: 1600
+                height: 700
                 placeholder: BLURRED
                 formats: [AUTO, WEBP]
               )
             }
           }
+          sections {
+            heading
+            contentType
+            content {
+              title
+            }
+          }
+          registrationLink
+          minorsNote
+        }
+        irodsContent {
+          program_id
+          description
+          sections {
+            heading
+            contentType
+            content {
+              title
+            }
+          }
+          learnMoreLink
+        }
+        lowerBanner {
+          childImageSharp {
+            gatsbyImageData(
+              width: 2400
+              height: 500
+              placeholder: BLURRED
+              formats: [AUTO, WEBP]
+            )
+          }
+        }
+      }
+      StarShowcase: sectionsYaml(section_id: { eq: "star-showcase" }) {
+        title
+        students {
+          student_name
+          title
+          semester
           project_description
+          project_link_text
+          project_link
         }
       }
       Resources: sectionsYaml(section_id: { eq: "resources" }) {
-        links {
-          title
-          url
+        title
+        sections {
+          heading
+          description
+          links {
+            title
+            url
+          }
+          stayConnectedList {
+            item
+          }
         }
+        stayConnectedButtonText
+        stayConnectedButtonURL
       }
       StudentsStaffCtas: sectionsYaml(section_id: { eq: "students-staff-ctas" }) {
         staff_cta {
@@ -79,7 +167,7 @@ export const useSectionContent = id => {
             childImageSharp {
               gatsbyImageData(
                 width: 600
-                height: 300
+                height: 400
                 placeholder: BLURRED
                 formats: [AUTO, WEBP]
               )
@@ -92,7 +180,7 @@ export const useSectionContent = id => {
             childImageSharp {
               gatsbyImageData(
                 width: 600
-                height: 300
+                height: 400
                 placeholder: BLURRED
                 formats: [AUTO, WEBP]
               )
@@ -101,12 +189,14 @@ export const useSectionContent = id => {
         }
       }
       Testimonials: sectionsYaml(section_id: { eq: "testimonials" }) {
+        title
         quotes {
           quote
           attribution
         }
       }
       WhyRenci: sectionsYaml(section_id: { eq: "why-renci" }) {
+        title
         reasons {
           title
           description
@@ -114,5 +204,4 @@ export const useSectionContent = id => {
       }
     }
   `)
-  return content[id]
 }

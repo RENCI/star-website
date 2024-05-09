@@ -1,15 +1,23 @@
 import React from 'react'
 import { Section } from '../section'
-import { useSectionContent } from '../../hooks'
+import { ParagraphGrid } from '../paragraph-grid';
+import Grid from '@mui/joy/Grid';
 
-export const WhyRenci = () => {
-  const content = useSectionContent('WhyRenci')
-
+export const WhyRenci = ({ content }) => {
+  
   return (
     <Section
-      backgroundColor="#00abc766"
+      backgroundColor="#F6F6F6"
+      title={content.title}
+      height="55vh"
     >
-      <pre>{ JSON.stringify(content) }</pre>
+      <Grid container spacing={2}>
+        {
+          content.reasons.map((paragraph) => (
+            <ParagraphGrid heading={paragraph.title} body={paragraph.description} key={paragraph.title}/>
+          ))
+        }
+      </Grid>
     </Section>
   )
 }

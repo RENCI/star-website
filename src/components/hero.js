@@ -2,14 +2,24 @@ import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import {
-  Button, FormControl, Input, Sheet, Stack, Typography,
+  Sheet, Stack, Typography, Box
 } from '@mui/joy'
 import { useScrolling } from '../hooks'
+import { Button } from './button'
+import { Link } from './link'
+import { useWindowWidth } from '../hooks'
 
-export const Hero = ({ background_image, blurb, title }) => {
+export const Hero = ({ 
+  background_image, 
+  blurb, 
+  title, 
+  titleColor,
+  buttons
+}) => {
   const heroImage = getImage(background_image)
   const { scrollPosition } = useScrolling()
   const heroRef = useRef()
+  const { isCompact } = useWindowWidth();
 
   useEffect(() => {
     if (!heroRef.current) return
@@ -21,29 +31,42 @@ export const Hero = ({ background_image, blurb, title }) => {
       ref={ heroRef }
       sx={{
         display: 'flex',
-        height: '600px',
+        height: isCompact ? '650px' :'600px',
         position: 'relative',
         '.background-image': {
           position: 'absolute',
-          left: 0, top: 0, width: '100%', height: '600px',
+          left: 0, top: 0, width: '100%', height: isCompact ? '650px' :'600px',
         },
         '.overlay': {
           zIndex: 8,
-          px: 4,
           margin: 'auto',
-          width: '1200px',
+          width: '100%',
+          height:'100%',
+          background: isCompact? 'linear-gradient(145deg, #000 0%, #00000020 100%)' :'linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%)',
+          '.content': {
+            zIndex: 9,
+            maxWidth: '1200px',
+            margin: 'auto',
+            px: isCompact ? 1: 0,
+            height:'100%',
+          },
           '.title': {
-            maxWidth: '66%',
-            fontSize: '400%',
-            backgroundColor: '#cccc',
+            maxWidth: isCompact ? '100% ':'66%',
+            fontSize: isCompact ? '250% ':'400%',
+            color: '#EDCB5B',
             p: 1,
+            letterSpacing: '1px',
+            fontWeight: '300'
           },
           '.subtitle': {
-            maxWidth: '66%',
-            fontSize: '120%',
-            backgroundColor: '#cccc',
-            lineHeight: 1.75,
+            maxWidth: isCompact ? '100%':'55%',
+            fontSize: isCompact ? '130%' :'150%',
+            color: '#fff',
+            lineHeight: 1.5,
             p: 1,
+            letterSpacing: '0.01px',
+            fontWeight: '500',
+            filter: 'drop-shadow(5px 5px 5px black)'
           },
           '.search-button': {
             borderTopLeftRadius: 0,
@@ -53,29 +76,41 @@ export const Hero = ({ background_image, blurb, title }) => {
       }}
     >
       <GatsbyImage image={ heroImage } alt="" className="background-image" />
+      <Box className="overlay">
       <Stack
         justifyContent="center"
-        alignItems="flex-start"
+        alignItems={{ sm: 'center', md: 'flex-start' }}
         gap={ 3 }
-        className="overlay"
+        className="content"
       >
-        <Typography level="h1" className="title">{ title }</Typography>
-        <Typography level="body-md" className="subtitle">{ blurb }</Typography>
-        <FormControl>
-          <Input
-            placeholder="Search positions"
-            endDecorator={
-              <Button
-                variant="solid"
-                color="primary"
-                type="submit"
-                className="search-button"
-              >Search</Button>
-            }
-            sx={{ '--Input-decoratorChildHeight': '45px' }}
-          />
-        </FormControl>
+        <Box
+          justifyContent="center"
+          alignItems="flex-start"
+        >
+          <Typography level="h1" className="title">{ title }</Typography>
+          <Typography level="body-lg" className="subtitle">{ blurb }</Typography>
+        </Box>
+        {buttons && (
+          <Stack
+            direction={{ sm: 'column', md: 'row' }}
+            gap={ 2 }
+            mt="3rem"
+          >
+            {buttons.map((button)=> (
+              <Button 
+                noIcon 
+                large={isCompact ? false : true} 
+                hero 
+                component={Link} 
+                to={button.url}
+              >
+                <Typography>{button.title}</Typography>
+              </Button>
+            ))}
+          </Stack>
+        )}
       </Stack>
+      </Box>
     </Sheet>
   )
 }

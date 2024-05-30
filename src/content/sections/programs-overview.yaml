@@ -39,9 +39,9 @@ starShipContent:
       contentType: "button"
       content:
         - title: "New Student Responsibilities"
-          url: "https://docs.google.com/document/d/1vjrr349cRXTHq1ypr2jzQz5dZde67sB3xpvKm9Tgl7s/edit"
+          url: "https://drive.google.com/file/d/1yKWPW7Zc-8J56Dn0DWhZB7KakpIuli2w/view?usp=drive_link"
         - title: "Extended Student Responsbilities"
-          url: "https://docs.google.com/document/d/1Q7imkLGgekCt7oWGqRJ1cXPglGhtCCvhUMxLPp9Suxc/edit"
+          url: "https://drive.google.com/file/d/1OOx9_bhREQB360d7fD3h_blk4JkJTHsL/view?usp=drive_link"
 starVenturesContent:
   program_id: 'starventures'
   description: >

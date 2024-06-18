@@ -30,11 +30,14 @@ export const StarVenturesPanel = ({title, content}) => {
         }
       </PanelContentGridContainer>
       
-      <MainPanelButton 
+      {/* hide registration button (below) when registration is closed */}
+
+      {/* <MainPanelButton 
         title="Registration Form"
         to={content.registrationLink}
         external
-      />
+      /> */}
+
       <Typography sx={{color: '#fff', py: '1rem'}}>{content.minorsNote}</Typography>
     </Container>
   )

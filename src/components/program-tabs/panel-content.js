@@ -27,7 +27,7 @@ export const PanelContentGridItem = ({section, color}) => (
         </List>
       ) : section.contentType === 'button' ? (
         <Stack
-          gap={ 4 }
+          gap={ 2 }
           sx={{display: 'flex'}}
         >
           {section.content.map((button) => (

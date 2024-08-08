@@ -38,10 +38,12 @@ starShipContent:
     - heading: "Student Responsibilities"
       contentType: "button"
       content:
-        - title: "New Student Responsibilities"
-          url: "https://drive.google.com/file/d/1yKWPW7Zc-8J56Dn0DWhZB7KakpIuli2w/preview"
-        - title: "Extended Student Responsbilities"
-          url: "https://drive.google.com/file/d/1OOx9_bhREQB360d7fD3h_blk4JkJTHsL/preview"
+        - title: "New Students"
+          url: "https://drive.google.com/file/d/1dCSoxwKSAK4EFYgcuweGRdAJnSo_qRlO/preview"
+        - title: "Extended Students"
+          url: "https://drive.google.com/file/d/15had4MnthZlWGVIfjVZd9FgFzRtye4WR/preview"
+        - title: "Rising & Guiding STARs"
+          url: "https://drive.google.com/file/d/1TGnbEVcsVh6XVDH8IEg8B4RD9OpC9c5K/preview"
 starVenturesContent:
   program_id: 'starventures'
   description: >

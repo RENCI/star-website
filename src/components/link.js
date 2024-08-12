@@ -50,7 +50,7 @@ export const ExternalLink = ({ to, children, noIcon, fill, ...etc }) => {
   )
 }
 
-export const InternalLink = ({ to, children, ref, ...props }) => {
+export const InternalLink = React.forwardRef(({ to, children, ...props }, ref) => {
   return (
     <MUILink
     component={GatsbyLink} 
@@ -59,13 +59,13 @@ export const InternalLink = ({ to, children, ref, ...props }) => {
       { children }
     </MUILink>
   )
-}
+})
 
 export const Link = React.forwardRef(({ to, children, noIcon, fill, ...props }, ref) => {
   const externalUrlPattern = new RegExp(/^https?:\/\//)
   const match = externalUrlPattern.exec(to)
   if (match) {
-    return <ExternalLink to={ to } { ...props } noIcon={noIcon}  fill={fill} ref={ ref }>{ children }</ExternalLink>
+    return <ExternalLink to={ to } { ...props } noIcon={noIcon} fill={fill} >{ children }</ExternalLink>
   }
   return <InternalLink to={ to } { ...props } ref={ ref }>{ children }</InternalLink>
 })

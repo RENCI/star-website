@@ -12,7 +12,7 @@ export const Forms = ({ content }) => {
   >
       <Grid container>
       {content.sections.map((section) => (
-        <Grid item key={section.heading} 
+        <Grid key={section.heading} 
           sm={12} md={6}
           sx={{marginBottom: '2rem'}}
         >

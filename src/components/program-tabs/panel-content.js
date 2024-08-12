@@ -16,7 +16,7 @@ export const PanelContentGridContainer = ({children}) => (
 )
 
 export const PanelContentGridItem = ({section, color}) => (
-  <Grid item sm={12} md={6}>
+  <Grid sm={12} md={6}>
     <Typography level="h4" sx={{marginBottom: '0.5rem', color: color, fontWeight: 500, fontSize: '1rem'}}>{section.heading}</Typography>
     {
       section.contentType === "ul" ? (

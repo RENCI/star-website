@@ -13,7 +13,7 @@ export const DatesTable = ({content, type}) => {
   }
 
   const datesArray = createDatesArray(content)
-
+console.log(datesArray)
   const studentsArray = [
     datesArray[2],
     datesArray[3],
@@ -47,7 +47,7 @@ export const DatesTable = ({content, type}) => {
   >
     <thead>
       <tr>
-        <th style={{ width: "35%" }}></th>
+        <th style={{ width: "35%" }} aria-hidden="true"></th>
         {content.dates.map(({semester}, i) => (
           <th key={`semester-${i}`}>{semester}</th>
         ))}

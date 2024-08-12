@@ -72,7 +72,6 @@ export const MobileSlide = ({student}) => {
   const { 
     student_name, 
     title, 
-    semester,
     project_description,
     project_link_text, 
     project_link } = student

@@ -31,7 +31,7 @@ export const AboutStar = ({ content }) => {
         >
           {
             content.bullets.map(({item})=>(
-              <DecorativeBulletListItem>{item}</DecorativeBulletListItem>
+              <DecorativeBulletListItem key={`about-star-${item}`}>{item}</DecorativeBulletListItem>
             ))
           }
         </List>

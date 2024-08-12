@@ -30,7 +30,7 @@ export const Carousel = ({students}) => {
       >
         {
           students.map((student) => (
-            <SwiperSlide key={student.name}>
+            <SwiperSlide key={student.student_name}>
               <StudentSlide student={student}/>
             </SwiperSlide>
           ))
@@ -58,7 +58,7 @@ export const MobileCarousel = ({students}) => {
     >
       {
         students.map((student) => (
-          <SwiperSlide key={student.name}>
+          <SwiperSlide key={`mobile-${student.student_name}`}>
             <MobileSlide student={student}/>
           </SwiperSlide>
         ))

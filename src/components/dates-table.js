@@ -47,7 +47,7 @@ export const DatesTable = ({content, type}) => {
   >
     <thead>
       <tr>
-        <th style={{ width: "40%" }}></th>
+        <th style={{ width: "35%" }} aria-hidden="true"></th>
         {content.dates.map(({semester}, i) => (
           <th key={`semester-${i}`}>{semester}</th>
         ))}

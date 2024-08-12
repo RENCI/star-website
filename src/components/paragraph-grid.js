@@ -6,7 +6,7 @@ import Grid from '@mui/joy/Grid'
 
 export const ParagraphGrid = ({heading, body, color}, id) => {
   return (
-    <Grid item xs={12} sm={6} md={6} >
+    <Grid xs={12} sm={6} md={6} >
       <Card key={`${heading}-${id}`} sx={{height: '100%', backgroundColor: 'transparent'}} variant="soft">
         <Typography level="h3" sx={{color: color}}>{heading}</Typography>
         <Typography sx={{color: color}}>{body}</Typography>

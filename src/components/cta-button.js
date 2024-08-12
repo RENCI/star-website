@@ -9,7 +9,7 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import DownloadIcon from '@mui/icons-material/Download';
 
 export const CtaButton = ({
-  background_image, href, title, backgroundColor, interview
+  background_image, href, title, backgroundcolor, interview
 }) => {
   const bgImage = getImage(background_image)
   return (
@@ -18,7 +18,7 @@ export const CtaButton = ({
       borderRadius: '0% 0% 25px 25px',
       border: 'none',
       '.card-content': {
-        backgroundColor: backgroundColor,
+        backgroundColor: backgroundcolor,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',

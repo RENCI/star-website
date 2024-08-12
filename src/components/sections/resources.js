@@ -19,7 +19,7 @@ export const Resources = ({ content }) => {
           {section.links && (
             <Grid container>
             {section.links.map((link) => (
-              <Grid item key={link.title} sm={12} md={6}>
+              <Grid key={link.title} sm={12} md={6}>
                 <Link to={link.url} fill="#F9A302">
                   <Typography sx={{fontWeight: 600, color: '#F9A302'}}>
                     {link.title}
@@ -33,7 +33,7 @@ export const Resources = ({ content }) => {
             <List>
               <Grid container>
                 {section.stayConnectedList.map(({item}) => (
-                  <Grid item sm={12} md={6} key={item}>
+                  <Grid sm={12} md={6} key={item}>
                     <DecorativeBulletListItem sx={{color: 'inherit', p: 0, fontSize: '1.1rem'}}>{item}</DecorativeBulletListItem>
                   </Grid>
                 ))}

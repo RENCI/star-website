@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import MenuIcon from '@mui/icons-material/Menu';
 import starLogo from '../images/star-logo-color.png'
 
-export const MobileMenu = ({ options }) => {
+export const MobileMenu = () => {
   const data = useStaticQuery(graphql`
   query ThemeQuery {
     themeYaml {
@@ -132,13 +132,12 @@ const [open, setOpen] = useState(false)
         >
           {
             data.themeYaml.navigation.map(({ label, path }) => (
-              <Fragment>
-                <li
-                  key={ path }
-                  className="list-item"
-                  onClick={ () => setOpen(false) }
-                >
-                  <Link nav to={ path }>{ label }</Link>
+              <Fragment key={ path }>
+                <li className="list-item">
+                  <Link 
+                    to={ path }
+                    onClick={ () => setOpen(false) }
+                  >{ label }</Link>
                 </li>
                 <Divider sx={{borderBottom: '1px solid #04758e01'}}/>
               </Fragment>
@@ -158,5 +157,5 @@ const MenuOptionPropTypes = PropTypes.shape({
 MobileMenu.propTypes = {
   options: PropTypes.arrayOf(
     MenuOptionPropTypes
-  ).isRequired
+  )
 }

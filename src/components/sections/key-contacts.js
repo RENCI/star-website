@@ -14,7 +14,7 @@ export const KeyContacts = ({ content }) => {
       <Grid container spacing={2}>
         {
           content.people.map((person) => (
-            <ParagraphGrid heading={person.name} body={person.description} color="#fff"/>
+            <ParagraphGrid key={`contact-${person.name}`} heading={person.name} body={person.description} color="#fff"/>
           ))
         }
       </Grid>

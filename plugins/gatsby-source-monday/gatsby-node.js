@@ -11,7 +11,7 @@ exports.sourceNodes = async (gatsbyApi, pluginOptions) => {
   const timer = reporter.activityTimer(`source Monday.com boards`)
 
   function createBoardNode(data) {
-    // console.log(JSON.stringify(data, null, 2))
+
     actions.createNode({
       ...data,
       parent: null,

@@ -103,6 +103,7 @@ export const Hero = ({
                 hero 
                 component={Link} 
                 to={button.url}
+                key={button.title}
               >
                 <Typography>{button.title}</Typography>
               </Button>
@@ -117,6 +118,6 @@ export const Hero = ({
 
 Hero.propTypes = {
   background_image: PropTypes.object.isRequired,
-  blurb: PropTypes.string.isRequired,
+  blurb: PropTypes.string,
   title: PropTypes.string.isRequired,
 }

@@ -12,20 +12,20 @@ export const ProgramsOverview = ({ content }) => {
     {
       program_id: 'starship',
       content: content.starShipContent,
-      backgroundColor: '#F9A302',
+      backgroundcolor: '#F9A302',
       ...content.programs[0]
     },
     {
       program_id: 'starventures',
       content: content.starVenturesContent,
-      backgroundColor: '#1A1B2F',
+      backgroundcolor: '#1A1B2F',
       color: '#fff',
       ...content.programs[1]
     },
     {
       program_id: 'irods',
       content: content.irodsContent,
-      backgroundColor: '#00758D',
+      backgroundcolor: '#00758D',
       color: '#fff',
       ...content.programs[2]
     }
@@ -56,7 +56,7 @@ export const ProgramsOverview = ({ content }) => {
                   disableIndicator
                   indicatorInset
                   key={`${program.program_id}-tab`} 
-                  backgroundColor={program.backgroundColor}
+                  backgroundcolor={program.backgroundcolor}
                   sx={{
                     padding: {xs: '1rem 0', sm: '2rem 0', md: '2.5rem 0'},
                   }}
@@ -91,7 +91,7 @@ export const ProgramsOverview = ({ content }) => {
               <ProgramPanel 
                 value={i} 
                 key={`${program.program_id}-panel`} 
-                backgroundColor={program.backgroundColor}
+                backgroundcolor={program.backgroundcolor}
               >
                 {
                   program.program_id === 'starship' ? 

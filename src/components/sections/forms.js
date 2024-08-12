@@ -12,14 +12,14 @@ export const Forms = ({ content }) => {
   >
       <Grid container>
       {content.sections.map((section) => (
-        <Grid key={section.heading} 
+        <Grid key={`forms-section-${section.heading}`} 
           sm={12} md={6}
           sx={{marginBottom: '2rem'}}
         >
           <Typography level="h3" sx={{color: "inherit", marginBottom: '0.25rem'}}>{section.heading}</Typography>
           <Typography level="body-lg" sx={{color: "inherit", marginBottom: '0.5rem'}}>{section.description}</Typography>
             {section.links && section.links.map((link) => (
-              <Stack direction="column" key={link.title}>
+              <Stack direction="column" key={`staff-form-link-${link.name}`}>
                 <Link to={link.url} key={link.name}>
                   <Typography sx={{fontWeight: 600}}>
                     {link.name}

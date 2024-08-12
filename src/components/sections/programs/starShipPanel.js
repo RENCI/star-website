@@ -36,7 +36,7 @@ export const StarShipPanel = ({title, content}) => {
       <PanelContentGridContainer>
         {
           content.sections.map((section) => (
-            <PanelContentGridItem section={section}/>
+            <PanelContentGridItem section={section} key={`starship-panel-${section.heading}`}/>
           ))
         }
       </PanelContentGridContainer>

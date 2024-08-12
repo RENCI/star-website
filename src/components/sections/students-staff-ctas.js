@@ -12,8 +12,8 @@ export const StudentsStaffCtas = ({ content }) => {
         direction={{ xs: 'column', sm: 'row' }}
         gap={ 2 }
       >
-        <CtaButton href="/students" backgroundColor="#F9A302" { ...students_cta } />
-        <CtaButton href="/staff" backgroundColor="#1A1B2F"{ ...staff_cta } />
+        <CtaButton href="/students" backgroundcolor="#F9A302" { ...students_cta } />
+        <CtaButton href="/staff" backgroundcolor="#1A1B2F"{ ...staff_cta } />
       </Stack>
     </Section>
   )

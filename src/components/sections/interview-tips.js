@@ -81,7 +81,7 @@ const TextPhotoWrapper = ({
         ) : (
           <CtaButton 
             href={interviewPDF}
-            backgroundColor="#F9A302" 
+            backgroundcolor="#F9A302" 
             background_image={InterviewImg.allFile.nodes[0]}
             title="Download Interview Tips"
             interview

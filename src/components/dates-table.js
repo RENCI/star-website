@@ -13,7 +13,7 @@ export const DatesTable = ({content, type}) => {
   }
 
   const datesArray = createDatesArray(content)
-console.log(datesArray)
+
   const studentsArray = [
     datesArray[2],
     datesArray[3],

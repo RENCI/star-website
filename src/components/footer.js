@@ -58,7 +58,7 @@ export const Footer = () => {
             <Typography>Europa Center</Typography>
             <Typography>100 Europa Drive, Suite 540</Typography>
             <Typography sx={{marginBottom: '0.5rem'}}>Chapel Hill, NC  27517</Typography>
-            <Link to={`mailto:${data.themeYaml.footer.email}`}>{data.themeYaml.footer.email}</Link>
+            <Link to={`mailto:${data.themeYaml.footer.email}`} noIcon>{data.themeYaml.footer.email}</Link>
             <Typography>919-445-9640</Typography>
           </Grid>
           <Grid xs={ 12 } sm={ 4 } md={ 3 } lg={ 3 } className="link-group">

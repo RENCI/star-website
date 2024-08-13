@@ -43,7 +43,7 @@ const TextPhotoWrapper = ({
 
   return (
     <Grid container spacing={4}>
-      <Grid item sm={12} md={8}>
+      <Grid sm={12} md={8}>
         <AccordionGroup size="lg">
           {tips.map((item, i)=>(
             <Accordion
@@ -65,7 +65,7 @@ const TextPhotoWrapper = ({
           ))}
         </AccordionGroup>
       </Grid>
-      <Grid item sm={12} md={4} sx={{
+      <Grid sm={12} md={4} sx={{
         width: isCompact ? '100%' : null,
         display: isCompact ? 'flex' : null,
         justifyContent: isCompact ? 'center' : null
@@ -81,7 +81,7 @@ const TextPhotoWrapper = ({
         ) : (
           <CtaButton 
             href={interviewPDF}
-            backgroundColor="#F9A302" 
+            backgroundcolor="#F9A302" 
             background_image={InterviewImg.allFile.nodes[0]}
             title="Download Interview Tips"
             interview

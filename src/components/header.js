@@ -1,21 +1,11 @@
 import React, { useMemo } from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import { Sheet } from '@mui/joy'
 import { Container } from './container'
 import { useScrolling, useWindowWidth } from '../hooks'
 import { Menu } from './menu'
 import { MobileMenu } from './mobile-menu'
 
-const Header = ({ siteTitle, menuOptions }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      themeYaml {
-        metadata {
-          title
-        }
-      }
-    }
-  `)
+const Header = () => {
   const { isCompact } = useWindowWidth();
 
   const { scrollPosition } = useScrolling()

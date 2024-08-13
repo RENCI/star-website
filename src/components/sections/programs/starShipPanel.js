@@ -28,8 +28,6 @@ const datesQuery = graphql`query {
 
 export const StarShipPanel = ({title, content}) => {
   const data = useStaticQuery(datesQuery)
-
-  console.log(data)
   
   return (
     <Container maxWidth="md" sx={{margin: '1.5rem auto'}}>
@@ -38,7 +36,7 @@ export const StarShipPanel = ({title, content}) => {
       <PanelContentGridContainer>
         {
           content.sections.map((section) => (
-            <PanelContentGridItem section={section}/>
+            <PanelContentGridItem section={section} key={`starship-panel-${section.heading}`}/>
           ))
         }
       </PanelContentGridContainer>

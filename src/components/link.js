@@ -25,6 +25,25 @@ ExternalLinkIcon.propTypes = {
   size: PropTypes.number.isRequired,
 }
 
+export const MailtoLinkIcon = ({ size = 12, fill, ...rest }) => {
+  return (
+    <svg
+      { ...rest }
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      x="0px"
+      y="0px"
+      viewBox="0 0 24 24"
+      width={ `${ size }px` }
+      height={ `${ size }px` }
+      style={{ marginLeft: '4px' }}
+      fill={fill ? fill : "#789"}
+    >
+      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"></path>
+    </svg>
+  )
+}
+
 export const ExternalLink = ({ to, children, noIcon, fill, ...etc }) => {
   return (
     <Fragment>
@@ -49,8 +68,16 @@ export const ExternalLink = ({ to, children, noIcon, fill, ...etc }) => {
     </Fragment>
   )
 }
+export const MailtoLink = ({ to, children }) => {
+  return (
+    <Fragment>
+      <MUILink href={ to }>{ children }</MUILink>
+      <MailtoLinkIcon />
+    </Fragment>
+  )
+}
 
-export const InternalLink = ({ to, children, ref, ...props }) => {
+export const InternalLink = React.forwardRef(({ to, children, ...props }, ref) => {
   return (
     <MUILink
     component={GatsbyLink} 
@@ -59,13 +86,19 @@ export const InternalLink = ({ to, children, ref, ...props }) => {
       { children }
     </MUILink>
   )
-}
+})
 
 export const Link = React.forwardRef(({ to, children, noIcon, fill, ...props }, ref) => {
   const externalUrlPattern = new RegExp(/^https?:\/\//)
   const match = externalUrlPattern.exec(to)
+  const mailtoPattern = new RegExp(/^mailto:/)
+  const mailtoMatch = mailtoPattern.exec(to)
+
   if (match) {
-    return <ExternalLink to={ to } { ...props } noIcon={noIcon}  fill={fill} ref={ ref }>{ children }</ExternalLink>
+    return <ExternalLink to={ to } fill={ fill } noIcon={ noIcon } { ...props }>{ children }</ExternalLink>
+  }
+  if (mailtoMatch) {
+    return <MailtoLink to={ to } fill={ fill } { ...props }>{ children }</MailtoLink>
   }
   return <InternalLink to={ to } { ...props } ref={ ref }>{ children }</InternalLink>
 })

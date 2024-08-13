@@ -5,25 +5,25 @@ import { styled } from '@mui/joy'
 export const TabContainer = styled(Tabs)`
 `
 
-export const ProgramTab = styled(Tab)((({backgroundColor, color, ...props}) => ({
+export const ProgramTab = styled(Tab)((({backgroundcolor, color, ...props}) => ({
   width: '33%',
   display: 'flex',
   alignItems: 'flex-start',
   color: color ? color : null,
   transition: 'background-color 0.5s ease',
   [`&[aria-selected="false"]`]: {
-    backgroundColor: `${backgroundColor}75`,
+    backgroundColor: `${backgroundcolor}75`,
     ':hover': {
-      backgroundColor: `${backgroundColor}99`,
+      backgroundColor: `${backgroundcolor}99`,
     },
   },
   [`&[aria-selected="true"]`]: {
-    backgroundColor: backgroundColor,
+    backgroundColor: backgroundcolor,
   },
   borderBottom: 'none'
 })))
 
-export const ProgramPanel = styled(TabPanel)(({backgroundColor, ...props})=> ({
-  backgroundColor: backgroundColor,
+export const ProgramPanel = styled(TabPanel)(({backgroundcolor, ...props})=> ({
+  backgroundColor: backgroundcolor,
   paddingBottom: '2rem'
 }))

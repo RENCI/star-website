@@ -6,6 +6,7 @@ import { Button } from './button'
 export const StudentSlide = ({student}) => {
   const { 
     student_name, 
+    semester,
     title, 
     project_description,
     project_link_text, 
@@ -15,10 +16,8 @@ export const StudentSlide = ({student}) => {
     <Card 
       sx={{
         height: '220px',
-        flexWrap: 'wrap',
-        marginTop: '1rem',
-        px: '3.5rem',
-        py: '2.5rem',
+        marginTop: '0.5rem',
+        padding: '1rem 2.5rem 3rem',
         backgroundColor: '#ECF1F2',
       }}
     >
@@ -27,33 +26,25 @@ export const StudentSlide = ({student}) => {
         flexDirection: 'column', 
         justifyContent: 'center'
       }}>
-        <Typography 
-          level="h3"
-          align="center"
+        <Typography level="h3" align="center"
+          sx={{ fontWeight: 600 }}
+        >
+          {project_description}
+        </Typography>
+        <Typography level="h4" align="center"
           sx={{
-            fontSize: '1.5rem',
-            fontWeight: 600
+            fontSize: '1.2rem',
           }}
         >
           {student_name}
         </Typography>
-          
-        <Typography
-          align="center"
-          sx={{
-            fontSize: '1.2rem'
-          }}
-        >
-          {title}
-        </Typography>
-          
-        <Typography
-          align="center"
+        <Typography align="center"
           sx={{
             fontSize: '1rem',
-            fontStyle: 'italic',
           }}
-        >{project_description}</Typography>
+        >
+          {title}, {semester}
+        </Typography>
       </CardContent>
       <CardActions sx={{margin: '0 auto'}}>
         <Button
@@ -71,6 +62,7 @@ export const StudentSlide = ({student}) => {
 export const MobileSlide = ({student}) => {
   const { 
     student_name, 
+    semester,
     title, 
     project_description,
     project_link_text, 
@@ -80,10 +72,8 @@ export const MobileSlide = ({student}) => {
     <Card 
       sx={{
         height: {xs: '180px', sm: '200px'},
-        flexWrap: 'wrap',
-        marginTop: '1rem',
         px: {xs: '1rem', sm: '2rem'},
-        pb: {xs: '2rem', sm: '2rem'},
+        pb: '3rem',
         mx: '1rem', 
         backgroundColor: '#ECF1F2',
       }}
@@ -93,33 +83,29 @@ export const MobileSlide = ({student}) => {
         flexDirection: 'column', 
         justifyContent: 'center'
       }}>
-        <Typography 
-          level="h3"
-          align="center"
+      <Typography level="h3" align="center"
+        sx={{
+          fontSize: {xs: '1.2rem', sm: '1.25rem'},
+          fontWeight: 600
+        }}
+      >
+          {project_description}
+        </Typography>
+        <Typography level="h4" align="center"
           sx={{
-            fontSize: {xs: '1.2rem', sm: '1.25rem'},
-            fontWeight: 600
+            fontSize: '1rem',
           }}
         >
           {student_name}
         </Typography>
-          
-        <Typography
-          align="center"
+        <Typography align="center"
           sx={{
-            fontSize: {xs: '0.9rem', sm: '1rem'},
-          }}
-        >
-          {title}
-        </Typography>
-          
-        <Typography
-          align="center"
-          sx={{
-            fontSize: {xs: '1rem', sm: '1.1rem', md: '1.5rem'},
+            fontSize: '0.9rem',
             fontStyle: 'italic',
           }}
-        >{project_description}</Typography>
+        >
+          {title}, {semester}
+        </Typography>
       </CardContent>
       <CardActions sx={{margin: '0 auto'}}>
         <Button

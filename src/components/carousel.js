@@ -16,16 +16,16 @@ export const Carousel = ({students}) => {
         keyboard={{
           enabled: true,
         }}
-        // navigation={{
-        //   enabled: true,
-        // }}
+        navigation={{
+          enabled: true,
+        }}
         pagination={{
           clickable: true,
         }}
         grabCursor={true}
         slidesPerView={2}
         centeredSlides={true}
-        spaceBetween={60}
+        spaceBetween={80}
         loop={true}
       >
         {

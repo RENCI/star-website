@@ -23,10 +23,13 @@ export const Carousel = ({students}) => {
           clickable: true,
         }}
         grabCursor={true}
-        slidesPerView={2}
         centeredSlides={true}
         spaceBetween={80}
         loop={true}
+        breakpoints={{
+          800: {slidesPerView: 2},
+          0: {slidesPerView: 1}
+        }}
       >
         {
           students.map((student) => (

@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Keyboard, Navigation, Pagination } from 'swiper/modules';
 
-import { StudentSlide, MobileSlide } from './student-slide'
+import { StudentSlide } from './student-slide'
 
 export const Carousel = ({students}) => {
 
@@ -40,32 +40,4 @@ export const Carousel = ({students}) => {
         }
       </Swiper>
   );
-}
-
-export const MobileCarousel = ({students}) => {
-
-  return (
-    <Swiper
-      modules={[ Keyboard, Navigation, Pagination]}
-      keyboard={{
-        enabled: true,
-      }}
-      pagination={{
-        clickable: true,
-      }}
-      grabCursor={true}
-      slidesPerView={1}
-      centeredSlides={true}
-      spaceBetween={60}
-      loop={true}
-    >
-      {
-        students.map((student) => (
-          <SwiperSlide key={`mobile-${student.student_name}`}>
-            <MobileSlide student={student}/>
-          </SwiperSlide>
-        ))
-      }
-    </Swiper>
-  )
 }

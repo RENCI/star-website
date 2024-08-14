@@ -59,6 +59,7 @@ export const useSectionContent = () => {
         people {
           name
           description
+          photoURL
         }
       }
       ProcessOverview: sectionsYaml(section_id: { eq: "process-overview" }) {
@@ -137,8 +138,8 @@ export const useSectionContent = () => {
         title
         students {
           student_name
-          title
           semester
+          title
           project_description
           project_link_text
           project_link

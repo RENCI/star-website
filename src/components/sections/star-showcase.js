@@ -1,11 +1,8 @@
 import React from 'react'
-import { Carousel, MobileCarousel } from '../carousel'
+import { Carousel } from '../carousel'
 import { Sheet, Typography } from '@mui/joy'
-import { useWindowWidth } from '../../hooks'
 
 export const StarShowcase = ({ content }) => {
-  const { isCompact } = useWindowWidth();
-
   return (
     <Sheet
       component="section"

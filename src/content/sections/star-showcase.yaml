@@ -1,40 +1,46 @@
 section_id: star-showcase
 title: Projects in the STARlight
 students:
-  - student_name: Rio
+  - student_name: Shivani K.
     title: STAR Intern
-    semester: Spring 2023
-    project_description: HEAL Publications Analysis
-    project_link_text: 'View Rio’s STAR Talk presentation'
-    project_link: https://drive.google.com/file/d/1HVsiv1XNZp0bGwVNfLhJeNbYc0iPdi5C/view?usp=sharing
-  - student_name: Kylie
+    semester: Spring 2024
+    project_description: Improving Registration for Data Matters
+    project_link_text: "View STAR Talk Presentation"
+    project_link: https://drive.google.com/file/d/1mXVf8sleVPto_NNk1EQBJrGNCtW0hn4Q/view?usp=drive_link
+  - student_name: Abel L.
     title: STAR Intern
-    semester: Fall 2023
-    project_description: Digital Curation
-    project_link_text: 'View Kylie’s STAR Talk paper'
-    project_link: https://docs.google.com/document/d/1o89j0olyAqJbdMCzUs9YLKAMZf4beGdo/edit?usp=sharing&ouid=106015245864437093171&rtpof=true&sd=true
-  - student_name: Kieran, Ethan, and Anoop
+    semester: "Fall 2023 - Spring 2024"
+    project_description: A Portal for RENCI's Infrastructure Inventory
+    project_link_text: "View STAR Talk Presentation"
+    project_link: https://drive.google.com/file/d/1Oip5bh5pMMR05P_-wJZ8vfDzoIlhLumI/view?usp=drive_link
+  - student_name: Kenzie N.
+    title: STAR Intern
+    semester: "Spring 2024 - Fall 2024"
+    project_description: "Strategizing ACIS IT Service Delivery"
+    project_link_text: "View STAR Talk Presentation"
+    project_link: https://drive.google.com/file/d/1SyRf4ab7nXTfUz8jEZIIGLLfSlXDEg7m/view?usp=drive_link
+  - student_name: Nathan K.
+    title: STAR Intern
+    semester: "Summer 2024 - Fall 2024"
+    project_description: Organizing RENCI's Google Drives
+    project_link_text: "View STAR Talk Presentation"
+    project_link: https://drive.google.com/file/d/1FfHpvTwZQ6xEqUticFgban5WB-Vlro83/view?usp=drive_link
+  - student_name: Aadil, Aakesh, Dikshita, Olivia
     title: STAR Ventures Participants
-    semester: Summer 23
-    project_description: 'Addressing the Opioid Crisis: The Solution to Over-Prescribing'
-    project_link_text: 'View their STAR Ventures presentation'
-    project_link: https://drive.google.com/file/d/1usViQQVO-lIPk6Qj2dothDt2n7MQph7X/view?usp=sharing
-  - student_name: Alok
+    semester: Summer 2024
+    project_description: Measuring and Analyzing Air Quality
+    project_link_text: "View STAR Talk Presentation"
+    project_link: https://drive.google.com/file/d/1qbyHrKkV8PBoqbhqz_A3s5fNaJjd0NXF/view?usp=drive_link
+  - student_name: Jude S.
     title: STAR Intern
-    semester: Summer 2023
-    project_description: UI application for echocardiogram image segmentation
-    project_link_text: 'View Alok’s STAR Talk presentation'
-    project_link: https://drive.google.com/file/d/1hyh53AEuV3HYgxS-1zwN4wzq8kYDQ3c9/view?usp=drive_link
-  - student_name: Ganning
-    title: iRODS Intern
-    semester: Summer 2023
-    project_description: Zone Management Tool and NFSRODS
-    project_link_text: 'View Ganning’s TriRODS presentation'
-    project_link: https://youtu.be/Q0tSk0LExIk
-  - student_name: Jude
+    semester: "Summer 2023 - Summer 2024"
+    project_description: Programmatically Building & Storing Docker Images in the Google Artifact Registry 
+    project_link_text: "View STAR Talk Presentation"
+    project_link: https://drive.google.com/file/d/1MSoFcfeFFEmOWkuBNrKITJFqgkI4O0AW/view?usp=drive_link
+  - student_name: Brenna H.
     title: STAR Intern
-    semester: Summer 2023
-    project_description: Making multidimensional time series data more accessible with Python
-    project_link_text: 'View Jude’s STAR Talk presentation'
-    project_link: https://drive.google.com/file/d/1bBuSXnKxPXCirGRQPrTKBsOLm15r5jvA/view?usp=drive_link
+    semester: "Summer 2023 - Fall 2024"
+    project_description: Analyzing Rare Pulmonary Disease Data with ICEES 
+    project_link_text: "View STAR Talk Presentation"
+    project_link: https://drive.google.com/file/d/1Qx1eF6qLL6O6-QXFGt6yOekNyJy-6vRc/view?usp=drive_link
 

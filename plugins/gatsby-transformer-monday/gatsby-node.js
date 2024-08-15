@@ -2,7 +2,7 @@ const assemblePositionData = require('./assemble-positions')
 const assembleColumnData = require('./assemble-columns')
 const assembleDatesData = require('./assemble-dates')
 
-const DEBUG = true
+const DEBUG = false
 
 async function onCreateNode({
   actions,

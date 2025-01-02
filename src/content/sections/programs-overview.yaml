@@ -56,7 +56,8 @@ starVenturesContent:
       contentType: "ul"
       content:
         - title: "This program runs for 3 weeks during the summer. Check back later for Summer 2025 dates."
-        - title: "Registration will open in early 2025. Check back for registration deadlines and link."
+        - title: "Registration will open on Monday, January 13, 2025."
+        - title: "Button to apply will appear when registration is open."
     - heading: "Requirements"
       contentType: "ul"
       content:

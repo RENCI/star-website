@@ -19,7 +19,7 @@ export const KeyContacts = ({ content }) => {
               <Card orientation="horizontal" size="lg"
                 sx={{ backgroundColor: '#ECF1F2' }}
               >
-                <AspectRatio flex ratio="1" maxHeight={182} sx={{ minWidth: 182 }}>
+                <AspectRatio flex ratio="1" maxHeight={160} sx={{ minWidth: 160 }}>
                   <img loading="lazy" alt=""
                     src={person.photoURL}                    
                   />

@@ -4,12 +4,12 @@ blurb: >
   to pursue their passion while engaging in meaningful data 
   science-related projects.
 bullets:
-  - item: Data Science
-  - item: Computer Science
-  - item: Business
-  - item: Earth Science
-  - item: Project Management
   - item: Communications
-  - item: Research Science
+  - item: Earth Science
+  - item: Computer Science
+  - item: Project Management
   - item: Cyberinfrastructure Security
+  - item: Research Operations
+  - item: Data Science
+  - item: Research Science
 

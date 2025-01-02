@@ -39,11 +39,11 @@ starShipContent:
       contentType: "button"
       content:
         - title: "New Students"
-          url: "https://drive.google.com/file/d/1dCSoxwKSAK4EFYgcuweGRdAJnSo_qRlO/preview"
+          url: "https://drive.google.com/file/d/1dCSoxwKSAK4EFYgcuweGRdAJnSo_qRlO/view"
         - title: "Extended Students"
-          url: "https://drive.google.com/file/d/15had4MnthZlWGVIfjVZd9FgFzRtye4WR/preview"
+          url: "https://drive.google.com/file/d/15had4MnthZlWGVIfjVZd9FgFzRtye4WR/view"
         - title: "Rising & Guiding STARs"
-          url: "https://drive.google.com/file/d/1TGnbEVcsVh6XVDH8IEg8B4RD9OpC9c5K/preview"
+          url: "https://drive.google.com/file/d/1TGnbEVcsVh6XVDH8IEg8B4RD9OpC9c5K/view"
 starVenturesContent:
   program_id: 'starventures'
   description: >

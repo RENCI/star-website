@@ -54,7 +54,7 @@ export const Footer = () => {
             }} />
           </Grid>
           <Grid xs={ 12 } sm={ 8 } md={ 9 } lg={ 9 }>
-            <Typography sx={{fontWeight: 600}}>Student Achievement at RENCI</Typography>
+            <Typography sx={{fontWeight: 600}}>Student Advancement at RENCI</Typography>
             <Typography>Europa Center</Typography>
             <Typography>100 Europa Drive, Suite 540</Typography>
             <Typography sx={{marginBottom: '0.5rem'}}>Chapel Hill, NC  27517</Typography>

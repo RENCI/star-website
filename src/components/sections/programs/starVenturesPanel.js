@@ -32,11 +32,11 @@ export const StarVenturesPanel = ({title, content}) => {
       
       {/* hide registration button (below) when registration is closed */}
 
-      {/* <MainPanelButton 
+      <MainPanelButton 
         title="Registration Form"
         to={content.registrationLink}
         external
-      /> */}
+      />
 
       <Typography sx={{color: '#fff', py: '1rem'}}>{content.minorsNote}</Typography>
     </Container>

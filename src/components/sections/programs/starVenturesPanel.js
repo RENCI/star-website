@@ -30,11 +30,11 @@ export const StarVenturesPanel = ({title, content}) => {
         }
       </PanelContentGridContainer>
       
-      {/* hide registration button (below) when registration is closed */}
+      {/* hide application button (below) when application is closed */}
 
       <MainPanelButton 
-        title="Registration Form"
-        to={content.registrationLink}
+        title="Apply Now"
+        to={content.applicationLink}
         external
       />
 

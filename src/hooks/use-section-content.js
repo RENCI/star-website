@@ -108,7 +108,7 @@ export const useSectionContent = () => {
               title
             }
           }
-          registrationLink
+          applicationLink
           minorsNote
         }
         irodsContent {

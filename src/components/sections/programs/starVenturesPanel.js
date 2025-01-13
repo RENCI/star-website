@@ -7,7 +7,7 @@ import {
 import {
   PanelContentGridContainer,
   PanelContentGridItem,
-  // MainPanelButton
+  MainPanelButton
 } from '../../program-tabs'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 

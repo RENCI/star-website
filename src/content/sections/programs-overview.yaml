@@ -57,14 +57,14 @@ starVenturesContent:
       content:
         - title: "This program runs for 3 weeks during the summer."
         - title: "Summer 2025 Dates: July 14, 2025 - July 31, 2025."
-        - title: "Applications close April 11, 2025, 11:59 EST."
+        - title: "Applications close April 11, 2025, 11:59pm EST."
     - heading: "Requirements"
       contentType: "ul"
       content:
         - title: "Offered during the summer to rising high school juniors and seniors and rising college freshman."
         - title: "Must be 15 - 17 years old at the time of the program."
         - title: "Must be able to attend all in-person and virtual sessions during the entire program."
-  registrationLink: https://wkf.ms/43lvrK6 
+  applicationLink: https://wkf.ms/43lvrK6 
   minorsNote: >
     Note: RENCI values safety and security of all students. Minors and 
     their parents/guardians will be required to complete additional forms 

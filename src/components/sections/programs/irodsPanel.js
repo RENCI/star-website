@@ -22,12 +22,12 @@ export const IrodsPanel = ({title, content}) => {
           ))
         }
       </PanelContentGridContainer>
-      <MainPanelButton 
+      {/* <MainPanelButton 
         title="Learn More"
         to={content.learnMoreLink}
         external
         color="#1A1B2F"
-      />
+      /> */}
     </Container>
   )
 }

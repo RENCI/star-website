@@ -56,8 +56,8 @@ starVenturesContent:
       contentType: "ul"
       content:
         - title: "This program runs for 3 weeks during the summer."
-        - title: "Summer 2025 Dates: July 14, 2025 - July 31, 2025."
-        - title: "Applications close April 11, 2025, 11:59pm EST."
+        - title: "Summer 2025: STAR will not be hosting STAR Ventures this summer and hopes to resume this program for future summers."
+        - title: "Stay connected to the STARverse by signing up for our mailing list below."
     - heading: "Requirements"
       contentType: "ul"
       content:
@@ -82,6 +82,7 @@ irodsContent:
       content:
         - title: "3 months during the summer"
         - title: "Approximately June - August"
+        - title: "Applications for Summer 2025 are currently closed."
     - heading: "Requirements"
       contentType: "ul"
       content:

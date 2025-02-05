@@ -19,6 +19,7 @@ export const ProgramsOverview = ({ content }) => {
       program_id: 'starventures',
       content: content.starVenturesContent,
       backgroundcolor: '#1A1B2F',
+      bottomBorder: '#ffffff50',
       color: '#fff',
       ...content.programs[1]
     },
@@ -92,6 +93,7 @@ export const ProgramsOverview = ({ content }) => {
                 value={i} 
                 key={`${program.program_id}-panel`} 
                 backgroundcolor={program.backgroundcolor}
+                bottomBorder={program.bottomBorder}
               >
                 {
                   program.program_id === 'starship' ? 

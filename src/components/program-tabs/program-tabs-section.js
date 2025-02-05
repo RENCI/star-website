@@ -23,7 +23,8 @@ export const ProgramTab = styled(Tab)((({backgroundcolor, color, ...props}) => (
   borderBottom: 'none'
 })))
 
-export const ProgramPanel = styled(TabPanel)(({backgroundcolor, ...props})=> ({
+export const ProgramPanel = styled(TabPanel)(({backgroundcolor, bottomBorder, ...props})=> ({
   backgroundColor: backgroundcolor,
+  borderBottom: `1px solid ${bottomBorder}`,
   paddingBottom: '2rem'
 }))

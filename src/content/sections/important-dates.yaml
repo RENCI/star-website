@@ -17,18 +17,6 @@ date_titles:
 
 # Content managers edit below this line.
 dates:
-  - semester: SPRING 2025
-    semester_dates:
-      date1: "Wednesday, November 20, 2024"
-      date2: "Friday, November 29, 2024"
-      date3: "Friday, December 20, 2024"
-      date4: "Friday, January 3, 2025"
-      date5: "Friday, January 17, 2025"
-      date6: "Friday, March 7, 2025"
-      date7: "Friday, March 28, 2025"
-      date8: "Monday, April 21, 2025"
-      date9: "Friday, May 9, 2025"
-      date10: "Friday, May 9, 2025"
   - semester: SUMMER 2025
     semester_dates:
       date1: "Friday, March 28, 2025"
@@ -53,3 +41,15 @@ dates:
       date8: "Wednesday, November 19, 2025"
       date9: "Wednesday, December 17, 2025"
       date10: "Wednesday, December 17, 2025"
+  - semester: SPRING 2026
+    semester_dates:
+      date1: "Wednesday, November 19, 2025"
+      date2: "Friday, November 28, 2025"
+      date3: "Friday, December 19, 2025"
+      date4: "Friday, January 2, 2026"
+      date5: "Friday, January 16, 2026"
+      date6: "Friday, March 6, 2026"
+      date7: "Friday, March 27, 2026"
+      date8: "Monday, April 20, 2026"
+      date9: "Friday, May 8, 2026"
+      date10: "Friday, May 8, 2026"

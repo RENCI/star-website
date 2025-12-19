@@ -56,7 +56,8 @@ starVenturesContent:
       contentType: "ul"
       content:
         - title: "This program runs for 3 weeks during the summer."
-        - title: "Summer 2025: STAR will not be hosting STAR Ventures this summer and hopes to resume this program for future summers."
+        - title: "Summer 2026 Dates: July 6, 2026 - July 24, 2026."
+        - title: "Applications close April 12, 2026, 11:59pm EST."
         - title: "Stay connected to the STARverse by signing up for our mailing list below."
     - heading: "Requirements"
       contentType: "ul"
@@ -64,7 +65,7 @@ starVenturesContent:
         - title: "Offered during the summer to rising high school juniors and seniors and rising college freshman."
         - title: "Must be 15 - 17 years old at the time of the program."
         - title: "Must be able to attend all in-person and virtual sessions during the entire program."
-  applicationLink: https://wkf.ms/43lvrK6 
+  applicationLink: https://wkf.ms/43lvrK6
   minorsNote: >
     Note: RENCI values safety and security of all students. Minors and 
     their parents/guardians will be required to complete additional forms 

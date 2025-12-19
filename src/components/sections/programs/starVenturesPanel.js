@@ -32,11 +32,11 @@ export const StarVenturesPanel = ({title, content}) => {
       
       {/* hide application button (below) when application is closed */}
 
-      {/* <MainPanelButton 
+      <MainPanelButton 
         title="Apply Now"
         to={content.applicationLink}
         external
-      /> */}
+      />
 
       <Typography sx={{color: '#fff', py: '1rem'}}>{content.minorsNote}</Typography>
     </Container>

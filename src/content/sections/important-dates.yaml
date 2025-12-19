@@ -17,30 +17,6 @@ date_titles:
 
 # Content managers edit below this line.
 dates:
-  - semester: SUMMER 2025
-    semester_dates:
-      date1: "Friday, March 28, 2025"
-      date2: "Friday, April 11, 2025"
-      date3: "Friday, May 2, 2025"
-      date4: "Wednesday, May 7, 2025"
-      date5: "Friday, May 23, 2025"
-      date6: "Thursday, July 3, 2025"
-      date7: "Thursday, July 3, 2025"
-      date8: "Monday, July 28, 2025"
-      date9: "Friday, August 8, 2025"
-      date10: "Friday, August 8, 2025"
-  - semester: FALL 2025
-    semester_dates:
-      date1: "Friday, July 4, 2025"
-      date2: "Friday, July 18, 2025"
-      date3: "Friday, August 8, 2025"
-      date4: "Wednesday, August 13, 2025"
-      date5: "Friday, August 29, 2025"
-      date6: "Friday, October 24, 2025"
-      date7: "Friday, November 14, 2025"
-      date8: "Wednesday, November 19, 2025"
-      date9: "Wednesday, December 17, 2025"
-      date10: "Wednesday, December 17, 2025"
   - semester: SPRING 2026
     semester_dates:
       date1: "Wednesday, November 19, 2025"
@@ -53,3 +29,27 @@ dates:
       date8: "Monday, April 20, 2026"
       date9: "Friday, May 8, 2026"
       date10: "Friday, May 8, 2026"
+  - semester: SUMMER 2026
+    semester_dates:
+      date1: "Friday, March 27, 2026"
+      date2: "Friday, April 10, 2026"
+      date3: "Friday, May 1, 2026"
+      date4: "Wednesday, May 6, 2026"
+      date5: "Friday, May 22, 2026"
+      date6: "Friday, July 3, 2026"
+      date7: "Friday, July 3, 2026"
+      date8: "Monday, July 27, 2026"
+      date9: "Friday, August 7, 2026"
+      date10: "Friday, August 7, 2026"
+  - semester: FALL 2026
+    semester_dates:
+      date1: "Friday, July 3, 2026"
+      date2: "Friday, July 17, 2026"
+      date3: "Friday, August 7, 2026"
+      date4: "Wednesday, August 12, 2026"
+      date5: "Friday, August 28, 2026"
+      date6: "Friday, October 23, 2026"
+      date7: "Friday, November 13, 2026"
+      date8: "Wednesday, November 18, 2026"
+      date9: "Wednesday, December 16, 2026"
+      date10: "Wednesday, December 16, 2026"

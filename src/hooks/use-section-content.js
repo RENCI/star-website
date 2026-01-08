@@ -123,6 +123,19 @@ export const useSectionContent = () => {
           }
           learnMoreLink
         }
+        reuSiteContent {
+          program_id
+          longTitle
+          description
+          sections {
+            heading
+            contentType
+            content {
+              title
+            }
+          }
+          learnMoreLink
+        }
         lowerBanner {
           childImageSharp {
             gatsbyImageData(

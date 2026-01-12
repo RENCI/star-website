@@ -107,8 +107,9 @@ reuSiteContent:
       contentType: "ul"
       content:
         - title: "9-week summer program"
-        - title: "Program Dates: May 25 – July 24, 2026"
-        - title: "Applications open January 15, 2026"
+        - title: "Must commit full-time for the duration of the program"
+        - title: "Program Dates: May 25 - July 24, 2026"
+        - title: "Applications open January 19, 2026"
         - title: "Applications close April 10, 2026"
         - title: "Final decisions announced April 31, 2026"
     - heading: "Requirements"
@@ -116,7 +117,6 @@ reuSiteContent:
       content:
         - title: "Open to U.S. citizens, nationals, or permanent residents"
         - title: "Must be enrolled as an undergraduate student in good academic standing"
-        - title: "Must commit full-time for the duration of the program"
         - title: "Background or interest in networking, distributed systems, cloud computing, or related fields"
         - title: "Python proficiency and basic computer systems knowledge required"
   learnMoreLink: https://renci.org

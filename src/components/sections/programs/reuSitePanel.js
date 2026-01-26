@@ -9,10 +9,10 @@ import {
   MainPanelButton
 } from '../../program-tabs'
 
-export const IrodsPanel = ({title, content}) => {
+export const ReuSitePanel = ({title, content}) => {
   return (
     <Container maxWidth="md" sx={{margin: '1.5rem auto', color: '#fff'}}>
-      <Typography level="h3" textAlign="center" gutterBottom sx={{ color: '#fff'}}>{title}</Typography>
+      <Typography level="h3" textAlign="center" gutterBottom sx={{ color: '#fff'}}>{content.longTitle || title}</Typography>
       <Typography sx={{ color: '#fff', marginBottom: '1rem'}}>{content.description}</Typography>
       
       <PanelContentGridContainer>
@@ -23,7 +23,7 @@ export const IrodsPanel = ({title, content}) => {
         }
       </PanelContentGridContainer>
       <MainPanelButton 
-        title="Learn More"
+        title="Learn more and apply to the NSF REU Site"
         to={content.learnMoreLink}
         external
         color="#1A1B2F"

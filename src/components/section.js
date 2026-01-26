@@ -28,7 +28,7 @@ export const Section = ({
         '.section-container': {
           backgroundColor: 'transparent',
           alignItems: 'center',
-          px: 2,
+          px: 0,
           py: 8,
           mx: 'auto',
         },

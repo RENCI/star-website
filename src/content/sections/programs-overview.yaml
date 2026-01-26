@@ -10,6 +10,9 @@ programs:
   - title: iRODS Internship
     program_id: 'irods'
     subtitle: Undergraduate and Graduate Students
+  - title: REU Site
+    program_id: 'reuSite'
+    subtitle: Undergraduate Students
 starShipContent:
   program_id: 'starship'
   description: >
@@ -83,11 +86,38 @@ irodsContent:
       content:
         - title: "3 months during the summer"
         - title: "Approximately June - August"
-        - title: "Applications for Summer 2025 are currently closed."
     - heading: "Requirements"
       contentType: "ul"
       content:
         - title: "Only offered during the summer to rising college freshman, undergraduate, and graduate students."
         - title: "Must be 18 or older."
-  learnMoreLink: https://irods.org/2025/01/irods-internship-summer-2025/
+  learnMoreLink: https://irods.org/2026/01/irods-internship-summer-2026/
+reuSiteContent:
+  program_id: 'reuSite'
+  longTitle: "REU Site: Multi-disciplinary Research with the FABRIC Network"
+  description: >
+    The NSF Research Experiences for Undergraduates (REU) Site at 
+    Renaissance Computing Institute (RENCI) at UNC–Chapel Hill offers 
+    undergraduate students a hands-on summer research experience exploring 
+    advanced networking, distributed systems, machine learning, 
+    cybersecurity, and emerging cyberinfrastructure using the NSF FABRIC 
+    nationwide testbed.
+  sections:
+    - heading: "Dates"
+      contentType: "ul"
+      content:
+        - title: "9-week summer program"
+        - title: "Must commit full-time for the duration of the program"
+        - title: "Program Dates: May 25 - July 24, 2026"
+        - title: "Applications open January 19, 2026"
+        - title: "Applications close April 10, 2026"
+        - title: "Final decisions announced April 31, 2026"
+    - heading: "Requirements"
+      contentType: "ul"
+      content:
+        - title: "Open to U.S. citizens, nationals, or permanent residents"
+        - title: "Must be enrolled as an undergraduate student in good academic standing"
+        - title: "Background or interest in networking, distributed systems, cloud computing, or related fields"
+        - title: "Python proficiency and basic computer systems knowledge required"
+  learnMoreLink: https://sites.google.com/renci.org/reu-site/home
 lowerBanner: ../images/resources-students.png

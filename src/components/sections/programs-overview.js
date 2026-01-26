@@ -5,7 +5,7 @@ import {
   ProgramPanel } from '../program-tabs'
 import { Sheet, Typography, Stack } from '@mui/joy'
 import TabList from '@mui/joy/TabList';
-import { StarShipPanel, StarVenturesPanel, IrodsPanel } from './programs'
+import { StarShipPanel, StarVenturesPanel, IrodsPanel, ReuSitePanel } from './programs'
 
 export const ProgramsOverview = ({ content }) => {
   const programContent = [
@@ -29,6 +29,13 @@ export const ProgramsOverview = ({ content }) => {
       backgroundcolor: '#00758D',
       color: '#fff',
       ...content.programs[2]
+    },
+    {
+      program_id: 'reuSite',
+      content: content.reuSiteContent,
+      backgroundcolor: '#5B2D8B',
+      color: '#fff',
+      ...content.programs[3]
     }
   ]
 
@@ -46,9 +53,9 @@ export const ProgramsOverview = ({ content }) => {
       }}>{content.title}</Typography>
       <TabContainer sx={{ backgroundColor: '#F6F6F6' }}>
         <TabList disableUnderline sx={{
-          maxWidth: '900px',
+          maxWidth: '1200px',
           margin: '0 auto -1px',
-          padding: 0
+          padding: 0,
         }}>
           {
             programContent.map((program) => {
@@ -59,7 +66,7 @@ export const ProgramsOverview = ({ content }) => {
                   key={`${program.program_id}-tab`} 
                   backgroundcolor={program.backgroundcolor}
                   sx={{
-                    padding: {xs: '1rem 0', sm: '2rem 0', md: '2.5rem 0'},
+                    padding: {xs: '1rem 0', sm: '2rem 0', md: '2.5rem 0.5rem'},
                   }}
                 >
                   <Stack
@@ -108,6 +115,11 @@ export const ProgramsOverview = ({ content }) => {
                     />
                   : program.program_id === 'irods' ?
                     <IrodsPanel 
+                      title={program.title}
+                      content={program.content}
+                    />
+                  : program.program_id === 'reuSite' ?
+                    <ReuSitePanel 
                       title={program.title}
                       content={program.content}
                     />

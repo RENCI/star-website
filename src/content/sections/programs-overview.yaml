@@ -119,5 +119,5 @@ reuSiteContent:
         - title: "Must be enrolled as an undergraduate student in good academic standing"
         - title: "Background or interest in networking, distributed systems, cloud computing, or related fields"
         - title: "Python proficiency and basic computer systems knowledge required"
-  learnMoreLink: https://sites.google.com/renci.org/reu-site/home
+  learnMoreLink: https://reusite.renci.org/home
 lowerBanner: ../images/resources-students.png

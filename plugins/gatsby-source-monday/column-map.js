@@ -1,6 +1,6 @@
 // columns (keys) end up as item object properties (values)
 module.exports = {
-  'Minimum Education': 'education',
+  'Open to Students in': 'education',
   'RENCI Domain': 'domain',
   'Group': 'group',
   'Project/Team Name': 'division',

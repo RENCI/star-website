@@ -69,7 +69,7 @@ export const PositionsCard = ({ position }) => {
           }}>
             <ListItem sx={{pading: 0}}>
               <Typography>
-                <strong>Minimum Education: </strong>{position.education}
+                <strong>Open to Students in: </strong>{position.education}
               </Typography>
             </ListItem>
             <ListItem>
@@ -82,11 +82,15 @@ export const PositionsCard = ({ position }) => {
                 <strong>Estimated Duration: </strong>{position.duration} weeks
               </Typography>
             </ListItem>
-            <ListItem>
-              <Typography>
-                <strong>Pay Range: </strong>{position.pay}
-              </Typography>
-            </ListItem>
+            {
+              position.pay && (  
+                <ListItem>
+                  <Typography>
+                    <strong>Pay Range: </strong>{position.pay}
+                  </Typography>
+                </ListItem>
+               )
+            }
           </List>
 
           <br/>

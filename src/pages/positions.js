@@ -48,10 +48,10 @@ const PositionsPage = () => {
     <Fragment>
       <Seo
         title="Positions"
-        description="Commodo sunt tempor ad velit nostrud aute est aute incididunt enim labore."
+        description="View open internship positions at RENCI."
       />
         <Hero {...PositionsHeroContent} />
-      <Container sx={{ mt: 4, p: 2 }}>
+      <Container sx={{ mt: 4, p: 2, mb: 10 }}>
         <Typography level="h2" color="neutral">View Open Positions</Typography>
         <Stack gap={ 2 }>
           <FiltersTray />
